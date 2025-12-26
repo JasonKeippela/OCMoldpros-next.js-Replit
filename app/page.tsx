@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -334,7 +332,6 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main>
-        <Navigation />
         <HeroSection />
         <TrustIndicators />
         <ServicesSection />
@@ -343,7 +340,6 @@ export default function Home() {
         <ProcessSection />
         <FAQSection />
         <CTASection />
-        <Footer />
       </main>
     </>
   )

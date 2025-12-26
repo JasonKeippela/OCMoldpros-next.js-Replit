@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'OC Mold Pros | Professional Mold Inspection & Remediation in Orange County',
@@ -24,35 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "OC Mold Pros",
-              "description": "Professional mold inspection and remediation services in Orange County, California",
-              "url": "https://ocmoldpros.com",
-              "telephone": "+1-949-371-5934",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Orange County",
-                "addressRegion": "CA",
-                "addressCountry": "US"
-              },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Orange County, California"
-              },
-              "serviceType": ["Mold Inspection", "Mold Remediation", "Mold Testing", "Air Quality Testing"],
-              "priceRange": "$$"
-            })
-          }}
-        />
-      </head>
       <body className="bg-white text-gray-900 antialiased">
+        <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   )

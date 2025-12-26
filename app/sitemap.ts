@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { cities } from './lib/cities'
+import { cities } from '@/app/lib/cities'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ocmoldpros.com'

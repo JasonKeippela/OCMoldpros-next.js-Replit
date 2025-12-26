@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { cities } from '@/app/lib/cities'
+import { cities } from '../lib/cities'
 
 export const metadata: Metadata = {
   title: 'Service Areas | Mold Inspection in Orange County | OC Mold Pros',
