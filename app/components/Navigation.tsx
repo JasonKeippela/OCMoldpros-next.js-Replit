@@ -18,7 +18,7 @@ export default function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-sm'}`}>
       <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <Image src="/logo.jpg" alt="OC Mold Pros - Home Inspection" width={140} height={60} className="h-14 w-auto" />
+          <Image src="/logo.jpg" alt="OC Mold Pros - Home Inspection" width={420} height={180} className="h-28 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           <a href="#services" className="text-gray-700 hover:text-ocean-600 transition-colors">Services</a>
