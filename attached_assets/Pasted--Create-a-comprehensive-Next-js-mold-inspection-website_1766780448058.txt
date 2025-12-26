@@ -1,0 +1,144 @@
+
+
+Create a comprehensive Next.js mold inspection website for OC Mold Pros with the following requirements:
+NAVIGATION STRUCTURE
+The top navigation bar should include these menu items (left to right):
+
+Home - Links to homepage
+About - Links to /about page with company history, certifications, team info
+Services - Links to /services page detailing all service offerings
+Service Areas - Dropdown menu linking to city-specific pages (see below)
+Process - Links to /process page explaining the 4-step inspection process
+Pricing - Links to /pricing page with transparent pricing information
+Learn (or Blog) - Links to /blog with educational content about mold
+
+Include phone number (949-371-5934) and "Book Inspection" CTA button on the right side of navigation.
+CITY-SPECIFIC LANDING PAGES
+Create individual service area pages for every major city in Orange County. Each page should follow this URL structure: /service-areas/[city-name]-ca
+Cities to include:
+
+Irvine, Newport Beach, Huntington Beach, Anaheim, Santa Ana, Costa Mesa, Fullerton, Orange, Garden Grove, Mission Viejo, Westminster, Yorba Linda, San Clemente, Lake Forest, Tustin, Buena Park, Aliso Viejo, Laguna Niguel, Brea, Placentia, Laguna Beach, Cypress, Laguna Hills, La Habra, Seal Beach, Fountain Valley, Dana Point, San Juan Capistrano, Rancho Santa Margarita, Stanton, La Palma, Villa Park, Los Alamitos
+
+Each city page should include:
+
+H1 Headline: "Professional Mold Testing & Inspection Services in [City Name], CA"
+Introductory paragraph (150-200 words) covering:
+
+Company introduction with city name
+Services offered specifically for that city
+Coverage area (mention nearby neighborhoods)
+Unique challenges for that city's climate/geography
+
+
+Main service section (300-400 words):
+
+Detailed explanation of mold inspection and testing services
+Mention of equipment used (infrared thermal imaging, moisture meters, air quality testing)
+Independent lab analysis
+Health risks of mold exposure specific to local climate
+
+
+"Why Choose OC Mold Pros in [City Name]" section with bullet points:
+
+Certified & licensed inspectors
+Advanced testing methods
+Same-day service available
+Detailed reports with photos
+Owner-operated business
+Locally based in Orange County
+
+
+Common mold locations specific to [City Name] homes:
+
+Bathrooms (showers, under sinks)
+Kitchens (under appliances)
+Attics (roof leaks)
+Crawl spaces
+HVAC systems
+Coastal properties (for coastal cities mention salt air, humidity)
+
+
+About [City Name] section (200-300 words):
+
+Brief description of the city
+Notable landmarks or attractions
+Lifestyle/community features
+Why it's a great place to live
+Any local mold-related challenges (coastal humidity, older homes, etc.)
+
+
+Nearby Areas Served list showing 6-8 surrounding cities with links to their pages
+CTA section at bottom with:
+
+"Schedule Your Mold Inspection Today"
+Phone number
+Contact form
+Email address
+
+
+SEO metadata for each page:
+
+Title tag: "Mold Testing & Inspection in [City Name], CA | OC Mold Pros"
+Meta description: "Professional mold testing and inspection services in [City Name], Orange County. Certified inspectors, advanced technology, same-day service. Call 949-371-5934"
+H1, H2, H3 tags properly structured
+Alt text for all images mentioning city name
+
+
+
+SERVICE AREAS MAIN PAGE
+Create /service-areas page that:
+
+Lists all Orange County cities served in a clean grid layout
+Each city links to its specific landing page
+Includes a map of Orange County service area
+Brief intro about comprehensive OC coverage
+
+HOMEPAGE ENHANCEMENTS
+Update the homepage to include:
+
+Expanded content (aim for 800-1000 words total)
+Trust indicators (years in business, certifications, reviews)
+Service area overview linking to city pages
+More detailed service descriptions
+FAQ section
+Recent blog posts preview
+Local business schema markup
+
+TECHNICAL SEO REQUIREMENTS
+
+Generate dynamic routes in Next.js for all city pages using [city].tsx or App Router
+Create sitemap.xml including all city-specific pages
+Add robots.txt file
+Implement local business schema (JSON-LD) on each city page with:
+
+Business name, address, phone
+Service area
+Hours of operation
+Services offered
+
+
+Optimize images with next/image component
+Add breadcrumb navigation on all pages
+Create internal linking between related city pages
+Mobile-responsive design for all pages
+Fast page load times (use Next.js optimization features)
+
+CONTENT GUIDELINES
+
+Use natural language, avoid keyword stuffing
+Include city name 5-7 times per page naturally
+Mention "Orange County" 3-5 times per page
+Use variations: "mold inspection," "mold testing," "mold remediation"
+Write for humans first, search engines second
+Include clear calls-to-action on every page
+Make phone number clickable (tel: link)
+
+STYLING
+
+Maintain current professional design aesthetic
+Ensure consistent branding across all pages
+Use clear typography and spacing
+Include relevant images (mold inspection equipment, local landmarks where appropriate)
+Ensure accessibility (WCAG 2.1 AA compliance)
+
+Generate all the city pages with unique, relevant content for each location while maintaining consistent structure and quality throughout the site.
