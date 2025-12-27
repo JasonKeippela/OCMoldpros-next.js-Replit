@@ -34,7 +34,7 @@ export default async function CityPage({ params }: Props) {
     notFound()
   }
 
-  const { description, isCoastal } = getCityData(cityInfo.name)
+  const { description, moldServices, isCoastal } = getCityData(cityInfo.name)
   const nearbyWithSlugs = cityInfo.nearby.map(name => ({
     name,
     slug: cityToSlug(name)
@@ -160,11 +160,27 @@ export default async function CityPage({ params }: Props) {
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">About {cityInfo.name}, California</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">{description}</p>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">{description}</p>
+            
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Local Landmarks & Points of Interest</h3>
+            <div className="flex flex-wrap gap-3">
+              {cityInfo.landmarks?.map((landmark, i) => (
+                <span key={i} className="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200 shadow-sm">
+                  {landmark}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="py-16">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mold Inspection Services in {cityInfo.name}</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">{moldServices}</p>
+          </div>
+        </section>
+
+        <section className="py-16 bg-ocean-50">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Nearby Areas We Serve</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
