@@ -32,7 +32,7 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'}`}>
-      <div className="max-w-7xl mx-auto px-4 py-0 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 pt-6 pb-0 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image src="/logo.jpg" alt="OC Mold Pros - Professional Mold Inspection Services in Orange County, CA" width={1050} height={450} className="h-[200px] w-auto my-[-36px]" />
         </Link>
