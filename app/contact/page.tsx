@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Schedule Mold Inspection | OC Mold Pros',
-  description: 'Contact OC Mold Pros to schedule your mold inspection in Orange County. Call 949-371-5934 or fill out our contact form.',
+  description: 'Schedule your Orange County mold inspection today. Same-day appointments available. Call 949-371-5934 or book online. Serving all of OC since 2009.',
 }
 
 export default function ContactPage() {

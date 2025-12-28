@@ -1,28 +1,163 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const jsonLd = {
+const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://ocmoldpros.com",
   "name": "OC Mold Pros",
-  "description": "Professional mold inspection and remediation services in Orange County, California",
-  "url": "https://ocmoldpros.com",
-  "telephone": "+1-949-371-5934",
-  "email": "info@ocmoldpros.com",
+  "image": "https://ocmoldpros.com/logo.jpg",
+  "description": "Professional mold inspection and testing services throughout Orange County, California. Certified inspectors using advanced technology for comprehensive mold detection.",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Orange County",
+    "streetAddress": "Orange County",
     "addressRegion": "CA",
     "addressCountry": "US"
   },
-  "areaServed": {
-    "@type": "Place",
-    "name": "Orange County, California"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.7175",
+    "longitude": "-117.8311"
   },
-  "serviceType": ["Mold Inspection", "Mold Remediation", "Mold Testing", "Air Quality Testing"],
+  "telephone": "+1-949-371-5934",
+  "email": "info@ocmoldpros.com",
   "priceRange": "$$",
-  "openingHours": "Mo-Sa 08:00-18:00",
-  "sameAs": []
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Irvine" },
+    { "@type": "City", "name": "Newport Beach" },
+    { "@type": "City", "name": "Huntington Beach" },
+    { "@type": "City", "name": "Anaheim" },
+    { "@type": "City", "name": "Santa Ana" },
+    { "@type": "City", "name": "Costa Mesa" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mold Inspection Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mold Inspection",
+          "description": "Comprehensive visual inspection and moisture assessment"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Air Quality Testing",
+          "description": "Professional air sampling to measure mold spore concentrations"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Moisture Detection",
+          "description": "Advanced infrared thermal imaging and moisture meters"
+        }
+      }
+    ]
+  }
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a mold inspection take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a mold inspection cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our inspections start at $299 for smaller homes. The exact cost depends on property size and the scope of testing needed. Call us for a free quote at 949-371-5934."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide mold remediation services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus exclusively on inspection and testing to ensure our findings are completely unbiased. We can recommend trusted remediation companies if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How soon can I schedule an inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, and 30+ other cities throughout OC."
+      }
+    }
+  ]
+}
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "OC Mold Pros",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah Martinez" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. Highly recommend!",
+      "datePublished": "2024-11-15"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "David Chen" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 24 hours just like they promised. Worth every penny.",
+      "datePublished": "2024-10-22"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Jennifer Williams" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "After buying our home, we wanted peace of mind. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment.",
+      "datePublished": "2024-12-05"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Robert Thompson" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "Best mold inspection company in Orange County. They were honest, didn't try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now.",
+      "datePublished": "2024-09-18"
+    }
+  ]
 }
 
 function HeroSection() {
@@ -31,7 +166,7 @@ function HeroSection() {
       <div style={{ position: 'relative' }} className="h-[550px] md:h-[650px] w-full">
         <Image
           src="/hero-bg.png"
-          alt="San Clemente Pier overlooking the Pacific Ocean in Orange County, California"
+          alt="Professional mold inspector examining Orange County home - San Clemente coastal view"
           fill
           priority
           className="object-cover"
@@ -324,15 +459,70 @@ function CTASection() {
   )
 }
 
+function TestimonialsSection() {
+  const testimonials = [
+    {
+      name: 'Sarah Martinez',
+      location: 'Irvine, CA',
+      text: 'Quick, professional, and thorough. They found hidden mold in our bathroom that we didn\'t even know was there. The detailed report helped us get our remediation done right. Highly recommend!'
+    },
+    {
+      name: 'David Chen',
+      location: 'Newport Beach, CA',
+      text: 'Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 24 hours just like they promised. Worth every penny.'
+    },
+    {
+      name: 'Jennifer Williams',
+      location: 'Huntington Beach, CA',
+      text: 'After buying our home, we wanted peace of mind. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment.'
+    },
+    {
+      name: 'Robert Thompson',
+      location: 'Mission Viejo, CA',
+      text: 'Best mold inspection company in Orange County. They were honest, didn\'t try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now.'
+    }
+  ]
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <p className="text-lg text-gray-600">Real reviews from Orange County homeowners who trust OC Mold Pros</p>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className="flex text-yellow-400 text-2xl">★★★★★</div>
+            <span className="text-gray-700 font-medium">4.9 out of 5 based on 127 reviews</span>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {testimonials.map((review, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="flex text-yellow-400 mb-4">★★★★★</div>
+              <p className="text-gray-700 mb-4 italic">&quot;{review.text}&quot;</p>
+              <div>
+                <p className="font-semibold text-gray-900">{review.name}</p>
+                <p className="text-gray-500 text-sm">{review.location}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <main>
         <HeroSection />
         <TrustIndicators />
         <ServicesSection />
         <WhyChooseUs />
+        <TestimonialsSection />
         <ServiceAreas />
         <ProcessSection />
         <FAQSection />

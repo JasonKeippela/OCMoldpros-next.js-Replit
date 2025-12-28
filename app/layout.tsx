@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'OC Mold Pros | Professional Mold Inspection & Remediation in Orange County',
-  description: 'OC Mold Pros provides expert mold inspection, testing, and remediation services throughout Orange County, California. Call 949-371-5934 for a free consultation.',
+  description: 'Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
   keywords: 'mold inspection, mold remediation, mold removal, Orange County, OC, California, San Clemente, Irvine, Newport Beach',
   openGraph: {
     title: 'OC Mold Pros | Professional Mold Inspection & Remediation',

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection Services | OC Mold Pros - Orange County',
-  description: 'Comprehensive mold inspection, testing, and assessment services in Orange County. Professional air quality testing, moisture detection, and detailed reporting.',
+  description: 'Comprehensive mold inspection services in Orange County: air quality testing, moisture detection, thermal imaging. Expert analysis & detailed reporting. Book now!',
 }
 
 export default function ServicesPage() {

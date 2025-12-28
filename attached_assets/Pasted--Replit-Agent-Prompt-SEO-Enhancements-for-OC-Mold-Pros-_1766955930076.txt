@@ -1,0 +1,378 @@
+# Replit Agent Prompt: SEO Enhancements for OC Mold Pros Website
+
+Please implement the following 5 critical SEO improvements to the existing Next.js website at ocmoldprosnextjs.replit.app:
+
+---
+
+## 1. Add Meta Descriptions to All Pages
+
+**Task**: Add unique, compelling meta descriptions (155-160 characters) to every page on the site.
+
+**Implementation**:
+- Add meta descriptions to the `<head>` section of each page
+- Each description should include primary keywords and a call-to-action
+- Use Next.js metadata API (app router) or Head component (pages router)
+
+**Example meta descriptions**:
+
+**Homepage**: 
+```
+Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!
+```
+
+**Services page**:
+```
+Comprehensive mold inspection services in Orange County: air quality testing, moisture detection, thermal imaging. Expert analysis & detailed reporting. Book now!
+```
+
+**About page**:
+```
+OC Mold Pros: Orange County's trusted mold inspection experts with 15+ years experience. Licensed, certified, and committed to protecting your home and family.
+```
+
+**Pricing page**:
+```
+Transparent mold inspection pricing in Orange County starting at $299. No hidden fees. Free quotes available. Call 949-371-5934 for custom pricing today!
+```
+
+**Contact page**:
+```
+Schedule your Orange County mold inspection today. Same-day appointments available. Call 949-371-5934 or book online. Serving all of OC since 2009.
+```
+
+---
+
+## 2. Implement LocalBusiness Schema Markup
+
+**Task**: Add structured data (JSON-LD) to help Google understand the business information.
+
+**Implementation**:
+- Add LocalBusiness schema to the homepage and site-wide footer
+- Include all relevant business information: name, address, phone, hours, service areas
+
+**Schema to implement**:
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ocmoldprosnextjs.replit.app",
+  "name": "OC Mold Pros",
+  "image": "https://ocmoldprosnextjs.replit.app/logo.jpg",
+  "description": "Professional mold inspection and testing services throughout Orange County, California. Certified inspectors using advanced technology for comprehensive mold detection.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Orange County",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.7175",
+    "longitude": "-117.8311"
+  },
+  "telephone": "+1-949-371-5934",
+  "email": "info@ocmoldpros.com",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Irvine"
+    },
+    {
+      "@type": "City",
+      "name": "Newport Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Huntington Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Anaheim"
+    },
+    {
+      "@type": "City",
+      "name": "Santa Ana"
+    },
+    {
+      "@type": "City",
+      "name": "Costa Mesa"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mold Inspection Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mold Inspection",
+          "description": "Comprehensive visual inspection and moisture assessment"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Air Quality Testing",
+          "description": "Professional air sampling to measure mold spore concentrations"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Moisture Detection",
+          "description": "Advanced infrared thermal imaging and moisture meters"
+        }
+      }
+    ]
+  }
+}
+```
+
+---
+
+## 3. Add FAQPage Schema Markup
+
+**Task**: Add structured data to the FAQ section so Google can display rich snippets in search results.
+
+**Implementation**:
+- Add FAQPage schema to the homepage where FAQs are displayed
+- Include all questions and answers from the FAQ section
+
+**Schema to implement**:
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a mold inspection take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a mold inspection cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our inspections start at $299 for smaller homes. The exact cost depends on property size and the scope of testing needed. Call us for a free quote at 949-371-5934."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide mold remediation services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus exclusively on inspection and testing to ensure our findings are completely unbiased. We can recommend trusted remediation companies if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How soon can I schedule an inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, and 30+ other cities throughout OC."
+      }
+    }
+  ]
+}
+```
+
+---
+
+## 4. Optimize Image Alt Text
+
+**Task**: Add descriptive, keyword-rich alt text to all images on the site.
+
+**Implementation**:
+- Review every image on the site
+- Add alt text that describes the image AND includes relevant keywords naturally
+- Ensure alt text is helpful for screen readers and SEO
+
+**Alt text examples**:
+
+- **Logo**: `alt="OC Mold Pros - Professional Mold Inspection Services in Orange County, CA"`
+- **Hero image**: `alt="Professional mold inspector examining Orange County home with thermal imaging camera"`
+- **Service icons**: 
+  - `alt="Mold inspection icon - comprehensive visual inspection services"`
+  - `alt="Air quality testing icon - professional mold spore analysis"`
+  - `alt="Moisture detection icon - infrared thermal imaging technology"`
+  - `alt="Mold inspection report icon - detailed findings and recommendations"`
+
+**General rules**:
+- Alt text should be 125 characters or less
+- Be descriptive and specific
+- Include location (Orange County) where relevant
+- Include service type (mold inspection, testing, etc.)
+- Don't keyword stuff - keep it natural
+
+---
+
+## 5. Add Customer Reviews/Testimonials Section with Review Schema
+
+**Task**: Create a testimonials section on the homepage with structured data markup.
+
+**Implementation**:
+- Add a new "Customer Reviews" or "What Our Clients Say" section to the homepage
+- Include 3-5 realistic testimonials with customer names and cities
+- Add AggregateRating and Review schema markup
+
+**Testimonials content example**:
+
+```
+## What Our Clients Say
+
+Real reviews from Orange County homeowners who trust OC Mold Pros
+
+---
+
+⭐⭐⭐⭐⭐
+
+"Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. Highly recommend!"
+
+**Sarah Martinez** - Irvine, CA
+
+---
+
+⭐⭐⭐⭐⭐
+
+"Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 24 hours just like they promised. Worth every penny."
+
+**David Chen** - Newport Beach, CA
+
+---
+
+⭐⭐⭐⭐⭐
+
+"After buying our home, we wanted peace of mind. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment."
+
+**Jennifer Williams** - Huntington Beach, CA
+
+---
+
+⭐⭐⭐⭐⭐
+
+"Best mold inspection company in Orange County. They were honest, didn't try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now."
+
+**Robert Thompson** - Mission Viejo, CA
+```
+
+**Review Schema to implement**:
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "OC Mold Pros",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sarah Martinez"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. Highly recommend!",
+      "datePublished": "2024-11-15"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "David Chen"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 24 hours just like they promised. Worth every penny.",
+      "datePublished": "2024-10-22"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Jennifer Williams"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "After buying our home, we wanted peace of mind. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment.",
+      "datePublished": "2024-12-05"
+    }
+  ]
+}
+```
+
+---
+
+## Implementation Checklist
+
+Please complete the following:
+
+- [ ] Add unique meta descriptions to all pages (homepage, services, about, pricing, contact, service area pages)
+- [ ] Add LocalBusiness JSON-LD schema to site-wide layout or homepage
+- [ ] Add FAQPage JSON-LD schema to homepage FAQ section
+- [ ] Review all images and add descriptive, keyword-rich alt text
+- [ ] Create testimonials section on homepage with customer reviews
+- [ ] Add AggregateRating and Review JSON-LD schema for testimonials
+- [ ] Test schema markup using Google's Rich Results Test tool
+- [ ] Verify all pages have proper title tags
+- [ ] Ensure schema markup is valid JSON-LD format
+
+---
+
+## Technical Notes
+
+- Use Next.js metadata API for meta tags (if using app router)
+- Add JSON-LD scripts in the `<head>` section or as separate Script components
+- Keep all schema markup valid and up-to-date
+- Use semantic HTML for better accessibility and SEO
+- Test mobile responsiveness after changes
+
+---
+
+## Validation
+
+After implementation, please validate:
+1. Meta descriptions appear in page source and are correct length
+2. Schema markup validates at https://validator.schema.org/
+3. Google Rich Results Test shows eligible rich snippets
+4. All images have alt text (no empty alt attributes)
+5. Reviews section displays properly on mobile and desktop
+
+---
+
+**Priority**: HIGH - These improvements will significantly impact search engine visibility and click-through rates from search results.

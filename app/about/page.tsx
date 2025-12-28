@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Us | OC Mold Pros - Orange County Mold Inspection Experts',
-  description: 'Learn about OC Mold Pros, your trusted mold inspection and testing company serving Orange County, California. Certified inspectors, advanced technology, local expertise.',
+  description: 'OC Mold Pros: Orange County\'s trusted mold inspection experts with 15+ years experience. Licensed, certified, and committed to protecting your home and family.',
 }
 
 export default function AboutPage() {
