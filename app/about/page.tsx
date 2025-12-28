@@ -35,13 +35,19 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="prose prose-lg text-gray-600">
                 <p>
-                  OC Mold Pros was founded with a simple mission: to provide Orange County homeowners and businesses with honest, thorough, and professional mold inspection services. As a locally owned and operated company, we understand the unique challenges that Southern California properties face.
+                  Welcome to OC Mold Pros, your trusted partner in mold inspection and air quality services across Southern California and Orange County. Our mission is simple: to ensure that every home and business we inspect is a safe and healthy environment, free from the hidden dangers of mold.
                 </p>
                 <p className="mt-4">
-                  Our founder recognized a need in the community for transparent, reliable mold testing that puts the customer first. Unlike companies that both inspect and remediate, we focus exclusively on inspection and testing, ensuring our findings are completely unbiased.
+                  At OC Mold Pros, our team of professional home inspectors is not just experienced—they&apos;re fully certified and rigorously trained to the highest industry standards. We believe in providing our clients with detailed, easy-to-read reports that offer clear insights into the condition of their property. No confusing jargon—just straightforward information that helps you make informed decisions.
                 </p>
                 <p className="mt-4">
-                  Today, we continue to serve families and businesses throughout Orange County, from the beaches of San Clemente to the hills of Yorba Linda. Every inspection we perform is backed by our commitment to accuracy, professionalism, and customer satisfaction.
+                  Customer service is at the heart of everything we do. We know that dealing with potential mold issues can be stressful, so we&apos;re committed to offering a friendly, supportive experience from start to finish. Whether you&apos;re a homeowner, realtor, or property manager, you can count on us to be transparent, reliable, and attentive to your needs.
+                </p>
+                <p className="mt-4">
+                  In addition, we pride ourselves on staying at the forefront of mold detection technology and best practices. We use state-of-the-art equipment and methods to ensure the most accurate results, and we continuously update our knowledge to serve you better.
+                </p>
+                <p className="mt-4">
+                  At OC Mold Pros, we believe that a healthy home is a happy home. We&apos;re here to help you breathe easier and live better—one inspection at a time.
                 </p>
               </div>
             </div>
