@@ -30,7 +30,7 @@ function HeroSection() {
     <section className="relative pt-28">
       <div style={{ position: 'relative' }} className="h-[550px] md:h-[650px] w-full">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/2/24/San_Clemente_Pier%2C_San_Clemente%2C_California.jpg"
+          src="/hero-bg.png"
           alt="San Clemente Pier overlooking the Pacific Ocean in Orange County, California"
           fill
           priority
@@ -54,9 +54,6 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      <p className="text-xs text-gray-500 text-center py-2 bg-gray-50">
-        Image: San Clemente Pier, California. Photo by <a href="https://commons.wikimedia.org/wiki/File:San_Clemente_Pier,_San_Clemente,_California.jpg" target="_blank" rel="noopener noreferrer" className="underline hover:text-ocean-600">Wikimedia Commons</a> (CC BY-SA 4.0)
-      </p>
     </section>
   )
 }
