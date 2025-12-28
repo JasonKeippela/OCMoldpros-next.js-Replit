@@ -171,20 +171,6 @@ const organizationSchema = {
     },
     {
       "@type": "Review",
-      "author": { "@type": "Person", "name": "Sarah Martinez" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. The inspector was knowledgeable and explained everything clearly. Highly recommend OC Mold Pros!",
-      "datePublished": "2024-11-15"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "David Chen" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 48 hours just like they promised. Very professional and worth every penny for the peace of mind.",
-      "datePublished": "2024-10-22"
-    },
-    {
-      "@type": "Review",
       "author": { "@type": "Person", "name": "Jennifer Williams" },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "After buying our home, we wanted peace of mind about potential mold issues. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment in our home's health.",
@@ -513,18 +499,6 @@ function TestimonialsSection() {
       location: "Orange County, CA",
       date: "December 2024",
       text: "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!"
-    },
-    {
-      name: "Sarah Martinez",
-      location: "Irvine, CA",
-      date: "November 2024",
-      text: "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. The inspector was knowledgeable and explained everything clearly. Highly recommend!"
-    },
-    {
-      name: "David Chen",
-      location: "Newport Beach, CA",
-      date: "October 2024",
-      text: "Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 48 hours just like they promised. Very professional and worth every penny for the peace of mind."
     },
     {
       name: "Jennifer Williams",
