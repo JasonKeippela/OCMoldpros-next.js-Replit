@@ -65,7 +65,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <span className="text-ocean-400 text-xs">Mon-Sat: 8am - 6pm</span>
+                <span className="text-ocean-400 text-xs">Mon-Fri: 8am - 5pm, Sat: 8am - 12pm</span>
               </li>
             </ul>
           </div>

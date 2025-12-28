@@ -59,7 +59,7 @@ export default async function CityPage({ params }: Props) {
     },
     "serviceType": ["Mold Inspection", "Mold Testing", "Mold Remediation", "Air Quality Testing"],
     "priceRange": "$$",
-    "openingHours": "Mo-Sa 08:00-18:00"
+    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
   }
 
   return (
