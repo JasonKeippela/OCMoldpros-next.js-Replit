@@ -75,7 +75,11 @@ export default function Footer() {
       <div className="border-t border-ocean-800">
         <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; {new Date().getFullYear()} OC Mold Pros. All rights reserved.</p>
-          <p className="text-ocean-400 mt-2 md:mt-0">Serving all of Orange County, California</p>
+          <div className="flex items-center gap-4 mt-2 md:mt-0">
+            <Link href="/privacy" className="text-ocean-400 hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="text-ocean-600">|</span>
+            <p className="text-ocean-400">Serving all of Orange County, California</p>
+          </div>
         </div>
       </div>
     </footer>
