@@ -171,24 +171,10 @@ const organizationSchema = {
     },
     {
       "@type": "Review",
-      "author": { "@type": "Person", "name": "Jennifer Williams" },
+      "author": { "@type": "Person", "name": "Sean Hanley" },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "After buying our home, we wanted peace of mind about potential mold issues. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment in our home's health.",
-      "datePublished": "2024-12-05"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Robert Thompson" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Best mold inspection company in Orange County. They were honest, didn't try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now. Would definitely use them again.",
-      "datePublished": "2024-09-18"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Lisa Nguyen" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Excellent service from start to finish. The inspector arrived on time, was very thorough, and answered all our questions. The report was detailed and easy to understand. Highly recommend for anyone in Orange County needing mold testing.",
-      "datePublished": "2024-12-10"
+      "reviewBody": "I had a great experience with OC Mold Pros. Jason was thorough, honest, and took the time to explain everything so we understood exactly what was going on in our home. His awareness and care really stood out. We were so happy with the service that we're now having them come to our office building as well. Highly recommend!",
+      "datePublished": "2024-12-20"
     }
   ]
 }
@@ -501,22 +487,10 @@ function TestimonialsSection() {
       text: "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!"
     },
     {
-      name: "Jennifer Williams",
-      location: "Huntington Beach, CA",
+      name: "Sean Hanley",
+      location: "Orange County, CA",
       date: "December 2024",
-      text: "After buying our home, we wanted peace of mind about potential mold issues. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment in our home's health."
-    },
-    {
-      name: "Robert Thompson",
-      location: "Mission Viejo, CA",
-      date: "September 2024",
-      text: "Best mold inspection company in Orange County. They were honest, didn't try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now. Would definitely use them again."
-    },
-    {
-      name: "Lisa Nguyen",
-      location: "Costa Mesa, CA",
-      date: "December 2024",
-      text: "Excellent service from start to finish. The inspector arrived on time, was very thorough, and answered all our questions. The report was detailed and easy to understand. Highly recommend for anyone in Orange County needing mold testing."
+      text: "I had a great experience with OC Mold Pros. Jason was thorough, honest, and took the time to explain everything so we understood exactly what was going on in our home. His awareness and care really stood out. We were so happy with the service that we're now having them come to our office building as well. Highly recommend!"
     }
   ]
 
