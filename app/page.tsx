@@ -197,10 +197,9 @@ function TrustIndicators() {
   return (
     <section className="py-12 bg-white border-b">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-3 gap-8 text-center">
           {[
             { number: '15+', label: 'Years Experience' },
-            { number: '5,000+', label: 'Inspections Completed' },
             { number: '100%', label: 'Satisfaction Guaranteed' },
             { number: '24hr', label: 'Report Turnaround' }
           ].map((stat, i) => (
