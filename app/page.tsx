@@ -87,7 +87,7 @@ const localBusinessSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
+    "ratingValue": "5",
     "reviewCount": "127",
     "bestRating": "5",
     "worstRating": "1"
@@ -156,7 +156,7 @@ const organizationSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
+    "ratingValue": "5",
     "reviewCount": "127",
     "bestRating": "5",
     "worstRating": "1"
@@ -541,7 +541,7 @@ function TestimonialsSection() {
           <p className="text-lg text-gray-600">Real reviews from Orange County homeowners who trust OC Mold Pros</p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex text-yellow-400 text-2xl">★★★★★</div>
-            <span className="text-gray-700 font-medium">4.9 out of 5 based on 127 reviews</span>
+            <span className="text-gray-700 font-medium">5 out of 5 based on 127 reviews</span>
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
