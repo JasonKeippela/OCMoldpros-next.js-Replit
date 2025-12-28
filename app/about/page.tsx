@@ -35,19 +35,40 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="prose prose-lg text-gray-600">
                 <p>
-                  Welcome to OC Mold Pros, your trusted partner in mold inspection and air quality services across Southern California and Orange County. Our mission is simple: to ensure that every home and business we inspect is a safe and healthy environment, free from the hidden dangers of mold.
+                  OC Mold Pros was born out of personal experience — not a business idea.
                 </p>
                 <p className="mt-4">
-                  At OC Mold Pros, our team of professional home inspectors is not just experienced—they&apos;re fully certified and rigorously trained to the highest industry standards. We believe in providing our clients with detailed, easy-to-read reports that offer clear insights into the condition of their property. No confusing jargon—just straightforward information that helps you make informed decisions.
+                  For over a decade, my wife Joy and I unknowingly lived in a home that was making our family sick. What started as vague, unexplained health issues slowly became a long, exhausting journey of doctor visits, treatments, and unanswered questions. We did everything we were told to do. We trusted professionals. We spent money where we were advised to spend it — and then spent more.
                 </p>
                 <p className="mt-4">
-                  Customer service is at the heart of everything we do. We know that dealing with potential mold issues can be stressful, so we&apos;re committed to offering a friendly, supportive experience from start to finish. Whether you&apos;re a homeowner, realtor, or property manager, you can count on us to be transparent, reliable, and attentive to your needs.
+                  Over the years, we invested tens of thousands of dollars trying to fix the problem: medical appointments, specialists, supplements, treatments, and eventually home repairs and remediation efforts. At one point, we had spent well over $100,000 between healthcare costs and attempts to repair our home — all while still not getting better.
+                </p>
+                <p className="mt-4 font-semibold text-gray-900">
+                  The most frustrating part? No one was looking at the environment.
                 </p>
                 <p className="mt-4">
-                  In addition, we pride ourselves on staying at the forefront of mold detection technology and best practices. We use state-of-the-art equipment and methods to ensure the most accurate results, and we continuously update our knowledge to serve you better.
+                  It wasn&apos;t until we began noticing something strange — feeling better when we traveled and worse when we came home — that mold finally entered the conversation. Even then, it wasn&apos;t simple. Improper remediation attempts actually made things worse, forcing us to leave our home while trying to understand what had gone wrong. The emotional toll was heavy. We were exhausted. Discouraged. Worn down financially and mentally.
+                </p>
+                <p className="mt-4 font-semibold text-gray-900">
+                  But that struggle changed everything.
                 </p>
                 <p className="mt-4">
-                  At OC Mold Pros, we believe that a healthy home is a happy home. We&apos;re here to help you breathe easier and live better—one inspection at a time.
+                  With my background in construction and inspection, I began digging deeper — learning how mold really behaves, how moisture issues are often missed, and how poorly planned remediation can fail families who are already suffering. We realized that if this could happen to us — diligent, proactive homeowners — it could happen to anyone.
+                </p>
+                <p className="mt-4 font-semibold text-gray-900">
+                  OC Mold Pros exists so others don&apos;t have to learn the hard way like we did.
+                </p>
+                <p className="mt-4">
+                  Today, our mission is simple: find the problem correctly, explain it clearly, and help people move forward with confidence — not fear.
+                </p>
+                <p className="mt-4">
+                  We approach every inspection with the care we wish someone had shown us years ago. We don&apos;t rush. We don&apos;t gloss over details. And we don&apos;t treat mold as &quot;just another inspection item.&quot; We understand what&apos;s at stake — your health, your home, and your peace of mind.
+                </p>
+                <p className="mt-4 font-semibold text-gray-900">
+                  This isn&apos;t just our profession. It&apos;s personal.
+                </p>
+                <p className="mt-4">
+                  And if you&apos;re reading this because something doesn&apos;t feel right in your home or your health — you&apos;re not crazy, and you&apos;re not alone. We&apos;re here to help you get answers.
                 </p>
               </div>
             </div>
