@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Our Inspection Process | OC Mold Pros - Orange County',
-  description: 'Learn about our 4-step mold inspection process. From scheduling to detailed reporting, we make professional mold testing easy and transparent.',
+  description: 'Our 4-step mold inspection process: Schedule, Inspect, Analyze, Report. Same-day service available throughout Orange County. Call 949-371-5934 to start today.',
 }
 
 export default function ProcessPage() {

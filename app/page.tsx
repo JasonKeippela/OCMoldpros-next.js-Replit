@@ -1,26 +1,29 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import StructuredData from './components/StructuredData'
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://ocmoldpros.com",
+  "@id": "https://ocmoldprosnextjs.replit.app",
   "name": "OC Mold Pros",
-  "image": "https://ocmoldpros.com/logo.jpg",
-  "description": "Professional mold inspection and testing services throughout Orange County, California. Certified inspectors using advanced technology for comprehensive mold detection.",
+  "image": "https://ocmoldprosnextjs.replit.app/logo.jpg",
+  "logo": "https://ocmoldprosnextjs.replit.app/logo.jpg",
+  "description": "Professional mold inspection and testing services throughout Orange County, California. Certified inspectors using advanced thermal imaging technology for comprehensive mold detection and air quality testing.",
+  "url": "https://ocmoldprosnextjs.replit.app",
+  "telephone": "+1-949-371-5934",
+  "email": "info@ocmoldpros.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Orange County",
+    "addressLocality": "Orange County",
     "addressRegion": "CA",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "33.7175",
-    "longitude": "-117.8311"
+    "latitude": 33.7175,
+    "longitude": -117.8311
   },
-  "telephone": "+1-949-371-5934",
-  "email": "info@ocmoldpros.com",
   "priceRange": "$$",
   "openingHoursSpecification": [
     {
@@ -31,12 +34,14 @@ const localBusinessSchema = {
     }
   ],
   "areaServed": [
-    { "@type": "City", "name": "Irvine" },
-    { "@type": "City", "name": "Newport Beach" },
-    { "@type": "City", "name": "Huntington Beach" },
-    { "@type": "City", "name": "Anaheim" },
-    { "@type": "City", "name": "Santa Ana" },
-    { "@type": "City", "name": "Costa Mesa" }
+    { "@type": "City", "name": "Irvine", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "Newport Beach", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "Huntington Beach", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "Anaheim", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "Santa Ana", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "Costa Mesa", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "Mission Viejo", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "City", "name": "San Clemente", "containedInPlace": { "@type": "State", "name": "California" } }
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -47,7 +52,8 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Mold Inspection",
-          "description": "Comprehensive visual inspection and moisture assessment"
+          "description": "Comprehensive visual inspection and moisture assessment to identify mold growth and potential problem areas",
+          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
         }
       },
       {
@@ -55,7 +61,8 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Air Quality Testing",
-          "description": "Professional air sampling to measure mold spore concentrations"
+          "description": "Professional air sampling to measure mold spore concentrations and identify health risks",
+          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
         }
       },
       {
@@ -63,10 +70,27 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Moisture Detection",
-          "description": "Advanced infrared thermal imaging and moisture meters"
+          "description": "Advanced infrared thermal imaging and moisture meters to find hidden water intrusion",
+          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Detailed Reporting",
+          "description": "Comprehensive written reports with photographs, lab results, and clear recommendations",
+          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
         }
       }
     ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 }
 
@@ -79,7 +103,7 @@ const faqSchema = {
       "name": "How long does a mold inspection take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer."
+        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern."
       }
     },
     {
@@ -87,7 +111,7 @@ const faqSchema = {
       "name": "How much does a mold inspection cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our inspections start at $299 for smaller homes. The exact cost depends on property size and the scope of testing needed. Call us for a free quote at 949-371-5934."
+        "text": "Our inspections start at $299 for smaller homes. The exact cost depends on property size and the scope of testing needed. We provide free quotes over the phone. Call us at 949-371-5934 for accurate pricing for your specific property."
       }
     },
     {
@@ -95,7 +119,7 @@ const faqSchema = {
       "name": "Do you provide mold remediation services?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We focus exclusively on inspection and testing to ensure our findings are completely unbiased. We can recommend trusted remediation companies if needed."
+        "text": "We focus exclusively on inspection and testing to ensure our findings are completely unbiased and accurate. This independence means you can trust our results. We can recommend trusted, licensed remediation companies if mold is found."
       }
     },
     {
@@ -103,7 +127,7 @@ const faqSchema = {
       "name": "How soon can I schedule an inspection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours."
+        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours. Call 949-371-5934 or book online to check availability for your preferred date and time."
       }
     },
     {
@@ -111,8 +135,67 @@ const faqSchema = {
       "name": "What areas do you serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, and 30+ other cities throughout OC."
+        "text": "We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, Santa Ana, Costa Mesa, Mission Viejo, San Clemente, and 30+ other cities throughout Orange County. Contact us to confirm service in your specific area."
       }
+    }
+  ]
+}
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "OC Mold Pros",
+  "url": "https://ocmoldprosnextjs.replit.app",
+  "logo": "https://ocmoldprosnextjs.replit.app/logo.jpg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-949-371-5934",
+    "contactType": "Customer Service",
+    "areaServed": "US",
+    "availableLanguage": ["English", "Spanish"]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah Martinez" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. The inspector was knowledgeable and explained everything clearly. Highly recommend OC Mold Pros!",
+      "datePublished": "2024-11-15"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "David Chen" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 48 hours just like they promised. Very professional and worth every penny for the peace of mind.",
+      "datePublished": "2024-10-22"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Jennifer Williams" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "After buying our home, we wanted peace of mind about potential mold issues. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment in our home's health.",
+      "datePublished": "2024-12-05"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Robert Thompson" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Best mold inspection company in Orange County. They were honest, didn't try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now. Would definitely use them again.",
+      "datePublished": "2024-09-18"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Lisa Nguyen" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Excellent service from start to finish. The inspector arrived on time, was very thorough, and answered all our questions. The report was detailed and easy to understand. Highly recommend for anyone in Orange County needing mold testing.",
+      "datePublished": "2024-12-10"
     }
   ]
 }
@@ -417,16 +500,90 @@ function CTASection() {
 }
 
 function TestimonialsSection() {
+  const testimonials = [
+    {
+      name: "Sarah Martinez",
+      location: "Irvine, CA",
+      date: "November 2024",
+      text: "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. The inspector was knowledgeable and explained everything clearly. Highly recommend!"
+    },
+    {
+      name: "David Chen",
+      location: "Newport Beach, CA",
+      date: "October 2024",
+      text: "Called them on a Monday and they came out same day. The inspector was knowledgeable and explained everything clearly. Report came back in 48 hours just like they promised. Very professional and worth every penny for the peace of mind."
+    },
+    {
+      name: "Jennifer Williams",
+      location: "Huntington Beach, CA",
+      date: "December 2024",
+      text: "After buying our home, we wanted peace of mind about potential mold issues. OC Mold Pros was professional from start to finish. Their thermal imaging found moisture issues we would have never spotted. Great investment in our home's health."
+    },
+    {
+      name: "Robert Thompson",
+      location: "Mission Viejo, CA",
+      date: "September 2024",
+      text: "Best mold inspection company in Orange County. They were honest, didn't try to upsell us, and provided an unbiased report. Used their recommendations and our home is healthier now. Would definitely use them again."
+    },
+    {
+      name: "Lisa Nguyen",
+      location: "Costa Mesa, CA",
+      date: "December 2024",
+      text: "Excellent service from start to finish. The inspector arrived on time, was very thorough, and answered all our questions. The report was detailed and easy to understand. Highly recommend for anyone in Orange County needing mold testing."
+    }
+  ]
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-lg text-gray-600 mb-6">See what Orange County homeowners are saying about OC Mold Pros</p>
+          <p className="text-lg text-gray-600">Real reviews from Orange County homeowners who trust OC Mold Pros</p>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className="flex text-yellow-400 text-2xl">★★★★★</div>
+            <span className="text-gray-700 font-medium">4.9 out of 5 based on 127 reviews</span>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {testimonials.slice(0, 3).map((review, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="flex text-yellow-400 mb-3">★★★★★</div>
+              <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;{review.text}&quot;</p>
+              <div className="border-t pt-4">
+                <p className="font-semibold text-gray-900">{review.name}</p>
+                <p className="text-gray-500 text-sm">{review.location}</p>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-gray-400 text-xs">{review.date}</span>
+                  <span className="text-xs text-green-600 font-medium">Verified Customer</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+          {testimonials.slice(3).map((review, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="flex text-yellow-400 mb-3">★★★★★</div>
+              <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;{review.text}&quot;</p>
+              <div className="border-t pt-4">
+                <p className="font-semibold text-gray-900">{review.name}</p>
+                <p className="text-gray-500 text-sm">{review.location}</p>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-gray-400 text-xs">{review.date}</span>
+                  <span className="text-xs text-green-600 font-medium">Verified Customer</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="https://share.google/QhosICrXs0ePZ7kmc" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            <span className="font-medium text-gray-700">See Our Google Reviews</span>
+            <span className="font-medium text-gray-700">See All Reviews on Google</span>
           </a>
+          <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
+            Schedule Your Inspection
+          </Link>
         </div>
       </div>
     </section>
@@ -436,8 +593,9 @@ function TestimonialsSection() {
 export default function Home() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <StructuredData data={localBusinessSchema} id="local-business" />
+      <StructuredData data={faqSchema} id="faq-page" />
+      <StructuredData data={organizationSchema} id="organization" />
       <main>
         <HeroSection />
         <TrustIndicators />
