@@ -539,10 +539,6 @@ function TestimonialsSection() {
               <div className="border-t pt-4">
                 <p className="font-semibold text-gray-900">{review.name}</p>
                 <p className="text-gray-500 text-sm">{review.location}</p>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="text-gray-400 text-xs">{review.date}</span>
-                  <span className="text-xs text-green-600 font-medium">Verified Customer</span>
-                </div>
               </div>
             </div>
           ))}
@@ -555,10 +551,6 @@ function TestimonialsSection() {
               <div className="border-t pt-4">
                 <p className="font-semibold text-gray-900">{review.name}</p>
                 <p className="text-gray-500 text-sm">{review.location}</p>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="text-gray-400 text-xs">{review.date}</span>
-                  <span className="text-xs text-green-600 font-medium">Verified Customer</span>
-                </div>
               </div>
             </div>
           ))}
