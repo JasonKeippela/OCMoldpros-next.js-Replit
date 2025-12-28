@@ -175,6 +175,13 @@ const organizationSchema = {
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "I had a great experience with OC Mold Pros. Jason was thorough, honest, and took the time to explain everything so we understood exactly what was going on in our home. His awareness and care really stood out. We were so happy with the service that we're now having them come to our office building as well. Highly recommend!",
       "datePublished": "2024-12-20"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Mike Saidi" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "We had mold inspections done before buying our property, but later when we opened the walls, we found a few surprises. A friend referred us to Jason at OC Mold Pros, and I'm so glad we called him. He was super knowledgeable, very reasonably priced, and went above and beyond. He even found mold inside the chimney — something the first company totally missed! Couldn't be happier with his work. Highly recommend OC Mold Pros!",
+      "datePublished": "2024-11-05"
     }
   ]
 }
@@ -491,6 +498,12 @@ function TestimonialsSection() {
       location: "Orange County, CA",
       date: "December 2024",
       text: "I had a great experience with OC Mold Pros. Jason was thorough, honest, and took the time to explain everything so we understood exactly what was going on in our home. His awareness and care really stood out. We were so happy with the service that we're now having them come to our office building as well. Highly recommend!"
+    },
+    {
+      name: "Mike Saidi",
+      location: "Orange County, CA",
+      date: "November 2024",
+      text: "We had mold inspections done before buying our property, but later when we opened the walls, we found a few surprises. A friend referred us to Jason at OC Mold Pros, and I'm so glad we called him. He was super knowledgeable, very reasonably priced, and went above and beyond. He even found mold inside the chimney — something the first company totally missed! Couldn't be happier with his work. Highly recommend OC Mold Pros!"
     }
   ]
 
