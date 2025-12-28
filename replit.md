@@ -58,12 +58,16 @@ npm run dev -- -p 5000
 ```
 
 ## SEO Elements
-- Dynamic meta tags per page
-- JSON-LD LocalBusiness schema on homepage and city pages
+- Dynamic meta tags per page with unique, keyword-optimized descriptions
+- JSON-LD LocalBusiness schema (with geo coordinates, services catalog, hours)
+- JSON-LD FAQPage schema (5 common questions)
+- JSON-LD Review/AggregateRating schema (4 reviews, 4.9/5 rating)
 - Sitemap.xml with all 40+ pages
 - robots.txt
 - Semantic HTML structure
 - Breadcrumb navigation
+- Optimized image alt text (logo, hero image)
 
 ## Recent Changes
+- Dec 28, 2025: Enhanced SEO with LocalBusiness, FAQPage, and Review schemas; added testimonials section; optimized meta descriptions and alt text
 - Dec 26, 2025: Comprehensive website expansion with navigation, city pages, and all content pages
