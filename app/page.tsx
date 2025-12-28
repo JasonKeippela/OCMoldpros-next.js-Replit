@@ -497,25 +497,21 @@ function TestimonialsSection() {
     {
       name: "Michelle B.",
       location: "Orange County, CA",
-      date: "December 2024",
       text: "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!"
     },
     {
       name: "Sean Hanley",
       location: "Orange County, CA",
-      date: "December 2024",
       text: "I had a great experience with OC Mold Pros. Jason was thorough, honest, and took the time to explain everything so we understood exactly what was going on in our home. His awareness and care really stood out. We were so happy with the service that we're now having them come to our office building as well. Highly recommend!"
     },
     {
       name: "Mike Saidi",
       location: "Orange County, CA",
-      date: "November 2024",
       text: "We had mold inspections done before buying our property, but later when we opened the walls, we found a few surprises. A friend referred us to Jason at OC Mold Pros, and I'm so glad we called him. He was super knowledgeable, very reasonably priced, and went above and beyond. He even found mold inside the chimney — something the first company totally missed! Couldn't be happier with his work. Highly recommend OC Mold Pros!"
     },
     {
       name: "Nathan Abell",
       location: "Orange County, CA",
-      date: "November 2024",
       text: "Jason at OC Mold Pros was amazing! He came out to test our home for mold and walked me through the process with professionalism. He gave me detailed results, and also provided clear, practical steps on how to move forward and prevent future mold growth. His expertise and genuine care for our family's health and home really stood out. I hope you never have mold problems, but if you do, I highly recommend Jason and the OC Mold Pros team!"
     }
   ]
