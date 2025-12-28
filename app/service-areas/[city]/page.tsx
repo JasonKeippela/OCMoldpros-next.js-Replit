@@ -70,11 +70,11 @@ export default async function CityPage({ params }: Props) {
         <nav className="bg-gray-100 py-3">
           <div className="max-w-6xl mx-auto px-4">
             <ol className="flex items-center gap-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-ocean-600">Home</Link></li>
+              <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
               <li>/</li>
-              <li><Link href="/service-areas" className="hover:text-ocean-600">Service Areas</Link></li>
+              <li><Link href="/service-areas" className="hover:text-gray-900">Service Areas</Link></li>
               <li>/</li>
-              <li className="text-ocean-700 font-medium">{cityInfo.name}, CA</li>
+              <li className="text-gray-900 font-medium">{cityInfo.name}, CA</li>
             </ol>
           </div>
         </nav>
@@ -91,7 +91,7 @@ export default async function CityPage({ params }: Props) {
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call 949-371-5934
               </a>
-              <Link href="/contact" className="px-8 py-4 border-2 border-ocean-600 text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
+              <Link href="/contact" className="px-8 py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
                 Schedule Inspection
               </Link>
             </div>
@@ -128,7 +128,7 @@ export default async function CityPage({ params }: Props) {
                 { title: 'Locally Based in Orange County', desc: 'We know the local climate, construction, and common mold issues in ' + cityInfo.name + '.' }
               ].map((item, i) => (
                 <div key={i} className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-lg font-semibold text-ocean-700 mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
               ))}
@@ -185,7 +185,7 @@ export default async function CityPage({ params }: Props) {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Nearby Areas We Serve</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {nearbyWithSlugs.map(city => (
-                <Link key={city.slug} href={`/service-areas/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-ocean-700 hover:bg-ocean-100 transition-colors text-center font-medium">
+                <Link key={city.slug} href={`/service-areas/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium">
                   {city.name}, CA
                 </Link>
               ))}
@@ -200,7 +200,7 @@ export default async function CityPage({ params }: Props) {
               Don&apos;t wait until mold becomes a bigger problem. Contact OC Mold Pros for professional mold testing and inspection services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
+              <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
                 Call 949-371-5934
               </a>
               <a href="mailto:info@ocmoldpros.com" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">

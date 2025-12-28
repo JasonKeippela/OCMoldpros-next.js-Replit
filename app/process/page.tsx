@@ -59,9 +59,9 @@ export default function ProcessPage() {
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-ocean-600">Home</Link></li>
+            <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-ocean-700 font-medium">Process</li>
+            <li className="text-gray-900 font-medium">Process</li>
           </ol>
         </div>
       </nav>
@@ -94,7 +94,7 @@ export default function ProcessPage() {
                   <ul className="space-y-2">
                     {step.details.map((detail, j) => (
                       <li key={j} className="flex items-start gap-2 text-gray-700">
-                        <svg className="w-5 h-5 text-ocean-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {detail}
@@ -141,7 +141,7 @@ export default function ProcessPage() {
             Schedule your professional mold inspection today. We are here to help protect your home and family.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
+            <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">

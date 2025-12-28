@@ -12,9 +12,9 @@ export default function AboutPage() {
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-ocean-600">Home</Link></li>
+            <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-ocean-700 font-medium">About</li>
+            <li className="text-gray-900 font-medium">About</li>
           </ol>
         </div>
       </nav>
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 ].map((value, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-12 h-12 bg-ocean-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-ocean-600 font-bold">{i + 1}</span>
+                      <span className="text-gray-900 font-bold">{i + 1}</span>
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">{value.title}</h3>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             ].map((cert, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow-sm text-center">
                 <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             Contact us today to schedule your professional mold inspection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
+            <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">

@@ -51,9 +51,9 @@ export default function BlogPage() {
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-ocean-600">Home</Link></li>
+            <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-ocean-700 font-medium">Learn</li>
+            <li className="text-gray-900 font-medium">Learn</li>
           </ol>
         </div>
       </nav>
@@ -75,12 +75,12 @@ export default function BlogPage() {
                 <div className="h-48 bg-gradient-to-br from-ocean-400 to-ocean-600"></div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-medium text-ocean-600 bg-ocean-50 px-2 py-1 rounded">{article.category}</span>
+                    <span className="text-xs font-medium text-gray-900 bg-ocean-50 px-2 py-1 rounded">{article.category}</span>
                     <span className="text-xs text-gray-500">{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                   </div>
                   <h2 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h2>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <span className="text-ocean-600 font-medium hover:text-ocean-700 cursor-pointer">Read More →</span>
+                  <span className="text-gray-900 font-medium hover:text-gray-900 cursor-pointer">Read More →</span>
                 </div>
               </article>
             ))}

@@ -13,9 +13,9 @@ export default function ServiceAreasPage() {
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-ocean-600">Home</Link></li>
+            <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-ocean-700 font-medium">Service Areas</li>
+            <li className="text-gray-900 font-medium">Service Areas</li>
           </ol>
         </div>
       </nav>
@@ -41,7 +41,7 @@ export default function ServiceAreasPage() {
                 href={`/service-areas/${city.slug}`}
                 className="p-4 bg-white border border-gray-200 rounded-xl hover:border-ocean-500 hover:shadow-md transition-all text-center group"
               >
-                <span className="text-gray-900 group-hover:text-ocean-600 font-medium">{city.name}</span>
+                <span className="text-gray-900 group-hover:text-gray-900 font-medium">{city.name}</span>
                 <span className="text-gray-500 text-sm block">California</span>
               </Link>
             ))}
@@ -73,7 +73,7 @@ export default function ServiceAreasPage() {
             Contact us to schedule a professional mold inspection anywhere in Orange County.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
+            <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">

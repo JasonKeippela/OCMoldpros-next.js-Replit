@@ -36,7 +36,7 @@ function HeroSection() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/70 to-ocean-900/50 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30 z-10" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl">
             Professional Mold Inspection & Testing in Orange County
@@ -45,7 +45,7 @@ function HeroSection() {
             Certified inspectors protecting your home and family with advanced mold detection technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
+            <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg">
@@ -70,7 +70,7 @@ function TrustIndicators() {
             { number: '24hr', label: 'Report Turnaround' }
           ].map((stat, i) => (
             <div key={i}>
-              <div className="text-3xl md:text-4xl font-bold text-ocean-600">{stat.number}</div>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
@@ -127,7 +127,7 @@ function ServicesSection() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <Link href="/services" className="inline-block px-6 py-3 border-2 border-ocean-600 text-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
+          <Link href="/services" className="inline-block px-6 py-3 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
             View All Services
           </Link>
         </div>
@@ -156,7 +156,7 @@ function WhyChooseUs() {
                 'Owner-operated with personalized service'
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-ocean-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-gray-900 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-gray-700">{item}</span>
@@ -170,7 +170,7 @@ function WhyChooseUs() {
             <a href="tel:9493715934" className="block w-full py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center mb-4">
               Call 949-371-5934
             </a>
-            <Link href="/contact" className="block w-full py-4 border-2 border-ocean-600 text-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
+            <Link href="/contact" className="block w-full py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
               Schedule Online
             </Link>
           </div>
@@ -203,13 +203,13 @@ function ServiceAreas() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {featuredCities.map(city => (
-            <Link key={city.slug} href={`/service-areas/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-ocean-700 hover:bg-ocean-100 transition-colors text-center font-medium">
+            <Link key={city.slug} href={`/service-areas/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium">
               {city.name}, CA
             </Link>
           ))}
         </div>
         <div className="text-center mt-8">
-          <Link href="/service-areas" className="text-ocean-600 hover:text-ocean-700 font-medium">
+          <Link href="/service-areas" className="text-gray-900 hover:text-gray-900 font-medium">
             View all 33+ cities we serve →
           </Link>
         </div>
@@ -245,7 +245,7 @@ function ProcessSection() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <Link href="/process" className="inline-block px-6 py-3 border-2 border-ocean-600 text-ocean-600 rounded-lg hover:bg-white transition-colors font-medium">
+          <Link href="/process" className="inline-block px-6 py-3 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-white transition-colors font-medium">
             Learn More About Our Process
           </Link>
         </div>
@@ -294,7 +294,7 @@ function FAQSection() {
         </div>
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Have more questions? We are here to help.</p>
-          <a href="tel:9493715934" className="text-ocean-600 hover:text-ocean-700 font-medium text-lg">
+          <a href="tel:9493715934" className="text-gray-900 hover:text-gray-900 font-medium text-lg">
             Call 949-371-5934
           </a>
         </div>
@@ -312,7 +312,7 @@ function CTASection() {
           Contact us today for a professional mold inspection. We serve all of Orange County with same-day service available.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
+          <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
             Call 949-371-5934
           </a>
           <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg shadow-lg">

@@ -38,19 +38,19 @@ export default function Navigation() {
         </Link>
         
         <div className="hidden lg:flex items-center gap-6">
-          <Link href="/" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium">Home</Link>
-          <Link href="/about" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium">About</Link>
-          <Link href="/services" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium">Services</Link>
+          <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Home</Link>
+          <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">About</Link>
+          <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</Link>
           
           <div className="relative" onMouseEnter={() => setServiceAreasOpen(true)} onMouseLeave={() => setServiceAreasOpen(false)}>
-            <Link href="/service-areas" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium flex items-center gap-1">
+            <Link href="/service-areas" className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center gap-1">
               Service Areas
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </Link>
             {serviceAreasOpen && (
               <div className="absolute top-full left-0 bg-white shadow-xl rounded-lg py-4 w-64 max-h-96 overflow-y-auto z-50">
                 {cities.map(city => (
-                  <Link key={city} href={`/service-areas/${cityToSlug(city)}`} className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-ocean-600 transition-colors text-sm">
+                  <Link key={city} href={`/service-areas/${cityToSlug(city)}`} className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">
                     {city}, CA
                   </Link>
                 ))}
@@ -58,13 +58,13 @@ export default function Navigation() {
             )}
           </div>
           
-          <Link href="/process" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium">Process</Link>
-          <Link href="/pricing" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium">Pricing</Link>
-          <Link href="/blog" className="text-gray-700 hover:text-ocean-600 transition-colors font-medium">Learn</Link>
+          <Link href="/process" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Process</Link>
+          <Link href="/pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Pricing</Link>
+          <Link href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Learn</Link>
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:9493715934" className="px-4 py-2 text-ocean-700 border border-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
+          <a href="tel:9493715934" className="px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
             949-371-5934
           </a>
           <Link href="/contact" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
@@ -82,15 +82,15 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t shadow-lg">
           <div className="px-4 py-4 space-y-3">
-            <Link href="/" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link href="/about" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/services" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/service-areas" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Service Areas</Link>
-            <Link href="/process" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Process</Link>
-            <Link href="/pricing" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-            <Link href="/blog" className="block text-gray-700 hover:text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Learn</Link>
+            <Link href="/" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/about" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link href="/services" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link href="/service-areas" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Service Areas</Link>
+            <Link href="/process" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Process</Link>
+            <Link href="/pricing" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+            <Link href="/blog" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Learn</Link>
             <div className="pt-3 space-y-2">
-              <a href="tel:9493715934" className="block w-full text-center px-4 py-2 text-ocean-700 border border-ocean-600 rounded-lg">949-371-5934</a>
+              <a href="tel:9493715934" className="block w-full text-center px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg">949-371-5934</a>
               <Link href="/contact" className="block w-full text-center px-4 py-2 bg-ocean-600 text-white rounded-lg" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
             </div>
           </div>

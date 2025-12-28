@@ -12,9 +12,9 @@ export default function PricingPage() {
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-ocean-600">Home</Link></li>
+            <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-ocean-700 font-medium">Pricing</li>
+            <li className="text-gray-900 font-medium">Pricing</li>
           </ol>
         </div>
       </nav>
@@ -35,13 +35,13 @@ export default function PricingPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2">Basic Inspection</h2>
               <p className="text-gray-500 mb-4">For smaller homes up to 1,500 sq ft</p>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-ocean-600">$299</span>
+                <span className="text-4xl font-bold text-gray-900">$299</span>
                 <span className="text-gray-500">+</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {['Visual inspection', 'Moisture detection', 'Infrared thermal imaging', '1 air sample', 'Written report'].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     {item}
@@ -60,13 +60,13 @@ export default function PricingPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2">Standard Inspection</h2>
               <p className="text-gray-500 mb-4">For homes 1,500 - 3,000 sq ft</p>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-ocean-600">$399</span>
+                <span className="text-4xl font-bold text-gray-900">$399</span>
                 <span className="text-gray-500">+</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {['Complete visual inspection', 'Comprehensive moisture detection', 'Infrared thermal imaging', '2-3 air samples', 'Surface sampling', 'Detailed report with photos'].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     {item}
@@ -82,13 +82,13 @@ export default function PricingPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2">Comprehensive Inspection</h2>
               <p className="text-gray-500 mb-4">For larger homes 3,000+ sq ft</p>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-ocean-600">$499</span>
+                <span className="text-4xl font-bold text-gray-900">$499</span>
                 <span className="text-gray-500">+</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {['Full property inspection', 'Advanced moisture mapping', 'Infrared thermal imaging', '4+ air samples', 'Multiple surface samples', 'HVAC inspection', 'Comprehensive report'].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     {item}
@@ -118,7 +118,7 @@ export default function PricingPage() {
                   <h3 className="font-semibold text-gray-900">{item.service}</h3>
                   <p className="text-gray-500 text-sm">{item.desc}</p>
                 </div>
-                <span className="text-ocean-600 font-semibold whitespace-nowrap ml-4">{item.price}</span>
+                <span className="text-gray-900 font-semibold whitespace-nowrap ml-4">{item.price}</span>
               </div>
             ))}
           </div>
@@ -151,7 +151,7 @@ export default function PricingPage() {
             Call us for a free consultation and accurate pricing for your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:9493715934" className="px-8 py-4 bg-white text-ocean-700 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
+            <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
