@@ -59,15 +59,17 @@ npm run dev -- -p 5000
 
 ## SEO Elements
 - Dynamic meta tags per page with unique, keyword-optimized descriptions
-- JSON-LD LocalBusiness schema (with geo coordinates, services catalog, hours)
-- JSON-LD FAQPage schema (5 common questions)
-- JSON-LD Review/AggregateRating schema (4 reviews, 4.9/5 rating)
+- JSON-LD LocalBusiness schema (with geo coordinates, 8 cities, services catalog, hours, aggregateRating)
+- JSON-LD FAQPage schema (5 detailed questions with expanded answers)
+- JSON-LD Organization schema (with 5 reviews, aggregateRating, contact point)
+- Open Graph and Twitter Card meta tags for social sharing
 - Sitemap.xml with all 40+ pages
 - robots.txt
 - Semantic HTML structure
 - Breadcrumb navigation
 - Optimized image alt text (logo, hero image)
+- StructuredData component using Next.js Script with beforeInteractive strategy
 
 ## Recent Changes
-- Dec 28, 2025: Enhanced SEO with LocalBusiness, FAQPage, and Review schemas; added testimonials section; optimized meta descriptions and alt text
+- Dec 28, 2025: Comprehensive SEO overhaul - enhanced schemas using Next.js Script component, added Organization schema with reviews, added testimonials section with 5 reviews and Google Reviews button, Open Graph and Twitter Card tags
 - Dec 26, 2025: Comprehensive website expansion with navigation, city pages, and all content pages
