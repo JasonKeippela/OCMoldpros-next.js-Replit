@@ -2,11 +2,84 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Pricing | Mold Inspection Costs | OC Mold Pros - Orange County',
-  description: 'Transparent mold inspection pricing in Orange County starting at $299. No hidden fees. Free quotes available. Call 949-371-5934 for custom pricing today!',
+  title: 'Packages & Pricing | Mold Inspection Costs | OC Mold Pros - Orange County',
+  description: 'Transparent mold inspection pricing in Orange County. Choose from our inspection packages starting at $799. No hidden fees. Call 949-371-5934 for a free quote.',
 }
 
 export default function PricingPage() {
+  const packages = [
+    {
+      name: 'I Inspect',
+      price: '$899',
+      description: 'Perfect for initial inspections and peace of mind',
+      features: [
+        'Up to 4-hour comprehensive inspection',
+        'Moisture mapping with professional meters',
+        'Thermal imaging technology',
+        'Detailed report with findings and photos',
+        'Remediation recommendations'
+      ],
+      buttonText: 'Book Now',
+      buttonStyle: 'outline',
+      popular: false
+    },
+    {
+      name: 'I Inspect Plus',
+      price: '$1,299',
+      description: 'Our most popular package for thorough testing',
+      features: [
+        'Everything in I Inspect',
+        'Professional air sample collection',
+        'ERMI testing for mold DNA analysis',
+        'HERTSMI-2 scoring',
+        'Lab-certified results and interpretation'
+      ],
+      buttonText: 'Book Now',
+      buttonStyle: 'filled',
+      popular: true
+    },
+    {
+      name: 'Healthy Choice',
+      price: '$1,997',
+      description: 'Comprehensive testing for health-conscious homeowners',
+      features: [
+        'Everything in I Inspect Plus',
+        'Mycotoxin testing',
+        'VOC (Volatile Organic Compound) testing',
+        'Formaldehyde testing',
+        'Detailed remediation action plan'
+      ],
+      buttonText: 'Get Estimate',
+      buttonStyle: 'outline',
+      popular: false
+    },
+    {
+      name: 'Inspect Max',
+      price: '$4,999',
+      description: 'The ultimate package for complete peace of mind',
+      features: [
+        'Everything in Healthy Choice',
+        'Professional mold dog inspection',
+        'Air purifier included',
+        '3-6 month follow-up inspection (2 hours)',
+        'Follow-up air samples included',
+        'Priority scheduling'
+      ],
+      buttonText: 'Schedule Now',
+      buttonStyle: 'filled-orange',
+      popular: false
+    }
+  ]
+
+  const homebuyerFeatures = [
+    '2-hour comprehensive inspection',
+    '2 outdoor control samples',
+    '3 indoor air samples',
+    'Same-day summary report',
+    'Full detailed report within 48 hours',
+    'Perfect for closing timelines'
+  ]
+
   return (
     <main className="pt-28">
       <nav className="bg-gray-100 py-3">
@@ -14,113 +87,94 @@ export default function PricingPage() {
           <ol className="flex items-center gap-2 text-sm text-gray-600">
             <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-gray-900 font-medium">Pricing</li>
+            <li className="text-gray-900 font-medium">Packages</li>
           </ol>
         </div>
       </nav>
 
       <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Transparent Pricing</h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
-            We believe in upfront, honest pricing with no hidden fees. The cost of your mold inspection depends on the size of your property and the services you need.
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Packages & Pricing</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Transparent pricing with no hidden fees. Choose the package that fits your needs.
           </p>
         </div>
       </section>
 
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-ocean-500 transition-colors">
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Basic Inspection</h2>
-              <p className="text-gray-500 mb-4">For smaller homes up to 1,500 sq ft</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">$299</span>
-                <span className="text-gray-500">+</span>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {packages.map((pkg, i) => (
+              <div key={i} className={`bg-white border-2 rounded-xl p-6 relative ${pkg.popular ? 'border-ocean-500' : 'border-gray-200 hover:border-ocean-300'} transition-colors`}>
+                {pkg.popular && (
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-ocean-600 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                    <span>★</span> Most Popular
+                  </div>
+                )}
+                <div className="text-center mb-6 pt-2">
+                  <h2 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h2>
+                  <div className="text-3xl font-bold text-ocean-600 mb-2">{pkg.price}</div>
+                  <p className="text-gray-500 text-sm">{pkg.description}</p>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {pkg.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-2 text-gray-700 text-sm">
+                      <svg className="w-5 h-5 text-ocean-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                {pkg.buttonStyle === 'filled' ? (
+                  <Link href="/contact" className="block w-full py-3 text-center bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
+                    {pkg.buttonText}
+                  </Link>
+                ) : pkg.buttonStyle === 'filled-orange' ? (
+                  <Link href="/contact" className="block w-full py-3 text-center bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium">
+                    {pkg.buttonText}
+                  </Link>
+                ) : (
+                  <Link href="/contact" className="block w-full py-3 text-center border-2 border-gray-300 text-gray-700 rounded-lg hover:border-ocean-500 hover:text-ocean-600 transition-colors font-medium">
+                    {pkg.buttonText}
+                  </Link>
+                )}
               </div>
-              <ul className="space-y-3 mb-8">
-                {['Visual inspection', 'Moisture detection', 'Infrared thermal imaging', '1 air sample', 'Written report'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a href="tel:9493715934" className="block w-full py-3 text-center bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-                Call for Quote
-              </a>
-            </div>
-
-            <div className="bg-white border-2 border-ocean-500 rounded-xl p-8 relative">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-ocean-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                Most Popular
-              </div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Standard Inspection</h2>
-              <p className="text-gray-500 mb-4">For homes 1,500 - 3,000 sq ft</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">$399</span>
-                <span className="text-gray-500">+</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {['Complete visual inspection', 'Comprehensive moisture detection', 'Infrared thermal imaging', '2-3 air samples', 'Surface sampling', 'Detailed report with photos'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a href="tel:9493715934" className="block w-full py-3 text-center bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-                Call for Quote
-              </a>
-            </div>
-
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-ocean-500 transition-colors">
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Comprehensive Inspection</h2>
-              <p className="text-gray-500 mb-4">For larger homes 3,000+ sq ft</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">$499</span>
-                <span className="text-gray-500">+</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {['Full property inspection', 'Advanced moisture mapping', 'Infrared thermal imaging', '4+ air samples', 'Multiple surface samples', 'HVAC inspection', 'Comprehensive report'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a href="tel:9493715934" className="block w-full py-3 text-center bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-                Call for Quote
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Additional Services</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              { service: 'Additional Air Samples', price: '$75 each', desc: 'Extra air samples for larger properties or specific concerns' },
-              { service: 'Surface Sampling', price: '$50 each', desc: 'Tape lift or swab samples for visible mold identification' },
-              { service: 'Post-Remediation Testing', price: 'Starting at $250', desc: 'Verification testing after mold remediation is complete' },
-              { service: 'Commercial Inspections', price: 'Custom Quote', desc: 'Pricing based on property size and scope of inspection' }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl flex justify-between items-start">
-                <div>
-                  <h3 className="font-semibold text-gray-900">{item.service}</h3>
-                  <p className="text-gray-500 text-sm">{item.desc}</p>
-                </div>
-                <span className="text-gray-900 font-semibold whitespace-nowrap ml-4">{item.price}</span>
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Special Package</h2>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-1/2 p-8 bg-gradient-to-br from-gray-50 to-white">
+                <span className="inline-block bg-ocean-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                  Real Estate Special
+                </span>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Homebuyer Package</h3>
+                <div className="text-4xl font-bold text-ocean-600 mb-2">$799</div>
+                <p className="text-gray-600 mb-6">Fast turnaround for real estate transactions</p>
+                <Link href="/contact" className="inline-block w-full md:w-auto px-8 py-3 text-center bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium">
+                  Book for Closing
+                </Link>
               </div>
-            ))}
+              <div className="md:w-1/2 p-8">
+                <h4 className="font-semibold text-gray-900 mb-4">What&apos;s Included:</h4>
+                <ul className="space-y-3">
+                  {homebuyerFeatures.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3 text-gray-700">
+                      <svg className="w-5 h-5 text-ocean-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -130,9 +184,9 @@ export default function PricingPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
           <div className="space-y-6">
             {[
-              { q: 'What factors affect the price of a mold inspection?', a: 'The main factors are property size, number of samples needed, and complexity of the inspection. Larger properties or those with multiple problem areas may require more samples and time.' },
+              { q: 'What factors affect the price of a mold inspection?', a: 'The main factors are property size, number of samples needed, and complexity of the inspection. Our packages are designed to cover most residential needs.' },
               { q: 'Are lab fees included in the price?', a: 'Yes, all prices include laboratory analysis fees. There are no hidden costs or surprise charges.' },
-              { q: 'Do you offer free estimates?', a: 'We provide free phone consultations to discuss your needs and provide an accurate quote before scheduling your inspection.' },
+              { q: 'Which package is right for me?', a: 'I Inspect is perfect for basic peace of mind. I Inspect Plus is our most popular for thorough testing. Healthy Choice is ideal if you have health concerns. Inspect Max provides the ultimate protection with follow-up care.' },
               { q: 'What payment methods do you accept?', a: 'We accept all major credit cards, checks, and cash. Payment is due at the time of service.' }
             ].map((faq, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-6">
@@ -146,16 +200,16 @@ export default function PricingPage() {
 
       <section className="py-20 bg-ocean-700">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Get Your Free Quote Today</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-ocean-100 mb-8">
-            Call us for a free consultation and accurate pricing for your specific needs.
+            Call us for a free consultation or book your inspection online today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-              Request Quote
+              Book Online
             </Link>
           </div>
         </div>

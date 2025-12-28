@@ -59,7 +59,7 @@ export default function Navigation() {
           </div>
           
           <Link href="/process" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Process</Link>
-          <Link href="/pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Pricing</Link>
+          <Link href="/pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Packages</Link>
           <Link href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Learn</Link>
         </div>
 
@@ -87,7 +87,7 @@ export default function Navigation() {
             <Link href="/services" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link href="/service-areas" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Service Areas</Link>
             <Link href="/process" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Process</Link>
-            <Link href="/pricing" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+            <Link href="/pricing" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Packages</Link>
             <Link href="/blog" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Learn</Link>
             <div className="pt-3 space-y-2">
               <a href="tel:9493715934" className="block w-full text-center px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg">949-371-5934</a>
