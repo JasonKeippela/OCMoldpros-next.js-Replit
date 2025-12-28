@@ -182,6 +182,13 @@ const organizationSchema = {
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "We had mold inspections done before buying our property, but later when we opened the walls, we found a few surprises. A friend referred us to Jason at OC Mold Pros, and I'm so glad we called him. He was super knowledgeable, very reasonably priced, and went above and beyond. He even found mold inside the chimney — something the first company totally missed! Couldn't be happier with his work. Highly recommend OC Mold Pros!",
       "datePublished": "2024-11-05"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Nathan Abell" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Jason at OC Mold Pros was amazing! He came out to test our home for mold and walked me through the process with professionalism. He gave me detailed results, and also provided clear, practical steps on how to move forward and prevent future mold growth. His expertise and genuine care for our family's health and home really stood out. I hope you never have mold problems, but if you do, I highly recommend Jason and the OC Mold Pros team!",
+      "datePublished": "2024-11-05"
     }
   ]
 }
@@ -504,6 +511,12 @@ function TestimonialsSection() {
       location: "Orange County, CA",
       date: "November 2024",
       text: "We had mold inspections done before buying our property, but later when we opened the walls, we found a few surprises. A friend referred us to Jason at OC Mold Pros, and I'm so glad we called him. He was super knowledgeable, very reasonably priced, and went above and beyond. He even found mold inside the chimney — something the first company totally missed! Couldn't be happier with his work. Highly recommend OC Mold Pros!"
+    },
+    {
+      name: "Nathan Abell",
+      location: "Orange County, CA",
+      date: "November 2024",
+      text: "Jason at OC Mold Pros was amazing! He came out to test our home for mold and walked me through the process with professionalism. He gave me detailed results, and also provided clear, practical steps on how to move forward and prevent future mold growth. His expertise and genuine care for our family's health and home really stood out. I hope you never have mold problems, but if you do, I highly recommend Jason and the OC Mold Pros team!"
     }
   ]
 
