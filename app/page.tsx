@@ -201,7 +201,7 @@ function TrustIndicators() {
           {[
             { number: '15+', label: 'Years Experience' },
             { number: '100%', label: 'Satisfaction Guaranteed' },
-            { number: '24hr', label: 'Report Turnaround' }
+            { number: '48hr', label: 'Report Turnaround' }
           ].map((stat, i) => (
             <div key={i}>
               <div className="text-3xl md:text-4xl font-bold text-gray-900">{stat.number}</div>
