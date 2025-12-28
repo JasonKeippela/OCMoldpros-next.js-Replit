@@ -5,12 +5,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const cities = [
-  'Irvine', 'Newport Beach', 'Huntington Beach', 'Anaheim', 'Santa Ana', 'Costa Mesa',
-  'Fullerton', 'Orange', 'Garden Grove', 'Mission Viejo', 'Westminster', 'Yorba Linda',
-  'San Clemente', 'Lake Forest', 'Tustin', 'Buena Park', 'Aliso Viejo', 'Laguna Niguel',
-  'Brea', 'Placentia', 'Laguna Beach', 'Cypress', 'Laguna Hills', 'La Habra',
-  'Seal Beach', 'Fountain Valley', 'Dana Point', 'San Juan Capistrano',
-  'Rancho Santa Margarita', 'Stanton', 'La Palma', 'Villa Park', 'Los Alamitos'
+  'Aliso Viejo', 'Anaheim', 'Brea', 'Buena Park', 'Costa Mesa', 'Cypress',
+  'Dana Point', 'Fountain Valley', 'Fullerton', 'Garden Grove', 'Huntington Beach',
+  'Irvine', 'La Habra', 'La Palma', 'Laguna Beach', 'Laguna Hills', 'Laguna Niguel',
+  'Lake Forest', 'Los Alamitos', 'Mission Viejo', 'Newport Beach', 'Orange',
+  'Placentia', 'Rancho Santa Margarita', 'San Clemente', 'San Juan Capistrano',
+  'Santa Ana', 'Seal Beach', 'Stanton', 'Tustin', 'Villa Park', 'Westminster', 'Yorba Linda'
 ]
 
 function cityToSlug(city: string) {
