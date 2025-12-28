@@ -164,6 +164,13 @@ const organizationSchema = {
   "review": [
     {
       "@type": "Review",
+      "author": { "@type": "Person", "name": "Michelle B." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!",
+      "datePublished": "2024-12-20"
+    },
+    {
+      "@type": "Review",
       "author": { "@type": "Person", "name": "Sarah Martinez" },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "Quick, professional, and thorough. They found hidden mold in our bathroom that we didn't even know was there. The detailed report helped us get our remediation done right. The inspector was knowledgeable and explained everything clearly. Highly recommend OC Mold Pros!",
@@ -501,6 +508,12 @@ function CTASection() {
 
 function TestimonialsSection() {
   const testimonials = [
+    {
+      name: "Michelle B.",
+      location: "Orange County, CA",
+      date: "December 2024",
+      text: "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!"
+    },
     {
       name: "Sarah Martinez",
       location: "Irvine, CA",
