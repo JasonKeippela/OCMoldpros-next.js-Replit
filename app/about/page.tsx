@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About Us | OC Mold Pros - Orange County Mold Inspection Experts',
@@ -32,6 +33,19 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
+              <div className="flex items-center gap-6 mb-8">
+                <Image
+                  src="/jason-headshot.jpg"
+                  alt="Jason, Owner of OC Mold Pros"
+                  width={120}
+                  height={120}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Jason</h3>
+                  <p className="text-gray-600">Owner, OC Mold Pros</p>
+                </div>
+              </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="prose prose-lg text-gray-600">
                 <p>
