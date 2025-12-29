@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'OC Mold Pros Website <onboarding@resend.dev>',
+      from: 'OC Mold Pros Website <noreply@ocmoldpros.com>',
       to: ['info@ocmoldpros.com'],
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
