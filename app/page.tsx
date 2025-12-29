@@ -117,7 +117,7 @@ const faqSchema = {
       "name": "How much does a mold inspection cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our inspections start at $299 for smaller homes. The exact cost depends on property size and the scope of testing needed. We provide free quotes over the phone. Call us at 949-371-5934 for accurate pricing for your specific property."
+        "text": "The exact cost depends on property size and the scope of testing needed. We provide free quotes over the phone. Call us at 949-371-5934 for accurate pricing for your specific property."
       }
     },
     {
@@ -436,7 +436,7 @@ function FAQSection() {
     },
     {
       q: 'How much does a mold inspection cost?',
-      a: 'Our inspections start at $299 for smaller homes. The exact cost depends on property size and the scope of testing needed. Call us for a free quote.'
+      a: 'The exact cost depends on property size and the scope of testing needed. Call us for a free quote.'
     },
     {
       q: 'Do you provide mold remediation services?',
