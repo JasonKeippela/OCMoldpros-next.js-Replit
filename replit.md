@@ -70,6 +70,14 @@ npm run dev -- -p 5000
 - Optimized image alt text (logo, hero image)
 - StructuredData component using Next.js Script with beforeInteractive strategy
 
+## Contact Form
+- Uses Resend API (RESEND_API_KEY secret) to send form submissions to info@ocmoldpros.com
+- API route: app/api/contact/route.ts
+- Client component: app/components/ContactForm.tsx
+- Displays success popup after submission
+
 ## Recent Changes
+- Dec 29, 2025: Added contact form email functionality using Resend, with thank you popup
+- Dec 29, 2025: Updated "Our Story" on About page with personal narrative
 - Dec 28, 2025: Comprehensive SEO overhaul - enhanced schemas using Next.js Script component, added Organization schema with reviews, added testimonials section with 5 reviews and Google Reviews button, Open Graph and Twitter Card tags
 - Dec 26, 2025: Comprehensive website expansion with navigation, city pages, and all content pages
