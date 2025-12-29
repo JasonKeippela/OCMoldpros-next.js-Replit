@@ -37,8 +37,8 @@ export default function AboutPage() {
                 <Image
                   src="/jason-headshot.jpg"
                   alt="Jason, Owner of OC Mold Pros"
-                  width={120}
-                  height={120}
+                  width={300}
+                  height={300}
                   className="rounded-full object-cover"
                 />
                 <div>
