@@ -239,7 +239,7 @@ function TrustIndicators() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-3 gap-8 text-center">
           {[
-            { number: '15+', label: 'Years Experience' },
+            { number: '30', label: 'Years Experience' },
             { number: '100%', label: 'Satisfaction Guaranteed' },
             { number: '48hr', label: 'Report Turnaround' }
           ].map((stat, i) => (
