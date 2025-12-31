@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cityInfo) return { title: 'City Not Found' }
   
   return {
-    title: `Mold Testing & Inspection in ${cityInfo.name}, CA | OC Mold Pros`,
-    description: `Professional mold testing and inspection services in ${cityInfo.name}, Orange County. Certified inspectors, advanced technology, same-day service. Call 949-371-5934`,
+    title: `${cityInfo.name} Mold Inspection | OC Mold Pros`,
+    description: `Expert mold inspection services in ${cityInfo.name}. Contact OC Mold Pros for professional mold testing and remediation in ${cityInfo.name}, California.`,
   }
 }
 
