@@ -222,8 +222,11 @@ function HeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl">
             Professional Mold Inspection & Testing in Orange County
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
+          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
             Certified inspectors protecting your home and family with advanced mold detection technology
+          </p>
+          <p className="text-2xl md:text-3xl font-bold text-white mb-8">
+            Restore Your Home, Restore Your Health
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
