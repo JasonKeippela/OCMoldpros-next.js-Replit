@@ -1,13 +1,5 @@
 import Link from 'next/link'
-
-const cities = [
-  { name: 'Irvine', slug: 'irvine-ca' },
-  { name: 'Newport Beach', slug: 'newport-beach-ca' },
-  { name: 'Huntington Beach', slug: 'huntington-beach-ca' },
-  { name: 'Anaheim', slug: 'anaheim-ca' },
-  { name: 'Costa Mesa', slug: 'costa-mesa-ca' },
-  { name: 'San Clemente', slug: 'san-clemente-ca' }
-]
+import { CORE_SERVICE_AREAS } from '@/app/lib/cities'
 
 export default function Footer() {
   return (
@@ -34,7 +26,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Service Areas</h4>
             <ul className="space-y-2 text-sm">
-              {cities.map(city => (
+              {CORE_SERVICE_AREAS.slice(0, 6).map(city => (
                 <li key={city.slug}>
                   <Link href={`/service-areas/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
                 </li>
@@ -73,12 +65,22 @@ export default function Footer() {
       </div>
       
       <div className="border-t border-ocean-800">
-        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} OC Mold Pros. All rights reserved.</p>
-          <div className="flex items-center gap-4 mt-2 md:mt-0">
-            <Link href="/privacy" className="text-ocean-400 hover:text-white transition-colors">Privacy Policy</Link>
-            <span className="text-ocean-600">|</span>
-            <p className="text-ocean-400">Serving all of Orange County, California</p>
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <div className="text-sm text-ocean-300 mb-3">
+            <span className="text-white font-semibold">Primary Service Areas: </span>
+            {CORE_SERVICE_AREAS.map((city, i) => (
+              <span key={city.slug}>
+                <Link href={`/service-areas/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
+                {i < CORE_SERVICE_AREAS.length - 1 ? ', ' : ''}
+              </span>
+            ))}
+          </div>
+          <div className="text-sm text-ocean-400 mb-4">Serving all cities in Orange County, CA.</div>
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm border-t border-ocean-800 pt-4">
+            <p>&copy; {new Date().getFullYear()} OC Mold Pros. All rights reserved.</p>
+            <div className="flex items-center gap-4 mt-2 md:mt-0">
+              <Link href="/privacy" className="text-ocean-400 hover:text-white transition-colors">Privacy Policy</Link>
+            </div>
           </div>
         </div>
       </div>
