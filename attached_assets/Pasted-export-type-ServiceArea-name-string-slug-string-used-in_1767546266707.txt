@@ -1,0 +1,63 @@
+export type ServiceArea = {
+  name: string;
+  slug: string; // used in URL
+  tier: "core" | "secondary";
+};
+
+export const CORE_CITIES: ServiceArea[] = [
+  { name: "San Clemente", slug: "san-clemente-ca", tier: "core" },
+  { name: "Dana Point", slug: "dana-point-ca", tier: "core" },
+  { name: "Laguna Beach", slug: "laguna-beach-ca", tier: "core" },
+  { name: "Laguna Niguel", slug: "laguna-niguel-ca", tier: "core" },
+  { name: "Laguna Hills", slug: "laguna-hills-ca", tier: "core" },
+  { name: "Mission Viejo", slug: "mission-viejo-ca", tier: "core" },
+  { name: "Newport Beach", slug: "newport-beach-ca", tier: "core" },
+  { name: "Huntington Beach", slug: "huntington-beach-ca", tier: "core" },
+  { name: "Costa Mesa", slug: "costa-mesa-ca", tier: "core" },
+  { name: "Irvine", slug: "irvine-ca", tier: "core" },
+];
+
+// The full 34 incorporated cities of Orange County (including the core ones)
+// (This list keeps your “only 34 cities” requirement intact.)
+export const ALL_OC_CITIES: ServiceArea[] = [
+  ...CORE_CITIES,
+
+  { name: "Aliso Viejo", slug: "aliso-viejo-ca", tier: "secondary" },
+  { name: "Anaheim", slug: "anaheim-ca", tier: "secondary" },
+  { name: "Brea", slug: "brea-ca", tier: "secondary" },
+  { name: "Buena Park", slug: "buena-park-ca", tier: "secondary" },
+  { name: "Cypress", slug: "cypress-ca", tier: "secondary" },
+  { name: "Fountain Valley", slug: "fountain-valley-ca", tier: "secondary" },
+  { name: "Fullerton", slug: "fullerton-ca", tier: "secondary" },
+  { name: "Garden Grove", slug: "garden-grove-ca", tier: "secondary" },
+  { name: "La Habra", slug: "la-habra-ca", tier: "secondary" },
+  { name: "La Palma", slug: "la-palma-ca", tier: "secondary" },
+  { name: "Laguna Hills", slug: "laguna-hills-ca", tier: "core" }, // duplicate-safe check below recommended
+  { name: "Laguna Woods", slug: "laguna-woods-ca", tier: "secondary" },
+  { name: "Lake Forest", slug: "lake-forest-ca", tier: "secondary" },
+  { name: "Los Alamitos", slug: "los-alamitos-ca", tier: "secondary" },
+  { name: "Mission Viejo", slug: "mission-viejo-ca", tier: "core" },
+  { name: "Newport Beach", slug: "newport-beach-ca", tier: "core" },
+  { name: "Orange", slug: "orange-ca", tier: "secondary" },
+  { name: "Placentia", slug: "placentia-ca", tier: "secondary" },
+  { name: "Rancho Santa Margarita", slug: "rancho-santa-margarita-ca", tier: "secondary" },
+  { name: "San Juan Capistrano", slug: "san-juan-capistrano-ca", tier: "secondary" },
+  { name: "Santa Ana", slug: "santa-ana-ca", tier: "secondary" },
+  { name: "Seal Beach", slug: "seal-beach-ca", tier: "secondary" },
+  { name: "Stanton", slug: "stanton-ca", tier: "secondary" },
+  { name: "Tustin", slug: "tustin-ca", tier: "secondary" },
+  { name: "Villa Park", slug: "villa-park-ca", tier: "secondary" },
+  { name: "Westminster", slug: "westminster-ca", tier: "secondary" },
+  { name: "Yorba Linda", slug: "yorba-linda-ca", tier: "secondary" },
+
+  // Already included in CORE_CITIES but listed here for completeness if you prefer a single flat list:
+  // Costa Mesa, Dana Point, Huntington Beach, Irvine, Laguna Beach, Laguna Niguel, San Clemente
+];
+
+// IMPORTANT: ensure uniqueness so no duplicates accidentally ship
+export const APPROVED_SERVICE_AREAS: ServiceArea[] = Array.from(
+  new Map(ALL_OC_CITIES.map((c) => [c.slug, c])).values()
+);
+
+export const CORE_SERVICE_AREAS = APPROVED_SERVICE_AREAS.filter((c) => c.tier === "core");
+export const SECONDARY_SERVICE_AREAS = APPROVED_SERVICE_AREAS.filter((c) => c.tier === "secondary");

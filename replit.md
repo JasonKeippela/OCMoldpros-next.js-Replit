@@ -77,6 +77,7 @@ npm run dev -- -p 5000
 - Displays success popup after submission
 
 ## Recent Changes
+- Jan 04, 2026: Added tier system (core/secondary) to service areas - 10 core cities (San Clemente, Dana Point, Laguna Beach, Laguna Niguel, Laguna Hills, Mission Viejo, Newport Beach, Huntington Beach, Costa Mesa, Irvine) and 24 secondary cities
 - Jan 04, 2026: Service areas cleanup - Updated to 34 approved cities only, added Laguna Woods, removed 12 invalid city references from nearby arrays, added 301 redirects for bad URLs
 - Dec 29, 2025: Added contact form email functionality using Resend, with thank you popup
 - Dec 29, 2025: Updated "Our Story" on About page with personal narrative
