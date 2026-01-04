@@ -54,6 +54,9 @@ export const SECONDARY_CITIES: ServiceArea[] = [
 // All 34 approved service areas (combined and deduplicated)
 export const cities: ServiceArea[] = [...CORE_CITIES, ...SECONDARY_CITIES]
 
+// Primary export for static params generation
+export const APPROVED_SERVICE_AREAS = cities
+
 // Export filtered lists
 export const CORE_SERVICE_AREAS = cities.filter(c => c.tier === 'core')
 export const SECONDARY_SERVICE_AREAS = cities.filter(c => c.tier === 'secondary')

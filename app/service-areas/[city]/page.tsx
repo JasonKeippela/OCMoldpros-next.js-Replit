@@ -1,14 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { cities, getCityBySlug, getCityData } from '../../lib/cities'
+import { APPROVED_SERVICE_AREAS, getCityBySlug, getCityData } from '@/app/lib/cities'
 
 type Props = {
   params: Promise<{ city: string }>
 }
 
 export async function generateStaticParams() {
-  return cities.map(city => ({ city: city.slug }))
+  return APPROVED_SERVICE_AREAS.map(city => ({ city: city.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
