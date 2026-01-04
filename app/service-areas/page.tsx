@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { cities } from '../lib/cities'
+import { CORE_SERVICE_AREAS, SECONDARY_SERVICE_AREAS } from '@/app/lib/cities'
 
 export const metadata: Metadata = {
   title: 'Service Areas | Mold Inspection in Orange County | OC Mold Pros',
@@ -23,26 +23,28 @@ export default function ServiceAreasPage() {
       <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Mold Inspection Service Areas in Orange County
+            Service Areas
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            OC Mold Pros provides comprehensive mold inspection and testing services throughout Orange County, California. Select your city below to learn more about our services in your area.
+            OC Mold Pros serves South OC and Coastal Orange County with professional mold inspection and testing. DM me to set up a free 20-minute consultation or call 949-371-5934.
           </p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Cities We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {cities.map(city => (
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Primary Service Areas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {CORE_SERVICE_AREAS.map(city => (
               <Link 
                 key={city.slug} 
                 href={`/service-areas/${city.slug}`}
-                className="p-4 bg-white border border-gray-200 rounded-xl hover:border-ocean-500 hover:shadow-md transition-all text-center group"
+                className="p-6 bg-white border-2 border-ocean-200 rounded-xl hover:border-ocean-500 hover:shadow-lg transition-all group"
               >
-                <span className="text-gray-900 group-hover:text-gray-900 font-medium">{city.name}</span>
-                <span className="text-gray-500 text-sm block">California</span>
+                <span className="text-lg text-gray-900 group-hover:text-ocean-700 font-semibold">
+                  Mold Inspection in {city.name}
+                </span>
+                <span className="text-gray-500 text-sm block mt-1">Orange County, CA</span>
               </Link>
             ))}
           </div>
@@ -50,6 +52,23 @@ export default function ServiceAreasPage() {
       </section>
 
       <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Additional Cities We Serve in Orange County</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {SECONDARY_SERVICE_AREAS.map(city => (
+              <Link 
+                key={city.slug} 
+                href={`/service-areas/${city.slug}`}
+                className="px-4 py-2 bg-white border border-gray-200 rounded-full hover:border-ocean-500 hover:bg-ocean-50 transition-all text-gray-700 hover:text-ocean-700 font-medium text-sm"
+              >
+                {city.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Comprehensive Orange County Coverage</h2>
           <div className="prose prose-lg max-w-none text-gray-600">
