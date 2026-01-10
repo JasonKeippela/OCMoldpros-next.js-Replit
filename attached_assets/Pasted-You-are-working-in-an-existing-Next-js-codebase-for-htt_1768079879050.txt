@@ -1,0 +1,96 @@
+You are working in an existing Next.js codebase for https://ocmoldpros.com.
+
+GOAL:
+Create/upgrade a “Beach City Cluster” of service-area landing pages for OC Mold Pros with strong local SEO, high conversion CTAs, and consistent internal linking. Cities included:
+
+1) San Clemente
+2) Dana Point
+3) Laguna Niguel
+4) Laguna Beach
+5) Newport Beach
+6) Costa Mesa
+7) Huntington Beach
+8) Seal Beach
+9) San Juan Capistrano
+
+IMPORTANT CONVERSION STRATEGY:
+Every city page must use this primary CTA:
+“DM or call to schedule a free 20-minute consultation”
+Primary button should be tel:949-371-5934 labeled “Call for Free 20-Min Consultation”
+Secondary button should link to /contact (or existing contact/booking route) labeled “Request a Consultation”
+Do NOT use “free quote” as the main CTA.
+
+ROUTING:
+Use the existing service area routing pattern already in the codebase.
+If the current San Clemente page is /service-areas/san-clemente-ca, follow that convention for all new pages:
+- /service-areas/dana-point-ca
+- /service-areas/laguna-niguel-ca
+- /service-areas/laguna-beach-ca
+- /service-areas/newport-beach-ca
+- /service-areas/costa-mesa-ca
+- /service-areas/huntington-beach-ca
+- /service-areas/seal-beach-ca
+- /service-areas/san-juan-capistrano-ca
+If the codebase uses a different pattern, match it exactly.
+
+PAGE TEMPLATE (must be consistent across all cities):
+Each page must include these sections in this order:
+
+1) H1: “Mold Inspection & Mold Testing in {City}, CA”
+2) Intro paragraph: 90–140 words, tailored to that city (coastal humidity for beach cities; older homes/hillside for some; inland microclimates for SJC), reassuring and non-alarmist.
+3) “What Our Mold Inspection Includes” (bullets):
+   - Visual inspection of high-risk areas
+   - Moisture mapping (meters)
+   - Thermal imaging (infrared)
+   - Mold air sampling (indoor + outdoor control)
+   - Surface/swab samples when warranted
+   - HVAC/duct inspection when applicable
+   - Clear findings + recommendations
+   Include one sentence: “We inspect only — we do not perform remediation — so our findings stay unbiased.”
+
+4) “Why Mold Happens in {City} Homes” (city-specific bullets):
+   - For coastal cities: marine layer, salt air, humidity, condensation, closed-up homes, bathroom moisture
+   - For Huntington / Seal: coastal moisture + older tract homes + past leaks
+   - For Newport: coastal + higher-end builds with complex HVAC, tight envelopes, vacation homes
+   - For Costa Mesa: mix of coastal influence + older construction + remodel history
+   - For San Juan Capistrano: older homes, historic properties, crawlspaces, irrigation/landscaping moisture, hillside drainage
+
+5) “Mold Testing & Indoor Air Quality Testing” (short explanation + who it’s for)
+6) “Buying or Selling a Home in {City}?” (homebuyer/realtor angle)
+7) “Communities We Serve in {City}” (H2 + bullet list)
+   - For San Clemente include these neighborhoods:
+     Talega; Forster Ranch (incl. The Reserves); Marblehead; Rancho San Clemente; Coast District; North San Clemente (Shorecliffs / Sea Pointe Estates); Southwest San Clemente (T-Street / beach); Southeast San Clemente; Mariners Point; Sea Ridge Estates; Presidential Heights; Cyprus Cove; Cyprus Shore; La Ladera; The Breakers; Cotton Point
+   - For other cities: create 8–14 well-known neighborhoods/areas (do NOT invent fake communities). Use commonly recognized area names. If unsure, use broader “areas” (e.g., “Balboa Peninsula” for Newport; “Downtown” for Laguna Beach; “Monarch Beach” for Dana Point; “Bear Brand Ranch” for Laguna Niguel; etc.). Keep them plausible and widely known.
+
+8) “Related Services” block with internal links (use existing link component):
+   - /mold-inspection  (label: Mold Inspection)
+   - /air-quality-testing (label: Air Quality Testing)
+   - /moisture-detection (label: Moisture Detection)
+   - /post-remediation-clearance-testing (label: Clearance / Post-Remediation Testing)
+   If any routes don’t exist, locate the closest matching existing service route and use that.
+
+9) “Nearby Beach Cities We Serve” block:
+   On EACH city page, link to 4–6 other pages in this cluster (excluding itself). This is the internal linking “star” pattern:
+   Example for San Clemente: Dana Point, Laguna Niguel, Laguna Beach, Newport Beach
+   Example for Huntington Beach: Seal Beach, Costa Mesa, Newport Beach, Laguna Beach
+   (Use sensible proximity.)
+
+10) Final CTA section (repeat the primary CTA):
+   “DM or call to schedule a free 20-minute consultation”
+   Button: tel:949-371-5934
+
+SEO METADATA (for every city page):
+Use Next.js metadata export (app router) or existing SEO component.
+- title format: “Mold Inspection {City} CA | Certified Mold Testing & Air Quality”
+- description format: “Professional mold inspection and mold testing in {City}, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.”
+
+TECH REQUIREMENTS:
+- Reuse existing layout/components/styles
+- Ensure pages compile with no TS/ESLint errors
+- Add these pages to any sitemap/route map if your site uses one
+- Ensure internal links work and do not 404
+
+OUTPUT REQUIRED:
+- Show exactly which files were added/edited
+- Provide diffs or the final code blocks for each new page component
+- Confirm all pages render and build successfully

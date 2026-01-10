@@ -76,7 +76,24 @@ npm run dev -- -p 5000
 - Client component: app/components/ContactForm.tsx
 - Displays success popup after submission
 
+## Beach City Cluster Pages
+9 dedicated landing pages with enhanced local SEO, consistent template, and internal linking:
+- San Clemente, Dana Point, Laguna Niguel, Laguna Beach, Newport Beach, Costa Mesa, Huntington Beach, Seal Beach, San Juan Capistrano
+
+Each page includes:
+- H1: "Mold Inspection & Mold Testing in {City}, CA"
+- City-specific intro paragraph (90-140 words)
+- "What Our Mold Inspection Includes" (7 bullets + unbiased statement)
+- "Why Mold Happens in {City} Homes" (6 city-specific reasons)
+- "Mold Testing & Indoor Air Quality Testing" section
+- "Buying or Selling a Home in {City}?" section
+- "Communities We Serve in {City}" (8-16 neighborhoods)
+- "Related Services" links
+- "Nearby Beach Cities We Serve" (internal cluster linking)
+- CTA: "DM or call to schedule a free 20-minute consultation"
+
 ## Recent Changes
+- Jan 10, 2026: Created Beach City Cluster - 9 dedicated landing pages with enhanced template including inspection details, city-specific mold causes, neighborhoods, related services, and internal cluster linking
 - Jan 04, 2026: Added tier system (core/secondary) to service areas - 10 core cities (San Clemente, Dana Point, Laguna Beach, Laguna Niguel, Laguna Hills, Mission Viejo, Newport Beach, Huntington Beach, Costa Mesa, Irvine) and 24 secondary cities
 - Jan 04, 2026: Service areas cleanup - Updated to 34 approved cities only, added Laguna Woods, removed 12 invalid city references from nearby arrays, added 301 redirects for bad URLs
 - Dec 29, 2025: Added contact form email functionality using Resend, with thank you popup

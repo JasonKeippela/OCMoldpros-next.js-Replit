@@ -2,35 +2,31 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mold Inspection San Clemente CA | Certified Mold Testing & Air Quality',
-  description: 'Professional mold inspection and mold testing in San Clemente, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
+  title: 'Mold Inspection Costa Mesa CA | Certified Mold Testing & Air Quality',
+  description: 'Professional mold inspection and mold testing in Costa Mesa, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
 }
 
 const neighborhoods = [
-  'Talega',
-  'Forster Ranch (including The Reserves)',
-  'Marblehead',
-  'Rancho San Clemente',
-  'Coast District',
-  'North San Clemente (Shorecliffs / Sea Pointe Estates)',
-  'Southwest San Clemente (T-Street / beach areas)',
-  'Southeast San Clemente',
-  'Mariners Point',
-  'Sea Ridge Estates',
-  'Presidential Heights',
-  'Cyprus Cove',
-  'Cyprus Shore',
-  'La Ladera',
-  'The Breakers',
-  'Cotton Point',
+  'Mesa Verde',
+  'Eastside Costa Mesa',
+  'Westside Costa Mesa',
+  'South Coast Metro',
+  'Mesa del Mar',
+  'College Park',
+  'Halecrest',
+  'Mesa North',
+  'Tanager',
+  'California Heights',
+  'The Coves',
+  'Lyon Square',
 ]
 
 const nearbyBeachCities = [
-  { name: 'Dana Point', slug: 'dana-point-ca' },
-  { name: 'Laguna Niguel', slug: 'laguna-niguel-ca' },
-  { name: 'Laguna Beach', slug: 'laguna-beach-ca' },
-  { name: 'San Juan Capistrano', slug: 'san-juan-capistrano-ca' },
   { name: 'Newport Beach', slug: 'newport-beach-ca' },
+  { name: 'Huntington Beach', slug: 'huntington-beach-ca' },
+  { name: 'Laguna Beach', slug: 'laguna-beach-ca' },
+  { name: 'Seal Beach', slug: 'seal-beach-ca' },
+  { name: 'Dana Point', slug: 'dana-point-ca' },
 ]
 
 const relatedServices = [
@@ -40,21 +36,21 @@ const relatedServices = [
   { href: '/services', label: 'Clearance / Post-Remediation Testing' },
 ]
 
-export default function SanClementePage() {
+export default function CostaMesaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "OC Mold Pros",
-    "description": "Professional mold inspection and testing services in San Clemente, CA",
-    "url": "https://ocmoldpros.com/service-areas/san-clemente-ca",
+    "description": "Professional mold inspection and testing services in Costa Mesa, CA",
+    "url": "https://ocmoldpros.com/service-areas/costa-mesa-ca",
     "telephone": "+1-949-371-5934",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "San Clemente",
+      "addressLocality": "Costa Mesa",
       "addressRegion": "CA",
       "addressCountry": "US"
     },
-    "areaServed": { "@type": "City", "name": "San Clemente" },
+    "areaServed": { "@type": "City", "name": "Costa Mesa" },
     "serviceType": ["Mold Inspection", "Mold Testing", "Air Quality Testing", "Moisture Detection"],
     "priceRange": "$$",
     "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
@@ -72,7 +68,7 @@ export default function SanClementePage() {
               <li>/</li>
               <li><Link href="/service-areas" className="hover:text-gray-900">Service Areas</Link></li>
               <li>/</li>
-              <li className="text-gray-900 font-medium">San Clemente, CA</li>
+              <li className="text-gray-900 font-medium">Costa Mesa, CA</li>
             </ol>
           </div>
         </nav>
@@ -80,10 +76,10 @@ export default function SanClementePage() {
         <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Mold Inspection & Mold Testing in San Clemente, CA
+              Mold Inspection & Mold Testing in Costa Mesa, CA
             </h1>
             <p className="text-xl text-gray-600 mb-6 max-w-3xl">
-              San Clemente&apos;s &quot;Spanish Village by the Sea&quot; charm comes with real moisture challenges for homeowners. The coastal humidity, marine layer, and salt air create perfect conditions for hidden mold growth—especially in hillside homes, beach properties, and areas with poor ventilation. Whether you&apos;re in Talega, near the pier, or anywhere in between, our certified inspectors help you understand what&apos;s happening inside your home with clear, unbiased findings and practical recommendations.
+              Costa Mesa&apos;s mix of mid-century homes, remodeled properties, and newer construction creates varied mold risk factors. The city&apos;s proximity to the coast brings marine layer humidity, while older homes may have aging plumbing and ventilation issues. Renovated properties sometimes have hidden moisture problems from previous construction. Our certified inspectors understand Costa Mesa&apos;s diverse housing stock and provide clear, unbiased assessments to help you protect your home and health.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -128,15 +124,15 @@ export default function SanClementePage() {
 
         <section className="py-16 bg-ocean-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Mold Happens in San Clemente Homes</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Mold Happens in Costa Mesa Homes</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                'Marine layer and coastal fog create persistent humidity',
-                'Salt air accelerates moisture intrusion around windows and doors',
-                'Hillside homes can have drainage and grading issues',
-                'Bathroom exhaust fans often vent into attics instead of outside',
-                'Closed-up vacation homes trap moisture inside',
-                'Older construction may lack modern moisture barriers',
+                'Coastal proximity brings marine layer moisture',
+                'Mid-century homes with aging plumbing systems',
+                'Remodeled properties with hidden moisture from past work',
+                'Inadequate bathroom and kitchen ventilation',
+                'Past water leaks that were not fully remediated',
+                'Stucco exteriors that can trap moisture behind walls',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-lg">
                   <svg className="w-5 h-5 text-ocean-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -163,7 +159,7 @@ export default function SanClementePage() {
 
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Buying or Selling a Home in San Clemente?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Buying or Selling a Home in Costa Mesa?</h2>
             <p className="text-lg text-gray-600 mb-4">
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
@@ -175,8 +171,8 @@ export default function SanClementePage() {
 
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Communities We Serve in San Clemente</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Communities We Serve in Costa Mesa</h2>
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3 mb-8">
               {neighborhoods.map((neighborhood, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-ocean-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -187,10 +183,7 @@ export default function SanClementePage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure what to call your area? No problem. If you&apos;re in San Clemente, we can help you decide whether an inspection makes sense based on symptoms, odors, visible growth, past leaks, or humidity—especially in coastal and hillside homes where moisture can hide behind walls or under flooring.
-            </p>
-            <p className="text-lg text-ocean-700 font-medium">
-              DM or call to schedule a free 20-minute consultation.
+              Not sure if we cover your area? If you&apos;re in Costa Mesa, we can help. DM or call to schedule a free 20-minute consultation.
             </p>
           </div>
         </section>
@@ -231,7 +224,7 @@ export default function SanClementePage() {
 
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in San Clemente Today</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Costa Mesa Today</h2>
             <p className="text-lg text-white font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
             </p>
@@ -243,7 +236,7 @@ export default function SanClementePage() {
                 Request a Consultation
               </Link>
             </div>
-            <p className="text-ocean-200">Serving San Clemente and all of Orange County, California</p>
+            <p className="text-ocean-200">Serving Costa Mesa and all of Orange County, California</p>
           </div>
         </section>
       </main>
