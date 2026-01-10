@@ -47,15 +47,14 @@ export default function SanClementePage() {
     "name": "OC Mold Pros",
     "description": "Professional mold inspection and testing services in San Clemente, CA",
     "url": "https://ocmoldpros.com/service-areas/san-clemente-ca",
-    "telephone": "949-371-5934",
+    "telephone": "+1-949-371-5934",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "San Clemente",
       "addressRegion": "CA",
-      "postalCode": "92672",
       "addressCountry": "US"
     },
-    "areaServed": ["Orange County"],
+    "areaServed": { "@type": "City", "name": "San Clemente" },
     "serviceType": ["Mold Inspection", "Mold Testing", "Air Quality Testing", "Moisture Detection"],
     "priceRange": "$$",
     "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
