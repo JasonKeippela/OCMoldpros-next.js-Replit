@@ -80,6 +80,8 @@ npm run dev -- -p 5000
 9 dedicated landing pages with enhanced local SEO, consistent template, and internal linking:
 - San Clemente, Dana Point, Laguna Niguel, Laguna Beach, Newport Beach, Costa Mesa, Huntington Beach, Seal Beach, San Juan Capistrano
 
+**Hub Page**: `/service-areas/orange-county-beach-cities` - Links to all 9 beach city pages with city-specific descriptions
+
 Each page includes:
 - H1: "Mold Inspection & Mold Testing in {City}, CA"
 - City-specific intro paragraph (90-140 words)

@@ -31,6 +31,34 @@ export default function ServiceAreasPage() {
         </div>
       </section>
 
+      <section className="py-12 bg-ocean-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <Link 
+            href="/service-areas/orange-county-beach-cities"
+            className="block p-6 bg-white border-2 border-ocean-300 rounded-xl hover:border-ocean-500 hover:shadow-lg transition-all group"
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 group-hover:text-ocean-700 mb-2">
+                  Orange County Beach Cities
+                </h2>
+                <p className="text-gray-600">
+                  Specialized mold inspection for coastal communities: San Clemente, Dana Point, Laguna Beach, Newport Beach, Huntington Beach, and more.
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-600 text-white rounded-lg font-semibold group-hover:bg-ocean-700 transition-colors">
+                  View Beach Cities
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Primary Service Areas</h2>

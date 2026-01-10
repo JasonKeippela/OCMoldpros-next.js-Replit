@@ -1,0 +1,99 @@
+Add a new “Beach Cities” hub page to the existing Next.js site https://ocmoldpros.com.
+
+GOAL:
+Create a hub page that:
+1) Targets “Mold Inspection Beach Cities Orange County” style intent
+2) Links to all city pages in our cluster
+3) Strengthens internal linking and helps Google understand the topical cluster
+4) Uses my main CTA: “DM or call to schedule a free 20-minute consultation”
+
+CITIES IN THIS CLUSTER (must be included as linked cards/sections):
+- San Clemente
+- Dana Point
+- Laguna Niguel
+- Laguna Beach
+- Newport Beach
+- Costa Mesa
+- Huntington Beach
+- Seal Beach
+- San Juan Capistrano
+
+ROUTE:
+Create the hub page at:
+- /service-areas/orange-county-beach-cities
+If your codebase uses a different service-area folder structure, match it exactly.
+Also add internal links to this hub page from:
+- the Orange County service area page (if it exists)
+- the main Service Areas index page (if it exists)
+- optionally from the header/nav (only if your nav already includes service areas)
+
+PAGE REQUIREMENTS / STRUCTURE:
+
+1) SEO METADATA:
+- title: “Mold Inspection Orange County Beach Cities | OC Mold Pros”
+- meta description: “Mold inspection and mold testing across Orange County beach cities and nearby coastal communities. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.”
+
+2) H1:
+“Mold Inspection & Mold Testing in Orange County Beach Cities”
+
+3) Intro (120–160 words):
+- Mention coastal humidity / marine layer
+- Mention common hidden moisture sources (bathrooms, HVAC, attic/crawlspace, past leaks)
+- Reassure: independent inspection (no remediation), clarity-first
+
+4) “Beach City Service Areas” section:
+Create a grid of 9 cards (or consistent blocks) with:
+- City name
+- 1–2 sentence city-specific snippet (coastal moisture, older homes, hillside drainage, vacation homes, etc.)
+- Button/link: “Mold Inspection in {City}” to that city page
+Use the existing service-area routing pattern, e.g.:
+  /service-areas/san-clemente-ca
+  /service-areas/dana-point-ca
+  /service-areas/laguna-niguel-ca
+  /service-areas/laguna-beach-ca
+  /service-areas/newport-beach-ca
+  /service-areas/costa-mesa-ca
+  /service-areas/huntington-beach-ca
+  /service-areas/seal-beach-ca
+  /service-areas/san-juan-capistrano-ca
+If any of those pages do not exist yet, create them as placeholders using the same page template we discussed, but keep the hub page live and linking to the correct routes.
+
+5) “What Our Mold Inspection Includes” section (bullets):
+- Visual inspection of high-risk areas
+- Moisture mapping
+- Thermal imaging
+- Mold air sampling (indoor + outdoor control)
+- Surface/swab samples when warranted
+- HVAC/duct inspection when applicable
+- Clear findings + recommendations
+Add: “We inspect only — we do not perform remediation — so our findings stay unbiased.”
+
+6) “When to Consider a Mold Inspection” section:
+Add 6–8 bullets (musty odor, visible growth, after a leak, recurring condensation, health symptoms that improve when away, recent remodel, etc.)
+
+7) “Related Services” internal links block:
+- /mold-inspection  (Mold Inspection)
+- /air-quality-testing (Air Quality Testing)
+- /moisture-detection (Moisture Detection)
+- /post-remediation-clearance-testing (Clearance / Post-Remediation Testing)
+If these routes don’t exist, find closest equivalents and use those.
+
+8) Final CTA section (VERY IMPORTANT):
+Headline:
+“Not sure what city page you need? Let’s talk.”
+Body:
+“DM or call to schedule a free 20-minute consultation and we’ll help you decide what testing (if any) makes sense for your home.”
+Buttons:
+- tel:949-371-5934 labeled “Call for Free 20-Min Consultation”
+- /contact labeled “Request a Consultation”
+
+TECH REQUIREMENTS:
+- Reuse existing layout/components and styling conventions
+- Ensure no broken links, no TS/ESLint errors
+- Add this new route to any sitemap generator or manual sitemap file if your project uses one
+- Show which files were added/edited and include code diffs or final code blocks
+
+OUTPUT REQUIRED:
+- List of files changed
+- The final code for the hub page
+- Confirmation that it builds successfully
