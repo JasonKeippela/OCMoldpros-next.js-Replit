@@ -1,0 +1,77 @@
+You are working in a Next.js codebase for https://ocmoldpros.com. I need you to update the San Clemente service area page content and CTAs.
+
+GOAL:
+Improve local SEO for “Mold inspection San Clemente” AND add neighborhood coverage (Talega etc.), plus align calls-to-action with my conversion strategy: “DM or call to schedule a free 20-minute consultation” (NOT “free quote”).
+
+WHAT TO EDIT:
+Find the page that renders this URL:
+  /service-areas/san-clemente-ca
+Look for existing text like:
+  “Professional Mold Testing & Inspection Services in San Clemente, CA”
+and update that page component/content.
+
+CHANGES REQUIRED:
+
+1) CTA ALIGNMENT (IMPORTANT)
+- Replace any “Request Your Free Quote” or “Schedule Inspection” style CTA sections on the San Clemente page with:
+  Primary CTA text: “DM or call to schedule a free 20-minute consultation”
+  Button/Link: tel:949-371-5934 (label: “Call for Free 20-Min Consultation”)
+  Secondary CTA: link to /contact or your booking route (label: “Request a Consultation”)
+- Keep phone number 949-371-5934 and make sure the CTA appears:
+  (a) near the top after the intro, and
+  (b) again near the bottom before the footer.
+
+2) ADD A NEW SECTION: “Communities We Serve in San Clemente”
+Insert an H2 section after “Common Mold Locations in San Clemente Homes” and before “About San Clemente”.
+Include the following bullet list exactly (order OK):
+- Talega
+- Forster Ranch (including The Reserves)
+- Marblehead
+- Rancho San Clemente
+- Coast District
+- North San Clemente (including Shorecliffs / Sea Pointe Estates)
+- Southwest San Clemente (T-Street / beach areas)
+- Southeast San Clemente
+- Mariners Point
+- Sea Ridge Estates
+- Presidential Heights
+- Cyprus Cove
+- Cyprus Shore
+- La Ladera
+- The Breakers
+- Cotton Point
+
+Under the list, add a short paragraph:
+“Not sure what to call your area? No problem. If you’re in San Clemente, we can help you decide whether an inspection makes sense based on symptoms, odors, visible growth, past leaks, or humidity—especially in coastal and hillside homes where moisture can hide behind walls or under flooring.”
+
+Then add a mini-CTA line:
+“DM or call to schedule a free 20-minute consultation.”
+
+3) ADD INTERNAL LINKS (RELATED SERVICES)
+Add a “Related Services” block with links (use the existing site’s link component):
+- /mold-inspection (label: Mold Inspection)
+- /air-quality-testing (label: Air Quality Testing)
+- /moisture-detection (label: Moisture Detection)
+- /post-remediation-clearance-testing (label: Clearance / Post-Remediation Testing)
+If any of these routes don’t exist, search the codebase for the closest matching service route and use that instead.
+
+4) ADD “Nearby Beach Cities We Serve” (cluster linking)
+Add a block titled “Nearby Beach Cities We Serve” that links to these city pages (use the site’s existing service-area routing pattern):
+- Dana Point
+- Laguna Niguel
+- Laguna Beach
+- Newport Beach
+- Costa Mesa
+- Huntington Beach
+- Seal Beach
+If some of these city pages don’t exist yet, create placeholder pages in the same style as existing city pages with basic intro + CTA and “Coming soon” content.
+
+5) SEO META
+Ensure the San Clemente page has:
+- title: “Mold Inspection San Clemente CA | Certified Mold Testing & Air Quality”
+- meta description: “Professional mold inspection and mold testing in San Clemente, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.”
+Use Next.js metadata export (app router) or existing SEO component pattern.
+
+OUTPUT REQUIRED:
+- Show me exactly which file(s) you changed and the diff (or the updated code blocks).
+- Confirm the page builds without TypeScript errors.
