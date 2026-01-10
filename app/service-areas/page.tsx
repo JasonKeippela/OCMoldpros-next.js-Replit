@@ -25,9 +25,17 @@ export default function ServiceAreasPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Service Areas
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            OC Mold Pros serves South OC and Coastal Orange County with professional mold inspection and testing. DM me to set up a free 20-minute consultation or call 949-371-5934.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            OC Mold Pros serves South OC and Coastal Orange County with professional mold inspection and testing.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg">
+              Call for Free 20-Min Consultation
+            </a>
+            <Link href="/contact" className="px-8 py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
+              Request a Consultation
+            </Link>
+          </div>
         </div>
       </section>
 
