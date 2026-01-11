@@ -165,8 +165,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "OC Mold Pros",
-  "url": "https://ocmoldprosnextjs.replit.app",
-  "logo": "https://ocmoldprosnextjs.replit.app/logo.jpg",
+  "url": "https://ocmoldpros.com",
+  "logo": "https://ocmoldpros.com/logo.jpg",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-949-371-5934",
@@ -177,9 +177,9 @@ const organizationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "127",
+    "reviewCount": "4",
     "bestRating": "5",
-    "worstRating": "1"
+    "worstRating": "5"
   },
   "review": [
     {
