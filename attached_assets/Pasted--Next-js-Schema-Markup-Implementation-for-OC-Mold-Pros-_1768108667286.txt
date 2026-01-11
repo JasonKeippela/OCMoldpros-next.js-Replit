@@ -1,0 +1,284 @@
+# Next.js Schema Markup Implementation for OC Mold Pros
+
+## Instructions for Replit Agent
+
+Please implement the following schema.org structured data markup for ocmoldpros.com. The site is built on Next.js and needs LocalBusiness, Service, Review, and FAQPage schema added.
+
+## Implementation Requirements
+
+1. Create a new component at `components/StructuredData.tsx` that exports schema JSON-LD
+2. Import and render this component in the main layout or home page
+3. Use Next.js Script component with type="application/ld+json"
+4. The schema should be valid JSON-LD format
+
+## Schema Data to Implement
+
+### 1. LocalBusiness Schema (Primary)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://ocmoldpros.com/#organization",
+  "name": "OC Mold Pros",
+  "image": "https://ocmoldpros.com/logo.jpg",
+  "logo": "https://ocmoldpros.com/logo.jpg",
+  "url": "https://ocmoldpros.com",
+  "telephone": "+1-949-371-5934",
+  "email": "info@ocmoldpros.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Clemente",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.4269",
+    "longitude": "-117.6120"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "San Clemente",
+      "containedIn": {
+        "@type": "AdministrativeArea",
+        "name": "Orange County"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Dana Point"
+    },
+    {
+      "@type": "City",
+      "name": "Laguna Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Laguna Niguel"
+    },
+    {
+      "@type": "City",
+      "name": "Mission Viejo"
+    },
+    {
+      "@type": "City",
+      "name": "Newport Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Huntington Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Irvine"
+    },
+    {
+      "@type": "City",
+      "name": "Costa Mesa"
+    },
+    {
+      "@type": "City",
+      "name": "Anaheim"
+    },
+    {
+      "@type": "City",
+      "name": "Santa Ana"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/ocmoldpros"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4",
+    "bestRating": "5",
+    "worstRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mold Inspection Services",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "name": "Mold Inspection",
+        "description": "Comprehensive visual inspection and moisture assessment to identify mold growth and potential problem areas in your home or business.",
+        "provider": {
+          "@id": "https://ocmoldpros.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Air Quality Testing",
+        "description": "Professional air sampling to measure mold spore concentrations and identify potential health risks in your indoor environment.",
+        "provider": {
+          "@id": "https://ocmoldpros.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Moisture Detection",
+        "description": "Advanced infrared thermal imaging and moisture meters to find hidden water intrusion and dampness that can lead to mold growth.",
+        "provider": {
+          "@id": "https://ocmoldpros.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Detailed Reporting",
+        "description": "Comprehensive written reports with photographs, lab results, and clear recommendations for addressing any issues found.",
+        "provider": {
+          "@id": "https://ocmoldpros.com/#organization"
+        }
+      }
+    ]
+  }
+}
+```
+
+### 2. Individual Review Schemas
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "ProfessionalService",
+    "name": "OC Mold Pros"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Michelle B."
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!"
+}
+```
+
+Create similar schemas for the other 3 reviews (Sean Hanley, Mike Saidi, Nathan Abell).
+
+### 3. FAQPage Schema
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a mold inspection take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a mold inspection cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The exact cost depends on property size and the scope of testing needed. Call us for a free quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide mold remediation services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus exclusively on inspection and testing to ensure our findings are completely unbiased. We can recommend trusted remediation companies if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How soon can I schedule an inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, and 30+ other cities."
+      }
+    }
+  ]
+}
+```
+
+## Component Structure
+
+Create the component with this structure:
+
+```typescript
+import Script from 'next/script';
+
+export default function StructuredData() {
+  const localBusinessSchema = { /* LocalBusiness JSON */ };
+  const reviews = [/* Array of review schemas */];
+  const faqSchema = { /* FAQ JSON */ };
+
+  return (
+    <>
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="reviews-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviews) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </>
+  );
+}
+```
+
+## Where to Add
+
+Import and use `<StructuredData />` in:
+- `app/layout.tsx` (for site-wide schema), or
+- `app/page.tsx` (for homepage only)
+
+## Testing
+
+After implementation, test the schema at:
+- https://search.google.com/test/rich-results
+- https://validator.schema.org/
+
+## Notes
+
+- Update the physical address once you have it
+- Add the actual street address to the PostalAddress object
+- Verify all service area cities are included
+- Update aggregateRating if you have more reviews
+- Add any additional social media profiles to sameAs array

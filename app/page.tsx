@@ -10,27 +10,46 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://ocmoldprosnextjs.replit.app",
+  "@type": "ProfessionalService",
+  "@id": "https://ocmoldpros.com/#organization",
   "name": "OC Mold Pros",
-  "image": "https://ocmoldprosnextjs.replit.app/logo.jpg",
-  "logo": "https://ocmoldprosnextjs.replit.app/logo.jpg",
-  "description": "Professional mold inspection and testing services throughout Orange County, California. Certified inspectors using advanced thermal imaging technology for comprehensive mold detection and air quality testing.",
-  "url": "https://ocmoldprosnextjs.replit.app",
+  "image": "https://ocmoldpros.com/logo.jpg",
+  "logo": "https://ocmoldpros.com/logo.jpg",
+  "url": "https://ocmoldpros.com",
   "telephone": "+1-949-371-5934",
   "email": "info@ocmoldpros.com",
+  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Orange County",
+    "addressLocality": "San Clemente",
     "addressRegion": "CA",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 33.7175,
-    "longitude": -117.8311
+    "latitude": "33.4269",
+    "longitude": "-117.6120"
   },
-  "priceRange": "$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "San Clemente",
+      "containedIn": {
+        "@type": "AdministrativeArea",
+        "name": "Orange County"
+      }
+    },
+    { "@type": "City", "name": "Dana Point" },
+    { "@type": "City", "name": "Laguna Beach" },
+    { "@type": "City", "name": "Laguna Niguel" },
+    { "@type": "City", "name": "Mission Viejo" },
+    { "@type": "City", "name": "Newport Beach" },
+    { "@type": "City", "name": "Huntington Beach" },
+    { "@type": "City", "name": "Irvine" },
+    { "@type": "City", "name": "Costa Mesa" },
+    { "@type": "City", "name": "Anaheim" },
+    { "@type": "City", "name": "Santa Ana" }
+  ],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -40,69 +59,50 @@ const localBusinessSchema = {
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday"],
+      "dayOfWeek": "Saturday",
       "opens": "08:00",
       "closes": "12:00"
     }
   ],
-  "areaServed": [
-    { "@type": "City", "name": "Irvine", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "Newport Beach", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "Huntington Beach", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "Anaheim", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "Santa Ana", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "Costa Mesa", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "Mission Viejo", "containedInPlace": { "@type": "State", "name": "California" } },
-    { "@type": "City", "name": "San Clemente", "containedInPlace": { "@type": "State", "name": "California" } }
+  "sameAs": [
+    "https://instagram.com/ocmoldpros"
   ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4",
+    "bestRating": "5",
+    "worstRating": "5"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Mold Inspection Services",
     "itemListElement": [
       {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mold Inspection",
-          "description": "Comprehensive visual inspection and moisture assessment to identify mold growth and potential problem areas",
-          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
-        }
+        "@type": "Service",
+        "name": "Mold Inspection",
+        "description": "Comprehensive visual inspection and moisture assessment to identify mold growth and potential problem areas in your home or business.",
+        "provider": { "@id": "https://ocmoldpros.com/#organization" }
       },
       {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Air Quality Testing",
-          "description": "Professional air sampling to measure mold spore concentrations and identify health risks",
-          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
-        }
+        "@type": "Service",
+        "name": "Air Quality Testing",
+        "description": "Professional air sampling to measure mold spore concentrations and identify potential health risks in your indoor environment.",
+        "provider": { "@id": "https://ocmoldpros.com/#organization" }
       },
       {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Moisture Detection",
-          "description": "Advanced infrared thermal imaging and moisture meters to find hidden water intrusion",
-          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
-        }
+        "@type": "Service",
+        "name": "Moisture Detection",
+        "description": "Advanced infrared thermal imaging and moisture meters to find hidden water intrusion and dampness that can lead to mold growth.",
+        "provider": { "@id": "https://ocmoldpros.com/#organization" }
       },
       {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Detailed Reporting",
-          "description": "Comprehensive written reports with photographs, lab results, and clear recommendations",
-          "provider": { "@type": "LocalBusiness", "name": "OC Mold Pros" }
-        }
+        "@type": "Service",
+        "name": "Detailed Reporting",
+        "description": "Comprehensive written reports with photographs, lab results, and clear recommendations for addressing any issues found.",
+        "provider": { "@id": "https://ocmoldpros.com/#organization" }
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "127",
-    "bestRating": "5",
-    "worstRating": "1"
   }
 }
 
@@ -157,8 +157,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "OC Mold Pros",
-  "url": "https://ocmoldprosnextjs.replit.app",
-  "logo": "https://ocmoldprosnextjs.replit.app/logo.jpg",
+  "url": "https://ocmoldpros.com",
+  "logo": "https://ocmoldpros.com/logo.jpg",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-949-371-5934",
@@ -169,9 +169,9 @@ const organizationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "127",
+    "reviewCount": "4",
     "bestRating": "5",
-    "worstRating": "1"
+    "worstRating": "5"
   },
   "review": [
     {
