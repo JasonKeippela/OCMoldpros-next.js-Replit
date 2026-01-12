@@ -87,7 +87,7 @@ export default function PricingPage() {
           <ol className="flex items-center gap-2 text-sm text-gray-600">
             <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-gray-900 font-medium">Packages</li>
+            <li className="text-gray-900 font-medium">Pricing</li>
           </ol>
         </div>
       </nav>
