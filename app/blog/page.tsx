@@ -9,42 +9,49 @@ export const metadata: Metadata = {
 const articles = [
   {
     title: 'Understanding the Health Effects of Mold: A Holistic Perspective',
+    slug: 'understanding-health-effects-mold-holistic-perspective',
     excerpt: 'From a homeopathic and naturopathic standpoint, mold exposure can impact overall health in deeper and subtler ways than just structural concerns.',
     category: 'Health',
     date: '2026-01-12'
   },
   {
     title: 'Understanding the Health Risks of Mold Exposure',
+    slug: 'understanding-health-risks-mold-exposure',
     excerpt: 'Learn about the potential health effects of mold exposure, who is most at risk, and when to seek professional help.',
     category: 'Health',
     date: '2024-12-15'
   },
   {
     title: 'Signs You May Have Hidden Mold in Your Home',
+    slug: 'signs-hidden-mold-home',
     excerpt: 'Discover the warning signs that could indicate hidden mold growth in your walls, attic, or other concealed areas.',
     category: 'Detection',
     date: '2024-12-10'
   },
   {
     title: 'Preventing Mold Growth in Coastal Orange County Homes',
+    slug: 'preventing-mold-growth-coastal-orange-county',
     excerpt: 'Special considerations for homes near the beach, including managing humidity and salt air exposure.',
     category: 'Prevention',
     date: '2024-12-05'
   },
   {
     title: 'What to Do If You Find Mold in Your Home',
+    slug: 'what-to-do-find-mold-home',
     excerpt: 'Step-by-step guide on how to respond when you discover mold, including when to call a professional.',
     category: 'Response',
     date: '2024-11-28'
   },
   {
     title: 'The Difference Between Mold Inspection and Mold Testing',
+    slug: 'difference-mold-inspection-testing',
     excerpt: 'Understanding the different types of mold assessment services and which one you need.',
     category: 'Education',
     date: '2024-11-20'
   },
   {
     title: 'Common Mold Types Found in Orange County Homes',
+    slug: 'common-mold-types-orange-county',
     excerpt: 'An overview of the most common mold species we encounter during inspections and their characteristics.',
     category: 'Education',
     date: '2024-11-15'
@@ -86,7 +93,7 @@ export default function BlogPage() {
                   </div>
                   <h2 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h2>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <span className="text-gray-900 font-medium hover:text-gray-900 cursor-pointer">Read More →</span>
+                  <Link href={`/blog/${article.slug}`} className="text-ocean-600 font-medium hover:text-ocean-800">Read More →</Link>
                 </div>
               </article>
             ))}
