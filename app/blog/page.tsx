@@ -8,6 +8,12 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'Understanding the Health Effects of Mold: A Holistic Perspective',
+    excerpt: 'From a homeopathic and naturopathic standpoint, mold exposure can impact overall health in deeper and subtler ways than just structural concerns.',
+    category: 'Health',
+    date: '2026-01-12'
+  },
+  {
     title: 'Understanding the Health Risks of Mold Exposure',
     excerpt: 'Learn about the potential health effects of mold exposure, who is most at risk, and when to seek professional help.',
     category: 'Health',
@@ -53,7 +59,7 @@ export default function BlogPage() {
           <ol className="flex items-center gap-2 text-sm text-gray-600">
             <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-gray-900 font-medium">Learn</li>
+            <li className="text-gray-900 font-medium">Blog</li>
           </ol>
         </div>
       </nav>
