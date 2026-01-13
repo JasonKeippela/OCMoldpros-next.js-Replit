@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'Case Study: Mold Discovery After the Holidays',
+    slug: 'case-study-mold-discovery-after-holidays-dana-point',
+    excerpt: 'A Dana Point homeowner returned from holiday travel to find visible mold in two closets. Learn how a roof leak and lack of humidity control created the perfect conditions for Aspergillus growth.',
+    category: 'Case Study',
+    date: '2026-01-13'
+  },
+  {
     title: 'Understanding the Health Effects of Mold: A Holistic Perspective',
     slug: 'understanding-health-effects-mold-holistic-perspective',
     excerpt: 'From a homeopathic and naturopathic standpoint, mold exposure can impact overall health in deeper and subtler ways than just structural concerns.',

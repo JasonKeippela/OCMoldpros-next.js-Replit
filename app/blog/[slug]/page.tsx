@@ -9,6 +9,46 @@ const articles: Record<string, {
   date: string
   content: string[]
 }> = {
+  'case-study-mold-discovery-after-holidays-dana-point': {
+    title: 'Case Study: Mold Discovery After the Holidays',
+    excerpt: 'A Dana Point homeowner returned from holiday travel to find visible mold in two closets. Learn how a roof leak and lack of humidity control created the perfect conditions for Aspergillus growth.',
+    category: 'Case Study',
+    date: '2026-01-13',
+    content: [
+      '## Dana Point, California | Part 1 - The Findings',
+      '## The Call That Started It All',
+      'This case study began with a call from a homeowner in Dana Point, California, just a couple of miles from the ocean. The client explained that their family had been away for about a week and a half over the holidays. When they returned home, they noticed something alarming: visible mold spots in two separate closets on two different floors of the house.',
+      'Given the visible mold and recent heavy rains, they wanted answers quickly and scheduled a mold inspection for the very next day.',
+      '## Exterior Inspection: Mostly Solid, Minor Vulnerabilities',
+      'We began with a full exterior inspection of the home. Overall, the exterior was in good condition. However, there were a couple of light sconces on the exterior walls that needed to be reset and properly caulked at the top. While minor, these openings can allow moisture intrusion over time—especially in coastal environments where wind-driven rain is common.',
+      'Nothing on the exterior immediately explained the mold growth, but it did reveal small areas that should be corrected to prevent future moisture problems.',
+      '## Interior Findings: Evidence of a Roof Leak',
+      'Once inside the home, the picture became clearer.',
+      'During the heavy rains over the holidays, a roof leak occurred while the family was away. Water intrusion caused sheetrock damage in a second-floor area, including visible separation and deterioration. With no one home to notice or respond, moisture was able to sit for an extended period of time—creating ideal conditions for mold growth.',
+      '## The Primary Issue: Mold Colonization in Two Closets',
+      'The most significant findings were in two closets located on different floors of the home. Both areas showed active mold colonization, and sampling confirmed the presence of Aspergillus.',
+      'Aspergillus is a common indoor mold that thrives in elevated humidity rather than direct water exposure. This detail matters.',
+      'Based on the conditions and homeowner input, it\'s very likely that the HVAC system was turned off while the family was away, there was no air circulation, the home remained dark and stagnant, and humidity levels quietly climbed. In other words, the perfect environment for Aspergillus to grow.',
+      '## A Longer Story Than Just One Leak',
+      'While the roof leak accelerated the problem, the evidence suggests this wasn\'t a brand-new issue.',
+      'The homeowners mentioned that various family members had experienced intermittent health challenges over the years, including headaches, congestion, and general discomfort that seemed to come and go. Nothing severe enough to immediately point to mold—but enough to raise questions in hindsight.',
+      'Given the type of mold found and the conditions present, it\'s very possible that Aspergillus had been present at low levels for years, with humidity acting as the constant fuel source.',
+      'The holiday leak didn\'t create the problem—it exposed it.',
+      '## Why Humidity Control Matters So Much',
+      'A helpful way to think about mold is this: Mold is like water in a bathtub. You can keep scooping water out, but if the faucet is still running, the tub will keep filling.',
+      'In this home, humidity was the faucet.',
+      'Without proper moisture control, mold remediation alone is often temporary. Mold doesn\'t need standing water—just enough moisture in the air to survive and grow.',
+      '## The Path Forward: Moisture Reduction First',
+      'The primary recommendation for this home was to address the moisture overburden by installing a whole-home dehumidification system.',
+      'We\'ve seen this approach work repeatedly, including with another client who installed whole-home dehumidification, reduced indoor humidity to optimal levels, saw mold growth stop, and experienced significant health improvements.',
+      'Simply removing excess moisture can halt fungal growth and dramatically improve indoor air quality.',
+      '## Restore Your Home. Restore Your Health.',
+      'This case perfectly illustrates a simple but powerful truth: When you restore the home, you often restore the health of the people living in it.',
+      'Indoor air quality matters—especially in coastal homes where humidity is a constant challenge.',
+      '## Part 2: What Happened Next',
+      'In Part 2, we\'ll share what steps were taken after the inspection, how humidity control changed the environment, updates on remediation and indoor air quality improvements. More to come.'
+    ]
+  },
   'understanding-health-effects-mold-holistic-perspective': {
     title: 'Understanding the Health Effects of Mold: A Holistic Perspective',
     excerpt: 'From a homeopathic and naturopathic standpoint, mold exposure can impact overall health in deeper and subtler ways than just structural concerns.',
