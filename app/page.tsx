@@ -70,7 +70,7 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "5",
+    "reviewCount": "6",
     "bestRating": "5",
     "worstRating": "5"
   },
@@ -169,7 +169,7 @@ const organizationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "5",
+    "reviewCount": "6",
     "bestRating": "5",
     "worstRating": "5"
   },
@@ -208,6 +208,13 @@ const organizationSchema = {
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "Jason has been incredibly helpful and supportive as we have dealt with a sudden mold invasion in our home. When we first spoke on the phone he treated us with utmost professionalism and empathy for our situation. We were able to quickly schedule a mold inspection. During the inspection he took a lot of time to explain things to us, look at every nook and cranny and ultimately helped us identify the source. He was also very communicative and responsive through the process. I would highly highly recommend Jason and OC mold pros!",
       "datePublished": "2025-01-15"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Jeslyn Rain" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.",
+      "datePublished": "2025-01-14"
     }
   ]
 }
@@ -540,6 +547,11 @@ function TestimonialsSection() {
       name: "Hanny Rivera",
       location: "Orange County, CA",
       text: "Jason has been incredibly helpful and supportive as we have dealt with a sudden mold invasion in our home. When we first spoke on the phone he treated us with utmost professionalism and empathy for our situation. We were able to quickly schedule a mold inspection. During the inspection he took a lot of time to explain things to us, look at every nook and cranny and ultimately helped us identify the source. He was also very communicative and responsive through the process. I would highly highly recommend Jason and OC mold pros!"
+    },
+    {
+      name: "Jeslyn Rain",
+      location: "San Clemente, CA",
+      text: "Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless."
     }
   ]
 
