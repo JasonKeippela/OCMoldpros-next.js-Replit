@@ -120,36 +120,9 @@ export default function SanClementePage() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-600 italic mb-10">
+            <p className="text-gray-600 italic">
               We inspect only—we do not perform remediation—so our findings stay unbiased.
             </p>
-
-            <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Visual Mold Inspection</h3>
-              <p className="text-gray-700 mb-6">
-                Every San Clemente mold inspector with OC Mold Pros begins with a detailed visual assessment of all accessible areas of the property. This step allows us to identify visible mold growth, staining, discoloration, water damage, and building conditions that commonly contribute to mold problems.
-              </p>
-              <p className="text-gray-900 font-semibold mb-4">We inspect:</p>
-              <div className="grid md:grid-cols-2 gap-3 mb-6">
-                {[
-                  'Interior living areas, bedrooms, and closets',
-                  'Bathrooms, kitchens, and laundry rooms',
-                  'Attics, crawlspaces, garages, and utility rooms (when accessible)',
-                  'Windows, doors, baseboards, and transition points',
-                  'Exterior walls, roofing components, and drainage areas',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-ocean-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-700">
-                Rather than just looking for obvious mold, we&apos;re trained to recognize subtle indicators of moisture intrusion and mold activity that are often overlooked, such as bubbling paint, warped materials, past repairs, or microbial staining.
-              </p>
-            </div>
           </div>
         </section>
 
