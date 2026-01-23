@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'How Fast Can Mold Spread in a Home?',
+    slug: 'how-fast-can-mold-spread-in-home',
+    excerpt: 'Mold can begin growing in as little as 24-48 hours after moisture is introduced. Learn what conditions allow mold to spread quickly and when to call a professional inspector.',
+    category: 'Education',
+    date: '2026-01-23'
+  },
+  {
     title: 'Case Study: Mold Discovery After the Holidays',
     slug: 'case-study-mold-discovery-after-holidays-dana-point',
     excerpt: 'A Dana Point homeowner returned from holiday travel to find visible mold in two closets. Learn how a roof leak and lack of humidity control created the perfect conditions for Aspergillus growth.',
