@@ -10,7 +10,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Visual Mold Inspection',
-      description: 'Our certified inspectors conduct a thorough visual examination of your property, checking all accessible areas for signs of mold growth, water damage, and moisture intrusion. We inspect attics, crawl spaces, basements, bathrooms, kitchens, and HVAC systems.',
+      description: 'Every San Clemente mold inspector with OC Mold Pros begins with a detailed visual assessment of all accessible areas of the property. This step allows us to identify visible mold growth, staining, discoloration, water damage, and building conditions that commonly contribute to mold problems. We inspect interior living areas, bedrooms, closets, bathrooms, kitchens, laundry rooms, attics, crawlspaces, garages, utility rooms, windows, doors, baseboards, transition points, exterior walls, roofing components, and drainage areas. Rather than just looking for obvious mold, we\'re trained to recognize subtle indicators of moisture intrusion and mold activity that are often overlooked, such as bubbling paint, warped materials, past repairs, or microbial staining.',
       features: ['Complete property walkthrough', 'Identification of visible mold', 'Water damage assessment', 'Detailed photo documentation']
     },
     {
