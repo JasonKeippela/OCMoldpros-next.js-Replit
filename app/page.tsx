@@ -70,7 +70,7 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "6",
+    "reviewCount": "7",
     "bestRating": "5",
     "worstRating": "5"
   },
@@ -169,7 +169,7 @@ const organizationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "6",
+    "reviewCount": "7",
     "bestRating": "5",
     "worstRating": "5"
   },
@@ -215,6 +215,13 @@ const organizationSchema = {
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.",
       "datePublished": "2025-01-14"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Joshua Schneider" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.",
+      "datePublished": "2025-01-23"
     }
   ]
 }
@@ -552,6 +559,11 @@ function TestimonialsSection() {
       name: "Jeslyn Rain",
       location: "San Clemente, CA",
       text: "Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless."
+    },
+    {
+      name: "Joshua Schneider",
+      location: "San Clemente, CA",
+      text: "Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues."
     }
   ]
 
