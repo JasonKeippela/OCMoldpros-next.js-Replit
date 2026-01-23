@@ -15,7 +15,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Moisture Detection',
-      description: 'Using professional-grade moisture meters and infrared thermal imaging cameras, we detect hidden moisture behind walls, under flooring, and in other concealed areas where mold often grows undetected.',
+      description: 'Mold cannot grow without moisture, which is why moisture detection is a critical part of every inspection. OC Mold Pros is considered an Orange County mold specialist. Using infrared thermal imaging cameras and professional-grade moisture meters, we evaluate walls, ceilings, flooring, and structural components for hidden moisture that may not be visible to the naked eye. This process allows us to identify concealed leaks behind walls or ceilings, detect active or intermittent moisture intrusion, confirm elevated moisture levels in building materials, and pinpoint areas that may support future mold growth. Thermal imaging helps us locate temperature differentials that suggest moisture, while moisture meters allow us to verify and quantify those findings. This combination reduces guesswork and helps ensure nothing important is missed.',
       features: ['Infrared thermal imaging', 'Pin and pinless moisture meters', 'Detection of hidden leaks', 'Moisture mapping']
     },
     {
