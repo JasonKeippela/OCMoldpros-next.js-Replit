@@ -20,7 +20,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Air Quality Testing',
-      description: 'We collect air samples from inside and outside your property to measure mold spore concentrations. Samples are analyzed by independent certified laboratories for accurate, unbiased results.',
+      description: 'When appropriate, and as part of our mold inspection San Clemente and mold inspection Orange County services, we perform air quality testing to evaluate the presence and concentration of airborne mold spores inside the home. Air samples are collected strategically to compare indoor air to outdoor baseline levels, identify elevated mold spore counts, determine the types of mold present, and assess whether mold activity is localized or widespread. Air sampling is especially valuable when mold is suspected but not visibly present, or when occupants are experiencing symptoms without a clear source. The results provide objective data that helps guide next steps and remediation decisions.',
       features: ['Indoor and outdoor sampling', 'Spore trap analysis', 'Independent lab testing', 'Species identification']
     },
     {
