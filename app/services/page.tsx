@@ -56,7 +56,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Mold Inspection Services</h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            OC Mold Pros offers comprehensive mold inspection and testing services designed to identify mold problems and protect your family&apos;s health. We use advanced technology and proven methods to deliver accurate results for mold testing Orange County.
+            OC Mold Pros offers comprehensive mold inspection and testing services designed to identify mold problems and protect your family&apos;s health. We use advanced technology and proven methods to deliver accurate results.
           </p>
         </div>
       </section>
