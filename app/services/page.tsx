@@ -30,12 +30,12 @@ export default function ServicesPage() {
     },
     {
       title: 'HVAC System Inspection',
-      description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County.',
+      description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County. Even though we do not offer mold removal San Clemente services we have industry partners that we can confidently refer to you. ',
       features: ['Ductwork inspection', 'Air handler assessment', 'Filter and coil check', 'Condensation evaluation']
     },
     {
       title: 'Comprehensive Reporting',
-      description: 'Every inspection includes a detailed written report with photographs, laboratory results, findings summary, and professional recommendations. We explain everything in clear, understandable terms.',
+      description: 'After the inspection is complete, we provide a clear, easy-to-understand report that summarizes our findings and outlines recommended next steps. Your report includes inspection observations and documented findings, moisture and environmental insights, laboratory results (when sampling is performed), photos and supporting details, and practical recommendations moving forward. Our goal is clarity — not overwhelm. We take the time to explain what the findings mean, whether conditions appear active or historical, and what actions (if any) should be considered next.',
       features: ['Detailed written report', 'Photo documentation', 'Lab results included', 'Clear recommendations']
     }
   ]
