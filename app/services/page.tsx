@@ -25,7 +25,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Surface Sampling',
-      description: 'When visible mold is present, we collect surface samples using tape lifts or swabs to identify the specific types of mold growing in your property and assess potential health risks.',
+      description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach.',
       features: ['Tape lift samples', 'Swab sampling', 'Lab analysis and identification', 'Health risk assessment']
     },
     {
@@ -56,7 +56,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Mold Inspection Services</h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            OC Mold Pros offers comprehensive mold inspection and testing services designed to identify mold problems and protect your family&apos;s health. We use advanced technology and proven methods to deliver accurate results.
+            OC Mold Pros offers comprehensive mold inspection and testing services designed to identify mold problems and protect your family&apos;s health. We use advanced technology and proven methods to deliver accurate results for mold testing Orange County.
           </p>
         </div>
       </section>
