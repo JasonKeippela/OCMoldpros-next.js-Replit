@@ -25,12 +25,12 @@ export default function ServicesPage() {
     },
     {
       title: 'Surface Sampling',
-      description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach.',
+      description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material and is very helpful for mold remediation Orange County. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach. Surface sampling is done in bathrooms quite a bit for ceiling mold inspection Orange County.',
       features: ['Tape lift samples', 'Swab sampling', 'Lab analysis and identification', 'Health risk assessment']
     },
     {
       title: 'HVAC System Inspection',
-      description: 'Your heating and cooling system can harbor and spread mold throughout your home. We inspect ductwork, air handlers, and HVAC components for mold contamination and moisture issues.',
+      description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County.',
       features: ['Ductwork inspection', 'Air handler assessment', 'Filter and coil check', 'Condensation evaluation']
     },
     {
