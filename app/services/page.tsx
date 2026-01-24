@@ -30,7 +30,7 @@ export default function ServicesPage() {
     },
     {
       title: 'HVAC System Inspection',
-      description: 'Your heating and cooling system can harbor and spread mold throughout your home. We inspect ductwork, air handlers, and HVAC components for mold contamination and moisture issues.',
+      description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County.',
       features: ['Ductwork inspection', 'Air handler assessment', 'Filter and coil check', 'Condensation evaluation']
     },
     {
