@@ -25,7 +25,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Surface Sampling',
-      description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material and is very helpful for mold remediation Orange County. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach. Surface sampling is done in bathrooms quite a bit for ceiling mold inspection Orange County.',
+      description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach.',
       features: ['Tape lift samples', 'Swab sampling', 'Lab analysis and identification', 'Health risk assessment']
     },
     {
