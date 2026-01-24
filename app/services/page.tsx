@@ -35,7 +35,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Comprehensive Reporting',
-      description: 'After the inspection is complete, we provide a clear, easy-to-understand report that summarizes our findings and outlines recommended next steps. Your report includes inspection observations and documented findings, moisture and environmental insights, laboratory results (when sampling is performed), photos and supporting details, and practical recommendations moving forward. Our goal is clarity — not overwhelm. We take the time to explain what the findings mean, whether conditions appear active or historical, and what actions (if any) should be considered next.',
+      description: 'After the mold inspection services San Clemente inspection is complete, we provide a clear, easy-to-understand report that summarizes our findings and outlines recommended next steps. Your report includes inspection observations from mold testing San Clemente and documented findings from mold sampling Orange County, moisture and environmental insights, laboratory results (when sampling is performed), photos and supporting details, and practical recommendations moving forward. Our goal is clarity — not overwhelm. We take the time to explain what the findings mean, whether conditions appear active or historical, and what actions (if any) should be considered next.',
       features: ['Detailed written report', 'Photo documentation', 'Lab results included', 'Clear recommendations']
     }
   ]
