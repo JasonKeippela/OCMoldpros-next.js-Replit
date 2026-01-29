@@ -13,7 +13,7 @@ const articles = [
     excerpt: 'Modern washing machines create the perfect environment for mold and mildew. Learn a simple 1-week reset protocol to eliminate buildup and keep your laundry fresh.',
     category: 'Prevention',
     date: '2026-01-29',
-    image: '/washing-machine-cleaning.jpg'
+    image: '/washing-machine-chart.jpg'
   },
   {
     title: 'How Fast Can Mold Spread in a Home?',

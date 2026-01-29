@@ -15,7 +15,7 @@ const articles: Record<string, {
     excerpt: 'Modern washing machines create the perfect environment for mold and mildew. Learn a simple 1-week reset protocol to eliminate buildup and keep your laundry fresh.',
     category: 'Prevention',
     date: '2026-01-29',
-    image: '/washing-machine-cleaning.jpg',
+    image: '/washing-machine-chart.jpg',
     content: [
       'Most people assume their washing machine stays clean because it\'s constantly washing clothes. Unfortunately, the opposite is often true.',
       'Modern washing machines—especially high-efficiency and front-loading units—create the perfect environment for buildup: moisture, detergent residue, fabric softener film, skin cells, and lint. Over time, this combination can lead to mold and mildew growth, musty odors transferring to clothing, reduced cleaning performance, and potential air quality concerns inside the home.',
@@ -299,6 +299,16 @@ export default async function ArticlePage({ params }: Props) {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{article.title}</h1>
             <p className="text-xl text-gray-600">{article.excerpt}</p>
           </div>
+
+          {article.image && (
+            <div className="mb-8">
+              <img 
+                src={article.image} 
+                alt={article.title}
+                className="w-full rounded-lg shadow-md"
+              />
+            </div>
+          )}
 
           <div className="prose prose-lg max-w-none">
             {article.content.map((paragraph, i) => {
