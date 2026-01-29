@@ -18,6 +18,10 @@ const articles: Record<string, {
     excerpt: 'One of the most overlooked mold sources in Southern California homes is hiding underneath your refrigerator. Learn why condensate pans become mold hotspots and what you can do.',
     category: 'Prevention',
     date: '2026-01-29',
+    image: '/refrigerator-condensate-pan.jpg',
+    imageAlt: 'Refrigerator condensate drip pan with mold and debris buildup from high humidity conditions in Southern California home',
+    imageTitle: 'Refrigerator Condensate Pan Mold Growth Example',
+    imageCaption: 'A refrigerator condensate drip pan. This is what happens in a home with high humidity.',
     content: [
       'When people think about mold problems in a home, they usually picture bathrooms, laundry rooms, or visible leaks. What almost no one expects is that one of the most common "ground zero" mold sources can be hiding underneath the refrigerator.',
       'In Southern California especially, we\'ve seen a surprising number of mold outbreaks—even in brand-new homes and luxury developments—that trace back to a simple but overlooked component: the refrigerator condensate pan.',

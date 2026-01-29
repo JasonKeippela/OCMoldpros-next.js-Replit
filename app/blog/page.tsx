@@ -12,7 +12,8 @@ const articles = [
     slug: 'hidden-mold-risk-refrigerator-condensate-pans',
     excerpt: 'One of the most overlooked mold sources in Southern California homes is hiding underneath your refrigerator. Learn why condensate pans become mold hotspots and what you can do.',
     category: 'Prevention',
-    date: '2026-01-29'
+    date: '2026-01-29',
+    image: '/refrigerator-condensate-pan.jpg'
   },
   {
     title: 'Why Cleaning Your Washing Machine Matters More Than You Think',
