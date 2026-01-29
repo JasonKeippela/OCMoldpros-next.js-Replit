@@ -9,6 +9,9 @@ const articles: Record<string, {
   date: string
   content: string[]
   image?: string
+  imageAlt?: string
+  imageTitle?: string
+  imageCaption?: string
 }> = {
   'why-cleaning-your-washing-machine-matters': {
     title: 'Why Cleaning Your Washing Machine Matters More Than You Think',
@@ -16,6 +19,9 @@ const articles: Record<string, {
     category: 'Prevention',
     date: '2026-01-29',
     image: '/washing-machine-chart.jpg',
+    imageAlt: 'Washing machine cleaning schedule chart showing nuclear clean option with vinegar and citric acid, weekly maintenance routine, and recommended products for mold prevention',
+    imageTitle: 'Washing Machine Mold Prevention Cleaning Schedule',
+    imageCaption: 'Complete washing machine cleaning protocol: deep clean reset, monthly maintenance, and every-load tips to prevent mold and mildew buildup',
     content: [
       'Most people assume their washing machine stays clean because it\'s constantly washing clothes. Unfortunately, the opposite is often true.',
       'Modern washing machines—especially high-efficiency and front-loading units—create the perfect environment for buildup: moisture, detergent residue, fabric softener film, skin cells, and lint. Over time, this combination can lead to mold and mildew growth, musty odors transferring to clothing, reduced cleaning performance, and potential air quality concerns inside the home.',
@@ -301,13 +307,20 @@ export default async function ArticlePage({ params }: Props) {
           </div>
 
           {article.image && (
-            <div className="mb-8">
+            <figure className="mb-8">
               <img 
                 src={article.image} 
-                alt={article.title}
+                alt={article.imageAlt || article.title}
+                title={article.imageTitle || article.title}
                 className="w-full rounded-lg shadow-md"
+                loading="eager"
               />
-            </div>
+              {article.imageCaption && (
+                <figcaption className="text-sm text-gray-500 mt-2 text-center italic">
+                  {article.imageCaption}
+                </figcaption>
+              )}
+            </figure>
           )}
 
           <div className="prose prose-lg max-w-none">
