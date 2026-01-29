@@ -70,7 +70,7 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "7",
+    "reviewCount": "8",
     "bestRating": "5",
     "worstRating": "5"
   },
@@ -169,7 +169,7 @@ const organizationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "7",
+    "reviewCount": "8",
     "bestRating": "5",
     "worstRating": "5"
   },
@@ -222,6 +222,13 @@ const organizationSchema = {
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.",
       "datePublished": "2025-01-23"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Kamal" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Number one in all Orange County, I'm grateful to found an excellent inspector for my home, I highly recommend, super professional and has all the tools to perform an excellent job and experience, expertise about mold and detecting any issues. Thank you for your service Jason!",
+      "datePublished": "2026-01-25"
     }
   ]
 }
@@ -564,6 +571,11 @@ function TestimonialsSection() {
       name: "Joshua Schneider",
       location: "San Clemente, CA",
       text: "Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues."
+    },
+    {
+      name: "Kamal",
+      location: "Orange County, CA",
+      text: "Number one in all Orange County, I'm grateful to found an excellent inspector for my home, I highly recommend, super professional and has all the tools to perform an excellent job and experience, expertise about mold and detecting any issues. Thank you for your service Jason!"
     }
   ]
 
