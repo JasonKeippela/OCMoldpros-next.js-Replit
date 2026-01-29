@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'The Hidden Mold Risk Beneath Your Refrigerator: Condensate (Drip) Pans',
+    slug: 'hidden-mold-risk-refrigerator-condensate-pans',
+    excerpt: 'One of the most overlooked mold sources in Southern California homes is hiding underneath your refrigerator. Learn why condensate pans become mold hotspots and what you can do.',
+    category: 'Prevention',
+    date: '2026-01-29'
+  },
+  {
     title: 'Why Cleaning Your Washing Machine Matters More Than You Think',
     slug: 'why-cleaning-your-washing-machine-matters',
     excerpt: 'Modern washing machines create the perfect environment for mold and mildew. Learn a simple 1-week reset protocol to eliminate buildup and keep your laundry fresh.',

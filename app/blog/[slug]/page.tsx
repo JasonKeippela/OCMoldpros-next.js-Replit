@@ -13,6 +13,46 @@ const articles: Record<string, {
   imageTitle?: string
   imageCaption?: string
 }> = {
+  'hidden-mold-risk-refrigerator-condensate-pans': {
+    title: 'The Hidden Mold Risk Beneath Your Refrigerator: Condensate (Drip) Pans',
+    excerpt: 'One of the most overlooked mold sources in Southern California homes is hiding underneath your refrigerator. Learn why condensate pans become mold hotspots and what you can do.',
+    category: 'Prevention',
+    date: '2026-01-29',
+    content: [
+      'When people think about mold problems in a home, they usually picture bathrooms, laundry rooms, or visible leaks. What almost no one expects is that one of the most common "ground zero" mold sources can be hiding underneath the refrigerator.',
+      'In Southern California especially, we\'ve seen a surprising number of mold outbreaks—even in brand-new homes and luxury developments—that trace back to a simple but overlooked component: the refrigerator condensate pan.',
+      '## What Is a Refrigerator Condensate Pan?',
+      'Most refrigerators, including high-end models like Sub-Zero–style refrigerator/freezer units, are designed to collect moisture created during normal cooling and defrost cycles.',
+      'That moisture drains into a condensate (or drip) pan located underneath or behind the refrigerator. In theory, the water should slowly evaporate with the help of heat from the condenser.',
+      'In reality—especially in humid environments—that evaporation often doesn\'t happen efficiently.',
+      '## Why Condensate Pans Become Mold Hotspots',
+      'A refrigerator condensate pan creates a near-perfect environment for mold growth: standing water that doesn\'t fully evaporate, darkness (hidden beneath the appliance), warmth from the condenser cycling on and off, dust and debris pulled in by airflow, and mold spores that are always present in indoor air.',
+      'When all of these factors come together, mold can colonize extremely quickly—sometimes in weeks, not months.',
+      'This isn\'t theoretical. During inspections, we\'ve repeatedly seen condensate pans that were actively growing mold and spreading spores into surrounding kitchen areas.',
+      '## How Mold Spreads Beyond the Refrigerator',
+      'Once mold establishes itself in or around the drip pan, it doesn\'t always stay there.',
+      'In more severe cases, we\'ve documented mold growth and contamination in kitchen cabinets adjacent to the refrigerator, silverware drawers, base cabinets and toe-kicks, flooring near the fridge, and the air space throughout the kitchen.',
+      'High humidity plus airflow allows spores to move easily, especially when the refrigerator cycles on and off throughout the day.',
+      'What starts as a hidden moisture issue can quietly affect a much larger area of the home.',
+      '## "But My Home Is Brand New…"',
+      'This is one of the most common reactions we hear.',
+      'New construction does not guarantee protection from mold. In fact, newer homes often have tighter building envelopes, less natural air exchange, higher indoor humidity, and larger, more powerful refrigeration units.',
+      'All of these factors can increase the likelihood of condensate moisture lingering instead of evaporating.',
+      '## Smell Is Your Early Warning System',
+      'A healthy home should be smell-neutral.',
+      'You shouldn\'t smell mustiness, sour or earthy odors, "dirty fridge" smells, or anything coming from inside or around the refrigerator.',
+      'You also shouldn\'t smell garbage once it\'s closed, or lingering odors in an otherwise clean kitchen.',
+      'If you do smell something—even faintly—that\'s often an early indicator that moisture and microbial growth may be present somewhere.',
+      'Smell is one of the body\'s first and best warning signals. It\'s worth paying attention to.',
+      '## What Homeowners Can Do',
+      'While not all condensate pans are easily accessible, some practical steps include: periodically pulling the refrigerator out (if safe to do so), checking for standing water or visible buildup, keeping indoor humidity under control, and addressing musty or unexplained kitchen odors promptly.',
+      'If access is limited or concerns persist, professional evaluation may be the safest route.',
+      '## Final Thought',
+      'Refrigerator condensate pans are one of the most overlooked and underestimated sources of mold in Southern California homes.',
+      'They\'re hidden. They\'re quiet. And when conditions are right, they can become the starting point for a much bigger problem.',
+      'A healthy home should feel comfortable and smell like… nothing at all.'
+    ]
+  },
   'why-cleaning-your-washing-machine-matters': {
     title: 'Why Cleaning Your Washing Machine Matters More Than You Think',
     excerpt: 'Modern washing machines create the perfect environment for mold and mildew. Learn a simple 1-week reset protocol to eliminate buildup and keep your laundry fresh.',
