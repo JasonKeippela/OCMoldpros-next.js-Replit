@@ -8,7 +8,45 @@ const articles: Record<string, {
   category: string
   date: string
   content: string[]
+  image?: string
 }> = {
+  'why-cleaning-your-washing-machine-matters': {
+    title: 'Why Cleaning Your Washing Machine Matters More Than You Think',
+    excerpt: 'Modern washing machines create the perfect environment for mold and mildew. Learn a simple 1-week reset protocol to eliminate buildup and keep your laundry fresh.',
+    category: 'Prevention',
+    date: '2026-01-29',
+    image: '/washing-machine-cleaning.jpg',
+    content: [
+      'Most people assume their washing machine stays clean because it\'s constantly washing clothes. Unfortunately, the opposite is often true.',
+      'Modern washing machines—especially high-efficiency and front-loading units—create the perfect environment for buildup: moisture, detergent residue, fabric softener film, skin cells, and lint. Over time, this combination can lead to mold and mildew growth, musty odors transferring to clothing, reduced cleaning performance, and potential air quality concerns inside the home.',
+      'If your laundry smells "off" even after washing, or if you notice black residue around the door seal or detergent tray, your washing machine is asking for attention.',
+      'The good news? You can clean it thoroughly using simple, affordable ingredients—and a short, focused routine.',
+      '## A Deep-Clean Laundry Machine Reset (1-Week Protocol)',
+      'This method is designed as a reset, not a forever routine. The goal is to break down biofilm, kill mold and bacteria, and flush residue from places you can\'t see—like internal hoses, drums, and trays.',
+      '**What You\'ll Need:** White distilled vinegar (all-purpose), citric acid powder, and washing machine cleaning tablets (active/enzymatic type).',
+      '## Step 1: Vinegar Cleaning Cycle (Daily for 7 Days)',
+      '**What to do:** Pour vinegar into the detergent tray and the fabric softener tray. Add 2 cups of vinegar directly into the drum. Run the machine on the hottest cleaning or sanitize cycle.',
+      '**Why it works:** Vinegar helps break down mineral buildup, soap residue, and mild mold growth—especially in trays and internal lines where moisture lingers.',
+      '## Step 2: Citric Acid Cleaning Cycle (Daily for 7 Days)',
+      'On the same day, run a second cycle.',
+      '**What to do:** Add 2 cups of citric acid powder directly into the drum. Run another hot cleaning or sanitize cycle.',
+      '**Why it works:** Citric acid is extremely effective at dissolving scale, biofilm, and residue that vinegar alone may not fully remove. It\'s especially helpful for deep internal buildup.',
+      '**Important:** Run vinegar and citric acid in separate cycles, never together.',
+      '## Step 3: Cleaning Tablets (Daily for 7 Days)',
+      'After completing the vinegar + citric acid week, move to tablets.',
+      '**What to do:** Use one washing machine cleaning tablet per day. Run a hot cleaning cycle.',
+      '**Why it works:** Cleaning tablets often contain enzymes or oxygen-based cleaners that target organic material, odors, and lingering contamination.',
+      '## Monthly Maintenance Going Forward',
+      'Once your machine has been reset, maintenance is simple. Each month: run one vinegar cycle, run one citric acid cycle, and run one cleaning tablet cycle. That\'s it.',
+      'This keeps residue from rebuilding and helps prevent mold and odor from coming back.',
+      '## Extra Tips to Keep Mold From Returning',
+      'Leave the washer door open after every load. Remove wet laundry immediately. Wipe down the door gasket and detergent tray weekly. Avoid overusing detergent or fabric softener.',
+      'A clean washing machine doesn\'t just protect your clothes—it supports a healthier home environment overall.',
+      '## Final Thought',
+      'If you\'re proactive about mold prevention in your home, your washing machine shouldn\'t be overlooked. It\'s one of the most moisture-heavy appliances in the house, and when neglected, it can quietly contribute to odors, contamination, and poor indoor air quality.',
+      'A little routine maintenance goes a long way.'
+    ]
+  },
   'how-fast-can-mold-spread-in-home': {
     title: 'How Fast Can Mold Spread in a Home?',
     excerpt: 'Mold can begin growing in as little as 24-48 hours after moisture is introduced. Learn what conditions allow mold to spread quickly and when to call a professional inspector.',

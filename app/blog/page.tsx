@@ -8,6 +8,14 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'Why Cleaning Your Washing Machine Matters More Than You Think',
+    slug: 'why-cleaning-your-washing-machine-matters',
+    excerpt: 'Modern washing machines create the perfect environment for mold and mildew. Learn a simple 1-week reset protocol to eliminate buildup and keep your laundry fresh.',
+    category: 'Prevention',
+    date: '2026-01-29',
+    image: '/washing-machine-cleaning.jpg'
+  },
+  {
     title: 'How Fast Can Mold Spread in a Home?',
     slug: 'how-fast-can-mold-spread-in-home',
     excerpt: 'Mold can begin growing in as little as 24-48 hours after moisture is introduced. Learn what conditions allow mold to spread quickly and when to call a professional inspector.',
