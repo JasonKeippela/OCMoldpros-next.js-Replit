@@ -307,9 +307,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Article Not Found | OC Mold Pros' }
   }
   
+  const baseUrl = 'https://ocmoldpros.com'
+  
   return {
     title: `${article.title} | OC Mold Pros Blog`,
     description: article.excerpt,
+    keywords: `mold inspection, ${article.category.toLowerCase()}, Orange County, San Clemente, mold testing, indoor air quality`,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: `${baseUrl}/blog/${slug}`,
+      siteName: 'OC Mold Pros',
+      type: 'article',
+      publishedTime: article.date,
+      authors: ['OC Mold Pros'],
+      images: article.image ? [
+        {
+          url: `${baseUrl}${article.image}`,
+          width: 1200,
+          height: 630,
+          alt: article.imageAlt || article.title,
+        }
+      ] : undefined,
+    },
+    twitter: {
+      card: article.image ? 'summary_large_image' : 'summary',
+      title: article.title,
+      description: article.excerpt,
+      images: article.image ? [`${baseUrl}${article.image}`] : undefined,
+    },
   }
 }
 
