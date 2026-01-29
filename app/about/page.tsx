@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About OC Mold Pros | Meet Our Expert Mold Inspection Team',
-  description: 'Learn more about OC Mold Pros, our experienced team of certified mold inspectors serving San Clemente and Orange County. Discover our commitment to keeping your home safe and mold-free with our professional inspection services.',
+  description: 'OC Mold Pros: Certified mold inspectors delivering expert inspections, detailed reports, and top customer care in Orange County.',
 }
 
 export default function AboutPage() {
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Certifications & Qualifications</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'Licensed & Insured', desc: 'Fully licensed to perform mold inspections in California with comprehensive liability insurance.' },
+              { title: 'Licensed', desc: 'Fully licensed to perform mold inspections in California.' },
               { title: 'Certified Inspectors', desc: 'Our team holds industry-recognized certifications in mold inspection and indoor air quality testing.' },
               { title: 'Continuing Education', desc: 'We stay current with the latest inspection techniques, equipment, and industry standards.' }
             ].map((cert, i) => (
