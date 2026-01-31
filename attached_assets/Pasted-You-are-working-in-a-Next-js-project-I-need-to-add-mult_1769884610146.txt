@@ -1,0 +1,123 @@
+You are working in a Next.js project.
+
+I need to add multiple 301 (permanent) redirects for legacy URLs.
+
+Please follow these steps exactly:
+
+Locate the Next.js configuration file (next.config.js or next.config.ts).
+
+If a redirects() async function already exists, append these redirects to the existing array.
+
+If it does not exist, create the redirects() function.
+
+All redirects must be permanent: true.
+
+Do not remove, rename, or alter any existing redirects or config settings.
+
+Use Next.js redirect best practices and ensure redirect order prevents conflicts (more specific paths and query-based redirects should come before broader redirects).
+
+Return only the updated config file.
+
+Add the following redirects (in this order):
+
+1. Exact path redirect
+
+source: /education/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home
+
+destination: /blog/understanding-health-effects-mold-holistic-perspective
+
+permanent: true
+
+2. Path + query redirect
+
+source: /education
+
+has query parameter: blogcategory=Costs
+
+destination: /pricing
+
+permanent: true
+
+3. Exact path + query redirect
+
+source: /education/f/identifying-the-signs-of-mold-illness
+
+has query parameter: blogcategory=Mold Illness
+
+destination: /blog
+
+permanent: true
+
+4. Query redirect (multiple params)
+
+source: /education
+
+has query parameters: blog=y AND blogcategory=Mold Illness
+
+destination: /blog
+
+permanent: true
+
+5. Exact path + query redirect
+
+source: /blog-1/f/how-air-purifiers-reduce-allergies-improve-air-quality
+
+has query parameter: blogcategory=Air Quality
+
+destination: /blog
+
+permanent: true
+
+6. Exact path + query redirect
+
+source: /education/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home
+
+has query parameter: blogcategory=Mold Illness
+
+destination: /blog
+
+permanent: true
+
+7. Query redirect (multiple params)
+
+source: /education
+
+has query parameters: blog=y AND blogcategory=Costs
+
+destination: /blog
+
+permanent: true
+
+8. Exact path redirect
+
+source: /education/f/identifying-the-signs-of-mold-illness
+
+destination: /blog
+
+permanent: true
+
+9. Query redirect
+
+source: /education
+
+has query parameter: blogcategory=Mold Illness
+
+destination: /blog
+
+permanent: true
+
+10. Broad path redirect
+
+source: /education
+
+destination: /blog
+
+permanent: true
+
+Important notes:
+
+Use Next.js has rules for query parameters (not string-matching).
+
+For query values like Mold+Illness or Air+Quality, treat the value as the decoded string with spaces (e.g., Mold Illness, Air Quality).
+
+Make sure the broad /education → /blog rule does not override the more specific query-based rules above it.
