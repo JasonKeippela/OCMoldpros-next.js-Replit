@@ -3,8 +3,10 @@ import Script from 'next/script'
 import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import CanonicalUrl from './components/CanonicalUrl'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ocmoldpros.com'),
   title: 'OC Mold Pros | Professional Mold Inspection & Remediation Solutions in Orange County',
   description: 'Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
   keywords: 'mold inspection, mold remediation, mold testing, Orange County, OC, California, San Clemente, Irvine, Newport Beach',
@@ -44,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <CanonicalUrl />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CK8D20LRK0"
           strategy="afterInteractive"
