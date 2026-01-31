@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ['*'],
   async redirects() {
     return [
+      // General page redirects
+      { source: '/packages', destination: '/pricing', permanent: true },
       // 301 Redirects for removed/invalid service area URLs
       { source: '/service-areas/rowland-heights-ca', destination: '/service-areas', permanent: true },
       { source: '/service-areas/cerritos-ca', destination: '/service-areas', permanent: true },
