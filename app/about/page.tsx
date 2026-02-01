@@ -145,7 +145,7 @@ export default function AboutPage() {
               Call for FREE Consultation
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-              Free Consultation
+              Book FREE Quote
             </Link>
           </div>
         </div>
