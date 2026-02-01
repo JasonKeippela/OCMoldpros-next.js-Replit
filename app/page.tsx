@@ -258,7 +258,7 @@ function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
-              Call 949-371-5934
+              Call for FREE Consultation
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg">
               Free Consultation
@@ -379,7 +379,7 @@ function WhyChooseUs() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Your Free Quote</h3>
             <p className="text-gray-600 mb-6">Call us today for a free consultation and accurate pricing for your mold inspection needs.</p>
             <a href="tel:9493715934" className="block w-full py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center mb-4">
-              Call 949-371-5934
+              Call for FREE Consultation
             </a>
             <Link href="/contact" className="block w-full py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
               Schedule Online
@@ -506,7 +506,7 @@ function FAQSection() {
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Have more questions? We are here to help.</p>
           <a href="tel:9493715934" className="text-gray-900 hover:text-gray-900 font-medium text-lg">
-            Call 949-371-5934
+            Call for FREE Consultation
           </a>
         </div>
       </div>
@@ -524,7 +524,7 @@ function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
-            Call 949-371-5934
+            Call for FREE Consultation
           </a>
           <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg shadow-lg">
             Free Consultation

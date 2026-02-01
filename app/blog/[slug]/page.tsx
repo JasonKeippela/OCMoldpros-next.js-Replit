@@ -409,7 +409,7 @@ export default async function ArticlePage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-6 py-3 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-center">
-                Call 949-371-5934
+                Call for FREE Consultation
               </a>
               <Link href="/contact" className="px-6 py-3 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-center">
                 Request a Consultation

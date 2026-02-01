@@ -138,7 +138,7 @@ export default function BlogPage() {
             If you have questions about mold in your home that are not answered here, give us a call. We are happy to provide guidance.
           </p>
           <a href="tel:9493715934" className="inline-block px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg">
-            Call 949-371-5934
+            Call for FREE Consultation
           </a>
         </div>
       </section>

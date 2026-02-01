@@ -65,7 +65,7 @@ export default function Navigation() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a href="tel:9493715934" className="px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
-            949-371-5934
+            Call for FREE Consultation
           </a>
           <Link href="/contact" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
             Free Consultation
@@ -90,7 +90,7 @@ export default function Navigation() {
             <Link href="/pricing" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link href="/blog" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
             <div className="pt-3 space-y-2">
-              <a href="tel:9493715934" className="block w-full text-center px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg">949-371-5934</a>
+              <a href="tel:9493715934" className="block w-full text-center px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg">Call for FREE Consultation</a>
               <Link href="/contact" className="block w-full text-center px-4 py-2 bg-ocean-600 text-white rounded-lg" onClick={() => setMobileMenuOpen(false)}>Free Consultation</Link>
             </div>
           </div>

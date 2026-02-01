@@ -89,7 +89,7 @@ export default async function CityPage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
-                Call 949-371-5934
+                Call for FREE Consultation
               </a>
               <Link href="/contact" className="px-8 py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
                 Schedule Inspection
@@ -201,7 +201,7 @@ export default async function CityPage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
-                Call 949-371-5934
+                Call for FREE Consultation
               </a>
               <a href="mailto:info@ocmoldpros.com" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
                 Email Us
