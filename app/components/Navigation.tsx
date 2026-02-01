@@ -68,7 +68,7 @@ export default function Navigation() {
             949-371-5934
           </a>
           <Link href="/contact" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-            Book Inspection
+            Free Consultation
           </Link>
         </div>
 
@@ -91,7 +91,7 @@ export default function Navigation() {
             <Link href="/blog" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
             <div className="pt-3 space-y-2">
               <a href="tel:9493715934" className="block w-full text-center px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg">949-371-5934</a>
-              <Link href="/contact" className="block w-full text-center px-4 py-2 bg-ocean-600 text-white rounded-lg" onClick={() => setMobileMenuOpen(false)}>Book Inspection</Link>
+              <Link href="/contact" className="block w-full text-center px-4 py-2 bg-ocean-600 text-white rounded-lg" onClick={() => setMobileMenuOpen(false)}>Free Consultation</Link>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function ProcessPage() {
       title: 'Schedule Your Inspection',
       description: 'Getting started is easy. Call us at 949-371-5934 or use our online booking form to schedule a convenient time for your inspection. We offer flexible scheduling, including same-day appointments when available.',
       details: [
-        'Call or book online anytime',
+        'Call or request a consultation anytime',
         'Flexible scheduling options',
         'Same-day service available',
         'Clear upfront pricing'
@@ -145,7 +145,7 @@ export default function ProcessPage() {
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-              Book Inspection
+              Free Consultation
             </Link>
           </div>
         </div>

@@ -139,7 +139,7 @@ const faqSchema = {
       "name": "How soon can I schedule an inspection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours. Call 949-371-5934 or book online to check availability for your preferred date and time."
+        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours. Call 949-371-5934 or request a free consultation to check availability for your preferred date and time."
       }
     },
     {
@@ -261,7 +261,7 @@ function HeroSection() {
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg">
-              Book an Inspection
+              Free Consultation
             </Link>
           </div>
         </div>
@@ -431,7 +431,7 @@ function ServiceAreas() {
 
 function ProcessSection() {
   const steps = [
-    { step: '1', title: 'Schedule', description: 'Call or book online to schedule your convenient inspection time' },
+    { step: '1', title: 'Schedule', description: 'Call or request a free consultation to schedule your convenient inspection time' },
     { step: '2', title: 'Inspect', description: 'Our certified inspector examines your property with advanced equipment' },
     { step: '3', title: 'Analyze', description: 'Samples are sent to an independent lab for accurate analysis' },
     { step: '4', title: 'Report', description: 'Receive a detailed report with findings and recommendations' }
@@ -527,7 +527,7 @@ function CTASection() {
             Call 949-371-5934
           </a>
           <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg shadow-lg">
-            Book Online
+            Free Consultation
           </Link>
         </div>
       </div>

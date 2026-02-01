@@ -209,7 +209,7 @@ export default function PricingPage() {
               Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-              Book Online
+              Free Consultation
             </Link>
           </div>
         </div>
