@@ -261,7 +261,7 @@ function HeroSection() {
               Call for FREE Consultation
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg">
-              Book FREE Quote
+              Get Free Quote now
             </Link>
           </div>
         </div>
@@ -382,7 +382,7 @@ function WhyChooseUs() {
               Call for FREE Consultation
             </a>
             <Link href="/contact" className="block w-full py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
-              Book FREE Quote
+              Get Free Quote now
             </Link>
           </div>
         </div>
@@ -527,7 +527,7 @@ function CTASection() {
             Call for FREE Consultation
           </a>
           <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg shadow-lg">
-            Book FREE Quote
+            Get Free Quote now
           </Link>
         </div>
       </div>

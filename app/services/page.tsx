@@ -120,7 +120,7 @@ export default function ServicesPage() {
               Call for FREE Consultation
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-              Book FREE Quote
+              Get Free Quote now
             </Link>
           </div>
         </div>
