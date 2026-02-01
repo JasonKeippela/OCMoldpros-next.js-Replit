@@ -21,6 +21,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [serviceAreasOpen, setServiceAreasOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,11 +31,24 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor
+      const isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())
+      const isMobileWidth = window.innerWidth < 768
+      setIsMobile(isMobileUA || isMobileWidth)
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'}`}>
-      <div className="max-w-7xl mx-auto px-4 pt-6 pb-0 flex items-center justify-between">
+      <div className={`max-w-7xl mx-auto px-4 pb-0 flex items-center justify-between ${isMobile ? 'pt-2' : 'pt-6'}`}>
         <Link href="/" className="flex items-center">
-          <Image src="/logo.jpg" alt="OC Mold Pros - Professional Mold Inspection Services in Orange County, CA" width={1050} height={450} className="h-[200px] w-auto my-[-36px]" />
+          <Image src="/logo.jpg" alt="OC Mold Pros - Professional Mold Inspection Services in Orange County, CA" width={1050} height={450} className={`w-auto ${isMobile ? 'h-[100px] my-[-18px]' : 'h-[200px] my-[-36px]'}`} />
         </Link>
         
         <div className="hidden lg:flex items-center gap-6">
