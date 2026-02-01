@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import StructuredData from './components/StructuredData'
+import HeroCTA from './components/HeroCTA'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -256,14 +257,7 @@ function HeroSection() {
           <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
             Restore Your Home, Restore Your Health
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
-              Call for FREE Consultation
-            </a>
-            <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg">
-              Get Free Quote now
-            </Link>
-          </div>
+          <HeroCTA />
         </div>
       </div>
     </section>
