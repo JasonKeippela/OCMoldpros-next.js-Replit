@@ -67,9 +67,9 @@ export default function Navigation() {
           <a href="tel:9493715934" className="px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
             949-371-5934
           </a>
-          <a href="sms:+19493715934?body=Hi, I'd like a free quote!" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-            Text For FREE Quote
-          </a>
+          <Link href="/contact" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
+            Get Free Quote now
+          </Link>
         </div>
 
         <button className="lg:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
