@@ -52,7 +52,6 @@ export default function Navigation() {
         </Link>
         
         <div className="hidden lg:flex items-center gap-6">
-          <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Home</Link>
           <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</Link>
           
@@ -96,7 +95,6 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t shadow-lg">
           <div className="px-4 py-4 space-y-3">
-            <Link href="/" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link href="/about" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <Link href="/services" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link href="/service-areas" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Mold Inspector Near Me</Link>
