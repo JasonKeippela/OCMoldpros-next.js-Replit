@@ -16,7 +16,9 @@ const nextConfig: NextConfig = {
       // General page redirects
       { source: '/packages', destination: '/pricing', permanent: true },
       { source: '/about-us', destination: '/about', permanent: true },
-      { source: '/locations', destination: '/service-areas', permanent: true },
+      { source: '/locations', destination: '/mold-inspector-near-me', permanent: true },
+      { source: '/service-areas', destination: '/mold-inspector-near-me', permanent: true },
+      { source: '/service-areas/:path*', destination: '/mold-inspector-near-me/:path*', permanent: true },
       // Legacy blog redirects - exact paths with query params first (most specific)
       { 
         source: '/education/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home',

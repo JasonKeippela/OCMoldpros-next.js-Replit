@@ -15,7 +15,7 @@ export default function ServiceAreasPage() {
           <ol className="flex items-center gap-2 text-sm text-gray-600">
             <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
             <li>/</li>
-            <li className="text-gray-900 font-medium">Service Areas</li>
+            <li className="text-gray-900 font-medium">Mold Inspector Near Me</li>
           </ol>
         </div>
       </nav>
@@ -42,7 +42,7 @@ export default function ServiceAreasPage() {
       <section className="py-12 bg-ocean-50">
         <div className="max-w-6xl mx-auto px-4">
           <Link 
-            href="/service-areas/orange-county-beach-cities"
+            href="/mold-inspector-near-me/orange-county-beach-cities"
             className="block p-6 bg-white border-2 border-ocean-300 rounded-xl hover:border-ocean-500 hover:shadow-lg transition-all group"
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -74,7 +74,7 @@ export default function ServiceAreasPage() {
             {CORE_SERVICE_AREAS.map(city => (
               <Link 
                 key={city.slug} 
-                href={`/service-areas/${city.slug}`}
+                href={`/mold-inspector-near-me/${city.slug}`}
                 className="p-6 bg-white border-2 border-ocean-200 rounded-xl hover:border-ocean-500 hover:shadow-lg transition-all group"
               >
                 <span className="text-lg text-gray-900 group-hover:text-ocean-700 font-semibold">
@@ -94,7 +94,7 @@ export default function ServiceAreasPage() {
             {SECONDARY_SERVICE_AREAS.map(city => (
               <Link 
                 key={city.slug} 
-                href={`/service-areas/${city.slug}`}
+                href={`/mold-inspector-near-me/${city.slug}`}
                 className="px-4 py-2 bg-white border border-gray-200 rounded-full hover:border-ocean-500 hover:bg-ocean-50 transition-all text-gray-700 hover:text-ocean-700 font-medium text-sm"
               >
                 {city.name}

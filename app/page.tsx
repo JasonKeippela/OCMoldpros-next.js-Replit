@@ -408,13 +408,13 @@ function ServiceAreas() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {featuredCities.map(city => (
-            <Link key={city.slug} href={`/service-areas/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium">
+            <Link key={city.slug} href={`/mold-inspector-near-me/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium">
               {city.name}, CA
             </Link>
           ))}
         </div>
         <div className="text-center mt-8">
-          <Link href="/service-areas" className="text-gray-900 hover:text-gray-900 font-medium">
+          <Link href="/mold-inspector-near-me" className="text-gray-900 hover:text-gray-900 font-medium">
             View all 33+ cities we serve →
           </Link>
         </div>

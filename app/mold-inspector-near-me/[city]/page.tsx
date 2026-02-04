@@ -45,7 +45,7 @@ export default async function CityPage({ params }: Props) {
     "@type": "LocalBusiness",
     "name": "OC Mold Pros",
     "description": `Professional mold inspection and testing services in ${cityInfo.name}, CA`,
-    "url": `https://ocmoldpros.com/service-areas/${citySlug}`,
+    "url": `https://ocmoldpros.com/mold-inspector-near-me/${citySlug}`,
     "telephone": "+1-949-371-5934",
     "address": {
       "@type": "PostalAddress",
@@ -72,7 +72,7 @@ export default async function CityPage({ params }: Props) {
             <ol className="flex items-center gap-2 text-sm text-gray-600">
               <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
               <li>/</li>
-              <li><Link href="/service-areas" className="hover:text-gray-900">Service Areas</Link></li>
+              <li><Link href="/mold-inspector-near-me" className="hover:text-gray-900">Mold Inspector Near Me</Link></li>
               <li>/</li>
               <li className="text-gray-900 font-medium">{cityInfo.name}, CA</li>
             </ol>
@@ -185,7 +185,7 @@ export default async function CityPage({ params }: Props) {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Nearby Areas We Serve</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {nearbyWithSlugs.map(city => (
-                <Link key={city.slug} href={`/service-areas/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium">
+                <Link key={city.slug} href={`/mold-inspector-near-me/${city.slug}`} className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium">
                   {city.name}, CA
                 </Link>
               ))}

@@ -72,7 +72,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Service Area</h3>
                     <p className="text-gray-700">All of Orange County, California</p>
-                    <Link href="/service-areas" className="text-gray-900 text-sm hover:text-gray-900">View all service areas →</Link>
+                    <Link href="/mold-inspector-near-me" className="text-gray-900 text-sm hover:text-gray-900">View all service areas →</Link>
                   </div>
                 </div>
               </div>

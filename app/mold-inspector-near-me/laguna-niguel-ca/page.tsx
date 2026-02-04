@@ -2,31 +2,31 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mold Inspection Laguna Beach CA | Certified Mold Testing & Air Quality',
-  description: 'Professional mold inspection and mold testing in Laguna Beach, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
+  title: 'Mold Inspection Laguna Niguel CA | Certified Mold Testing & Air Quality',
+  description: 'Professional mold inspection and mold testing in Laguna Niguel, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
 }
 
 const neighborhoods = [
-  'Downtown Laguna Beach',
-  'North Laguna',
-  'South Laguna',
-  'Top of the World',
-  'Laguna Canyon',
-  'Temple Hills',
-  'Arch Beach Heights',
-  'Woods Cove',
-  'Victoria Beach',
-  'Three Arch Bay',
-  'Emerald Bay',
-  'Irvine Cove',
+  'Bear Brand Ranch',
+  'Niguel Summit',
+  'Monarch Summit',
+  'Ocean Ranch',
+  'Kite Hill',
+  'Niguel West',
+  'Beacon Hill',
+  'El Niguel Heights',
+  'Colinas de Capistrano',
+  'Mountainview',
+  'Marina Hills',
+  'Crown Valley',
 ]
 
 const nearbyBeachCities = [
   { name: 'Dana Point', slug: 'dana-point-ca' },
-  { name: 'Laguna Niguel', slug: 'laguna-niguel-ca' },
-  { name: 'Newport Beach', slug: 'newport-beach-ca' },
-  { name: 'Costa Mesa', slug: 'costa-mesa-ca' },
+  { name: 'Laguna Beach', slug: 'laguna-beach-ca' },
   { name: 'San Clemente', slug: 'san-clemente-ca' },
+  { name: 'San Juan Capistrano', slug: 'san-juan-capistrano-ca' },
+  { name: 'Newport Beach', slug: 'newport-beach-ca' },
 ]
 
 const relatedServices = [
@@ -36,21 +36,21 @@ const relatedServices = [
   { href: '/services', label: 'Clearance / Post-Remediation Testing' },
 ]
 
-export default function LagunaBeachPage() {
+export default function LagunaNiguelPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "OC Mold Pros",
-    "description": "Professional mold inspection and testing services in Laguna Beach, CA",
-    "url": "https://ocmoldpros.com/service-areas/laguna-beach-ca",
+    "description": "Professional mold inspection and testing services in Laguna Niguel, CA",
+    "url": "https://ocmoldpros.com/mold-inspector-near-me/laguna-niguel-ca",
     "telephone": "+1-949-371-5934",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Laguna Beach",
+      "addressLocality": "Laguna Niguel",
       "addressRegion": "CA",
       "addressCountry": "US"
     },
-    "areaServed": { "@type": "City", "name": "Laguna Beach" },
+    "areaServed": { "@type": "City", "name": "Laguna Niguel" },
     "serviceType": ["Mold Inspection", "Mold Testing", "Air Quality Testing", "Moisture Detection"],
     "priceRange": "$$",
     "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
@@ -66,9 +66,9 @@ export default function LagunaBeachPage() {
             <ol className="flex items-center gap-2 text-sm text-gray-600">
               <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
               <li>/</li>
-              <li><Link href="/service-areas" className="hover:text-gray-900">Service Areas</Link></li>
+              <li><Link href="/mold-inspector-near-me" className="hover:text-gray-900">Mold Inspector Near Me</Link></li>
               <li>/</li>
-              <li className="text-gray-900 font-medium">Laguna Beach, CA</li>
+              <li className="text-gray-900 font-medium">Laguna Niguel, CA</li>
             </ol>
           </div>
         </nav>
@@ -76,10 +76,10 @@ export default function LagunaBeachPage() {
         <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Mold Inspection & Mold Testing in Laguna Beach, CA
+              Mold Inspection & Mold Testing in Laguna Niguel, CA
             </h1>
             <p className="text-xl text-gray-600 mb-6 max-w-3xl">
-              Laguna Beach&apos;s artistic charm and stunning coastline come with real moisture challenges. The marine layer, salt air, and canyon microclimates create perfect conditions for hidden mold growth—especially in older beach cottages, hillside homes, and properties with limited ventilation. Our certified inspectors understand the unique construction styles here and provide clear, unbiased assessments to help protect both your home and your health.
+              Laguna Niguel&apos;s hillside homes enjoy ocean views and coastal breezes—but that proximity to the coast also brings elevated humidity and moisture challenges. Many homes here were built in the 1980s and 90s, and aging plumbing, stucco issues, or inadequate ventilation can lead to hidden mold growth. Our certified inspectors help you understand what&apos;s happening inside your home with clear, unbiased findings and practical recommendations.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -124,15 +124,15 @@ export default function LagunaBeachPage() {
 
         <section className="py-16 bg-ocean-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Mold Happens in Laguna Beach Homes</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Mold Happens in Laguna Niguel Homes</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                'Persistent marine layer and coastal fog',
-                'Salt air that accelerates moisture intrusion',
-                'Canyon homes with unique drainage challenges',
-                'Historic and older construction lacking modern moisture barriers',
-                'Beach cottages with inadequate ventilation',
-                'Closed-up second homes that trap humidity inside',
+                'Coastal humidity and marine layer moisture',
+                'Hillside homes can have drainage and grading issues',
+                '1980s-90s construction with aging plumbing systems',
+                'Stucco exteriors that trap moisture behind walls',
+                'Inadequate bathroom and kitchen ventilation',
+                'HVAC systems that create condensation in ducts',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-lg">
                   <svg className="w-5 h-5 text-ocean-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -159,7 +159,7 @@ export default function LagunaBeachPage() {
 
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Buying or Selling a Home in Laguna Beach?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Buying or Selling a Home in Laguna Niguel?</h2>
             <p className="text-lg text-gray-600 mb-4">
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
@@ -171,7 +171,7 @@ export default function LagunaBeachPage() {
 
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Communities We Serve in Laguna Beach</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Communities We Serve in Laguna Niguel</h2>
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3 mb-8">
               {neighborhoods.map((neighborhood, i) => (
                 <div key={i} className="flex items-center gap-2">
@@ -183,7 +183,7 @@ export default function LagunaBeachPage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure if we cover your area? If you&apos;re in Laguna Beach, we can help. DM or call to schedule a free 20-minute consultation.
+              Not sure if we cover your area? If you&apos;re in Laguna Niguel, we can help. DM or call to schedule a free 20-minute consultation.
             </p>
           </div>
         </section>
@@ -212,7 +212,7 @@ export default function LagunaBeachPage() {
               {nearbyBeachCities.map(city => (
                 <Link 
                   key={city.slug} 
-                  href={`/service-areas/${city.slug}`} 
+                  href={`/mold-inspector-near-me/${city.slug}`} 
                   className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium"
                 >
                   {city.name}, CA
@@ -224,7 +224,7 @@ export default function LagunaBeachPage() {
 
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Laguna Beach Today</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Laguna Niguel Today</h2>
             <p className="text-lg text-white font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
             </p>
@@ -236,7 +236,7 @@ export default function LagunaBeachPage() {
                 Request a Consultation
               </Link>
             </div>
-            <p className="text-ocean-200">Serving Laguna Beach and all of Orange County, California</p>
+            <p className="text-ocean-200">Serving Laguna Niguel and all of Orange County, California</p>
           </div>
         </section>
       </main>

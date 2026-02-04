@@ -88,7 +88,7 @@ export default function BeachCitiesHubPage() {
     "@type": "LocalBusiness",
     "name": "OC Mold Pros",
     "description": "Professional mold inspection and testing services across Orange County beach cities",
-    "url": "https://ocmoldpros.com/service-areas/orange-county-beach-cities",
+    "url": "https://ocmoldpros.com/mold-inspector-near-me/orange-county-beach-cities",
     "telephone": "+1-949-371-5934",
     "areaServed": beachCities.map(city => ({ "@type": "City", "name": city.name })),
     "serviceType": ["Mold Inspection", "Mold Testing", "Air Quality Testing", "Moisture Detection"],
@@ -106,7 +106,7 @@ export default function BeachCitiesHubPage() {
             <ol className="flex items-center gap-2 text-sm text-gray-600">
               <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
               <li>/</li>
-              <li><Link href="/service-areas" className="hover:text-gray-900">Service Areas</Link></li>
+              <li><Link href="/mold-inspector-near-me" className="hover:text-gray-900">Mold Inspector Near Me</Link></li>
               <li>/</li>
               <li className="text-gray-900 font-medium">Beach Cities</li>
             </ol>
@@ -144,7 +144,7 @@ export default function BeachCitiesHubPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{city.name}</h3>
                   <p className="text-gray-600 mb-4">{city.description}</p>
                   <Link 
-                    href={`/service-areas/${city.slug}`}
+                    href={`/mold-inspector-near-me/${city.slug}`}
                     className="inline-flex items-center gap-2 text-ocean-600 hover:text-ocean-800 font-semibold"
                   >
                     Mold Inspection in {city.name}

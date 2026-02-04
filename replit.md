@@ -21,8 +21,8 @@ app/
   pricing/page.tsx    # Pricing page
   blog/page.tsx       # Learn/Blog page
   contact/page.tsx    # Contact page with form
-  service-areas/
-    page.tsx          # Service areas overview with city grid
+  mold-inspector-near-me/
+    page.tsx          # Mold inspector near me overview with city grid
     [city]/page.tsx   # Dynamic city landing pages (33 cities)
 public/
   robots.txt          # Robots file
@@ -40,7 +40,7 @@ public/
 - Home: Hero, trust indicators, services, FAQ, CTAs
 - About: Company story, values, certifications
 - Services: 6 detailed service offerings
-- Service Areas: Grid of 33 cities with links
+- Mold Inspector Near Me: Grid of 33 cities with links (URL: /mold-inspector-near-me)
 - [City] Pages: City-specific mold inspection content
 - Process: 4-step inspection process
 - Pricing: Transparent pricing tiers
@@ -80,7 +80,7 @@ npm run dev -- -p 5000
 9 dedicated landing pages with enhanced local SEO, consistent template, and internal linking:
 - San Clemente, Dana Point, Laguna Niguel, Laguna Beach, Newport Beach, Costa Mesa, Huntington Beach, Seal Beach, San Juan Capistrano
 
-**Hub Page**: `/service-areas/orange-county-beach-cities` - Links to all 9 beach city pages with city-specific descriptions
+**Hub Page**: `/mold-inspector-near-me/orange-county-beach-cities` - Links to all 9 beach city pages with city-specific descriptions
 
 Each page includes:
 - H1: "Mold Inspection & Mold Testing in {City}, CA"
@@ -95,6 +95,7 @@ Each page includes:
 - CTA: "DM or call to schedule a free 20-minute consultation"
 
 ## Recent Changes
+- Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure
 - Jan 10, 2026: Created Beach City Cluster - 9 dedicated landing pages with enhanced template including inspection details, city-specific mold causes, neighborhoods, related services, and internal cluster linking
 - Jan 04, 2026: Added tier system (core/secondary) to service areas - 10 core cities (San Clemente, Dana Point, Laguna Beach, Laguna Niguel, Laguna Hills, Mission Viejo, Newport Beach, Huntington Beach, Costa Mesa, Irvine) and 24 secondary cities
 - Jan 04, 2026: Service areas cleanup - Updated to 34 approved cities only, added Laguna Woods, removed 12 invalid city references from nearby arrays, added 301 redirects for bad URLs

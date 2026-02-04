@@ -42,7 +42,7 @@ export default function DanaPointPage() {
     "@type": "LocalBusiness",
     "name": "OC Mold Pros",
     "description": "Professional mold inspection and testing services in Dana Point, CA",
-    "url": "https://ocmoldpros.com/service-areas/dana-point-ca",
+    "url": "https://ocmoldpros.com/mold-inspector-near-me/dana-point-ca",
     "telephone": "+1-949-371-5934",
     "address": {
       "@type": "PostalAddress",
@@ -66,7 +66,7 @@ export default function DanaPointPage() {
             <ol className="flex items-center gap-2 text-sm text-gray-600">
               <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
               <li>/</li>
-              <li><Link href="/service-areas" className="hover:text-gray-900">Service Areas</Link></li>
+              <li><Link href="/mold-inspector-near-me" className="hover:text-gray-900">Mold Inspector Near Me</Link></li>
               <li>/</li>
               <li className="text-gray-900 font-medium">Dana Point, CA</li>
             </ol>
@@ -212,7 +212,7 @@ export default function DanaPointPage() {
               {nearbyBeachCities.map(city => (
                 <Link 
                   key={city.slug} 
-                  href={`/service-areas/${city.slug}`} 
+                  href={`/mold-inspector-near-me/${city.slug}`} 
                   className="p-4 bg-ocean-50 rounded-lg text-gray-900 hover:bg-ocean-100 transition-colors text-center font-medium"
                 >
                   {city.name}, CA

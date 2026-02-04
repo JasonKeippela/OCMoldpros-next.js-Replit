@@ -28,10 +28,10 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {CORE_SERVICE_AREAS.slice(0, 6).map(city => (
                 <li key={city.slug}>
-                  <Link href={`/service-areas/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
+                  <Link href={`/mold-inspector-near-me/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
                 </li>
               ))}
-              <li><Link href="/service-areas" className="text-ocean-300 hover:text-white transition-colors">View All Cities →</Link></li>
+              <li><Link href="/mold-inspector-near-me" className="text-ocean-300 hover:text-white transition-colors">View All Cities →</Link></li>
             </ul>
           </div>
           
@@ -70,7 +70,7 @@ export default function Footer() {
             <span className="text-white font-semibold">Primary Service Areas: </span>
             {CORE_SERVICE_AREAS.map((city, i) => (
               <span key={city.slug}>
-                <Link href={`/service-areas/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
+                <Link href={`/mold-inspector-near-me/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
                 {i < CORE_SERVICE_AREAS.length - 1 ? ', ' : ''}
               </span>
             ))}
