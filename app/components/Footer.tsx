@@ -68,6 +68,12 @@ export default function Footer() {
                   Facebook
                 </a>
               </li>
+              <li>
+                <a href="https://app.spectora.com/home-inspectors/my-inspection-company-1dceb3c45f" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Spectora
+                </a>
+              </li>
               <li className="pt-2">
                 <span className="text-ocean-400 text-xs">Mon-Fri: 8am - 5pm, Sat: 8am - 12pm</span>
               </li>
