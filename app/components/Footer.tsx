@@ -56,6 +56,12 @@ export default function Footer() {
                   @ocmoldpros
                 </a>
               </li>
+              <li>
+                <a href="https://www.houzz.com/pro/jason-keippela" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.01 0L5.5 3.5v8.5H2v8.5h7.5V24h5v-3.5H22V12h-3.5V3.5L12.01 0zm2.49 17h-5v-5h5v5z"/></svg>
+                  Houzz
+                </a>
+              </li>
               <li className="pt-2">
                 <span className="text-ocean-400 text-xs">Mon-Fri: 8am - 5pm, Sat: 8am - 12pm</span>
               </li>
