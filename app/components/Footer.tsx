@@ -80,6 +80,12 @@ export default function Footer() {
                   IAC2 Certified
                 </a>
               </li>
+              <li>
+                <a href="https://www.yelp.com/biz/oc-mold-pros-san-clemente-4" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 011.596-.206 9.194 9.194 0 011.67 4.711zm-6.165 4.408l1.432 4.995c.276.96-.8 1.74-1.63 1.176l-4.308-2.905a1.072 1.072 0 01-.206-1.596 9.194 9.194 0 014.712-1.67zm-6.997-1.633l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 011.596-.206 9.194 9.194 0 011.67 4.711zM12 2C6.477 2 2 6.477 2 12c0 .698.072 1.38.209 2.04l3.717-1.067c.117-1.644.682-3.17 1.592-4.446l-2.1-3.115A9.953 9.953 0 0112 2zm0 4a6 6 0 100 12 6 6 0 000-12z"/></svg>
+                  Yelp
+                </a>
+              </li>
               <li className="pt-2">
                 <span className="text-ocean-400 text-xs">Mon-Fri: 8am - 5pm, Sat: 8am - 12pm</span>
               </li>
