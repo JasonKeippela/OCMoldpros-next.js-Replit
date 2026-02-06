@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Environmental Consulting | Expert Mold Inspections in San Clemente & Orange County',
-  description: 'OC Mold Pros offers professional mold inspection services in San Clemente and surrounding Orange County areas. We use advanced air sampling and thermal imaging to ensure your home is mold-free.',
+  description: 'OC Mold Pros offers Environmental Consulting and mold inspection services in San Clemente and surrounding Orange County areas. We use advanced air sampling and thermal imaging to ensure your home is mold-free.',
 }
 
 const localBusinessSchema = {
@@ -117,7 +117,7 @@ const faqSchema = {
       "name": "How long does a mold inspection take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern."
+        "text": "A typical residential mold inspection takes 2-4 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern."
       }
     },
     {
@@ -250,7 +250,7 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30 z-10" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl">
-            Professional Mold Inspection & Testing in San Clemente & Orange County
+            Environmental Consulting and Professional Mold Inspection in San Clemente & Orange County
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
             Are you looking for a mold inspection near me? 24/7 emergency inspections and same day service available. Certified inspectors protecting your home and family with advanced mold detection technology
