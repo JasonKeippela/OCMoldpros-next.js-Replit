@@ -5,7 +5,7 @@ import HeroCTA from './components/HeroCTA'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'OC Mold Pros | Expert Mold Inspections in San Clemente & Orange County',
+  title: 'Environmental Consulting | Expert Mold Inspections in San Clemente & Orange County',
   description: 'OC Mold Pros offers professional mold inspection services in San Clemente and surrounding Orange County areas. We use advanced air sampling and thermal imaging to ensure your home is mold-free.',
 }
 
