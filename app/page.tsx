@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import StructuredData from './components/StructuredData'
 import HeroCTA from './components/HeroCTA'
 import { Metadata } from 'next'
 
@@ -22,8 +21,10 @@ const localBusinessSchema = {
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "1322 Calle Avanzado",
     "addressLocality": "San Clemente",
     "addressRegion": "CA",
+    "postalCode": "92673",
     "addressCountry": "US"
   },
   "geo": {
@@ -625,9 +626,18 @@ function TestimonialsSection() {
 export default function Home() {
   return (
     <>
-      <StructuredData data={localBusinessSchema} id="local-business" />
-      <StructuredData data={faqSchema} id="faq-page" />
-      <StructuredData data={organizationSchema} id="organization" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <main>
         <HeroSection />
         <TrustIndicators />
