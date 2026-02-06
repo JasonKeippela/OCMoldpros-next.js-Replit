@@ -22,8 +22,10 @@ const localBusinessSchema = {
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "1322 Calle Avanzado",
     "addressLocality": "San Clemente",
     "addressRegion": "CA",
+    "postalCode": "92673",
     "addressCountry": "US"
   },
   "geo": {
