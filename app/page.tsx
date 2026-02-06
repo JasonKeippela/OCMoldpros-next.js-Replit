@@ -250,7 +250,7 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30 z-10" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl">
-            Professional Mold Inspection & Testing in San Clemente & Orange County
+            Environmental Consulting and Professional Mold Inspection in San Clemente & Orange County
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
             Are you looking for a mold inspection near me? 24/7 emergency inspections and same day service available. Certified inspectors protecting your home and family with advanced mold detection technology
