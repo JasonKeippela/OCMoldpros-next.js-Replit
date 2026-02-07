@@ -95,34 +95,9 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Specialized Service Pages</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/services/hvac-system-inspection" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">HVAC System Inspection</h3>
-              <p className="text-gray-600">HVAC system inspection in San Clemente focused on moisture, air quality red flags, and mold risk from your heating and cooling system.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/mold-prevention" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Prevention</h3>
-              <p className="text-gray-600">Mold prevention inspections in San Clemente. Find moisture risks early and avoid costly mold damage in your coastal home.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
             <Link href="/services/mold-sampling" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Sampling</h3>
               <p className="text-gray-600">Professional mold sampling in San Clemente. Air and surface testing with lab analysis to identify hidden mold problems in your home.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/new-construction-inspections" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">New Construction Inspections</h3>
-              <p className="text-gray-600">New construction inspections in San Clemente. Pre-drywall, final walkthrough, and 11-month warranty inspections for new builds.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/physical-and-visual-inspection" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Physical and Visual Inspection</h3>
-              <p className="text-gray-600">Physical and visual inspection in San Clemente focused on moisture, mold risk, and building leaks. A smart first step before testing.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/rental-property-inspections" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Rental Property Inspections</h3>
-              <p className="text-gray-600">Rental property inspections in San Clemente for landlords, tenants, and property managers. Move-in, move-out, and mid-lease documentation.</p>
               <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
             </Link>
           </div>

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mold Sampling San Clemente CA | Local Home Inspector',
+  title: 'Mold Sampling San Clemente | Home Inspector',
   description: 'Professional mold sampling in San Clemente by a local home inspector. Air and surface testing with lab analysis to identify hidden mold problems in your home.',
 }
 
@@ -77,7 +77,7 @@ export default function MoldSamplingPage() {
             <li>How air moves room to room</li>
           </ul>
 
-          <p>This is especially important in mold sampling San Clemente, where coastal air can sneak in through crawlspaces, attics, and wall cavities. Homes near Avenida Del Mar, the Pier, Marblehead, Forster Ranch, Talega, and Capistrano Beach all have slightly different building styles, and those details matter.</p>
+          <p>This is especially important in San Clemente, where coastal air can sneak in through crawlspaces, attics, and wall cavities. Homes near Avenida Del Mar, the Pier, Marblehead, Forster Ranch, Talega, and Capistrano Beach all have slightly different building styles, and those details matter.</p>
 
           <p>Being an environmental consultant means explaining results in plain English. No scare tactics. No vague language. Just what&apos;s happening, why it&apos;s happening, and what usually fixes it.</p>
 
@@ -87,7 +87,7 @@ export default function MoldSamplingPage() {
 
           <p>At the core, this is still a <strong>home inspector</strong> service.</p>
 
-          <p>Mold sampling San Clemente works best when paired with an actual inspection of the property. We don&apos;t just collect samples and leave. We look for the reason behind the results.</p>
+          <p>Mold sampling works best when paired with an actual inspection of the property. We don&apos;t just collect samples and leave. We look for the reason behind the results.</p>
 
           <p>As a home inspector in San Clemente, we check:</p>
           <ul>
@@ -208,16 +208,6 @@ export default function MoldSamplingPage() {
 
           <p>We live and work in this area. We know the houses. We know the patterns.</p>
 
-          <p>We provide mold sampling in San Clemente, California, including Talega, Forster Ranch, Marblehead, Capistrano Beach, Rancho San Clemente, and downtown San Clemente near Avenida Del Mar and the Pier. If you searched for mold sampling near me, you&apos;re in the right place.</p>
-
-          <hr className="my-10" />
-
-          <h2 className="text-2xl font-bold text-gray-900">Mold Sampling in San Clemente, CA</h2>
-
-          <p>Our mold sampling services are available throughout San Clemente and South Orange County. We work with homeowners, renters, buyers, sellers, and real estate agents who need clear answers about indoor air quality.</p>
-
-          <p>Service area includes San Clemente, Capistrano Beach, Dana Point, San Juan Capistrano, and nearby Orange County communities.</p>
-
           <hr className="my-10" />
 
           <h2 className="text-2xl font-bold text-gray-900">Scheduling Mold Sampling San Clemente</h2>
@@ -236,7 +226,7 @@ export default function MoldSamplingPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Inspection Today</h2>
           <p className="text-xl text-ocean-100 mb-8">
-            Contact us to learn more about our services or schedule your mold inspection. 
+            Contact us to learn more about our services or schedule your mold inspection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
