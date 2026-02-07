@@ -1,0 +1,188 @@
+You are working in my existing Next.js codebase for ocmoldpros.com. I need you to ADD a new service page using my CURRENT Services page template and wire it into the main nav under the Services dropdown.
+
+THIS PAGE MUST INCLUDE PROPERLY FORMATTED BULLETED LISTS IN JSX (Next.js):
+- Use <ul> and <li> (not plain hyphens)
+- Use the same list styling classes the site already uses (if Tailwind, apply list-disc pl-5 space-y-2 or whatever the codebase uses)
+- Keep the lists readable and spaced
+
+GOAL (VERY SPECIFIC):
+- Create a NEW service page titled: “Mold Prevention”
+- The URL MUST be: https://ocmoldpros.com/services/mold-prevention
+  - Route path must be: /services/mold-prevention
+- This new page MUST be added as a new dropdown item under “Services” in the MAIN NAV (not a separate top-level nav link)
+- The new page MUST use the CURRENT Service page template (same layout, same components, same spacing, same styling)
+- Keep the existing “Ready to get started” section EXACTLY as-is with the current CTAs (do not rewrite it, do not change buttons, do not change links)
+
+ROUTING REQUIREMENTS:
+- Detect whether the project uses:
+  - App Router (folder “app/”) OR
+  - Pages Router (folder “pages/”)
+- Implement accordingly:
+  - If App Router:
+    - Create: /app/services/mold-prevention/page.tsx (or .jsx if this project uses JS)
+  - If Pages Router:
+    - Create: /pages/services/mold-prevention.tsx (or .jsx)
+
+TEMPLATE REQUIREMENTS (IMPORTANT):
+1) Find an existing service page under /services/* (example: /services/mold-inspection, /services/indoor-air-quality, etc.)
+2) Use that page as the template:
+   - Copy its structure (imports, Layout wrapper, SEO/head setup, hero section style, section spacing, CTA blocks)
+   - Replace ONLY the main body content area with the new copy I provide below
+   - DO NOT remove or modify the existing “Ready to get started” section; keep it identical (same text, same CTAs, same styling, same links)
+3) Keep everything else consistent with the template page:
+   - Same components
+   - Same CSS/Tailwind conventions
+   - Same container widths and spacing
+
+SEO REQUIREMENTS:
+- Title tag: “Mold Prevention San Clemente | Home Inspector”
+- Meta description: write ~150–160 characters based on the opening paragraph (no hypey forbidden phrases)
+- H1 must contain: “Mold Prevention San Clemente”
+- Use correct heading hierarchy and match the template’s pattern
+
+NAVIGATION REQUIREMENTS (DROP DOWN):
+- Locate the main navigation component (Header / Navbar).
+- Under the “Services” dropdown menu, add a NEW item:
+  - Label: “Mold Prevention”
+  - Link: “/services/mold-prevention”
+- Keep alphabetical order if that is how it’s currently organized.
+- Do NOT add it anywhere else in nav.
+
+LINKING REQUIREMENTS:
+- If there is a main Services index page (ex: /services), add “Mold Prevention” to that list/grid linking to /services/mold-prevention using the same card/list component pattern.
+- If the site uses a services data array/config file for navigation and services lists, add it there instead of hardcoding.
+
+CONTENT TO INSERT (convert to JSX, keep typos/imperfections, do not “polish”):
+[PASTE THIS COPY INTO THE MAIN CONTENT AREA OF THE TEMPLATE PAGE]
+
+# Mold Prevention San Clemente – Stop it before it starts
+
+Most mold problems we see in San Clemente didn’t start as a “mold problem”. It started as a little moisture. A small leak. A bathroom fan nobody uses. A gutter that overflows in the rain. Then months go by… and now it’s a smell, a stain, or someone not feeling good.
+
+A **mold prevention inspection in San Clemente** is basically a smart checkup for the house. Find the moisture habits, fix the easy stuff, and avoid the expensive stuff later.
+
+People usually ask us:
+- “How do I keep mold from coming back?”
+- “What do I do if my house always smells musty?”
+- “Is my bathroom setup causing mold?”
+- “Is coastal air making this worse?”
+
+Most of the time, the fix is not crazy. It’s just the right checklist.
+
+---
+
+## Mold Prevention
+
+Mold prevention is about moisture control. Mold can’t grow without moisture.
+
+Here are the main things we look for and talk through during mold prevention work:
+
+(THIS MUST BE RENDERED AS A BULLETED LIST USING <ul><li> IN JSX)
+- High humidity inside the home (especially bedrooms and closets)
+- Bathrooms with weak vent fans or poor airflow
+- Showers with missing caulk or gaps in grout
+- Plumbing drips under sinks and behind toilets
+- Window condensation and foggy glass issues
+- Attic ventilation problems and roof leak risk spots
+- Crawlspace moisture and poor drainage outside
+- HVAC drain line issues and dirty coils that hold moisture
+
+We’ll point out what’s low-cost and what’s “hey don’t ignore this” because it will turn into damage.
+
+---
+
+## Home Inspector
+
+A mold prevention visit works best when it’s done by a **home inspector** who actually understands how houses take on moisture.
+
+During a prevention-focused inspection, we check the usual high-risk areas:
+
+(THIS MUST BE RENDERED AS A BULLETED LIST USING <ul><li> IN JSX)
+- Bathrooms (fans, showers, sinks, toilet bases)
+- Kitchen sink, dishwasher area, fridge water line area
+- Laundry area (hookups, drain, pan, venting)
+- Attic (roof penetrations, vents, insulation gaps, bath vent terminations)
+- Crawlspace (if accessible) for damp soil, vents, vapor barrier basics
+- Windows and sliders for staining, gaps, and condensation patterns
+- Exterior drainage, gutters, downspouts, slope away from the house
+
+This stuff is boring… but boring is good. Boring houses don’t grow mold.
+
+---
+
+## Easy Mold Prevention Tips for San Clemente Homes
+
+Here’s what helps the most for coastal homes. These are the same things we tell friends and family.
+
+(THIS MUST BE RENDERED AS A BULLETED LIST USING <ul><li> IN JSX)
+- Run bathroom fans for 20 minutes after showers (or set a timer switch)
+- Keep indoor humidity around 45–55% if you can
+- Don’t push furniture tight against exterior walls (let it breathe)
+- If a closet smells musty, add airflow (louvered doors or small vent solutions)
+- Fix small leaks fast (don’t “watch it” for weeks)
+- Keep gutters clear before winter rains
+- Make sure downspouts push water away from the house
+- If you have recurring condensation, address airflow + humidity, not just wiping windows
+
+If you’ve had mold before, prevention matters even more. Mold tends to come back when the moisture pattern never got fixed.
+
+---
+
+## Common Questions
+
+**Do I need mold prevention if I’ve never had mold?**  
+If you’re in San Clemente and you have coastal moisture, it’s smart. Prevention is cheaper than repairs.
+
+**What’s the biggest cause of mold in homes here?**  
+Bathrooms and small leaks. Also poor drainage outside after rains.
+
+**Can I prevent mold without a dehumidifier?**  
+Sometimes yes, sometimes no. Depends on the home. Venting and airflow can solve a lot, but humidity is still king.
+
+**Does bleach prevent mold?**  
+Not really. Bleach might clean surface staining, but it doesn’t fix the moisture problem that caused it.
+
+---
+
+## What you get after the visit
+
+You get clear notes and a simple action list you can follow. Usually it’s:
+- quick fixes you can do right away
+- repairs to schedule soon
+- longer-term upgrades that help (if needed)
+
+No scare tactics. Just a plan.
+
+---
+
+## Scheduling Mold Prevention San Clemente
+
+If your home has that musty smell, if you’ve had leaks, or if you just want to keep your place in good shape… mold prevention is a smart move.
+
+Catch the moisture habits early, fix the easy stuff, and avoid the mess later.
+
+[END CONTENT]
+
+IMPLEMENTATION DETAILS (DO THESE STEPS):
+1) Locate an existing service page template file in /services/* and copy it to create the new route:
+   - /services/mold-prevention
+2) Update the copied page:
+   - Keep hero/banner layout consistent with the template
+   - Set the page title and H1 to include “Mold Prevention San Clemente”
+   - Replace only the main content section with the provided copy
+   - IMPORTANT: Convert the 3 bulleted sections into proper JSX bullet lists using <ul><li> with the site’s existing list styles
+   - Keep the existing “Ready to get started” section EXACTLY unchanged, including CTAs
+3) Update the main nav:
+   - Add “Mold Prevention” under the Services dropdown linking to /services/mold-prevention
+4) Update any services index/list page if it exists:
+   - Add a card/list entry for Mold Prevention linking to /services/mold-prevention
+5) If sitemap/route config exists, include this new page route
+6) Run typecheck/lint/build and fix any errors without changing page intent
+
+OUTPUT REQUIREMENTS:
+After changes, show me:
+- The exact file path created for the new page
+- Any files edited (nav, services list, config)
+- The final route: /services/mold-prevention
+- Confirmation that the “Ready to get started” section and CTAs were preserved exactly
+- Confirmation that bullet lists were implemented with <ul><li> in JSX (not hyphens)
