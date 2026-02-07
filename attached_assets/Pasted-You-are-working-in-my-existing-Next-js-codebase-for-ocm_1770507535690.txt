@@ -1,0 +1,210 @@
+You are working in my existing Next.js codebase for ocmoldpros.com. I need you to ADD a new service page using my CURRENT Services page template and wire it into the main nav under the Services dropdown.
+
+THIS PAGE MUST BE OPTIMIZED FOR GOOGLE MAP PACK (LOCAL SEO):
+- Strong service + location relevance (San Clemente + Orange County) without keyword stuffing
+- Add a dedicated “Service Areas” section
+- Add a short “Why locals call us” section with bullet points
+- Add an FAQ section that includes a “near me” question
+- Add internal links to related service pages ONLY if those routes already exist
+
+BULLETED LISTS MUST BE PROPER JSX:
+- Use <ul> and <li> (not hyphens)
+- Use the same list styling classes/patterns already used in the codebase
+
+GOAL (VERY SPECIFIC):
+- Create a NEW service page titled: “Physical and Visual Inspection”
+- The URL MUST be: https://ocmoldpros.com/services/physical-and-visual-inspection
+  - Route path must be: /services/physical-and-visual-inspection
+- Add this page as a NEW dropdown item under “Services” in the MAIN NAV (not a separate top-level nav link)
+- The new page MUST use the CURRENT Service page template (same layout, same components, same spacing, same styling)
+- Keep the existing “Ready to get started” section EXACTLY as-is with the current CTAs (do not rewrite it, do not change buttons, do not change links)
+
+ROUTING REQUIREMENTS:
+- Detect whether the project uses:
+  - App Router (folder “app/”) OR
+  - Pages Router (folder “pages/”)
+- Implement accordingly:
+  - If App Router:
+    - Create: /app/services/physical-and-visual-inspection/page.tsx (or .jsx if project uses JS)
+  - If Pages Router:
+    - Create: /pages/services/physical-and-visual-inspection.tsx (or .jsx)
+
+TEMPLATE REQUIREMENTS (IMPORTANT):
+1) Find an existing service page under /services/* (example: /services/mold-inspection, /services/mold-sampling, etc.)
+2) Use that page as the template:
+   - Copy its structure (imports, Layout wrapper, SEO/head setup, hero section style, section spacing, CTA blocks)
+   - Replace ONLY the main body content area with the new copy I provide below + the Local SEO sections requested
+   - DO NOT remove or modify the existing “Ready to get started” section; keep it identical (same text, same CTAs, same styling, same links)
+3) Keep everything else consistent with the template:
+   - Same components
+   - Same CSS/Tailwind conventions
+   - Same container widths and spacing
+
+SEO REQUIREMENTS:
+- Title tag: “Physical and Visual Inspection San Clemente | Home Inspector”
+- Meta description: write ~150–160 characters based on the opening paragraph (no hypey phrases)
+- H1 must contain: “Physical and Visual Inspection San Clemente”
+- Use correct heading hierarchy and match the template’s pattern
+
+NAVIGATION REQUIREMENTS (DROP DOWN):
+- Locate the main navigation component (Header / Navbar).
+- Under the “Services” dropdown menu, add a NEW item:
+  - Label: “Physical and Visual Inspection”
+  - Link: “/services/physical-and-visual-inspection”
+- Keep alphabetical order if that is how it’s currently organized.
+- Do NOT add it anywhere else in nav.
+
+SERVICES INDEX / LIST PAGE:
+- If there is a main Services index page (ex: /services), add “Physical and Visual Inspection” to that list/grid linking to /services/physical-and-visual-inspection using the same card/list component pattern.
+- If services are driven by a config/data array, update that instead of hardcoding.
+
+INTERNAL LINKS (ONLY IF ROUTES EXIST IN REPO):
+- Link to /services/mold-inspection
+- Link to /services/mold-sampling
+- Link to /services/mold-prevention
+- Link to /services/rental-property-inspections
+Use whatever Link component pattern the project already uses.
+
+LOCAL SEO CONTENT ADDITIONS (MUST INCLUDE):
+A) Add an H2 section: “Service Areas”
+   - Mention San Clemente neighborhoods + nearby Orange County cities naturally (include: Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel)
+B) Add an H2 section: “Why San Clemente homeowners call us for physical and visual inspections”
+   - Include 5 short bullet points (JSX list) about common triggers: musty smell, visible staining, past leaks, real estate timeline, weird humidity/condensation
+C) Add an H2 section: “FAQ”
+   - Include 6 Q/A items. One must be: “Who offers physical and visual inspection near me in San Clemente?”
+   - Keep answers short (2–4 sentences), simple language.
+
+CONTENT TO INSERT (convert to JSX, keep slight typos/imperfections, do not “polish”):
+[PASTE THIS COPY INTO THE MAIN CONTENT AREA OF THE TEMPLATE PAGE]
+
+# Physical and Visual Inspection San Clemente – the first step before testing
+
+Most people don’t start with lab tests. They start with a smell. Or a stain. Or a spot that keeps coming back no matter how many times they wipe it.
+
+A **physical and visual inspection in San Clemente** is the easiest first step when you think you might have a moisture issue or mold risk. We walk the home, look for the why behind the problem, and point out the spots that usually get missed.
+
+People call us and say things like:
+(THIS MUST BE A JSX BULLET LIST)
+- “My house smells musty but I can’t find where it’s coming from.”
+- “This bathroom keeps getting black stuff in the grout.”
+- “We had a leak last year… could there still be damage?”
+- “I’m buying a house and I just want to know what I’m walking into.”
+- “My kid’s room feels damp and it’s freaking me out.”
+
+You don’t need panic. You need eyes on it.
+
+---
+
+## Physical and Visual Inspection
+
+A physical and visual inspection is exactly what it sounds like: we inspect the home like a home inspector should, but with a special focus on moisture, building leaks, and mold risk.
+
+We look at things like:
+(THIS MUST BE A JSX BULLET LIST)
+- Bathrooms: shower corners, grout lines, caulk breaks, fans, under-sink plumbing
+- Kitchen: sink base, dishwasher area, fridge water line area, staining or swelling
+- Bedrooms: closets on exterior walls, window condensation patterns, musty zones
+- Windows/sliders: staining, soft drywall edges, failed seals, drafts that carry moisture
+- Attic (if accessible): roof penetrations, bath vent terminations, staining, insulation gaps
+- Crawlspace (if accessible): damp soil, standing water signs, basic venting and vapor barrier issues
+- HVAC basics: visible moisture around registers, drain line issues, obvious airflow problems
+- Exterior: gutters, downspouts, grading, cracks or gaps that let water in
+
+We also talk through your history: past leaks, remodeling, odors, and any “this only happens in winter” patterns.
+
+---
+
+## What we find most often in San Clemente homes
+
+Coastal air is real. Marine layer is real. And older homes near the coast can have small water entry points that slowly create big issues.
+
+Common patterns we see:
+(THIS MUST BE A JSX BULLET LIST)
+- Bathroom fans that don’t move enough air
+- Showers with old caulk and tiny gaps that let water behind tile
+- Window condensation that keeps feeding mold in corners
+- Closet odors on exterior walls with low airflow
+- Gutters overflowing in winter rains and wetting the same wall over and over
+- “Repaired” leaks where the source got fixed but the material stayed wet
+
+---
+
+## Do you need sampling after a physical and visual inspection?
+
+Sometimes yes, sometimes no.
+
+If we see strong indicators (staining, moisture patterns, musty odor zones), mold sampling can help confirm what’s in the air or on a surface. If everything looks normal, sometimes the best next step is prevention work and moisture control.
+
+We’ll tell you straight what makes sense.
+
+(If the route exists, add a short internal link line to Mold Sampling and Mold Prevention pages.)
+
+---
+
+## Service Areas
+
+We do physical and visual inspections in San Clemente and across nearby Orange County areas. That includes Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, and Laguna Niguel.
+
+---
+
+## Why San Clemente homeowners call us for physical and visual inspections
+(THIS MUST BE A JSX BULLET LIST)
+- They smell something weird and want a real answer
+- They see staining and want to know if it’s active or old
+- They had a leak and want to make sure it’s not still affecting the home
+- They’re on a real estate timeline and want clean documentation
+- They keep getting condensation or humidity in the same spots
+
+---
+
+## FAQ
+
+(Format each Q as <h3> and each A as <p>)
+
+Q1: Who offers physical and visual inspection near me in San Clemente?
+A1: If you’re in San Clemente, we do onsite inspections focused on moisture and mold risk. It’s a simple first step before you spend money on testing or repairs.
+
+Q2: How long does a physical and visual inspection take?
+A2: Most inspections take 60–120 minutes depending on the size of the home and how many areas we need to check.
+
+Q3: Do you use moisture meters or thermal imaging?
+A3: If your standard template uses these tools, keep them mentioned the same way. Do not invent tools. Only reference what the existing template already says.
+
+Q4: What if I already see mold?
+A4: We can document what we see and help you understand what might be feeding it. If needed, we can recommend next steps like sampling or repairs.
+
+Q5: Can you do this for a rental or before a tenant moves in?
+A5: Yes. Physical and visual inspections are common for rentals when there’s an odor, a leak, or you want a baseline condition report.
+
+Q6: Can this help with a home purchase?
+A6: Yes. It helps you understand moisture risk areas and red flags before you close, so you’re not surprised after move-in.
+
+[END CONTENT]
+
+IMPLEMENTATION DETAILS (DO THESE STEPS):
+1) Locate an existing service page template file in /services/* and copy it to create the new route:
+   - /services/physical-and-visual-inspection
+2) Update the copied page:
+   - Keep hero/banner layout consistent with the template
+   - Set the page title and H1 to include “Physical and Visual Inspection San Clemente”
+   - Replace only the main content section with the provided copy (convert lists to <ul><li>)
+   - Add “Service Areas”, “Why San Clemente homeowners call us for physical and visual inspections”, and “FAQ” sections
+   - Add internal links only if those routes exist
+   - Keep the existing “Ready to get started” section EXACTLY unchanged, including CTAs
+3) Update the main nav:
+   - Add “Physical and Visual Inspection” under the Services dropdown linking to /services/physical-and-visual-inspection
+4) Update any services index/list page if it exists:
+   - Add a card/list entry for Physical and Visual Inspection linking to /services/physical-and-visual-inspection
+5) If sitemap/route config exists, include this new page route
+6) Run typecheck/lint/build and fix any errors without changing page intent
+
+OUTPUT REQUIREMENTS:
+After changes, show me:
+- The exact file path created for the new page
+- Any files edited (nav, services list, config)
+- The final route: /services/physical-and-visual-inspection
+- Confirmation that the “Ready to get started” section and CTAs were preserved exactly
+- Confirmation that bullet lists were implemented with <ul><li> in JSX (not hyphens)
+- Confirmation that Service Areas + FAQ sections were added
+
+

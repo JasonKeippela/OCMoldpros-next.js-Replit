@@ -65,6 +65,7 @@ export default function Navigation() {
                 <Link href="/services/mold-prevention" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">Mold Prevention</Link>
                 <Link href="/services/mold-sampling" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">Mold Sampling</Link>
                 <Link href="/services/new-construction-inspections" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">New Construction Inspections</Link>
+                <Link href="/services/physical-and-visual-inspection" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">Physical and Visual Inspection</Link>
                 <Link href="/services/rental-property-inspections" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">Rental Property Inspections</Link>
               </div>
             )}
@@ -115,6 +116,7 @@ export default function Navigation() {
             <Link href="/services/mold-prevention" className="block text-gray-600 hover:text-gray-900 text-sm pl-4" onClick={() => setMobileMenuOpen(false)}>Mold Prevention</Link>
             <Link href="/services/mold-sampling" className="block text-gray-600 hover:text-gray-900 text-sm pl-4" onClick={() => setMobileMenuOpen(false)}>Mold Sampling</Link>
             <Link href="/services/new-construction-inspections" className="block text-gray-600 hover:text-gray-900 text-sm pl-4" onClick={() => setMobileMenuOpen(false)}>New Construction Inspections</Link>
+            <Link href="/services/physical-and-visual-inspection" className="block text-gray-600 hover:text-gray-900 text-sm pl-4" onClick={() => setMobileMenuOpen(false)}>Physical and Visual Inspection</Link>
             <Link href="/services/rental-property-inspections" className="block text-gray-600 hover:text-gray-900 text-sm pl-4" onClick={() => setMobileMenuOpen(false)}>Rental Property Inspections</Link>
             <Link href="/mold-inspector-near-me" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Mold Inspector Near Me</Link>
             <Link href="/process" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Process</Link>

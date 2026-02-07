@@ -99,6 +99,7 @@ Each page includes:
 - `/services/mold-prevention` - Mold Prevention San Clemente dedicated page
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
 - `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page
+- `/services/physical-and-visual-inspection` - Physical and Visual Inspection San Clemente dedicated page with local SEO sections
 - `/services/rental-property-inspections` - Rental Property Inspections San Clemente dedicated page
 
 ## Recent Changes
