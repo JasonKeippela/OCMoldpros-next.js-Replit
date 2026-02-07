@@ -97,8 +97,10 @@ Each page includes:
 ## Service Pages
 - `/services` - Main services overview page
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
+- `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page
 
 ## Recent Changes
+- Feb 07, 2026: Added New Construction Inspections service page at /services/new-construction-inspections with nav dropdown, sitemap, and services index link
 - Feb 07, 2026: Added Mold Sampling service page at /services/mold-sampling with Services dropdown in nav, sitemap entry, and services index link
 - Feb 07, 2026: Added Google Business Profile map embed and link on homepage, updated CTA buttons, added address and VOB badge to footer, fixed JSON-LD schema rendering (switched from Script component to inline script tags)
 - Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure

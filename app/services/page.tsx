@@ -100,6 +100,11 @@ export default function ServicesPage() {
               <p className="text-gray-600">Professional mold sampling in San Clemente. Air and surface testing with lab analysis to identify hidden mold problems in your home.</p>
               <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
             </Link>
+            <Link href="/services/new-construction-inspections" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">New Construction Inspections</h3>
+              <p className="text-gray-600">New construction inspections in San Clemente. Pre-drywall, final walkthrough, and 11-month warranty inspections for new builds.</p>
+              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>
