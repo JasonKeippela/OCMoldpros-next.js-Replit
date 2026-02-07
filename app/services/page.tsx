@@ -95,6 +95,11 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Specialized Service Pages</h2>
           <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/services/hvac-system-inspection" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">HVAC System Inspection</h3>
+              <p className="text-gray-600">HVAC system inspection in San Clemente focused on moisture, air quality red flags, and mold risk from your heating and cooling system.</p>
+              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
+            </Link>
             <Link href="/services/mold-prevention" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Prevention</h3>
               <p className="text-gray-600">Mold prevention inspections in San Clemente. Find moisture risks early and avoid costly mold damage in your coastal home.</p>

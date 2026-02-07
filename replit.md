@@ -96,6 +96,7 @@ Each page includes:
 
 ## Service Pages
 - `/services` - Main services overview page
+- `/services/hvac-system-inspection` - HVAC System Inspection San Clemente dedicated page with local SEO sections
 - `/services/mold-prevention` - Mold Prevention San Clemente dedicated page
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
 - `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page
