@@ -91,6 +91,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <Link href="/mold-sampling" className="inline-block bg-ocean-50 border border-ocean-200 rounded-xl p-8 hover:shadow-lg transition-shadow max-w-2xl">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Mold Sampling</h2>
+            <p className="text-gray-600 text-lg">Learn more about our professional mold sampling process in San Clemente and how air quality testing, surface sampling, and environmental consulting work together to protect your home.</p>
+            <span className="inline-block mt-4 text-ocean-600 font-semibold">Learn More &rarr;</span>
+          </Link>
+        </div>
+      </section>
+
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Professional Mold Inspection Matters</h2>
