@@ -4,7 +4,7 @@ import HeroCTA from './components/HeroCTA'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Environmental Consulting | Expert Mold Inspections in San Clemente & Orange County',
+  title: 'Home Inspector | Expert Mold Inspections in San Clemente & Orange County',
   description: 'OC Mold Pros offers professional mold inspection services in San Clemente and surrounding Orange County areas. We use advanced air sampling and thermal imaging to ensure your home is mold-free.',
 }
 
@@ -250,10 +250,10 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30 z-10" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl">
-            Environmental Consulting and Professional Mold Inspection in San Clemente & Orange County
+            Expert Home Inspector in San Clemente & Orange County: Professional Mold Inspections
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
-            Are you looking for a mold inspection near me? 24/7 emergency inspections and same day service available. Certified inspectors protecting your home and family with advanced mold detection technology
+            24/7 emergency inspections and same day service available. Certified inspectors protecting your home and family with advanced mold detection technology.
           </p>
           <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
             Restore Your Home, Restore Your Health
@@ -350,7 +350,7 @@ function WhyChooseUs() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose OC Mold Pros?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              As a locally owned and operated business, we understand the unique mold challenges that Orange County homeowners face. From coastal humidity to older construction, we have seen it all and know how to find hidden problems.
+              As a local vereran owned and operated business, we understand the unique mold challenges that Orange County homeowners face. From coastal humidity to older construction, we have seen it all and know how to find hidden problems.
             </p>
             <ul className="space-y-4">
               {[
@@ -464,7 +464,7 @@ function FAQSection() {
   const faqs = [
     {
       q: 'How long does a mold inspection take?',
-      a: 'A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer.'
+      a: 'A typical residential mold inspection takes 3-4 hours depending on the size of your property. Larger homes or commercial properties may take longer.'
     },
     {
       q: 'How much does a mold inspection cost?',
