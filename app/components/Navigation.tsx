@@ -21,6 +21,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [serviceAreasOpen, setServiceAreasOpen] = useState(false)
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -53,7 +54,18 @@ export default function Navigation() {
         
         <div className="hidden lg:flex items-center gap-6">
           <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">About</Link>
-          <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</Link>
+          <div className="relative" onMouseEnter={() => setServicesDropdownOpen(true)} onMouseLeave={() => setServicesDropdownOpen(false)}>
+            <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center gap-1">
+              Services
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+            </Link>
+            {servicesDropdownOpen && (
+              <div className="absolute top-full left-0 bg-white shadow-xl rounded-lg py-2 w-56 z-50">
+                <Link href="/services" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm font-medium">All Services</Link>
+                <Link href="/mold-sampling" className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm font-medium">Mold Sampling</Link>
+              </div>
+            )}
+          </div>
           
           <div className="relative" onMouseEnter={() => setServiceAreasOpen(true)} onMouseLeave={() => setServiceAreasOpen(false)}>
             <Link href="/mold-inspector-near-me" className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center gap-1">
@@ -97,6 +109,7 @@ export default function Navigation() {
           <div className="px-4 py-4 space-y-3">
             <Link href="/about" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <Link href="/services" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link href="/mold-sampling" className="block text-gray-500 hover:text-gray-900 font-medium pl-4 text-sm" onClick={() => setMobileMenuOpen(false)}>Mold Sampling</Link>
             <Link href="/mold-inspector-near-me" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Mold Inspector Near Me</Link>
             <Link href="/process" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Process</Link>
             <Link href="/pricing" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
