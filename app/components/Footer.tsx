@@ -106,6 +106,11 @@ export default function Footer() {
             ))}
           </div>
           <div className="text-sm text-ocean-400 mb-4">Serving all cities in Orange County, CA.</div>
+          <div className="mb-4">
+            <a href="https://www.veteranownedbusiness.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.veteranownedbusiness.com/images/banner_links/VOB-Banner-Trade-Show-Border.jpg" alt="Proud Veteran Owned Business Member!" className="h-16" />
+            </a>
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-center text-sm border-t border-ocean-800 pt-4">
             <p>&copy; {new Date().getFullYear()} OC Mold Pros. All rights reserved.</p>
             <div className="flex items-center gap-4 mt-2 md:mt-0">
