@@ -9,6 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">OC Mold Pros</h3>
             <p className="text-sm mb-4">Professional mold inspection and testing services throughout Orange County, California.</p>
+            <p className="text-sm mb-2">1322 Calle Avanzado, San Clemente, CA 92673</p>
             <a href="tel:9493715934" className="text-ocean-300 hover:text-white font-medium">949-371-5934</a>
           </div>
           
