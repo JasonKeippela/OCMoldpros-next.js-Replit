@@ -94,7 +94,13 @@ Each page includes:
 - "Nearby Beach Cities We Serve" (internal cluster linking)
 - CTA: "DM or call to schedule a free 20-minute consultation"
 
+## Service Pages
+- `/services` - Main services overview page
+- `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
+
 ## Recent Changes
+- Feb 07, 2026: Added Mold Sampling service page at /services/mold-sampling with Services dropdown in nav, sitemap entry, and services index link
+- Feb 07, 2026: Added Google Business Profile map embed and link on homepage, updated CTA buttons, added address and VOB badge to footer, fixed JSON-LD schema rendering (switched from Script component to inline script tags)
 - Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure
 - Jan 10, 2026: Created Beach City Cluster - 9 dedicated landing pages with enhanced template including inspection details, city-specific mold causes, neighborhoods, related services, and internal cluster linking
 - Jan 04, 2026: Added tier system (core/secondary) to service areas - 10 core cities (San Clemente, Dana Point, Laguna Beach, Laguna Niguel, Laguna Hills, Mission Viejo, Newport Beach, Huntington Beach, Costa Mesa, Irvine) and 24 secondary cities
