@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mold Sampling San Clemente | Home Inspector',
+  title: 'Mold Sampling San Clemente CA | Local Home Inspector',
   description: 'Professional mold sampling in San Clemente by a local home inspector. Air and surface testing with lab analysis to identify hidden mold problems in your home.',
 }
 
@@ -207,6 +207,8 @@ export default function MoldSamplingPage() {
           <p>Knowing which neighborhoods deal with drainage issues. Knowing which homes were built during certain eras. Knowing how coastal air behaves here. That all plays into good mold sampling.</p>
 
           <p>We live and work in this area. We know the houses. We know the patterns.</p>
+
+          <p>We provide mold sampling in San Clemente, California, including Talega, Forster Ranch, Marblehead, Capistrano Beach, Rancho San Clemente, and downtown San Clemente near Avenida Del Mar and the Pier. If you searched for mold sampling near me, you&apos;re in the right place.</p>
 
           <hr className="my-10" />
 
