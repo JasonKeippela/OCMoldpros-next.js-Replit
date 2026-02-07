@@ -212,6 +212,14 @@ export default function MoldSamplingPage() {
 
           <hr className="my-10" />
 
+          <h2 className="text-2xl font-bold text-gray-900">Mold Sampling in San Clemente, CA</h2>
+
+          <p>Our mold sampling services are available throughout San Clemente and South Orange County. We work with homeowners, renters, buyers, sellers, and real estate agents who need clear answers about indoor air quality.</p>
+
+          <p>Service area includes San Clemente, Capistrano Beach, Dana Point, San Juan Capistrano, and nearby Orange County communities.</p>
+
+          <hr className="my-10" />
+
           <h2 className="text-2xl font-bold text-gray-900">Scheduling Mold Sampling San Clemente</h2>
 
           <p>If you&apos;re dealing with unexplained symptoms, odd smells, or a past water issue, mold sampling is a smart next step. It doesn&apos;t mean something is wrong. It means you&apos;re checking.</p>
