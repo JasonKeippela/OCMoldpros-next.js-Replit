@@ -105,6 +105,11 @@ export default function ServicesPage() {
               <p className="text-gray-600">New construction inspections in San Clemente. Pre-drywall, final walkthrough, and 11-month warranty inspections for new builds.</p>
               <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
             </Link>
+            <Link href="/services/rental-property-inspections" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Rental Property Inspections</h3>
+              <p className="text-gray-600">Rental property inspections in San Clemente for landlords, tenants, and property managers. Move-in, move-out, and mid-lease documentation.</p>
+              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>

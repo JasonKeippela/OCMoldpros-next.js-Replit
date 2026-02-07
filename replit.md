@@ -98,6 +98,7 @@ Each page includes:
 - `/services` - Main services overview page
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
 - `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page
+- `/services/rental-property-inspections` - Rental Property Inspections San Clemente dedicated page
 
 ## Recent Changes
 - Feb 07, 2026: Added New Construction Inspections service page at /services/new-construction-inspections with nav dropdown, sitemap, and services index link
