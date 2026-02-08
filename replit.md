@@ -81,6 +81,8 @@ npm run dev -- -p 5000
 - Inline JSON-LD script tags for schema rendering (homepage)
 - BreadcrumbList + FAQPage schemas on each service page
 - ItemList schema on services index page
+- Server-rendered canonical URLs on all pages via Next.js metadata API (alternates.canonical)
+- Shared canonical helper: app/lib/canonical.ts (getCanonicalUrl, canonicalAlternates)
 
 ## Contact Form
 - Uses Resend API (RESEND_API_KEY secret) to send form submissions to info@ocmoldpros.com
@@ -117,6 +119,7 @@ Each page includes:
 Services: Mold Sampling, New Construction Inspections, Rental Property Inspections, Mold Prevention, Physical and Visual Inspection, HVAC System Inspection, Kitchen Inspection, Bathroom Inspection, Real Estate Inspection, Indoor Air Testing, Certified Mold Inspector, Mold Inspection, Mold Testing, ERMI Testing, Thermal Imaging Inspection, Indoor Allergen Sampling, Mycotoxin Testing, Custom Mold Action Plans, Mold Cleaning, Mold Damage Restoration, Mold Mitigation, Mold Remediation
 
 ## Recent Changes
+- Feb 08, 2026: Added server-rendered canonical URLs to all pages using Next.js metadata API (alternates.canonical), replaced client-side CanonicalUrl component with shared helper (app/lib/canonical.ts)
 - Feb 08, 2026: Created 22 service pages system with markdown content, next-mdx-remote rendering, expansion utility, Services dropdown in navigation, BreadcrumbList + FAQPage + ItemList schemas, sitemap update
 - Feb 08, 2026: Fixed JSON-LD schema rendering (switched from Next.js Script component to inline script tags), added Google Business Profile embed + link, Veteran Owned Business badge, business address in footer
 - Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure

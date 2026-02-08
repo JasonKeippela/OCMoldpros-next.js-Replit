@@ -309,10 +309,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   const baseUrl = 'https://ocmoldpros.com'
   
+  // Canonical v2 – services rollout
   return {
     title: `${article.title} | OC Mold Pros Blog`,
     description: article.excerpt,
     keywords: `mold inspection, ${article.category.toLowerCase()}, Orange County, San Clemente, mold testing, indoor air quality`,
+    alternates: {
+      canonical: `${baseUrl}/blog/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,

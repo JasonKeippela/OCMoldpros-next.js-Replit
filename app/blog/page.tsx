@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Learn About Mold | Educational Resources | OC Mold Pros',
   description: 'Educational articles about mold, indoor air quality, and home health. Learn how to identify, prevent, and address mold issues in your Orange County home.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/blog' },
 }
 
 const articles = [

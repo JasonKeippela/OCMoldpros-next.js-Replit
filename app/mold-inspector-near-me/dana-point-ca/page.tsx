@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Mold Inspection Dana Point CA | Certified Mold Testing & Air Quality',
   description: 'Professional mold inspection and mold testing in Dana Point, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/mold-inspector-near-me/dana-point-ca' },
 }
 
 const neighborhoods = [

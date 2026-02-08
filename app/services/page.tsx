@@ -5,6 +5,8 @@ import { services } from '@/content/services/services.config'
 export const metadata: Metadata = {
   title: 'Mold Inspection Services | OC Mold Pros - Orange County',
   description: 'Comprehensive mold inspection services in Orange County: air quality testing, moisture detection, thermal imaging. Expert analysis & detailed reporting. Book now!',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/services' },
 }
 
 const serviceHighlights = [

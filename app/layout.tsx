@@ -3,7 +3,6 @@ import Script from 'next/script'
 import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import CanonicalUrl from './components/CanonicalUrl'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ocmoldpros.com'),
@@ -46,7 +45,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <CanonicalUrl />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CK8D20LRK0"
           strategy="afterInteractive"

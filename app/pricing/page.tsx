@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Packages & Pricing | Mold Inspection Costs | OC Mold Pros - Orange County',
   description: 'Transparent mold inspection pricing in Orange County. Choose from our inspection packages starting at $799. No hidden fees. Call 949-371-5934 for a free quote.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/pricing' },
 }
 
 export default function PricingPage() {

@@ -6,6 +6,7 @@ import path from 'path'
 import ServiceMarkdown from '@/app/components/ServiceMarkdown'
 import { services } from '@/content/services/services.config'
 import { expandServiceMarkdown, SERVICE_EXPANSION_DEFAULTS } from '@/app/lib/expandServiceMarkdown'
+import { getCanonicalUrl } from '@/app/lib/canonical'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -19,9 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = services.find((s) => s.slug === slug)
   if (!service) return {}
+  // Canonical v2 – services rollout
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    alternates: {
+      canonical: getCanonicalUrl(`/services/${slug}`),
+    },
   }
 }
 

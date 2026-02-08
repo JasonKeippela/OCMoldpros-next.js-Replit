@@ -5,6 +5,8 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'About OC Mold Pros | Meet Our Expert Mold Inspection Team',
   description: 'OC Mold Pros: Certified mold inspectors delivering expert inspections, detailed reports, and top customer care in Orange County.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/about' },
 }
 
 export default function AboutPage() {

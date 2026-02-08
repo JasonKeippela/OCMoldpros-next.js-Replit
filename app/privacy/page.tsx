@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Privacy Policy | OC Mold Pros',
   description: 'Privacy Policy for OC Mold Pros. Learn how we collect, use, and protect your personal information.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/privacy' },
 }
 
 export default function PrivacyPolicyPage() {

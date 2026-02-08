@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { APPROVED_SERVICE_AREAS, getCityBySlug, getCityData } from '@/app/lib/cities'
+import { getCanonicalUrl } from '@/app/lib/canonical'
 
 type Props = {
   params: Promise<{ city: string }>
@@ -16,9 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityInfo = getCityBySlug(citySlug)
   if (!cityInfo) return { title: 'City Not Found' }
   
+  // Canonical v2 – services rollout
   return {
     title: `${cityInfo.name} Mold Inspection | OC Mold Pros`,
     description: `Expert mold inspection services in ${cityInfo.name}. Contact OC Mold Pros for professional mold testing and remediation in ${cityInfo.name}, California.`,
+    alternates: {
+      canonical: getCanonicalUrl(`/mold-inspector-near-me/${citySlug}`),
+    },
   }
 }
 

@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Mold Inspection Orange County Beach Cities | OC Mold Pros',
   description: 'Mold inspection and mold testing across Orange County beach cities and nearby coastal communities. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/mold-inspector-near-me/orange-county-beach-cities' },
 }
 
 const beachCities = [

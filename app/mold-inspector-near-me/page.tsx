@@ -5,6 +5,8 @@ import { CORE_SERVICE_AREAS, SECONDARY_SERVICE_AREAS } from '@/app/lib/cities'
 export const metadata: Metadata = {
   title: 'Service Areas | Mold Inspection in Orange County | OC Mold Pros',
   description: 'OC Mold Pros provides professional mold inspection and testing services throughout Orange County, California. See all cities we serve.',
+  // Canonical v2 – services rollout
+  alternates: { canonical: 'https://ocmoldpros.com/mold-inspector-near-me' },
 }
 
 export default function ServiceAreasPage() {
