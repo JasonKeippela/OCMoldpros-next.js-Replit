@@ -6,7 +6,7 @@ import JsonLd from './components/JsonLd'
 import { getFaqSchema } from './lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Home Inspector | Expert Mold Inspections in San Clemente & Orange County',
+  title: 'Home Inspector in San Clemente & Orange County | Mold Inspections',
   description: 'OC Mold Pros offers professional mold inspection services in San Clemente and surrounding Orange County areas. We use advanced air sampling and thermal imaging to ensure your home is mold-free.',
   // Canonical v2 – services rollout
   alternates: { canonical: 'https://ocmoldpros.com' },
@@ -53,7 +53,7 @@ function HeroSection() {
             Expert Home Inspector in San Clemente & Orange County: Professional Mold Inspections
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
-            24/7 emergency inspections and same day service available. Certified inspectors protecting your home and family with advanced mold detection technology.
+            Emergency inspections and same-day service available. Certified inspectors protecting your home and family with advanced mold detection technology.
           </p>
           <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
             Restore Your Home, Restore Your Health

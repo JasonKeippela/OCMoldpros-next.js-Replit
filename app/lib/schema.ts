@@ -34,40 +34,205 @@ function normalizeSchemaNumbers<T>(obj: T): T {
   return obj
 }
 
-const SERVICES = [
-  { name: 'Mold Sampling', slug: 'mold-sampling' },
-  { name: 'New Construction Inspections', slug: 'new-construction-inspections' },
-  { name: 'Rental Property Inspections', slug: 'rental-property-inspections' },
-  { name: 'Mold Prevention', slug: 'mold-prevention' },
-  { name: 'Physical and Visual Inspection', slug: 'physical-and-visual-inspection' },
-  { name: 'HVAC System Inspection', slug: 'hvac-system-inspection' },
-  { name: 'Kitchen Inspection', slug: 'kitchen-inspection' },
-  { name: 'Bathroom Inspection', slug: 'bathroom-inspection' },
-  { name: 'Real Estate Inspection', slug: 'real-estate-inspection' },
-  { name: 'Indoor Air Testing', slug: 'indoor-air-testing' },
-  { name: 'Certified Mold Inspector', slug: 'certified-mold-inspector' },
-  { name: 'Mold Inspection', slug: 'mold-inspection' },
-  { name: 'Mold Testing', slug: 'mold-testing' },
-  { name: 'ERMI Testing', slug: 'ermi-testing' },
-  { name: 'Thermal Imaging Inspection', slug: 'thermal-imaging-inspection' },
-  { name: 'Indoor Allergen Sampling', slug: 'indoor-allergen-sampling' },
-  { name: 'Mycotoxin Testing', slug: 'mycotoxin-testing' },
-  { name: 'Custom Mold Action Plans', slug: 'custom-mold-action-plans' },
-  { name: 'Mold Cleaning', slug: 'mold-cleaning' },
-  { name: 'Mold Damage Restoration', slug: 'mold-damage-restoration' },
-  { name: 'Mold Mitigation', slug: 'mold-mitigation' },
-  { name: 'Mold Remediation', slug: 'mold-remediation' },
+export type ServiceItem = {
+  name: string
+  slug: string
+  description: string
+  serviceType: string
+  category: string
+}
+
+export type ServiceCategory = {
+  categoryName: string
+  items: ServiceItem[]
+}
+
+export const SERVICES_CATALOG: ServiceCategory[] = [
+  {
+    categoryName: 'Home Inspector',
+    items: [
+      {
+        name: 'Mold Sampling',
+        slug: 'mold-sampling',
+        serviceType: 'Mold inspection',
+        category: 'Home Inspector',
+        description: 'Air and surface sampling used to identify mold presence, types, and spore levels inside homes, condos, and real estate properties.',
+      },
+      {
+        name: 'New Construction Inspections',
+        slug: 'new-construction-inspections',
+        serviceType: 'Construction inspection',
+        category: 'Home Inspector',
+        description: 'Inspections performed during or after construction to identify moisture issues and mold risks in newly built properties.',
+      },
+      {
+        name: 'Rental Property Inspections',
+        slug: 'rental-property-inspections',
+        serviceType: 'Property inspection',
+        category: 'Home Inspector',
+        description: 'Mold inspections for rental properties to help landlords and tenants identify moisture problems and indoor air quality concerns.',
+      },
+      {
+        name: 'Mold Prevention',
+        slug: 'mold-prevention',
+        serviceType: 'Mold prevention service',
+        category: 'Home Inspector',
+        description: 'Guidance and inspection-based strategies designed to reduce moisture conditions that lead to mold growth.',
+      },
+      {
+        name: 'Physical and Visual Inspection',
+        slug: 'physical-and-visual-inspection',
+        serviceType: 'Visual inspection',
+        category: 'Home Inspector',
+        description: 'A hands-on inspection of visible building areas to identify signs of moisture intrusion, water damage, and mold growth.',
+      },
+      {
+        name: 'HVAC System Inspection',
+        slug: 'hvac-system-inspection',
+        serviceType: 'HVAC inspection',
+        category: 'Home Inspector',
+        description: 'Inspection of HVAC components to identify moisture buildup, airflow issues, and conditions that contribute to mold growth.',
+      },
+      {
+        name: 'Kitchen Inspection',
+        slug: 'kitchen-inspection',
+        serviceType: 'Room inspection',
+        category: 'Home Inspector',
+        description: 'Focused inspection of kitchen areas prone to moisture, including sinks, dishwashers, refrigerators, and cabinetry.',
+      },
+      {
+        name: 'Bathroom Inspection',
+        slug: 'bathroom-inspection',
+        serviceType: 'Room inspection',
+        category: 'Home Inspector',
+        description: 'Inspection of bathrooms to identify moisture accumulation, ventilation issues, and hidden mold-prone areas.',
+      },
+      {
+        name: 'Real Estate Inspection',
+        slug: 'real-estate-inspection',
+        serviceType: 'Real estate inspection',
+        category: 'Home Inspector',
+        description: 'Mold inspections for buyers and sellers to identify moisture issues and mold risks prior to real estate transactions.',
+      },
+    ],
+  },
+  {
+    categoryName: 'Environmental Consultant',
+    items: [
+      {
+        name: 'Indoor Air Testing',
+        slug: 'indoor-air-testing',
+        serviceType: 'Indoor air quality testing',
+        category: 'Environmental Consultant',
+        description: 'Testing indoor air samples to detect mold spores and evaluate overall indoor air quality.',
+      },
+      {
+        name: 'Certified Mold Inspector',
+        slug: 'certified-mold-inspector',
+        serviceType: 'Mold inspection',
+        category: 'Environmental Consultant',
+        description: 'Certified mold inspections performed using industry standards to assess mold conditions and risks.',
+      },
+      {
+        name: 'Mold Inspection',
+        slug: 'mold-inspection',
+        serviceType: 'Mold inspection',
+        category: 'Environmental Consultant',
+        description: 'Comprehensive inspections to identify mold growth, moisture sources, and environmental conditions contributing to mold.',
+      },
+      {
+        name: 'Mold Testing',
+        slug: 'mold-testing',
+        serviceType: 'Mold testing',
+        category: 'Environmental Consultant',
+        description: 'Laboratory-based testing to confirm mold presence and identify mold species found during inspection.',
+      },
+      {
+        name: 'ERMI Testing',
+        slug: 'ermi-testing',
+        serviceType: 'Environmental testing',
+        category: 'Environmental Consultant',
+        description: 'DNA-based ERMI testing used to evaluate long-term mold contamination levels within a property.',
+      },
+      {
+        name: 'Thermal Imaging Inspection',
+        slug: 'thermal-imaging-inspection',
+        serviceType: 'Thermal imaging inspection',
+        category: 'Environmental Consultant',
+        description: 'Infrared imaging used to detect hidden moisture behind walls, ceilings, and building materials.',
+      },
+      {
+        name: 'Indoor Allergen Sampling',
+        slug: 'indoor-allergen-sampling',
+        serviceType: 'Allergen testing',
+        category: 'Environmental Consultant',
+        description: 'Sampling used to identify allergens such as dust mites, pollen, pet dander, and other airborne irritants.',
+      },
+      {
+        name: 'Mycotoxin Testing',
+        slug: 'mycotoxin-testing',
+        serviceType: 'Mycotoxin testing',
+        category: 'Environmental Consultant',
+        description: 'Testing for mold-produced toxins that may impact indoor environmental health.',
+      },
+      {
+        name: 'Custom Mold Action Plans',
+        slug: 'custom-mold-action-plans',
+        serviceType: 'Consultation service',
+        category: 'Environmental Consultant',
+        description: 'Customized step-by-step plans outlining inspection findings and recommended next actions for mold-related concerns.',
+      },
+    ],
+  },
+  {
+    categoryName: 'Water Damage Restoration Service',
+    items: [
+      {
+        name: 'Mold Cleaning',
+        slug: 'mold-cleaning',
+        serviceType: 'Mold cleaning support',
+        category: 'Water Damage Restoration Service',
+        description: 'Inspection and reporting support that helps guide professional mold cleaning efforts.',
+      },
+      {
+        name: 'Mold Damage Restoration',
+        slug: 'mold-damage-restoration',
+        serviceType: 'Mold damage assessment',
+        category: 'Water Damage Restoration Service',
+        description: 'Inspection services that document mold-related damage to assist restoration planning.',
+      },
+      {
+        name: 'Mold Mitigation',
+        slug: 'mold-mitigation',
+        serviceType: 'Mold mitigation support',
+        category: 'Water Damage Restoration Service',
+        description: 'Identification of moisture sources and affected areas to support mold mitigation strategies.',
+      },
+      {
+        name: 'Mold Remediation',
+        slug: 'mold-remediation',
+        serviceType: 'Mold remediation support',
+        category: 'Water Damage Restoration Service',
+        description: 'Inspection findings and documentation used to guide professional mold remediation efforts.',
+      },
+    ],
+  },
 ]
+
+export const ALL_SERVICES = SERVICES_CATALOG.flatMap((c) => c.items)
 
 function getOfferCatalogSchema() {
   return {
     '@type': 'OfferCatalog',
     name: 'Services',
-    itemListElement: SERVICES.map((service) => ({
+    itemListElement: ALL_SERVICES.map((service) => ({
       '@type': 'Offer',
       itemOffered: {
         '@type': 'Service',
         name: service.name,
+        description: service.description,
+        serviceType: service.serviceType,
+        category: service.category,
         url: `${SITE_CONFIG.url}/services/${service.slug}`,
         provider: { '@id': BUSINESS_ID },
         areaServed: { '@type': 'AdministrativeArea', name: 'Orange County, CA' },
