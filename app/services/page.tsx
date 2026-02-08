@@ -105,6 +105,11 @@ export default function ServicesPage() {
               <p className="text-gray-600">Expert mold prevention services in San Clemente. Stop mold before it starts with professional moisture control, ventilation assessment, and preventive inspections.</p>
               <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
             </Link>
+            <Link href="/services/new-construction-inspections" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">New Construction Inspections</h3>
+              <p className="text-gray-600">Expert new construction mold inspections in San Clemente. Protect your investment from mold risks in new homes with pre-drywall and final inspections.</p>
+              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>

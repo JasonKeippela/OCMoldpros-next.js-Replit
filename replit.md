@@ -98,8 +98,10 @@ Each page includes:
 - `/services` - Main services overview page
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
 - `/services/mold-prevention` - Mold Prevention San Clemente dedicated page with prevention strategies, cost comparisons, and FAQ
+- `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page with pre-drywall and final inspection coverage
 
 ## Recent Changes
+- Feb 08, 2026: Added New Construction Inspections service page at /services/new-construction-inspections with nav dropdown, sitemap entry, and services index link
 - Feb 08, 2026: Added Mold Prevention service page at /services/mold-prevention with nav dropdown, sitemap entry, and services index link
 - Feb 08, 2026: Updated Mold Sampling page content with new conversational copy
 - Feb 07, 2026: Added Mold Sampling service page at /services/mold-sampling with Services dropdown in nav, sitemap entry, and services index link
