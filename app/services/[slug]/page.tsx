@@ -7,7 +7,8 @@ import ServiceMarkdown from '@/app/components/ServiceMarkdown'
 import { services } from '@/content/services/services.config'
 import { expandServiceMarkdown, SERVICE_EXPANSION_DEFAULTS } from '@/app/lib/expandServiceMarkdown'
 import { getCanonicalUrl } from '@/app/lib/canonical'
-import { buildProfessionalServiceSchema } from '@/app/lib/schema'
+import { getServicePageSchema, getFaqSchema } from '@/app/lib/schema'
+import JsonLd from '@/app/components/JsonLd'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -21,7 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = services.find((s) => s.slug === slug)
   if (!service) return {}
-  // Canonical v2 – services rollout
   return {
     title: service.metaTitle,
     description: service.metaDescription,
@@ -49,7 +49,7 @@ export default async function ServicePage({ params }: Props) {
 
   const faqItems = extractFAQ(baseMarkdown)
 
-  const professionalServiceSchema = buildProfessionalServiceSchema(service)
+  const serviceSchema = getServicePageSchema(service)
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -61,35 +61,16 @@ export default async function ServicePage({ params }: Props) {
     ]
   }
 
-  const faqSchema = faqItems.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map((item) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer,
-      }
-    }))
+  const faqSchemaData = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    ...getFaqSchema(faqItems),
   } : null
 
   return (
     <main className="pt-28">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {faqSchemaData && <JsonLd data={faqSchemaData} />}
 
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">

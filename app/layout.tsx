@@ -3,6 +3,8 @@ import Script from 'next/script'
 import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import JsonLd from './components/JsonLd'
+import { getSiteGraph } from './lib/schema'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ocmoldpros.com'),
@@ -42,6 +44,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const siteGraph = getSiteGraph()
+
   return (
     <html lang="en">
       <head>
@@ -59,6 +63,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="bg-white text-gray-900 antialiased">
+        <JsonLd data={siteGraph} />
         <Navigation />
         {children}
         <Footer />

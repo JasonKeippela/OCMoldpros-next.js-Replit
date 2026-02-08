@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeroCTA from './components/HeroCTA'
 import { Metadata } from 'next'
-import { SITE_CONFIG } from './lib/siteConfig'
+import JsonLd from './components/JsonLd'
+import { getFaqSchema } from './lib/schema'
 
 export const metadata: Metadata = {
   title: 'Home Inspector | Expert Mold Inspections in San Clemente & Orange County',
@@ -11,187 +12,28 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://ocmoldpros.com' },
 }
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": SITE_CONFIG.organizationId,
-  "name": SITE_CONFIG.name,
-  "image": SITE_CONFIG.image,
-  "logo": SITE_CONFIG.logo,
-  "url": SITE_CONFIG.url,
-  "telephone": SITE_CONFIG.telephone,
-  "email": SITE_CONFIG.email,
-  "priceRange": SITE_CONFIG.priceRange,
-  "address": SITE_CONFIG.address,
-  "geo": SITE_CONFIG.geo,
-  "areaServed": SITE_CONFIG.areaServed,
-  "openingHoursSpecification": SITE_CONFIG.openingHoursSpecification,
-  "sameAs": SITE_CONFIG.sameAs,
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5,
-    "reviewCount": 8,
-    "bestRating": 5,
-    "worstRating": 5
+const homepageFaqItems = [
+  {
+    question: 'How long does a mold inspection take?',
+    answer: 'A typical residential mold inspection takes 3-4 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern.',
   },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Mold Inspection Services",
-    "itemListElement": [
-      {
-        "@type": "Service",
-        "name": "Mold Inspection",
-        "description": "Comprehensive visual inspection and moisture assessment to identify mold growth and potential problem areas in your home or business.",
-        "provider": { "@id": "https://ocmoldpros.com/#organization" }
-      },
-      {
-        "@type": "Service",
-        "name": "Air Quality Testing",
-        "description": "Professional air sampling to measure mold spore concentrations and identify potential health risks in your indoor environment.",
-        "provider": { "@id": "https://ocmoldpros.com/#organization" }
-      },
-      {
-        "@type": "Service",
-        "name": "Moisture Detection",
-        "description": "Advanced infrared thermal imaging and moisture meters to find hidden water intrusion and dampness that can lead to mold growth.",
-        "provider": { "@id": "https://ocmoldpros.com/#organization" }
-      },
-      {
-        "@type": "Service",
-        "name": "Detailed Reporting",
-        "description": "Comprehensive written reports with photographs, lab results, and clear recommendations for addressing any issues found.",
-        "provider": { "@id": "https://ocmoldpros.com/#organization" }
-      }
-    ]
-  }
-}
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How long does a mold inspection take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A typical residential mold inspection takes 3-4 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a mold inspection cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The exact cost depends on property size and the scope of testing needed. We provide free quotes over the phone. Call us at 949-371-5934 for accurate pricing for your specific property."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide mold remediation services?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We focus exclusively on inspection and testing to ensure our findings are completely unbiased and accurate. This independence means you can trust our results. We can recommend trusted, licensed remediation companies if mold is found."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How soon can I schedule an inspection?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours. Call 949-371-5934 or request a free consultation to check availability for your preferred date and time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What areas do you serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, Santa Ana, Costa Mesa, Mission Viejo, San Clemente, and 30+ other cities throughout Orange County. Contact us to confirm service in your specific area."
-      }
-    }
-  ]
-}
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "OC Mold Pros",
-  "url": "https://ocmoldpros.com",
-  "logo": "https://ocmoldpros.com/logo.jpg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-949-371-5934",
-    "contactType": "Customer Service",
-    "areaServed": "US",
-    "availableLanguage": ["English", "Spanish"]
+  {
+    question: 'How much does a mold inspection cost?',
+    answer: 'The exact cost depends on property size and the scope of testing needed. We provide free quotes over the phone. Call us at 949-371-5934 for accurate pricing for your specific property.',
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5,
-    "reviewCount": 8,
-    "bestRating": 5,
-    "worstRating": 5
+  {
+    question: 'Do you provide mold remediation services?',
+    answer: 'We focus exclusively on inspection and testing to ensure our findings are completely unbiased and accurate. This independence means you can trust our results. We can recommend trusted, licensed remediation companies if mold is found.',
   },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Michelle B." },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "Jason is so awesome and amazing!!! He was referred to us by a friend and instantly I knew he was trustworthy and so knowledgeable! He truly just came to help us, offer advice and connect us with people who could do further investigating and remediating. We are so grateful to Jason and will always go to him first bc we know we can trust and count on his insight!!",
-      "datePublished": "2024-12-20"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Sean Hanley" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "I had a great experience with OC Mold Pros. Jason was thorough, honest, and took the time to explain everything so we understood exactly what was going on in our home. His awareness and care really stood out. We were so happy with the service that we're now having them come to our office building as well. Highly recommend!",
-      "datePublished": "2024-12-20"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Mike Saidi" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "We had mold inspections done before buying our property, but later when we opened the walls, we found a few surprises. A friend referred us to Jason at OC Mold Pros, and I'm so glad we called him. He was super knowledgeable, very reasonably priced, and went above and beyond. He even found mold inside the chimney — something the first company totally missed! Couldn't be happier with his work. Highly recommend OC Mold Pros!",
-      "datePublished": "2024-11-05"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Nathan Abell" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "Jason at OC Mold Pros was amazing! He came out to test our home for mold and walked me through the process with professionalism. He gave me detailed results, and also provided clear, practical steps on how to move forward and prevent future mold growth. His expertise and genuine care for our family's health and home really stood out. I hope you never have mold problems, but if you do, I highly recommend Jason and the OC Mold Pros team!",
-      "datePublished": "2024-11-05"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Hanny Rivera" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "Jason has been incredibly helpful and supportive as we have dealt with a sudden mold invasion in our home. When we first spoke on the phone he treated us with utmost professionalism and empathy for our situation. We were able to quickly schedule a mold inspection. During the inspection he took a lot of time to explain things to us, look at every nook and cranny and ultimately helped us identify the source. He was also very communicative and responsive through the process. I would highly highly recommend Jason and OC mold pros!",
-      "datePublished": "2025-01-15"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Jeslyn Rain" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.",
-      "datePublished": "2025-01-14"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Joshua Schneider" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.",
-      "datePublished": "2025-01-23"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Kamal" },
-      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "reviewBody": "Number one in all Orange County, I'm grateful to found an excellent inspector for my home, I highly recommend, super professional and has all the tools to perform an excellent job and experience, expertise about mold and detecting any issues. Thank you for your service Jason!",
-      "datePublished": "2026-01-25"
-    }
-  ]
-}
+  {
+    question: 'How soon can I schedule an inspection?',
+    answer: 'We offer same-day appointments when available. In most cases, we can schedule your inspection within 24-48 hours. Call 949-371-5934 or request a free consultation to check availability for your preferred date and time.',
+  },
+  {
+    question: 'What areas do you serve?',
+    answer: 'We serve all of Orange County, California, including Irvine, Newport Beach, Huntington Beach, Anaheim, Santa Ana, Costa Mesa, Mission Viejo, San Clemente, and 30+ other cities throughout Orange County. Contact us to confirm service in your specific area.',
+  },
+]
 
 
 function HeroSection() {
@@ -596,20 +438,11 @@ function TestimonialsSection() {
 }
 
 export default function Home() {
+  const faqSchema = getFaqSchema(homepageFaqItems)
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
+      {faqSchema && <JsonLd data={{ '@context': 'https://schema.org', ...faqSchema }} />}
       <main>
         <HeroSection />
         <TrustIndicators />

@@ -1,0 +1,164 @@
+You are working inside my Next.js (App Router) project. I need you to clean up and standardize my JSON-LD schema implementation to resolve THREE issues:
+
+1) JSON-LD has numbers stored as strings (easy fix): convert schema numeric fields (ratingValue, reviewCount, etc.) to actual numbers.
+2) You’re outputting multiple entities that overlap (not wrong, but messy): currently outputting ProfessionalService + FAQPage + Organization (with reviews + aggregateRating). Refactor so there is ONE primary entity (LocalBusiness preferred) with a stable @id, and include aggregateRating + review ONLY ONCE on that primary entity. Keep FAQPage separate.
+3) KEEP the business street address in the final schema output (do not remove it).
+
+IMPORTANT CONSTRAINTS (READ CAREFULLY):
+- DO NOT invent reviews, rating values, reviewCount, hours, geo, services, or any business details.
+- KEEP the street address in the schema (PostalAddress must remain present).
+- DO NOT change the business name, address, or phone number formatting unless strictly required for schema validity.
+- Ensure schema remains valid JSON-LD and is injected only once per page render.
+- Goal: clean, minimal, Google-friendly schema with zero duplication and correct data types.
+
+PROJECT CONTEXT:
+- Framework: Next.js (App Router)
+- Domain: https://ocmoldpros.com
+- Business name: OC Mold Pros
+- Phone: +1-949-371-5934
+- Logo/Image: https://ocmoldpros.com/logo.jpg
+- Description (use exactly this): Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!
+
+BUSINESS ADDRESS (MUST BE INCLUDED):
+- Street: 1322 Calle Avanzado
+- City: San Clemente
+- State: CA
+- Postal Code: 92673
+- Country: US
+
+HERE IS MY CURRENT app/layout.tsx (do not break metadata or analytics; you may add schema injection cleanly):
+
+[...keep the full layout.tsx exactly as provided in the chat...]
+
+================================================================================
+PREFERRED FINAL SCHEMA SHAPE (EXACT JSON-LD EXAMPLE FOR OC MOLD PROS)
+================================================================================
+This is the target output shape you MUST implement. Use exactly this structure:
+- @context at top
+- @graph array
+- ONE primary business entity: LocalBusiness (or LocalBusiness + ProfessionalService only if needed)
+- FAQPage separate
+- aggregateRating/review ONLY on the LocalBusiness node, and ONLY if real data exists in the repo
+- Keep address with streetAddress included
+
+EXACT JSON-LD EXAMPLE (base version — NO ratings/reviews included unless real data exists):
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ocmoldpros.com/#business",
+      "name": "OC Mold Pros",
+      "url": "https://ocmoldpros.com/",
+      "telephone": "+1-949-371-5934",
+      "image": "https://ocmoldpros.com/logo.jpg",
+      "logo": "https://ocmoldpros.com/logo.jpg",
+      "description": "Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1322 Calle Avanzado",
+        "addressLocality": "San Clemente",
+        "addressRegion": "CA",
+        "postalCode": "92673",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Orange County, CA"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ocmoldpros.com/#faq",
+      "mainEntity": []
+    }
+  ]
+}
+
+RATINGS/REVIEWS CONDITIONAL RULE:
+- If (and only if) your repo already contains legitimate rating/review values (not placeholders),
+  then add aggregateRating and review ONLY ONCE and ONLY to the LocalBusiness node.
+- When you add them, numbers MUST be numbers (not strings).
+- Example shape (do NOT invent values; these are placeholders and must be replaced with real repo data):
+
+"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": 4.9,
+  "reviewCount": 127
+},
+"review": [
+  {
+    "@type": "Review",
+    "author": { "@type": "Person", "name": "Name from real data" },
+    "datePublished": "2026-01-15",
+    "reviewBody": "Review text from real data",
+    "reviewRating": { "@type": "Rating", "ratingValue": 5 }
+  }
+]
+
+FAQ CONDITIONAL RULE:
+- Only output FAQPage JSON-LD on pages that actually display the matching FAQ content.
+- mainEntity must match visible questions/answers exactly (no invented FAQs).
+- If a page has no FAQs, do not output FAQPage there.
+
+================================================================================
+IMPLEMENTATION TASKS
+================================================================================
+
+A) Create a reusable JSON-LD injector component
+- File: app/components/JsonLd.tsx
+- Renders <script type="application/ld+json"> safely
+- Accepts either a single schema object or an array for @graph
+- Must not double-encode JSON (no extra quotes)
+- Must render in Server Components safely (no window usage)
+
+B) Create a schema builder that outputs the preferred final schema shape
+- File: app/lib/schema.ts (or app/lib/schema/index.ts)
+- Export functions:
+  - getLocalBusinessSchema(): returns the LocalBusiness node object
+  - getFaqSchema(faqItems): returns the FAQPage node object
+  - getSiteGraph({ faqItems? }): returns the full object: { "@context", "@graph": [...] }
+- The output MUST match the "PREFERRED FINAL SCHEMA SHAPE" above.
+
+C) Remove/merge overlapping schema entities across the codebase
+- Search entire project for JSON-LD schema output (Script tags, JsonLd components, hard-coded schema objects)
+- Remove:
+  - Any top-level Organization entity that duplicates LocalBusiness identity
+  - Any top-level ProfessionalService entity that duplicates identity/ratings
+- If ProfessionalService semantics are required, use:
+  - "@type": ["LocalBusiness", "ProfessionalService"]
+  on the SAME LocalBusiness node (do not create a second entity)
+- Ensure there is no duplicate aggregateRating/review across entities
+
+D) Numeric coercion rules (MANDATORY)
+- Convert numeric-looking strings to numbers ONLY for:
+  - aggregateRating.ratingValue
+  - aggregateRating.reviewCount
+  - review.reviewRating.ratingValue
+  - bestRating / worstRating (if present)
+  - latitude / longitude (if present)
+- Do NOT convert:
+  - phone numbers
+  - postal codes
+  - IDs
+  - URLs
+- Add helper(s) and apply only to the allowed fields
+
+E) Integrate into app/layout.tsx without breaking anything
+- Import JsonLd and getSiteGraph() (or equivalent)
+- Add LocalBusiness JSON-LD once site-wide (layout is fine)
+- Keep existing metadata and Google Analytics scripts unchanged
+- Do not inject the same business schema multiple times (no duplicates on nested layouts/pages)
+
+F) Output and verification
+- After changes, provide:
+  1) List of files created/modified/deleted
+  2) The final JSON-LD object produced for LocalBusiness (exact JSON output)
+  3) Confirmation that numeric fields are numbers, not strings
+  4) Confirmation that only ONE primary business entity contains rating/review (if those exist)
+  5) Confirmation that the streetAddress remains in the schema
+
+BEGIN WORK NOW. Make the changes directly in the repo files.
