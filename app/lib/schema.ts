@@ -34,6 +34,48 @@ function normalizeSchemaNumbers<T>(obj: T): T {
   return obj
 }
 
+const SERVICES = [
+  { name: 'Mold Sampling', slug: 'mold-sampling' },
+  { name: 'New Construction Inspections', slug: 'new-construction-inspections' },
+  { name: 'Rental Property Inspections', slug: 'rental-property-inspections' },
+  { name: 'Mold Prevention', slug: 'mold-prevention' },
+  { name: 'Physical and Visual Inspection', slug: 'physical-and-visual-inspection' },
+  { name: 'HVAC System Inspection', slug: 'hvac-system-inspection' },
+  { name: 'Kitchen Inspection', slug: 'kitchen-inspection' },
+  { name: 'Bathroom Inspection', slug: 'bathroom-inspection' },
+  { name: 'Real Estate Inspection', slug: 'real-estate-inspection' },
+  { name: 'Indoor Air Testing', slug: 'indoor-air-testing' },
+  { name: 'Certified Mold Inspector', slug: 'certified-mold-inspector' },
+  { name: 'Mold Inspection', slug: 'mold-inspection' },
+  { name: 'Mold Testing', slug: 'mold-testing' },
+  { name: 'ERMI Testing', slug: 'ermi-testing' },
+  { name: 'Thermal Imaging Inspection', slug: 'thermal-imaging-inspection' },
+  { name: 'Indoor Allergen Sampling', slug: 'indoor-allergen-sampling' },
+  { name: 'Mycotoxin Testing', slug: 'mycotoxin-testing' },
+  { name: 'Custom Mold Action Plans', slug: 'custom-mold-action-plans' },
+  { name: 'Mold Cleaning', slug: 'mold-cleaning' },
+  { name: 'Mold Damage Restoration', slug: 'mold-damage-restoration' },
+  { name: 'Mold Mitigation', slug: 'mold-mitigation' },
+  { name: 'Mold Remediation', slug: 'mold-remediation' },
+]
+
+function getOfferCatalogSchema() {
+  return {
+    '@type': 'OfferCatalog',
+    name: 'Services',
+    itemListElement: SERVICES.map((service) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: service.name,
+        url: `${SITE_CONFIG.url}/services/${service.slug}`,
+        provider: { '@id': BUSINESS_ID },
+        areaServed: { '@type': 'AdministrativeArea', name: 'Orange County, CA' },
+      },
+    })),
+  }
+}
+
 const reviews = [
   {
     '@type': 'Review' as const,
@@ -119,6 +161,8 @@ export function getLocalBusinessSchema() {
 
     openingHoursSpecification: SITE_CONFIG.openingHoursSpecification,
     sameAs: SITE_CONFIG.sameAs,
+
+    hasOfferCatalog: getOfferCatalogSchema(),
 
     aggregateRating: {
       '@type': 'AggregateRating',

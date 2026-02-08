@@ -122,6 +122,7 @@ Each page includes:
 Services: Mold Sampling, New Construction Inspections, Rental Property Inspections, Mold Prevention, Physical and Visual Inspection, HVAC System Inspection, Kitchen Inspection, Bathroom Inspection, Real Estate Inspection, Indoor Air Testing, Certified Mold Inspector, Mold Inspection, Mold Testing, ERMI Testing, Thermal Imaging Inspection, Indoor Allergen Sampling, Mycotoxin Testing, Custom Mold Action Plans, Mold Cleaning, Mold Damage Restoration, Mold Mitigation, Mold Remediation
 
 ## Recent Changes
+- Feb 08, 2026: Added hasOfferCatalog with 22 services as OfferCatalog > Offer > Service sub-entities under LocalBusiness schema, each referencing business @id, with absolute URLs
 - Feb 08, 2026: Hardened JsonLd component with </script> escape prevention, added numeric normalization guardrails (toNumberIfNumericString, normalizeSchemaNumbers), fixed worstRating 5→1, dynamic reviewCount via reviews.length, expanded areaServed to 11 cities from SITE_CONFIG, removed 11 duplicate LocalBusiness schemas from city/beach pages, deleted unused StructuredData.tsx
 - Feb 08, 2026: Refactored JSON-LD to single @graph with merged LocalBusiness+ProfessionalService entity (app/lib/schema.ts), site-wide via layout.tsx, removed duplicate Organization/ProfessionalService schemas, created reusable JsonLd component, numeric types verified
 - Feb 08, 2026: Added ProfessionalService JSON-LD schema to all 22 service pages via shared builder (app/lib/schema.ts), centralized business data into app/lib/siteConfig.ts, homepage schema now uses shared config

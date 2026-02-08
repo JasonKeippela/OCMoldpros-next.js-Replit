@@ -1,0 +1,117 @@
+MASTER REPLIT PROMPT (Next.js / TypeScript)
+Goal: Update my site-wide JSON-LD so that the main LocalBusiness schema includes each individual service as a sub-entity under the business schema, without creating duplicate top-level entities. Keep FAQPage separate when present. Keep numbers as numbers (not strings). Keep my street address in schema.
+
+Project context:
+- Next.js app router
+- JSON-LD injected via <JsonLd data={siteGraph} /> in app/layout.tsx
+- Schema builder lives in: app/lib/schema.ts (or similar)
+- Site config lives in: app/lib/siteConfig.ts (SITE_CONFIG)
+- Current graph returns LocalBusiness + optional FAQPage
+- I want to add a services list under the business entity itself.
+
+Implementation requirements:
+1) Use one primary identity entity:
+   - @type: ["LocalBusiness","ProfessionalService"]
+   - @id: "https://ocmoldpros.com/#business"
+   - Put aggregateRating + review ONLY here (already done)
+2) Add a services catalog as sub-entities under the business:
+   - Use hasOfferCatalog with an OfferCatalog
+   - Inside it, use itemListElement containing Offer objects
+   - Each Offer should reference a Service object (or embed a Service object) with:
+     - @type: "Service"
+     - name (service name)
+     - url (absolute canonical URL to the service page)
+     - provider: { "@id": BUSINESS_ID }
+     - areaServed (Orange County, CA)
+3) The service list should be maintainable:
+   - Create a single SERVICES array in schema.ts (or a new file app/lib/services.ts) that contains:
+     - name
+     - slug or path
+   - Generate URLs from SITE_CONFIG.url + "/services/<slug>"
+4) Keep all numeric fields as numbers:
+   - aggregateRating.ratingValue as number
+   - aggregateRating.reviewCount as number
+   - latitude/longitude as numbers
+   - (No “5” as a string)
+5) Ensure schema output is valid JSON-LD and doesn’t duplicate identity:
+   - Only one business entity in @graph
+   - FAQPage is separate and optional
+6) Do NOT remove my street address:
+   - keep 1322 Calle Avanzado, San Clemente, CA 92673 in PostalAddress
+
+What to change (do all steps):
+A) Create/Update a services list:
+- Add a SERVICES constant like:
+  const SERVICES = [
+    { name: "Mold Sampling", slug: "mold-sampling" },
+    { name: "New Construction Inspections", slug: "new-construction-inspections" },
+    { name: "Rental Property Inspections", slug: "rental-property-inspections" },
+    { name: "Mold Prevention", slug: "mold-prevention" },
+    { name: "Physical and Visual Inspection", slug: "physical-and-visual-inspection" },
+    { name: "HVAC System Inspection", slug: "hvac-system-inspection" },
+    { name: "Kitchen Inspection", slug: "kitchen-inspection" },
+    { name: "Bathroom Inspection", slug: "bathroom-inspection" },
+    { name: "Real Estate Inspection", slug: "real-estate-inspection" },
+    { name: "Indoor Air Testing", slug: "indoor-air-testing" },
+    { name: "Certified Mold Inspector", slug: "certified-mold-inspector" },
+    { name: "Mold Inspection", slug: "mold-inspection" },
+    { name: "Mold Testing", slug: "mold-testing" },
+    { name: "ERMI Testing", slug: "ermi-testing" },
+    { name: "Thermal Imaging Inspection", slug: "thermal-imaging-inspection" },
+    { name: "Indoor Allergen Sampling", slug: "indoor-allergen-sampling" },
+    { name: "Mycotoxin Testing", slug: "mycotoxin-testing" },
+    { name: "Custom Mold Action Plans", slug: "custom-mold-action-plans" },
+    { name: "Mold Cleaning", slug: "mold-cleaning" },
+    { name: "Mold Damage Restoration", slug: "mold-damage-restoration" },
+    { name: "Mold Mitigation", slug: "mold-mitigation" },
+    { name: "Mold Remediation", slug: "mold-remediation" },
+  ]
+(If some of these pages don’t exist yet, still include them—URLs should still be generated. We’ll create pages later.)
+
+B) Add a helper to generate the OfferCatalog:
+- Create a function getOfferCatalogSchema() that returns:
+  {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": SERVICES.map(...)
+  }
+- Each itemListElement should be an Offer:
+  {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": service.name,
+      "url": `${SITE_CONFIG.url}/services/${service.slug}`,
+      "provider": { "@id": BUSINESS_ID },
+      "areaServed": { "@type": "AdministrativeArea", "name": "Orange County, CA" }
+    }
+  }
+
+C) Attach the catalog under the business schema:
+- In getLocalBusinessSchema(), add:
+  hasOfferCatalog: getOfferCatalogSchema(),
+(or if you prefer, wrap it as an array: hasOfferCatalog: [getOfferCatalogSchema()])
+
+D) Keep the existing FAQ behavior:
+- getSiteGraph() should still return:
+  { "@context": "https://schema.org", "@graph": [LocalBusiness, (optional) FAQPage] }
+
+E) Typescript correctness:
+- Export types for Service items if needed
+- Ensure no implicit any
+- Keep schema return shapes as plain JS objects (no classes)
+
+After changes:
+- Run lint/build
+- View page source and confirm a single JSON-LD script contains:
+  @context and @graph
+  The business node with @id #business
+  The hasOfferCatalog with offers/services
+  Optional FAQPage separate
+
+Now implement these changes directly in my codebase.
+
+Deliverables:
+1) Updated schema.ts (or new services.ts + schema.ts updates)
+2) Any necessary imports/exports
+3) If you add a new file, include its full contents
