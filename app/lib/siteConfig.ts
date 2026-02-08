@@ -17,8 +17,8 @@ export const SITE_CONFIG = {
   },
   geo: {
     '@type': 'GeoCoordinates' as const,
-    latitude: '33.4269',
-    longitude: '-117.6120',
+    latitude: 33.4269,
+    longitude: -117.6120,
   },
   areaServed: [
     { '@type': 'City' as const, name: 'San Clemente', containedIn: { '@type': 'AdministrativeArea' as const, name: 'Orange County' } },

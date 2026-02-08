@@ -1,0 +1,61 @@
+You are working in my existing Next.js project (App Router). My app/layout.tsx does NOT contain JSON-LD; it only contains metadata and Google Analytics scripts. Therefore you must locate where JSON-LD is injected elsewhere in the repo and fix numeric data types that are incorrectly stored as strings.
+
+TASK
+Fix JSON-LD numeric values stored as strings across the entire codebase.
+
+WHERE TO LOOK
+Search the entire repo for JSON-LD injection patterns including:
+- <script type="application/ld+json">
+- dangerouslySetInnerHTML with JSON.stringify
+- next/script usage that renders ld+json
+- components named like JsonLd, Schema, StructuredData, SEO, etc.
+Likely locations:
+- app/page.tsx
+- app/**/page.tsx
+- app/**/layout.tsx
+- app/components/**
+- components/**
+But you must rely on search results, not guesses.
+
+RULES (DO NOT BREAK)
+- Only change values inside JSON-LD objects/scripts.
+- Do NOT change schema structure, keys, @type, @id, URLs, addresses, phone, postalCode, or any visible UI content.
+- This is ONLY a data-type correction: convert specific fields from "string" -> number.
+
+FIELDS TO FIX (STRING -> NUMBER)
+Within JSON-LD objects:
+1) AggregateRating:
+   - ratingValue: "5" -> 5
+   - reviewCount: "8" -> 8
+   - bestRating: "5" -> 5 (if present)
+   - worstRating: "5" -> 5 (if present)
+
+2) Review ratings:
+   - reviewRating.ratingValue: "5" -> 5
+   - reviewRating.bestRating: "5" -> 5 (if present)
+
+3) GeoCoordinates:
+   - latitude: "33.4269" -> 33.4269
+   - longitude: "-117.6120" -> -117.6120 (or -117.612; either is fine)
+
+DO NOT CONVERT THESE EVEN IF THEY LOOK NUMERIC
+- telephone, postalCode, streetAddress, addressRegion, any IDs, any URLs
+
+HOW TO IMPLEMENT (IMPORTANT)
+- If JSON-LD is written as a JS/TS object and then JSON.stringify’d:
+  - Update the object values to numbers (preferred).
+- If JSON-LD is written as a raw JSON string:
+  - Carefully remove quotes only for the numeric fields above.
+- Do NOT add runtime string-replace hacks.
+- Do NOT refactor unrelated code.
+
+VALIDATION
+- Ensure JSON-LD remains valid JSON after changes (no trailing commas, correct quoting).
+- Run/build should not break and TypeScript should remain clean.
+
+DELIVERABLE
+- Apply the fixes directly in the codebase.
+- After edits, report ONLY:
+  - the file paths changed
+  - the exact before -> after for each corrected field
+No other commentary.
