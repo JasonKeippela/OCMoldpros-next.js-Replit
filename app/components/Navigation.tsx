@@ -124,7 +124,7 @@ export default function Navigation() {
             949-371-5934
           </a>
           <Link href="/contact" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-            Get Free Quote now
+            Request a Free Quote 
           </Link>
         </div>
 

@@ -75,7 +75,7 @@ const faqSchema = {
       "name": "How long does a mold inspection take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A typical residential mold inspection takes 1-2 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern."
+        "text": "A typical residential mold inspection takes 3-4 hours depending on the size of your property. Larger homes or commercial properties may take longer. We use advanced equipment including thermal imaging cameras and moisture meters to thoroughly examine all areas of concern."
       }
     },
     {
@@ -229,7 +229,7 @@ function TrustIndicators() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-3 gap-8 text-center">
           {[
-            { number: '30', label: 'Years Experience' },
+            { number: '25+', label: 'Years Construction/Inspection Experience' },
             { number: '100%', label: 'Satisfaction Guaranteed' },
             { number: '48hr', label: 'Report Turnaround' }
           ].map((stat, i) => (
@@ -308,7 +308,7 @@ function WhyChooseUs() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose OC Mold Pros?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              As a local vereran owned and operated business, we understand the unique mold challenges that Orange County homeowners face. From coastal humidity to older construction, we have seen it all and know how to find hidden problems.
+              As a veteran-owned and operated business, we understand the unique mold challenges that Orange County homeowners face. From coastal humidity to older construction, we have seen it all and know how to find hidden problems.
             </p>
             <ul className="space-y-4">
               {[
@@ -332,10 +332,10 @@ function WhyChooseUs() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Your Free Quote</h3>
             <p className="text-gray-600 mb-6">Call us today for a free consultation and accurate pricing for your mold inspection needs.</p>
             <a href="tel:9493715934" className="block w-full py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center mb-4">
-              Call for FREE Consultation
+              Call for a FREE Consultation
             </a>
             <Link href="/contact" className="block w-full py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
-              Get Free Quote now
+              Request a Free Quote
             </Link>
           </div>
         </div>
@@ -459,7 +459,7 @@ function FAQSection() {
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Have more questions? We are here to help.</p>
           <a href="tel:9493715934" className="text-gray-900 hover:text-gray-900 font-medium text-lg">
-            Call for FREE Consultation
+            Call for a FREE Consultation
           </a>
         </div>
       </div>
@@ -477,10 +477,10 @@ function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
-            Call for FREE Consultation
+            Call for a FREE Consultation
           </a>
           <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg shadow-lg">
-            Get Free Quote now
+            Request a Free Quote
           </Link>
         </div>
       </div>
@@ -587,7 +587,7 @@ function TestimonialsSection() {
             <span className="font-medium text-gray-700">View Our Google Business Profile</span>
           </a>
           <a href="tel:9493715934" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-            Call for FREE Consultation
+            Call for a FREE Consultation
           </a>
         </div>
       </div>
