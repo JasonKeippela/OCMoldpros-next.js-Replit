@@ -97,8 +97,11 @@ Each page includes:
 ## Service Pages
 - `/services` - Main services overview page
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
+- `/services/mold-prevention` - Mold Prevention San Clemente dedicated page with prevention strategies, cost comparisons, and FAQ
 
 ## Recent Changes
+- Feb 08, 2026: Added Mold Prevention service page at /services/mold-prevention with nav dropdown, sitemap entry, and services index link
+- Feb 08, 2026: Updated Mold Sampling page content with new conversational copy
 - Feb 07, 2026: Added Mold Sampling service page at /services/mold-sampling with Services dropdown in nav, sitemap entry, and services index link
 - Feb 07, 2026: Added Google Business Profile map embed and link on homepage, updated CTA buttons, added address and VOB badge to footer, fixed JSON-LD schema rendering (switched from Script component to inline script tags)
 - Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure

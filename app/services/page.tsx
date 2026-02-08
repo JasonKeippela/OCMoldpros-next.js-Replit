@@ -100,6 +100,11 @@ export default function ServicesPage() {
               <p className="text-gray-600">Professional mold sampling in San Clemente. Air and surface testing with lab analysis to identify hidden mold problems in your home.</p>
               <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
             </Link>
+            <Link href="/services/mold-prevention" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Prevention</h3>
+              <p className="text-gray-600">Expert mold prevention services in San Clemente. Stop mold before it starts with professional moisture control, ventilation assessment, and preventive inspections.</p>
+              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>
