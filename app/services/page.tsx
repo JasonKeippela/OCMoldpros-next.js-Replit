@@ -1,47 +1,65 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { services } from '@/content/services/services.config'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection Services | OC Mold Pros - Orange County',
   description: 'Comprehensive mold inspection services in Orange County: air quality testing, moisture detection, thermal imaging. Expert analysis & detailed reporting. Book now!',
 }
 
+const serviceHighlights = [
+  {
+    title: 'Visual Mold Inspection',
+    description: 'Every San Clemente mold inspector with OC Mold Pros begins with a detailed visual assessment of all accessible areas of the property. This step allows us to identify visible mold growth, staining, discoloration, water damage, and building conditions that commonly contribute to mold problems. We inspect interior living areas, bedrooms, closets, bathrooms, kitchens, laundry rooms, attics, crawlspaces, garages, utility rooms, windows, doors, baseboards, transition points, exterior walls, roofing components, and drainage areas. Rather than just looking for obvious mold, we\'re trained to recognize subtle indicators of moisture intrusion and mold activity that are often overlooked, such as bubbling paint, warped materials, past repairs, or microbial staining.',
+    features: ['Complete property walkthrough', 'Identification of visible mold', 'Water damage assessment', 'Detailed photo documentation']
+  },
+  {
+    title: 'Moisture Detection',
+    description: 'Mold cannot grow without moisture, which is why moisture detection is a critical part of every inspection. OC Mold Pros is considered an Orange County mold specialist. Using infrared thermal imaging cameras and professional-grade moisture meters, we evaluate walls, ceilings, flooring, and structural components for hidden moisture that may not be visible to the naked eye. This process allows us to identify concealed leaks behind walls or ceilings, detect active or intermittent moisture intrusion, confirm elevated moisture levels in building materials, and pinpoint areas that may support future mold growth. Thermal imaging helps us locate temperature differentials that suggest moisture, while moisture meters allow us to verify and quantify those findings. This combination reduces guesswork and helps ensure nothing important is missed.',
+    features: ['Infrared thermal imaging', 'Pin and pinless moisture meters', 'Detection of hidden leaks', 'Moisture mapping']
+  },
+  {
+    title: 'Air Quality Testing',
+    description: 'When appropriate, and as part of our mold inspection San Clemente and mold inspection Orange County services, we perform air quality testing to evaluate the presence and concentration of airborne mold spores inside the home. Air samples are collected strategically to compare indoor air to outdoor baseline levels, identify elevated mold spore counts, determine the types of mold present, and assess whether mold activity is localized or widespread. Air sampling is especially valuable when mold is suspected but not visibly present, or when occupants are experiencing symptoms without a clear source. The results provide objective data that helps guide next steps and remediation decisions.',
+    features: ['Indoor and outdoor sampling', 'Spore trap analysis', 'Independent lab testing', 'Species identification']
+  },
+  {
+    title: 'Surface Sampling',
+    description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach.',
+    features: ['Tape lift samples', 'Swab sampling', 'Lab analysis and identification', 'Health risk assessment']
+  },
+  {
+    title: 'HVAC System Inspection',
+    description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County. Even though we do not offer mold removal San Clemente services we have industry partners that we can confidently refer to you. ',
+    features: ['Ductwork inspection', 'Air handler assessment', 'Filter and coil check', 'Condensation evaluation']
+  },
+  {
+    title: 'Comprehensive Reporting',
+    description: 'After the mold inspection services San Clemente inspection is complete, we provide a clear, easy-to-understand report that summarizes our findings and outlines recommended next steps. Your report includes inspection observations from mold testing San Clemente and documented findings from mold sampling Orange County, moisture and environmental insights, laboratory results (when sampling is performed), photos and supporting details, and practical recommendations moving forward. Our goal is clarity — not overwhelm. We take the time to explain what the findings mean, whether conditions appear active or historical, and what actions (if any) should be considered next.',
+    features: ['Detailed written report', 'Photo documentation', 'Lab results included', 'Clear recommendations']
+  }
+]
+
 export default function ServicesPage() {
-  const services = [
-    {
-      title: 'Visual Mold Inspection',
-      description: 'Every San Clemente mold inspector with OC Mold Pros begins with a detailed visual assessment of all accessible areas of the property. This step allows us to identify visible mold growth, staining, discoloration, water damage, and building conditions that commonly contribute to mold problems. We inspect interior living areas, bedrooms, closets, bathrooms, kitchens, laundry rooms, attics, crawlspaces, garages, utility rooms, windows, doors, baseboards, transition points, exterior walls, roofing components, and drainage areas. Rather than just looking for obvious mold, we\'re trained to recognize subtle indicators of moisture intrusion and mold activity that are often overlooked, such as bubbling paint, warped materials, past repairs, or microbial staining.',
-      features: ['Complete property walkthrough', 'Identification of visible mold', 'Water damage assessment', 'Detailed photo documentation']
-    },
-    {
-      title: 'Moisture Detection',
-      description: 'Mold cannot grow without moisture, which is why moisture detection is a critical part of every inspection. OC Mold Pros is considered an Orange County mold specialist. Using infrared thermal imaging cameras and professional-grade moisture meters, we evaluate walls, ceilings, flooring, and structural components for hidden moisture that may not be visible to the naked eye. This process allows us to identify concealed leaks behind walls or ceilings, detect active or intermittent moisture intrusion, confirm elevated moisture levels in building materials, and pinpoint areas that may support future mold growth. Thermal imaging helps us locate temperature differentials that suggest moisture, while moisture meters allow us to verify and quantify those findings. This combination reduces guesswork and helps ensure nothing important is missed.',
-      features: ['Infrared thermal imaging', 'Pin and pinless moisture meters', 'Detection of hidden leaks', 'Moisture mapping']
-    },
-    {
-      title: 'Air Quality Testing',
-      description: 'When appropriate, and as part of our mold inspection San Clemente and mold inspection Orange County services, we perform air quality testing to evaluate the presence and concentration of airborne mold spores inside the home. Air samples are collected strategically to compare indoor air to outdoor baseline levels, identify elevated mold spore counts, determine the types of mold present, and assess whether mold activity is localized or widespread. Air sampling is especially valuable when mold is suspected but not visibly present, or when occupants are experiencing symptoms without a clear source. The results provide objective data that helps guide next steps and remediation decisions.',
-      features: ['Indoor and outdoor sampling', 'Spore trap analysis', 'Independent lab testing', 'Species identification']
-    },
-    {
-      title: 'Surface Sampling',
-      description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach.',
-      features: ['Tape lift samples', 'Swab sampling', 'Lab analysis and identification', 'Health risk assessment']
-    },
-    {
-      title: 'HVAC System Inspection',
-      description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County. Even though we do not offer mold removal San Clemente services we have industry partners that we can confidently refer to you. ',
-      features: ['Ductwork inspection', 'Air handler assessment', 'Filter and coil check', 'Condensation evaluation']
-    },
-    {
-      title: 'Comprehensive Reporting',
-      description: 'After the mold inspection services San Clemente inspection is complete, we provide a clear, easy-to-understand report that summarizes our findings and outlines recommended next steps. Your report includes inspection observations from mold testing San Clemente and documented findings from mold sampling Orange County, moisture and environmental insights, laboratory results (when sampling is performed), photos and supporting details, and practical recommendations moving forward. Our goal is clarity — not overwhelm. We take the time to explain what the findings mean, whether conditions appear active or historical, and what actions (if any) should be considered next.',
-      features: ['Detailed written report', 'Photo documentation', 'Lab results included', 'Clear recommendations']
-    }
-  ]
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "OC Mold Pros Services",
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": service.name,
+      "url": `https://ocmoldpros.com${service.path}`
+    }))
+  }
 
   return (
     <main className="pt-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
@@ -61,10 +79,27 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">All Services</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {services.map((service) => (
+              <Link
+                key={service.slug}
+                href={service.path}
+                className="block p-4 bg-ocean-50 rounded-lg hover:bg-ocean-100 transition-colors border border-ocean-100"
+              >
+                <span className="text-gray-900 font-medium">{service.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="space-y-12">
-            {services.map((service, i) => (
+            {serviceHighlights.map((service, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
                 <div className="grid md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">

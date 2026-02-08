@@ -17,11 +17,39 @@ function cityToSlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-') + '-ca'
 }
 
+const serviceLinks = [
+  { name: "Mold Sampling", slug: "mold-sampling" },
+  { name: "New Construction Inspections", slug: "new-construction-inspections" },
+  { name: "Rental Property Inspections", slug: "rental-property-inspections" },
+  { name: "Mold Prevention", slug: "mold-prevention" },
+  { name: "Physical and Visual Inspection", slug: "physical-and-visual-inspection" },
+  { name: "HVAC System Inspection", slug: "hvac-system-inspection" },
+  { name: "Kitchen Inspection", slug: "kitchen-inspection" },
+  { name: "Bathroom Inspection", slug: "bathroom-inspection" },
+  { name: "Real Estate Inspection", slug: "real-estate-inspection" },
+  { name: "Indoor Air Testing", slug: "indoor-air-testing" },
+  { name: "Certified Mold Inspector", slug: "certified-mold-inspector" },
+  { name: "Mold Inspection", slug: "mold-inspection" },
+  { name: "Mold Testing", slug: "mold-testing" },
+  { name: "ERMI Testing", slug: "ermi-testing" },
+  { name: "Thermal Imaging Inspection", slug: "thermal-imaging-inspection" },
+  { name: "Indoor Allergen Sampling", slug: "indoor-allergen-sampling" },
+  { name: "Mycotoxin Testing", slug: "mycotoxin-testing" },
+  { name: "Custom Mold Action Plans", slug: "custom-mold-action-plans" },
+  { name: "Mold Cleaning", slug: "mold-cleaning" },
+  { name: "Mold Damage Restoration", slug: "mold-damage-restoration" },
+  { name: "Mold Mitigation", slug: "mold-mitigation" },
+  { name: "Mold Remediation", slug: "mold-remediation" },
+]
+
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [serviceAreasOpen, setServiceAreasOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [mobileServicesExpanded, setMobileServicesExpanded] = useState(false)
+  const [mobileAreasExpanded, setMobileAreasExpanded] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +81,22 @@ export default function Navigation() {
         
         <div className="hidden lg:flex items-center gap-6">
           <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">About</Link>
-          <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Services</Link>
+          
+          <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
+            <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center gap-1">
+              Services
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+            </Link>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 bg-white shadow-xl rounded-lg py-4 w-72 max-h-96 overflow-y-auto z-50">
+                {serviceLinks.map(svc => (
+                  <Link key={svc.slug} href={`/services/${svc.slug}`} className="block px-4 py-2 text-gray-700 hover:bg-ocean-50 hover:text-gray-900 transition-colors text-sm">
+                    {svc.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           
           <div className="relative" onMouseEnter={() => setServiceAreasOpen(true)} onMouseLeave={() => setServiceAreasOpen(false)}>
             <Link href="/mold-inspector-near-me" className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center gap-1">
@@ -93,11 +136,44 @@ export default function Navigation() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t shadow-lg">
+        <div className="lg:hidden bg-white border-t shadow-lg max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 space-y-3">
             <Link href="/about" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/services" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/mold-inspector-near-me" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Mold Inspector Near Me</Link>
+            
+            <div>
+              <button className="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}>
+                Services
+                <svg className={`w-4 h-4 transition-transform ${mobileServicesExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              {mobileServicesExpanded && (
+                <div className="pl-4 mt-2 space-y-2 max-h-60 overflow-y-auto">
+                  <Link href="/services" className="block text-sm text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+                  {serviceLinks.map(svc => (
+                    <Link key={svc.slug} href={`/services/${svc.slug}`} className="block text-sm text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+                      {svc.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div>
+              <button className="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileAreasExpanded(!mobileAreasExpanded)}>
+                Mold Inspector Near Me
+                <svg className={`w-4 h-4 transition-transform ${mobileAreasExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              {mobileAreasExpanded && (
+                <div className="pl-4 mt-2 space-y-2 max-h-60 overflow-y-auto">
+                  <Link href="/mold-inspector-near-me" className="block text-sm text-ocean-600 font-medium" onClick={() => setMobileMenuOpen(false)}>All Areas</Link>
+                  {cities.map(city => (
+                    <Link key={city} href={`/mold-inspector-near-me/${cityToSlug(city)}`} className="block text-sm text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+                      {city}, CA
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link href="/process" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Process</Link>
             <Link href="/pricing" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link href="/blog" className="block text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>

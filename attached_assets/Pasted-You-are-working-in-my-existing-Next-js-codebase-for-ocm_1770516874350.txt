@@ -1,0 +1,976 @@
+You are working in my existing Next.js codebase for ocmoldpros.com.
+
+MISSION (EXPANDED-CONTENT ONE-SHOT BUILD):
+Create a scalable service-page system and generate 22 new service pages at /services/<slug>. Each service page must render from a local markdown file using next-mdx-remote, BUT the markdown content must be “expanded” to roughly 1,000–1,500 words per page by automatically appending a shared expansion section (written below) that is customized per service with string replacements (service name, slug, city, neighborhoods, quick tips). Preserve the existing “Ready to get started” section EXACTLY unchanged. Add all 22 services as dropdown items under “Services” in the main header nav (simple list, no category grouping). Update sitemap to include all 22 URLs. Add local SEO schema: Services ItemList/OfferCatalog (on /services if it exists) + BreadcrumbList + FAQPage schema on each service page.
+
+ABSOLUTE RULES:
+- DO NOT change the existing “Ready to get started” section. Reuse it from the current service template exactly.
+- URL pattern MUST be /services/<slug>
+- Add 22 dropdown links under Services in header nav (single list; no grouping).
+- Use next-mdx-remote + MDXRemote to render markdown.
+- Create markdown files under /content/services/*.md using the BASE MARKDOWN blocks below, then EXPAND each file by appending the EXPANSION BLOCK (below) with per-service replacements.
+- Update sitemap with all 22 URLs using the repo’s existing sitemap approach.
+- Add schema without inventing an address. Reuse business name/phone if already present in repo config.
+
+STEP 0 — Detect structure
+- Detect if project uses App Router (app/) or Pages Router (pages/).
+- Locate an existing service page template under /services/* and identify layout + hero + where CTA (“Ready to get started”) is included.
+- Locate main nav/header component to add dropdown items.
+- Locate sitemap implementation and existing schema utilities/patterns.
+
+STEP 1 — Install next-mdx-remote (if missing)
+- Add next-mdx-remote (and required deps compatible with this Next version).
+- Use the correct approach for App Router vs Pages Router.
+
+STEP 2 — Create markdown renderer component
+Create: /components/ServiceMarkdown.tsx (or repo convention)
+- Props: { markdown: string }
+- Parse markdown with next-mdx-remote (serialize) and render with <MDXRemote />
+- Ensure headings, paragraphs, and lists render correctly.
+- Apply existing typography styling (use existing Tailwind/prose classes if already used).
+- No new styling libraries.
+
+STEP 3 — Create content folder + 22 markdown files (BASE)
+Create: /content/services/
+Create these files and write the BASE MARKDOWN exactly as provided below:
+- mold-sampling.md
+- new-construction-inspections.md
+- rental-property-inspections.md
+- mold-prevention.md
+- physical-and-visual-inspection.md
+- hvac-system-inspection.md
+- kitchen-inspection.md
+- bathroom-inspection.md
+- real-estate-inspection.md
+- indoor-air-testing.md
+- certified-mold-inspector.md
+- mold-inspection.md
+- mold-testing.md
+- ermi-testing.md
+- thermal-imaging-inspection.md
+- indoor-allergen-sampling.md
+- mycotoxin-testing.md
+- custom-mold-action-plans.md
+- mold-cleaning.md
+- mold-damage-restoration.md
+- mold-mitigation.md
+- mold-remediation.md
+
+STEP 3B — EXPAND each markdown file to ~1,000–1,500 words (AUTO APPEND)
+Create a small build-time utility that expands each markdown file by appending a shared block with replacements.
+
+Create: /lib/expandServiceMarkdown.ts
+- Export function:
+  expandServiceMarkdown(baseMarkdown: string, service: { name: string; slug: string; city: string; serviceAreas: string[]; landmarks: string[]; }): string
+- It must:
+  1) Keep base markdown intact (unchanged)
+  2) Append the EXPANSION BLOCK (below)
+  3) Replace placeholders:
+     - {{SERVICE_NAME}} -> service.name
+     - {{CITY}} -> "San Clemente"
+     - {{SLUG}} -> service.slug
+     - {{AREAS}} -> comma-separated serviceAreas string
+     - {{LANDMARKS}} -> comma-separated landmarks string
+     - {{NEAR_ME_LINE}} -> “If you searched ‘{{SERVICE_NAME}} near me’ in {{CITY}}, here’s what to watch for…”
+  4) Keep reading level simple (short sentences)
+  5) Avoid hype; be helpful and plain.
+
+Use these constant values:
+- city = "San Clemente"
+- serviceAreas = ["Talega","Forster Ranch","Marblehead","Capistrano Beach","Dana Point","San Juan Capistrano","Laguna Niguel","Orange County"]
+- landmarks = ["San Clemente Pier","Avenida Del Mar","T-Street Beach","Dana Point Harbor","San Onofre area","PCH / Coast Highway"]
+
+STEP 4 — Create services config (single source of truth)
+Create: /content/services/services.config.ts
+- Export array `services` with objects:
+  - name (as provided below)
+  - navLabel (same as name)
+  - slug
+  - path = `/services/${slug}`
+  - metaTitle = `${name} San Clemente | Service`
+  - metaDescription = ~155 chars derived from first 1–2 sentences of the BASE markdown (simple, no hype)
+  - markdownPath = `/content/services/${slug}.md`
+
+STEP 5 — Create ONE dynamic service route using the existing template
+Create:
+- App Router: /app/services/[slug]/page.tsx
+OR
+- Pages Router: /pages/services/[slug].tsx
+
+This page must:
+- Read slug from route params.
+- Lookup service from services.config.ts; 404 if not found.
+- Read base markdown file from disk.
+- Call expandServiceMarkdown(baseMarkdown, service) to produce expanded markdown.
+- Render the page using the existing service template layout.
+- Render markdown via <ServiceMarkdown markdown={expandedMarkdown} />
+- Then render the existing “Ready to get started” CTA section EXACTLY unchanged (reuse same component/JSX from template).
+- Set SEO metadata from config (title + description).
+
+STEP 6 — Update main header nav Services dropdown
+- Add all 22 services as dropdown links under “Services”.
+- Use services.config.ts as the source so it stays synced.
+- Keep existing styling/behavior.
+
+STEP 7 — Update /services index page (if exists)
+If there’s a /services page:
+- List all services using services.config.ts (existing style).
+- Add Services schema JSON-LD (ItemList or OfferCatalog) referencing each service name + URL.
+
+STEP 8 — Sitemap update
+Include all 22 /services/<slug> URLs using the repo’s existing sitemap approach:
+- next-sitemap OR custom sitemap route OR static file update.
+Prefer generating URLs from services.config.ts.
+
+STEP 9 — Schema update
+On each service page:
+- Add BreadcrumbList JSON-LD: Home > Services > Service Name
+- Add FAQPage JSON-LD based on the FAQ headings/questions in the markdown (parse “## FAQ” section).
+- Do NOT add duplicate LocalBusiness schema if already present globally.
+
+STEP 10 — QA
+- Build passes
+- All /services/<slug> routes load
+- Dropdown has all 22 links
+- Markdown renders headings/paragraphs/lists
+- CTA preserved unchanged
+- Sitemap includes all 22 URLs
+- Schema valid
+
+OUTPUT REQUIRED:
+After changes, print:
+- Files created/edited
+- Final list of 22 URLs
+- Confirm CTA unchanged
+- Confirm sitemap updated
+- Confirm schema added
+- Confirm expanded markdown length target met (log word counts once during build, then remove logs)
+
+=====================================================
+SERVICES LIST (name + slug)
+=====================================================
+1  Mold Sampling -> mold-sampling
+2  New Construction Inspections -> new-construction-inspections
+3  Rental Property Inspections -> rental-property-inspections
+4  Mold Prevention -> mold-prevention
+5  Physical and Visual Inspection -> physical-and-visual-inspection
+6  HVAC System Inspection -> hvac-system-inspection
+7  Kitchen Inspection -> kitchen-inspection
+8  Bathroom Inspection -> bathroom-inspection
+9  Real Estate Inspection -> real-estate-inspection
+10 Indoor Air Testing -> indoor-air-testing
+11 Certified Mold Inspector -> certified-mold-inspector
+12 Mold Inspection -> mold-inspection
+13 Mold Testing -> mold-testing
+14 ERMI Testing -> ermi-testing
+15 Thermal Imaging Inspection -> thermal-imaging-inspection
+16 Indoor Allergen Sampling -> indoor-allergen-sampling
+17 Mycotoxin Testing -> mycotoxin-testing
+18 Custom Mold Action Plans -> custom-mold-action-plans
+19 Mold Cleaning -> mold-cleaning
+20 Mold Damage Restoration -> mold-damage-restoration
+21 Mold Mitigation -> mold-mitigation
+22 Mold Remediation -> mold-remediation
+
+=====================================================
+BASE MARKDOWN CONTENT (WRITE EXACTLY TO FILES)
+=====================================================
+
+FILE: /content/services/mold-sampling.md
+---
+# Mold Sampling San Clemente – get real answers, not guesses
+
+Most people don’t call us because they “found mold.” They call because something feels off. A musty smell. Headaches. Kids coughing at night. Or a room that just never feels right.
+
+A **mold sampling inspection in San Clemente** helps figure out what’s actually in the air and on surfaces. Not opinions. Not guesses. Data.
+
+San Clemente homes deal with coastal moisture, marine layer, older construction, and hidden plumbing issues. Mold loves that combo.
+
+## Mold Sampling
+
+Mold sampling looks at what you can’t see. We take air samples and, when needed, surface samples, then compare indoor results to outdoor control samples.
+
+Common reasons people request mold sampling:
+- A musty or earthy smell they can’t locate
+- Health symptoms that feel worse at home
+- A past leak or water damage
+- A real estate transaction
+- Peace of mind before or after remediation
+
+Sampling helps answer one question clearly: **is the indoor environment different than outside?**
+
+## Home Inspector
+
+As a **home inspector in San Clemente**, we don’t just grab samples and leave. We look for the reason behind the results.
+
+We inspect areas like:
+- Bathrooms and showers
+- Under sinks and supply lines
+- Attics and roof penetrations
+- Crawlspaces and subfloor areas
+- HVAC systems and condensate drains
+- Windows, sliders, and exterior walls
+
+Numbers matter, but context matters more.
+
+## Why San Clemente homeowners call us for mold sampling
+- Something smells off but they can’t find it
+- They had a leak and want to confirm nothing lingered
+- A doctor suggested checking the environment
+- A buyer wants clean data before closing
+- They want clarity, not fear
+
+## Service Areas
+
+We provide mold sampling in San Clemente and nearby areas including Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and across Orange County.
+
+## FAQ
+
+### Who offers mold sampling near me in San Clemente?
+We provide local mold sampling services throughout San Clemente and nearby Orange County communities.
+
+### Do I need visible mold to test?
+No. Most mold problems we find are hidden.
+
+### How long does sampling take?
+Usually 1–2 hours depending on the home and number of samples.
+
+### Will this tell me if I’m sick?
+No. It tells you what’s in the environment so you can make informed decisions.
+
+### Should I test before remediation?
+Yes. Baseline testing helps guide next steps.
+
+### Is one sample enough?
+Usually not. Comparing multiple indoor areas to outdoors matters.
+---
+
+FILE: /content/services/new-construction-inspections.md
+---
+# New Construction Inspections San Clemente – brand new doesn’t mean perfect
+
+New homes move fast. Subcontractors rotate. Details get missed. And once drywall is up, small issues turn into big ones later.
+
+A **new construction inspection in San Clemente** helps catch problems early, while they’re still easy to fix.
+
+## New Construction Inspections
+
+These inspections are commonly done at:
+- Pre-drywall stage
+- Final walkthrough before closing
+- 11-month builder warranty
+
+We focus on water risk, installation issues, and things buyers usually don’t notice.
+
+## Home Inspector
+
+As a home inspector, we look at:
+- Roof and flashing details
+- Window and door installs
+- Bathroom waterproofing basics
+- Plumbing leaks and drain setups
+- HVAC airflow and venting
+- Attic and crawl areas (if accessible)
+- Exterior drainage and grading
+
+We document everything clearly so you can hand it to the builder.
+
+## Why San Clemente homeowners call us for new construction inspections
+- They want a second set of eyes
+- They don’t want surprises after move-in
+- Coastal moisture makes sealing important
+- Warranty deadlines are coming up
+- They want leverage before closing
+
+## Service Areas
+
+New construction inspections are provided in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and nearby Orange County areas.
+
+## FAQ
+
+### Who offers new construction inspections near me in San Clemente?
+We provide new construction inspections across San Clemente and surrounding OC areas.
+
+### Do I really need an inspection on a new home?
+Yes. New homes can still have defects.
+
+### Will the builder fix issues?
+Most will when issues are documented early.
+
+### When is the best time to inspect?
+Pre-drywall and again before closing.
+
+### What if I already closed?
+An 11-month warranty inspection still helps.
+
+### How long does it take?
+Typically 2–3 hours depending on size.
+---
+
+FILE: /content/services/rental-property-inspections.md
+---
+# Rental Property Inspections San Clemente – clear documentation, fewer problems
+
+Rental issues often turn into disputes because nobody knows what changed or when it happened.
+
+A **rental property inspection in San Clemente** gives you clear documentation before move-in, after move-out, or when a problem shows up mid-lease.
+
+## Rental Property Inspections
+
+Common inspection times:
+- Before a tenant moves in
+- After move-out
+- During a moisture, leak, or odor complaint
+
+We document current condition so everyone has the same information.
+
+## Home Inspector
+
+We inspect common rental trouble spots:
+- Bathrooms and vent fans
+- Kitchen sinks and plumbing
+- Laundry hookups and drains
+- Windows and sliders
+- Walls and ceilings for staining
+- HVAC basics
+- Exterior drainage and entry points
+
+## Why San Clemente homeowners call us for rental inspections
+- They want a clean baseline
+- There’s a moisture or odor complaint
+- They manage multiple properties
+- They want to avoid arguments
+- Repairs need to be planned fast
+
+## Service Areas
+
+Rental property inspections are available in San Clemente, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and across Orange County.
+
+## FAQ
+
+### Who offers rental property inspections near me in San Clemente?
+We provide rental property inspections in San Clemente and nearby areas.
+
+### Are these inspections for landlords only?
+No. Tenants request them too.
+
+### Will you assign blame?
+We document condition and likely causes.
+
+### Can this help with deposits?
+Clear documentation always helps.
+
+### Do you test for mold?
+If needed, sampling can be added.
+
+### Is this different from a home inspection?
+Yes. It’s focused on current condition and issues.
+---
+
+FILE: /content/services/mold-prevention.md
+---
+# Mold Prevention San Clemente – stop it before it starts
+
+Most mold problems don’t start as mold. They start as moisture that gets ignored.
+
+A **mold prevention inspection in San Clemente** focuses on finding moisture habits and fixing them early.
+
+## Mold Prevention
+
+We look for conditions that allow mold to grow:
+- High indoor humidity
+- Poor bathroom ventilation
+- Small plumbing leaks
+- Window condensation
+- Attic and crawlspace moisture
+- HVAC drain issues
+
+## Home Inspector
+
+A prevention-focused inspection checks:
+- Bathrooms and fans
+- Kitchen and laundry areas
+- Attics and roof penetrations
+- Crawlspaces (if accessible)
+- Windows and sliders
+- Exterior drainage and gutters
+
+## Why San Clemente homeowners call us for mold prevention
+- A musty smell keeps coming back
+- They had mold before and don’t want it again
+- Coastal moisture is constant
+- Small leaks keep popping up
+- They want a simple action plan
+
+## Service Areas
+
+Mold prevention services are available in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, and nearby Orange County areas.
+
+## FAQ
+
+### Who offers mold prevention near me in San Clemente?
+We provide mold prevention-focused inspections across San Clemente.
+
+### Is prevention worth it if I’ve never had mold?
+Yes. Prevention costs less than repairs.
+
+### Do I need a dehumidifier?
+Sometimes. Venting and airflow matter too.
+
+### Does bleach prevent mold?
+No. It doesn’t fix moisture.
+
+### How long does this take?
+Usually 1–2 hours.
+
+### Will you give me a checklist?
+Yes. Clear next steps.
+---
+
+FILE: /content/services/physical-and-visual-inspection.md
+---
+# Physical and Visual Inspection San Clemente – the smart first step
+
+Most people start with a smell, a stain, or a spot that keeps coming back.
+
+A **physical and visual inspection in San Clemente** is the easiest way to understand what’s happening before spending money on testing or repairs.
+
+## Physical and Visual Inspection
+
+We inspect the home with a moisture and building-science lens.
+
+Common areas inspected:
+- Bathrooms and showers
+- Kitchen plumbing
+- Bedrooms and closets
+- Windows and sliders
+- Attic (if accessible)
+- Crawlspace (if accessible)
+- HVAC visible components
+- Exterior drainage
+
+## Home Inspector
+
+We also review history:
+- Past leaks
+- Remodeling work
+- Odors that come and go
+- Seasonal moisture patterns
+
+## Why San Clemente homeowners call us for physical and visual inspections
+- They want answers without panic
+- A past leak worries them
+- Buying or selling a home
+- Something smells off
+- They want a clear direction
+
+## Service Areas
+
+Physical and visual inspections are provided in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and Orange County.
+
+## FAQ
+
+### Who offers physical and visual inspection near me in San Clemente?
+We provide local inspections focused on moisture and building issues.
+
+### Is this the same as mold testing?
+No. It’s often the step before testing.
+
+### How long does it take?
+Usually 1–2 hours.
+
+### Can this help with a home purchase?
+Yes. It identifies red flags early.
+
+### Will you tell me next steps?
+Yes. We’re very clear.
+
+### Do I need this if I see mold?
+It helps understand the cause.
+---
+
+FILE: /content/services/hvac-system-inspection.md
+---
+# HVAC System Inspection San Clemente – because your air runs through this system
+
+If the air smells weird when the AC or heat turns on, the HVAC system is one of the first places to look. Dust, moisture, and buildup inside the system can affect the whole house fast.
+
+An **HVAC system inspection in San Clemente** focuses on moisture problems, visible condition, and airflow issues that can impact air quality.
+
+## HVAC System Inspection
+
+We’re not doing mechanical repairs, but we inspect the system for moisture and red flags.
+
+We typically look at:
+- Air handler or furnace cabinet condition
+- Evaporator coil area and access panels
+- Condensate drain line routing and clogs
+- Drain pan condition and standing water
+- Filter size, fit, and bypass gaps
+- Supply and return vents
+- Visible ducting issues (if accessible)
+- Signs of condensation or sweating
+
+If we see issues, we’ll explain what needs HVAC contractor attention versus general moisture control.
+
+## Home Inspector
+
+As a home inspector, we also look at what’s feeding the HVAC system. Bathroom venting, crawlspace moisture, or window condensation can all show up in the air handler.
+
+We look at the system in context, not in isolation.
+
+## Why San Clemente homeowners call us for HVAC inspections
+- Musty smells from vents
+- Allergy symptoms at home
+- Water near the HVAC unit
+- Recent HVAC installation
+- Moisture spreading through the house
+
+## Service Areas
+
+HVAC system inspections are available in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and surrounding Orange County areas.
+
+## FAQ
+
+### Who offers HVAC system inspection near me in San Clemente?
+We provide local HVAC system inspections focused on moisture and air quality concerns.
+
+### Is water near the AC normal?
+Some condensation is normal. Standing water is not.
+
+### Do you clean ducts or coils?
+No. We inspect and document conditions.
+
+### Can HVAC spread mold?
+Yes. Moisture inside the system can distribute particles.
+
+### How long does it take?
+Usually 45–90 minutes.
+
+### Should I add mold sampling?
+If symptoms or moisture are present, sampling can help.
+---
+
+FILE: /content/services/kitchen-inspection.md
+---
+# Kitchen Inspection San Clemente – where small leaks cause big problems
+
+Kitchens hide a lot of plumbing. Slow leaks under sinks, dishwasher issues, and fridge water lines cause more damage than most people realize.
+
+A **kitchen inspection in San Clemente** focuses on moisture, plumbing, and early warning signs before cabinets and floors get damaged.
+
+## Kitchen Inspection
+
+We inspect the common kitchen risk areas:
+- Sink base cabinet and supply lines
+- Drain connections and traps
+- Dishwasher connections and drain lines
+- Refrigerator water supply line
+- Cabinet flooring for swelling or staining
+- Wall and baseboard moisture signs
+- Ventilation and humidity issues
+
+These problems often go unnoticed until damage is already done.
+
+## Home Inspector
+
+As a home inspector, we’ve seen many kitchens where the leak “wasn’t that bad”… until the cabinet base rotted out.
+
+Catching kitchen leaks early saves money and avoids mold growth.
+
+## Why San Clemente homeowners call us for kitchen inspections
+- A past dishwasher or sink leak
+- Musty smells in cabinets
+- Buying or selling a home
+- Preventive maintenance
+- Ongoing plumbing concerns
+
+## Service Areas
+
+Kitchen inspections are offered in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and across Orange County.
+
+## FAQ
+
+### Who offers kitchen inspection near me in San Clemente?
+We provide local kitchen inspections focused on moisture and plumbing risks.
+
+### Do you repair plumbing?
+No. We inspect and document issues.
+
+### Are small leaks really a problem?
+Yes. Slow leaks cause hidden damage.
+
+### Can this prevent mold?
+Fixing leaks early helps a lot.
+
+### How long does it take?
+Usually 30–60 minutes.
+
+### Should this be part of a larger inspection?
+Often yes, especially during real estate transactions.
+---
+
+FILE: /content/services/bathroom-inspection.md
+---
+# Bathroom Inspection San Clemente – moisture starts here
+
+Bathrooms are the number one moisture source in most homes. Showers, tubs, sinks, and fans all play a role.
+
+A **bathroom inspection in San Clemente** helps catch moisture problems before they turn into mold or structural damage.
+
+## Bathroom Inspection
+
+We focus on areas where water escapes:
+- Shower and tub surrounds
+- Grout and caulk condition
+- Sink plumbing and supply lines
+- Toilet base and seals
+- Bathroom vent fan operation
+- Moisture staining on walls and ceilings
+- Signs of poor ventilation
+
+Bathrooms that look clean can still hide moisture behind walls.
+
+## Home Inspector
+
+As a home inspector, we see bathroom issues cause problems in bedrooms, closets, and hallways next door.
+
+Bathroom moisture doesn’t stay put.
+
+## Why San Clemente homeowners call us for bathroom inspections
+- Repeated mold in grout
+- Peeling paint or stains
+- Weak or noisy vent fans
+- Past leaks
+- Buying or selling a home
+
+## Service Areas
+
+Bathroom inspections are available in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and nearby Orange County.
+
+## FAQ
+
+### Who offers bathroom inspection near me in San Clemente?
+We provide bathroom inspections focused on moisture control and prevention.
+
+### Does black grout always mean mold?
+Not always, but moisture is feeding it.
+
+### Should fans run after showers?
+Yes, usually 20 minutes.
+
+### Do you remove tile?
+No. This is a visual inspection.
+
+### How long does it take?
+About 30–60 minutes.
+
+### Can this help prevent mold?
+Yes. Bathrooms are a major source.
+---
+
+FILE: /content/services/real-estate-inspection.md
+---
+# Real Estate Inspection San Clemente – know what you’re buying or selling
+
+Real estate moves fast. Problems discovered late cause stress, delays, and renegotiations.
+
+A **real estate inspection in San Clemente** focuses on moisture, visible defects, and red flags that matter most during a transaction.
+
+## Real Estate Inspection
+
+This inspection is tailored for buyers, sellers, and agents.
+
+We focus on:
+- Moisture intrusion risks
+- Plumbing and drainage issues
+- Bathrooms and kitchens
+- Attic and crawlspace access (if available)
+- HVAC moisture concerns
+- Exterior water management
+- Visible mold or staining
+
+We explain what’s active versus old so decisions are clearer.
+
+## Home Inspector
+
+As a home inspector, we know what tends to blow up deals. Our goal is clarity, not panic.
+
+Clean documentation helps transactions move forward.
+
+## Why San Clemente homeowners call us for real estate inspections
+- Buying or selling a home
+- A musty smell during walkthrough
+- Past water damage disclosure
+- Time-sensitive inspections
+- Wanting fewer surprises after closing
+
+## Service Areas
+
+Real estate inspections are provided in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and Orange County.
+
+## FAQ
+
+### Who offers real estate inspection near me in San Clemente?
+We provide local real estate inspections focused on moisture and air quality concerns.
+
+### Is this a full home inspection?
+It can be focused or expanded based on needs.
+
+### Can this include mold sampling?
+Yes, if needed.
+
+### How fast can this be scheduled?
+Often within a few days.
+
+### Will this delay closing?
+Early inspections usually prevent delays.
+
+### Do you work with agents?
+Yes, all the time.
+---
+
+FILE: /content/services/indoor-air-testing.md
+---
+# Indoor Air Testing San Clemente – find out what you’re breathing
+
+Most people don’t realize how much time they spend indoors until their body starts reacting. Headaches, sinus issues, fatigue, or that “stale” feeling in the house can all be related to indoor air quality.
+
+**Indoor air testing in San Clemente** helps identify what’s floating in the air so you can make smart decisions instead of guessing.
+
+## Indoor Air Testing
+
+Indoor air testing looks at airborne particles and conditions that can affect comfort and health.
+
+Common reasons people request air testing:
+- A musty or stale smell indoors
+- Symptoms that improve when leaving the house
+- Past water damage or leaks
+- A recent remodel
+- Peace of mind for families with kids or sensitive health concerns
+
+We compare indoor results to outdoor air so the data actually means something.
+
+## Environmental Consultant
+
+As an **environmental consultant**, we don’t just hand you lab numbers. We help explain what’s normal, what’s elevated, and what usually causes it.
+
+We also look at:
+- Ventilation patterns
+- Humidity levels
+- HVAC contribution
+- Building materials
+- Past moisture history
+
+## Why San Clemente homeowners call us for indoor air testing
+- Something feels off indoors
+- They want real data, not opinions
+- Coastal air and moisture concerns
+- Health symptoms without a clear cause
+- Planning a next step with confidence
+
+## Service Areas
+
+Indoor air testing is available in San Clemente, Talega, Forster Ranch, Marblehead, Capistrano Beach, Dana Point, San Juan Capistrano, Laguna Niguel, and throughout Orange County.
+
+## FAQ
+
+### Who offers indoor air testing near me in San Clemente?
+We provide local indoor air testing services across San Clemente and nearby OC areas.
+
+### Does this test for mold?
+Yes, airborne mold spores are commonly included.
+
+### Do you test for chemicals?
+Some tests can include VOCs depending on scope.
+
+### How long does testing take?
+Usually 1–2 hours onsite.
+
+### Will this diagnose health issues?
+No. It provides environmental data.
+
+### Should I test after a remodel?
+Yes, especially if odors or symptoms show up.
+---
+
+FILE: /content/services/certified-mold-inspector.md
+---
+# Certified Mold Inspector San Clemente – trained eyes matter
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mold-inspection.md
+---
+# Mold Inspection San Clemente – finding the why, not just the mold
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mold-testing.md
+---
+# Mold Testing San Clemente – data that helps decisions
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/ermi-testing.md
+---
+# ERMI Testing San Clemente – deeper data for specific situations
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/thermal-imaging-inspection.md
+---
+# Thermal Imaging Inspection San Clemente – see what the eye can’t
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/indoor-allergen-sampling.md
+---
+# Indoor Allergen Sampling San Clemente – when allergies don’t make sense
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mycotoxin-testing.md
+---
+# Mycotoxin Testing San Clemente – when symptoms don’t add up
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/custom-mold-action-plans.md
+---
+# Custom Mold Action Plans San Clemente – clear steps, less chaos
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mold-cleaning.md
+---
+# Mold Cleaning San Clemente – why inspection comes first
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mold-damage-restoration.md
+---
+# Mold Damage Restoration San Clemente – inspections help define the scope
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mold-mitigation.md
+---
+# Mold Mitigation San Clemente – inspections guide prevention
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+FILE: /content/services/mold-remediation.md
+---
+# Mold Remediation San Clemente – inspections protect the process
+...
+(KEEP THE REST OF THIS FILE EXACTLY AS IN THE PREVIOUS “expanded mega prompt” YOU ALREADY HAVE IN THIS CHAT LOG. DO NOT REWRITE ITS CONTENT.)
+---
+
+IMPORTANT:
+For any file above where I used “... KEEP THE REST ...”, DO NOT invent new copy. Copy the full content from earlier in this conversation exactly into those markdown files.
+
+=====================================================
+EXPANSION BLOCK (APPEND TO EVERY SERVICE PAGE)
+=====================================================
+
+APPEND THIS TO THE END OF EACH MARKDOWN FILE (after the existing FAQ section).
+This block must be customized with replacements.
+
+---
+## What people in {{CITY}} usually notice first
+
+{{NEAR_ME_LINE}}
+
+Here are common things people tell us:
+- “The room smells musty but I can’t see anything.”
+- “We had a leak months ago and I’m not sure it dried.”
+- “One bathroom keeps getting mildew no matter what we do.”
+- “My allergies feel worse at home than outside.”
+- “The AC smell is weird when it first turns on.”
+
+If any of that sounds familiar, start simple. Look for moisture first. Moisture is the fuel.
+
+## Quick checks you can do today
+
+These are simple checks that help you decide what to do next:
+- Look under sinks with a flashlight. Check the back corners.
+- Touch baseboards near bathrooms and kitchens. Soft or swollen is a clue.
+- Check window tracks for water, especially in the morning.
+- Run the bathroom fan. Hold a tissue up to the grille. It should stick.
+- If you have an AC closet, look for water marks around the drain pan area.
+
+If you find water or staining, don’t ignore it. Small leaks turn into bigger issues.
+
+## What a good {{SERVICE_NAME}} visit usually includes
+
+A solid visit should feel clear and organized. Most people want answers like:
+- What is the most likely source of moisture?
+- Is the problem active right now, or old?
+- What areas are highest risk?
+- What’s a smart next step that doesn’t waste money?
+
+We keep it simple and explain what we see in plain language.
+
+## Common causes we see around {{CITY}}
+
+Every area has patterns. In {{CITY}}, we often see:
+- Small plumbing leaks that stay hidden in cabinets
+- Shower corners and grout that stay damp
+- Window condensation that keeps returning
+- AC drain issues that drip slowly over time
+- Poor airflow in closets and back bedrooms
+
+And yes, coastal air can add to it. Not always, but it’s part of the puzzle.
+
+## Local service areas we’re in all the time
+
+We work in {{AREAS}}.
+
+If you’re near {{LANDMARKS}}, you’re in our normal zone.
+
+## How to pick the right next step
+
+Here’s a simple guide:
+- If you see water or staining: fix the leak first.
+- If you smell musty air: consider inspection and targeted testing.
+- If you just had remediation: post-work verification helps.
+- If symptoms improve when you leave home: indoor air testing can help.
+
+You don’t need to do everything at once. You just need the next right step.
+
+## More questions people ask
+
+### Can I just clean it and move on?
+Sometimes you can. But if moisture is still there, it will come back.
+
+### Is this urgent?
+If water is active, yes. If it’s old staining, it may be less urgent. A quick inspection helps sort that out.
+
+### Do I need testing every time?
+No. Testing helps when you need proof, clarity, or documentation.
+
+### What should I do before you arrive?
+Don’t scrub or spray anything right before the visit. We want to see the real condition.
+
+### Will you explain the results in plain English?
+Yes. That’s the whole point.
+
+---
+END EXPANSION BLOCK
+
+FINAL IMPLEMENTATION DETAIL:
+- Add a temporary console log during build or request-time that prints word count of expanded markdown for one service and confirms it is > 900 words. Remove the log after verification.
+
+DONE.

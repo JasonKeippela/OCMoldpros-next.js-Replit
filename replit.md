@@ -8,15 +8,19 @@ A comprehensive SEO-optimized website for OC Mold Pros, a mold inspection and re
 app/
   layout.tsx          # Root layout with Navigation and Footer
   page.tsx            # Homepage with hero, services, FAQ, etc.
-  globals.css         # Tailwind CSS with custom ocean theme
+  globals.css         # Tailwind CSS with custom ocean theme + typography plugin
   sitemap.ts          # Dynamic sitemap for all pages
   lib/
     cities.ts         # City data for 33 Orange County cities
+    expandServiceMarkdown.ts  # Expands service markdown with shared content block
   components/
-    Navigation.tsx    # Sticky nav with dropdown for Service Areas
+    Navigation.tsx    # Sticky nav with dropdowns for Services + Service Areas
     Footer.tsx        # Site-wide footer with links
+    ServiceMarkdown.tsx  # MDX renderer for service page markdown content
   about/page.tsx      # About page
-  services/page.tsx   # Services page
+  services/
+    page.tsx          # Services index with all 22 service links + ItemList schema
+    [slug]/page.tsx   # Dynamic service pages (22 services) with BreadcrumbList + FAQPage schema
   process/page.tsx    # 4-step process page
   pricing/page.tsx    # Pricing page
   blog/page.tsx       # Learn/Blog page
@@ -24,12 +28,17 @@ app/
   mold-inspector-near-me/
     page.tsx          # Mold inspector near me overview with city grid
     [city]/page.tsx   # Dynamic city landing pages (33 cities)
+content/
+  services/
+    services.config.ts   # Single source of truth for 22 services (name, slug, meta)
+    *.md                 # 22 markdown files for service pages
 public/
   robots.txt          # Robots file
   logo.jpg            # Company logo
 ```
 
 ## Key Features
+- **22 Service Pages**: Dynamic pages at /services/<slug> with expanded markdown content (~1000-1500 words), rendered via next-mdx-remote
 - **33 City Landing Pages**: Dynamic pages for each Orange County city with unique content
 - **SEO Optimized**: Title tags, meta descriptions, JSON-LD LocalBusiness schema
 - **Responsive Navigation**: Desktop dropdown menu, mobile hamburger menu
@@ -39,7 +48,8 @@ public/
 ## Pages
 - Home: Hero, trust indicators, services, FAQ, CTAs
 - About: Company story, values, certifications
-- Services: 6 detailed service offerings
+- Services: Index page with 22 service links + 6 detailed service highlights
+- Service Pages: 22 individual service pages with expanded markdown content
 - Mold Inspector Near Me: Grid of 33 cities with links (URL: /mold-inspector-near-me)
 - [City] Pages: City-specific mold inspection content
 - Process: 4-step inspection process
@@ -63,12 +73,14 @@ npm run dev -- -p 5000
 - JSON-LD FAQPage schema (5 detailed questions with expanded answers)
 - JSON-LD Organization schema (with 5 reviews, aggregateRating, contact point)
 - Open Graph and Twitter Card meta tags for social sharing
-- Sitemap.xml with all 40+ pages
+- Sitemap.xml with all 60+ pages (static + 22 services + 33 cities)
 - robots.txt
 - Semantic HTML structure
 - Breadcrumb navigation
 - Optimized image alt text (logo, hero image)
-- StructuredData component using Next.js Script with beforeInteractive strategy
+- Inline JSON-LD script tags for schema rendering (homepage)
+- BreadcrumbList + FAQPage schemas on each service page
+- ItemList schema on services index page
 
 ## Contact Form
 - Uses Resend API (RESEND_API_KEY secret) to send form submissions to info@ocmoldpros.com
@@ -94,7 +106,19 @@ Each page includes:
 - "Nearby Beach Cities We Serve" (internal cluster linking)
 - CTA: "DM or call to schedule a free 20-minute consultation"
 
+## Service Pages System
+22 service pages using markdown content rendered with next-mdx-remote:
+- Base markdown files in /content/services/*.md
+- Expanded at render time with shared content block (local tips, quick checks, common causes)
+- Services config in /content/services/services.config.ts (single source of truth)
+- Navigation dropdown lists all 22 services
+- Each page includes: breadcrumb nav, BreadcrumbList schema, FAQPage schema, CTA section
+
+Services: Mold Sampling, New Construction Inspections, Rental Property Inspections, Mold Prevention, Physical and Visual Inspection, HVAC System Inspection, Kitchen Inspection, Bathroom Inspection, Real Estate Inspection, Indoor Air Testing, Certified Mold Inspector, Mold Inspection, Mold Testing, ERMI Testing, Thermal Imaging Inspection, Indoor Allergen Sampling, Mycotoxin Testing, Custom Mold Action Plans, Mold Cleaning, Mold Damage Restoration, Mold Mitigation, Mold Remediation
+
 ## Recent Changes
+- Feb 08, 2026: Created 22 service pages system with markdown content, next-mdx-remote rendering, expansion utility, Services dropdown in navigation, BreadcrumbList + FAQPage + ItemList schemas, sitemap update
+- Feb 08, 2026: Fixed JSON-LD schema rendering (switched from Next.js Script component to inline script tags), added Google Business Profile embed + link, Veteran Owned Business badge, business address in footer
 - Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure
 - Jan 10, 2026: Created Beach City Cluster - 9 dedicated landing pages with enhanced template including inspection details, city-specific mold causes, neighborhoods, related services, and internal cluster linking
 - Jan 04, 2026: Added tier system (core/secondary) to service areas - 10 core cities (San Clemente, Dana Point, Laguna Beach, Laguna Niguel, Laguna Hills, Mission Viejo, Newport Beach, Huntington Beach, Costa Mesa, Irvine) and 24 secondary cities

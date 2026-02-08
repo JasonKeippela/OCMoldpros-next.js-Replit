@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { cities } from '@/app/lib/cities'
+import { services } from '@/content/services/services.config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ocmoldpros.com'
@@ -15,6 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
   ]
 
+  const servicePages = services.map(service => ({
+    url: `${baseUrl}${service.path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
   const cityPages = cities.map(city => ({
     url: `${baseUrl}/mold-inspector-near-me/${city.slug}`,
     lastModified: new Date(),
@@ -22,5 +30,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...cityPages]
+  return [...staticPages, ...servicePages, ...cityPages]
 }
