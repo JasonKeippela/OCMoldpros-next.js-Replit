@@ -1,0 +1,53 @@
+export const SITE_CONFIG = {
+  name: 'OC Mold Pros',
+  url: 'https://ocmoldpros.com',
+  telephone: '+1-949-371-5934',
+  email: 'info@ocmoldpros.com',
+  image: 'https://ocmoldpros.com/logo.jpg',
+  logo: 'https://ocmoldpros.com/logo.jpg',
+  priceRange: '$$',
+  organizationId: 'https://ocmoldpros.com/#organization',
+  address: {
+    '@type': 'PostalAddress' as const,
+    streetAddress: '1322 Calle Avanzado',
+    addressLocality: 'San Clemente',
+    addressRegion: 'CA',
+    postalCode: '92673',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates' as const,
+    latitude: '33.4269',
+    longitude: '-117.6120',
+  },
+  areaServed: [
+    { '@type': 'City' as const, name: 'San Clemente', containedIn: { '@type': 'AdministrativeArea' as const, name: 'Orange County' } },
+    { '@type': 'City' as const, name: 'Dana Point' },
+    { '@type': 'City' as const, name: 'Laguna Beach' },
+    { '@type': 'City' as const, name: 'Laguna Niguel' },
+    { '@type': 'City' as const, name: 'Mission Viejo' },
+    { '@type': 'City' as const, name: 'Newport Beach' },
+    { '@type': 'City' as const, name: 'Huntington Beach' },
+    { '@type': 'City' as const, name: 'Irvine' },
+    { '@type': 'City' as const, name: 'Costa Mesa' },
+    { '@type': 'City' as const, name: 'Anaheim' },
+    { '@type': 'City' as const, name: 'Santa Ana' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification' as const,
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '17:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification' as const,
+      dayOfWeek: 'Saturday',
+      opens: '08:00',
+      closes: '12:00',
+    },
+  ],
+  sameAs: [
+    'https://instagram.com/ocmoldpros',
+  ],
+}

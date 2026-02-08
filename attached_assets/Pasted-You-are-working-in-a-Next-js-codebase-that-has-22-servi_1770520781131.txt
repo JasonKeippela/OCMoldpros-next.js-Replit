@@ -1,0 +1,40 @@
+You are working in a Next.js codebase that has 22 service pages. I need you to update schema on ALL service pages so that each service page renders valid JSON-LD using ProfessionalService, and the Schema Markup Validator detects it.
+
+Requirements (must do all):
+1) Identify the 22 service pages (likely routes under app/ or pages/, e.g. app/services/[slug]/page.tsx, app/(services)/..., or pages/services/...).
+2) Implement a reusable schema generator (single source of truth) such as:
+   - lib/schema.ts (recommended), exporting a function buildProfessionalServiceSchema(service, site)
+   OR
+   - a shared component components/JsonLd.tsx that is NOT a client component.
+3) Ensure schema is server-rendered:
+   - Do NOT place schema only inside a "use client" component
+   - Do NOT inject schema via useEffect
+   - The <script type="application/ld+json"> must appear in the rendered HTML when viewing page source
+4) Each of the 22 service pages must output schema specific to that page:
+   - "@context": "https://schema.org"
+   - "@type": "ProfessionalService"
+   - "name": combine business name + service name (e.g., "OC Mold Pros – Indoor Air Testing")
+   - "url": canonical URL of that specific service page
+   - "telephone": reuse existing site/business config value; do not invent
+   - "areaServed": reuse existing known area(s) (e.g., cities/region) from config; do not invent new locations
+   - "serviceType": the service name for that page
+   - Include "provider": { "@type": "Organization", "name", "url", "telephone", "logo", "sameAs" } when those values already exist in the codebase/config
+   - If you already have address in schema, keep it; if you do NOT have it, do NOT add an address
+5) Do not duplicate multiple conflicting schemas per page:
+   - If there is an existing LocalBusiness/Organization schema on the same page, keep it only if it is in a global layout and does not conflict; otherwise refactor so each service page has only its own ProfessionalService schema (plus any global Organization schema if already present).
+6) Add a temporary version marker inside the JSON-LD so I can confirm it updated:
+   - add "identifier": "schema-v2-services-2026-02-07"
+   (This is valid schema.org and should remain for now; do not console.log.)
+7) After implementation, update ALL 22 pages to use the shared generator and pass the service name + canonical path so each page’s schema is unique.
+8) Finally, provide a list of the 22 routes you updated and the files changed.
+
+Implementation guidance (follow best fit for this repo):
+- If the services are driven by a data array/object (like services.ts), use that as the source and map slug -> service name.
+- If each page is a separate file, update each file to call the shared schema generator with the correct service name + URL.
+- If dynamic route [slug] is used, generate schema based on the slug lookup.
+
+Deliverables:
+- Make the code changes.
+- Tell me every file you edited.
+- Tell me where the JSON-LD script appears (head or body).
+- Give me 2 example “View Source” checks I can do to verify the updated schema is present (include the identifier string to search for).

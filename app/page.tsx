@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeroCTA from './components/HeroCTA'
 import { Metadata } from 'next'
+import { SITE_CONFIG } from './lib/siteConfig'
 
 export const metadata: Metadata = {
   title: 'Home Inspector | Expert Mold Inspections in San Clemente & Orange County',
@@ -13,64 +14,19 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://ocmoldpros.com/#organization",
-  "name": "OC Mold Pros",
-  "image": "https://ocmoldpros.com/logo.jpg",
-  "logo": "https://ocmoldpros.com/logo.jpg",
-  "url": "https://ocmoldpros.com",
-  "telephone": "+1-949-371-5934",
-  "email": "info@ocmoldpros.com",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1322 Calle Avanzado",
-    "addressLocality": "San Clemente",
-    "addressRegion": "CA",
-    "postalCode": "92673",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "33.4269",
-    "longitude": "-117.6120"
-  },
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "San Clemente",
-      "containedIn": {
-        "@type": "AdministrativeArea",
-        "name": "Orange County"
-      }
-    },
-    { "@type": "City", "name": "Dana Point" },
-    { "@type": "City", "name": "Laguna Beach" },
-    { "@type": "City", "name": "Laguna Niguel" },
-    { "@type": "City", "name": "Mission Viejo" },
-    { "@type": "City", "name": "Newport Beach" },
-    { "@type": "City", "name": "Huntington Beach" },
-    { "@type": "City", "name": "Irvine" },
-    { "@type": "City", "name": "Costa Mesa" },
-    { "@type": "City", "name": "Anaheim" },
-    { "@type": "City", "name": "Santa Ana" }
-  ],
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "17:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "12:00"
-    }
-  ],
-  "sameAs": [
-    "https://instagram.com/ocmoldpros"
-  ],
+  "@id": SITE_CONFIG.organizationId,
+  "name": SITE_CONFIG.name,
+  "image": SITE_CONFIG.image,
+  "logo": SITE_CONFIG.logo,
+  "url": SITE_CONFIG.url,
+  "telephone": SITE_CONFIG.telephone,
+  "email": SITE_CONFIG.email,
+  "priceRange": SITE_CONFIG.priceRange,
+  "address": SITE_CONFIG.address,
+  "geo": SITE_CONFIG.geo,
+  "areaServed": SITE_CONFIG.areaServed,
+  "openingHoursSpecification": SITE_CONFIG.openingHoursSpecification,
+  "sameAs": SITE_CONFIG.sameAs,
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",

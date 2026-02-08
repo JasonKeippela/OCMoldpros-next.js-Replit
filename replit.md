@@ -13,6 +13,9 @@ app/
   lib/
     cities.ts         # City data for 33 Orange County cities
     expandServiceMarkdown.ts  # Expands service markdown with shared content block
+    canonical.ts      # Shared canonical URL builder
+    siteConfig.ts     # Centralized business data (name, phone, address, areaServed, sameAs)
+    schema.ts         # ProfessionalService JSON-LD schema builder for service pages
   components/
     Navigation.tsx    # Sticky nav with dropdowns for Services + Service Areas
     Footer.tsx        # Site-wide footer with links
@@ -119,6 +122,7 @@ Each page includes:
 Services: Mold Sampling, New Construction Inspections, Rental Property Inspections, Mold Prevention, Physical and Visual Inspection, HVAC System Inspection, Kitchen Inspection, Bathroom Inspection, Real Estate Inspection, Indoor Air Testing, Certified Mold Inspector, Mold Inspection, Mold Testing, ERMI Testing, Thermal Imaging Inspection, Indoor Allergen Sampling, Mycotoxin Testing, Custom Mold Action Plans, Mold Cleaning, Mold Damage Restoration, Mold Mitigation, Mold Remediation
 
 ## Recent Changes
+- Feb 08, 2026: Added ProfessionalService JSON-LD schema to all 22 service pages via shared builder (app/lib/schema.ts), centralized business data into app/lib/siteConfig.ts, homepage schema now uses shared config
 - Feb 08, 2026: Added server-rendered canonical URLs to all pages using Next.js metadata API (alternates.canonical), replaced client-side CanonicalUrl component with shared helper (app/lib/canonical.ts)
 - Feb 08, 2026: Created 22 service pages system with markdown content, next-mdx-remote rendering, expansion utility, Services dropdown in navigation, BreadcrumbList + FAQPage + ItemList schemas, sitemap update
 - Feb 08, 2026: Fixed JSON-LD schema rendering (switched from Next.js Script component to inline script tags), added Google Business Profile embed + link, Veteran Owned Business badge, business address in footer
