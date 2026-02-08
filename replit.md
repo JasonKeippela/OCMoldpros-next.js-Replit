@@ -94,27 +94,7 @@ Each page includes:
 - "Nearby Beach Cities We Serve" (internal cluster linking)
 - CTA: "DM or call to schedule a free 20-minute consultation"
 
-## Service Pages
-- `/services` - Main services overview page
-- `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
-- `/services/mold-prevention` - Mold Prevention San Clemente dedicated page with prevention strategies, cost comparisons, and FAQ
-- `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page with pre-drywall and final inspection coverage
-- `/services/hvac-system-inspection` - HVAC System Inspection San Clemente dedicated page with moisture/airflow focus
-
-## Markdown Rendering
-- Service pages use `next-mdx-remote` for markdown content rendering
-- Reusable component: `app/components/ServiceMarkdown.tsx` - accepts MDXRemoteSerializeResult prop, renders h1-h3, paragraphs, lists, bold, hr with Tailwind styling
-- Content stored in `content.ts` files within each service page directory
-- Pages serialize markdown server-side via `serialize()` from `next-mdx-remote/serialize`
-
 ## Recent Changes
-- Feb 08, 2026: Added HVAC System Inspection service page at /services/hvac-system-inspection with markdown rendering via ServiceMarkdown component, nav dropdown, sitemap entry, and services index link
-- Feb 08, 2026: Created reusable ServiceMarkdown.tsx component using next-mdx-remote for markdown-based service page content
-- Feb 08, 2026: Added New Construction Inspections service page at /services/new-construction-inspections with nav dropdown, sitemap entry, and services index link
-- Feb 08, 2026: Added Mold Prevention service page at /services/mold-prevention with nav dropdown, sitemap entry, and services index link
-- Feb 08, 2026: Updated Mold Sampling page content with new conversational copy
-- Feb 07, 2026: Added Mold Sampling service page at /services/mold-sampling with Services dropdown in nav, sitemap entry, and services index link
-- Feb 07, 2026: Added Google Business Profile map embed and link on homepage, updated CTA buttons, added address and VOB badge to footer, fixed JSON-LD schema rendering (switched from Script component to inline script tags)
 - Feb 04, 2026: Changed /service-areas URL to /mold-inspector-near-me with 301 redirects, updated all internal navigation links, renamed folder structure
 - Jan 10, 2026: Created Beach City Cluster - 9 dedicated landing pages with enhanced template including inspection details, city-specific mold causes, neighborhoods, related services, and internal cluster linking
 - Jan 04, 2026: Added tier system (core/secondary) to service areas - 10 core cities (San Clemente, Dana Point, Laguna Beach, Laguna Niguel, Laguna Hills, Mission Viejo, Newport Beach, Huntington Beach, Costa Mesa, Irvine) and 24 secondary cities

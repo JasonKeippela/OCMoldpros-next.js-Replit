@@ -91,34 +91,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Specialized Service Pages</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/services/mold-sampling" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Sampling</h3>
-              <p className="text-gray-600">Professional mold sampling in San Clemente. Air and surface testing with lab analysis to identify hidden mold problems in your home.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/mold-prevention" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Prevention</h3>
-              <p className="text-gray-600">Expert mold prevention services in San Clemente. Stop mold before it starts with professional moisture control, ventilation assessment, and preventive inspections.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/new-construction-inspections" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">New Construction Inspections</h3>
-              <p className="text-gray-600">Expert new construction mold inspections in San Clemente. Protect your investment from mold risks in new homes with pre-drywall and final inspections.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-            <Link href="/services/hvac-system-inspection" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">HVAC System Inspection</h3>
-              <p className="text-gray-600">HVAC system inspection in San Clemente helps catch moisture problems, dirty components, and airflow issues before they spread through the whole house.</p>
-              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Professional Mold Inspection Matters</h2>
