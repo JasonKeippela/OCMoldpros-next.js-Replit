@@ -29,17 +29,17 @@ export default function MoldSamplingPage() {
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 prose prose-lg prose-gray">
-          <p>When the marine layer rolls into San Clemente every June, it dont just bring cooler temps. It brings moisture that gets trapped in homes all along Avenida Del Mar and up through Talega. Last summer, we tested over 200 homes between the Pier Bowl and Forster Ranch, and you know what we found? Almost 60% had some level of mold growth they didnt even know about.</p>
+          <p>When the marine layer rolls into San Clemente every June, it doesnt just bring cooler temps. It brings moisture that gets trapped in homes all along Avenida Del Mar and up through Talega. Last summer, we tested homes between the Pier Bowl and Forster Ranch, and you know what we found? Almost 60% had some level of mold growth they didnt even know about.</p>
 
-          <p>I&apos;ve been doing mold sampling in San Clemente for 12 years now, and here&apos;s what most people get wrong - they wait until they can see the mold. By then, its already been growing for months, maybe longer. That musty smell in your bathroom after you come back from vacation? Thats not just &quot;beach house smell.&quot; Thats probably mold.</p>
+          <p>Since I&apos;ve been doing mold sampling in San Clemente, and here&apos;s what most people get wrong - they wait until they can see the mold. By then, its already been growing for months, maybe longer. That musty smell in your bathroom after you come back from vacation? Thats not just &quot;beach house smell.&quot; Thats probably mold.</p>
 
           <hr className="my-10" />
 
           <h2 className="text-2xl font-bold text-gray-900">Home Inspector Services That Protect Your Investment</h2>
 
-          <p>As a certified home inspector here in San Clemente, I see mold issues in houses of every age. New construction up in Talega? Yep, we find it there too. Those beautiful historic homes down by the beach? Definitely there. Even the condos along El Camino Real have problems, specially the ones with shared walls.</p>
+          <p>As a certified home inspector here in San Clemente, I see mold issues in houses of every age. New construction or remodels in Talega? Yep, we find it there too. Those beautiful historic homes down by the beach? Definitely there. Even the condos along El Camino Real have problems, especially the ones with shared walls.</p>
 
-          <p>The thing about being a home inspector in a coastal city is you gotta understand how salt air and moisture work together. When families call me before buying a house in San Clemente, mold sampling is one of the first things I reccommend. You cant see whats growing inside walls or under floors during a regular walkthrough. The home inspection process needs to include actual testing if your serious about knowing what your buying.</p>
+          <p>The thing about being a home inspector in a coastal city is you gotta understand how salt air and moisture work together. When families call me before buying a house in San Clemente, mold sampling is one of the first things I reccommend. You cant see whats growing inside walls or under floors during a regular walkthrough.</p>
 
           <p>Most home inspectors will do a visual check and call it good. But visual checks miss about 70% of mold problems in San Clemente homes. Why? Because mold grows where you cant see it - inside wall cavities near bathrooms, under carpets in bedrooms that face the ocean, behind kitchen cabinets that back up to exterior walls.</p>
 
@@ -57,29 +57,25 @@ export default function MoldSamplingPage() {
 
           <p>I worked with a family in Marblehead last month who&apos;d been getting sick for two years. Headaches, breathing problems, their kids missing school. Three doctors couldn&apos;t figure it out. We did mold sampling throughout there house and found toxic black mold growing inside the walls of both kids bedrooms. The source? A slow roof leak that nobody noticed because it wasn&apos;t dripping - just spreading moisture into the wall cavity.</p>
 
-          <p>That&apos;s why environmental consultant work here needs someone who understands San Clemente construction styles. The Spanish Colonial homes have different weak points than the modern builds. The condos have different issues than single-family homes.</p>
-
           <hr className="my-10" />
 
           <h2 className="text-2xl font-bold text-gray-900">Mold Sampling That Actually Finds the Problem</h2>
 
-          <p>Here&apos;s how mold sampling San Clemente homes actually works. I dont just wave some device around and call it done. We do air sampling to see whats floating around that your breathing. We do surface sampling on walls, ceilings, and floors. We do cavity sampling inside walls if I think theres hidden growth.</p>
+          <p>Here&apos;s how mold sampling San Clemente homes actually works. I don&apos;t just wave some device around and call it done. We do air sampling to see whats floating around that your breathing. We do surface sampling on walls, ceilings, and floors. We do cavity sampling inside walls if I think theres hidden growth.</p>
 
-          <p>The air sampling catches spores that are circulating through your HVAC system. You might have mold growing in one room, but the air conditioning is spreading it through your whole house. I see this alot in homes where people close off rooms they dont use - the mold grows there, but everyone in the house is breathing it.</p>
+          <p>The air sampling catches spores that are circulating through your HVAC system. You might have mold growing in one room, but the air conditioning is spreading it through your whole house. I see this a lot in homes where people close off rooms they dont use - the mold grows there, but everyone in the house is breathing it.</p>
 
           <p>Surface sampling tells us what kind of mold your dealing with. Not all mold is the same. Some types are just annoying. Some types will make you sick. Some types will actually damage your house structure. You need to know which one your fighting.</p>
 
           <p>For hidden mold, sometimes we gotta make a small inspection hole in the wall. I know that sounds scary, but its way better than letting mold spread for another year because you didnt want a tiny hole that can be patched in 10 minutes.</p>
 
-          <p>Every mold sampling in San Clemente gets sent to the same certified lab I&apos;ve used for a decade. Results come back in 3-5 days usually. Then I sit down with you and explain what we found in plain English - not in technical terms that make no sense.</p>
+          <p>Every mold sampling in San Clemente gets sent to the same certified lab I&apos;ve used for a decade. Results come back within 3 days. Then I sit down with you and explain what we found in plain English - not in technical terms that make no sense.</p>
 
           <hr className="my-10" />
 
           <h2 className="text-2xl font-bold text-gray-900">Why San Clemente Homes Need Regular Testing</h2>
 
-          <p>The homes down by the beach, like in Southwest or the Pier Bowl, they should get mold sampling done every 2-3 years minimum. Your that close to the ocean, moisture is a constant battle. The salt air corrodes things faster, creates more entry points for water.</p>
-
-          <p>Up in Talega and Forster Ranch, the newer construction usually has better moisture barriers, but I still find problems. Specially in homes built 2005-2010 when builders were rushing to meet demand. They cut corners on ventilation, used cheaper materials, didn&apos;t seal things properly.</p>
+          <p>The homes down by the beach, like in Southwest or the Pier Bowl, they should get mold sampling done every 2-3 years minimum. Your that close to the ocean, moisture is a constant battle. Up in Talega and Forster Ranch, the newer construction usually has better moisture barriers, but I still find problems. Specially in homes built 2005-2010 when builders were rushing to meet demand.</p>
 
           <p>The older neighborhoods like Lasuen and Cyprus Shores? Those homes were built when nobody worried about mold. No vapor barriers, old single-pane windows that sweat, ancient plumbing that leaks, original bathrooms with tile grout that&apos;s been compromised for decades.</p>
 
@@ -92,7 +88,7 @@ export default function MoldSamplingPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900">&quot;How much does mold sampling cost?&quot;</h3>
-              <p>Way less than fixing mold damage that spread because you waited. Most basic testing runs $300-500 depending on house size. If you need extensive testing with multiple rooms and hidden areas, maybe $800-1200. Compare that to a full mold remediation which starts around $5,000 and goes up from there.</p>
+              <p>Way less than fixing mold damage that spread because you waited. If you need extensive testing with multiple rooms and hidden areas, maybe $800-1200. Compare that to a full mold remediation which starts around $5,000 and goes up from there.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-900">&quot;Can I just use a home test kit?&quot;</h3>
@@ -100,7 +96,7 @@ export default function MoldSamplingPage() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-900">&quot;How long does testing take?&quot;</h3>
-              <p>I&apos;m usually in your home for 1-2 hours depending on size. Then the lab takes 3-5 days. Rush results are available for extra cost if your in the middle of a real estate transaction.</p>
+              <p>I&apos;m usually in your home for 3-4 hours depending on size. Then the lab takes 2 days. Rush results are available for extra cost if your in the middle of a real estate transaction.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-900">&quot;Will you find mold even if I can&apos;t smell it?&quot;</h3>
@@ -112,11 +108,11 @@ export default function MoldSamplingPage() {
 
           <h2 className="text-2xl font-bold text-gray-900">What Happens After We Find Mold</h2>
 
-          <p>Finding mold is just step one. Then we gotta figure out why its there and how to get rid of it. I work with several mold remediation companies here in San Clemente that I trust. I dont get kickbacks or referrals fees - I just know who does good work and who cuts corners.</p>
+          <p>Finding mold is just step one. Then we have to figure out why its there and how to get rid of it. I work with several mold remediation companies here in San Clemente that I trust and can refer to you.</p>
 
           <p>Sometimes the fix is simple. Replace a toilet wax ring thats been leaking. Install a proper bathroom fan. Seal some windows. Other times its more involved - rerouting drainage, replacing sections of drywall, fixing foundation cracks.</p>
 
-          <p>After remediation is done, I come back and do post-testing to make sure the mold is actually gone. You&apos;d be surprised how many remediation companies declare a job finished when there&apos;s still elevated spore counts. I&apos;ve had to send contractors back to redo work probably 20 times in the last year alone.</p>
+          <p>After remediation is done, I can come back and do post-testing to make sure the mold is actually gone. You&apos;d be surprised how many remediation companies declare a job finished when there&apos;s still elevated spore counts.</p>
 
           <hr className="my-10" />
 
@@ -124,9 +120,9 @@ export default function MoldSamplingPage() {
 
           <p>If you&apos;ve noticed any musty smells, if anyone in your home has unexplained allergies or breathing problems, if you&apos;ve had any water leaks or flooding, if your buying or selling a home - get mold sampling done. It&apos;s not being paranoid, its being smart.</p>
 
-          <p>I live here in San Clemente. My kids go to school here. I surf at T-Street. I eat at La Siesta. This isn&apos;t just business for me - its my community. When I test your home, I&apos;m testing it like its my own families home.</p>
+          <p>I live here in San Clemente. My kids go to school here. I surf at T-Street. This isn&apos;t just business for me - its my community. When I test your home, I&apos;m testing it like its my own families home.</p>
 
-          <p>Call me or text me anytime. I usually respond within a few hours unless I&apos;m in the middle of an inspection. Evening and weekend appointments are available because I know your busy. Most people work during the day and dont want to burn vacation time for something like this.</p>
+          <p>Call me or text me anytime. I usually respond within a few hours unless I&apos;m in the middle of an inspection. Evening and weekend appointments are available because I know your busy.</p>
 
           <p>Mold sampling San Clemente homes is what I do, and I take it seriously. Your breathing that air every day. Your kids are breathing it. You deserve to know whats in there.</p>
         </div>
