@@ -45,32 +45,8 @@ export default async function CityPage({ params }: Props) {
     slug: cityToSlug(name)
   }))
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "OC Mold Pros",
-    "description": `Professional mold inspection and testing services in ${cityInfo.name}, CA`,
-    "url": `https://ocmoldpros.com/mold-inspector-near-me/${citySlug}`,
-    "telephone": "+1-949-371-5934",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": cityInfo.name,
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": cityInfo.name
-    },
-    "serviceType": ["Mold Inspection", "Mold Testing", "Mold Remediation", "Air Quality Testing"],
-    "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      
       <main className="pt-28">
         <nav className="bg-gray-100 py-3">
           <div className="max-w-6xl mx-auto px-4">

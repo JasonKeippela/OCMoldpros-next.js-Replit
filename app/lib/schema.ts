@@ -3,6 +3,37 @@ import { SITE_CONFIG } from './siteConfig'
 const BUSINESS_ID = 'https://ocmoldpros.com/#business'
 const FAQ_ID = 'https://ocmoldpros.com/#faq'
 
+function toNumberIfNumericString(value: unknown): unknown {
+  if (typeof value !== 'string') return value
+  const trimmed = value.trim()
+  if (!trimmed) return value
+  if (!/^-?\d+(\.\d+)?$/.test(trimmed)) return value
+  return Number(trimmed)
+}
+
+function normalizeSchemaNumbers<T>(obj: T): T {
+  if (Array.isArray(obj)) return obj.map(normalizeSchemaNumbers) as unknown as T
+  if (obj && typeof obj === 'object') {
+    const out: Record<string, unknown> = {}
+    for (const [k, v] of Object.entries(obj as Record<string, unknown>)) {
+      if (
+        k === 'ratingValue' ||
+        k === 'reviewCount' ||
+        k === 'bestRating' ||
+        k === 'worstRating' ||
+        k === 'latitude' ||
+        k === 'longitude'
+      ) {
+        out[k] = toNumberIfNumericString(v)
+      } else {
+        out[k] = normalizeSchemaNumbers(v)
+      }
+    }
+    return out as T
+  }
+  return obj
+}
+
 const reviews = [
   {
     '@type': 'Review' as const,
@@ -63,33 +94,44 @@ const reviews = [
 ]
 
 export function getLocalBusinessSchema() {
-  return {
+  const localBusiness = {
     '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': BUSINESS_ID,
+
     name: SITE_CONFIG.name,
     url: SITE_CONFIG.url + '/',
     telephone: SITE_CONFIG.telephone,
+    email: SITE_CONFIG.email,
+
     image: SITE_CONFIG.image,
     logo: SITE_CONFIG.logo,
-    description: 'Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
-    email: SITE_CONFIG.email,
+
+    description:
+      'Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
+
     priceRange: SITE_CONFIG.priceRange,
+
     address: SITE_CONFIG.address,
+
     geo: SITE_CONFIG.geo,
-    areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Orange County, CA' },
-    ],
+
+    areaServed: SITE_CONFIG.areaServed,
+
     openingHoursSpecification: SITE_CONFIG.openingHoursSpecification,
     sameAs: SITE_CONFIG.sameAs,
+
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: 5,
-      reviewCount: 8,
+      reviewCount: reviews.length,
       bestRating: 5,
-      worstRating: 5,
+      worstRating: 1,
     },
+
     review: reviews,
   }
+
+  return normalizeSchemaNumbers(localBusiness)
 }
 
 export type FaqItem = { question: string; answer: string }

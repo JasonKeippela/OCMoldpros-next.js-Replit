@@ -39,29 +39,8 @@ const relatedServices = [
 ]
 
 export default function LagunaBeachPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "OC Mold Pros",
-    "description": "Professional mold inspection and testing services in Laguna Beach, CA",
-    "url": "https://ocmoldpros.com/mold-inspector-near-me/laguna-beach-ca",
-    "telephone": "+1-949-371-5934",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Laguna Beach",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
-    "areaServed": { "@type": "City", "name": "Laguna Beach" },
-    "serviceType": ["Mold Inspection", "Mold Testing", "Air Quality Testing", "Moisture Detection"],
-    "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      
       <main className="pt-28">
         <nav className="bg-gray-100 py-3">
           <div className="max-w-6xl mx-auto px-4">

@@ -39,29 +39,8 @@ const relatedServices = [
 ]
 
 export default function CostaMesaPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "OC Mold Pros",
-    "description": "Professional mold inspection and testing services in Costa Mesa, CA",
-    "url": "https://ocmoldpros.com/mold-inspector-near-me/costa-mesa-ca",
-    "telephone": "+1-949-371-5934",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Costa Mesa",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
-    "areaServed": { "@type": "City", "name": "Costa Mesa" },
-    "serviceType": ["Mold Inspection", "Mold Testing", "Air Quality Testing", "Moisture Detection"],
-    "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"]
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      
       <main className="pt-28">
         <nav className="bg-gray-100 py-3">
           <div className="max-w-6xl mx-auto px-4">

@@ -1,0 +1,273 @@
+You are working inside my Next.js (App Router) project for https://ocmoldpros.com.
+
+I already inject site-wide JSON-LD in app/layout.tsx like:
+  const siteGraph = getSiteGraph()
+  <JsonLd data={siteGraph} />
+
+Schema generation is in app/lib/schema.ts and config is in app/lib/siteConfig.ts.
+
+Goal:
+1) Ensure JSON-LD outputs numeric fields as numbers (not strings) (guardrails).
+2) Clean up overlapping entities: use ONE primary entity (LocalBusiness + ProfessionalService) with a stable @id.
+   Put aggregateRating + review ONLY ONCE on that entity.
+   Keep FAQPage separate (fine).
+3) Provide a “preferred final schema shape” (exact JSON-LD example for OC Mold Pros) matching LocalBusiness expectations.
+4) Keep the street address included.
+
+DO ALL STEPS BELOW.
+
+────────────────────────────────────────────────────────
+STEP 1) Harden JSON-LD injection (prevent rare </script> parsing issues)
+────────────────────────────────────────────────────────
+Find app/components/JsonLd.tsx and replace the entire file with:
+
+---
+type JsonLdProps = { data: unknown }
+
+export default function JsonLd({ data }: JsonLdProps) {
+  // Prevent rare HTML parsing issues if any string contains "<" (including "</script>")
+  const json = JSON.stringify(data).replace(/</g, '\\u003c')
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: json }}
+    />
+  )
+}
+---
+
+Notes:
+- Do NOT add "use client"
+- This should remain a server component
+
+────────────────────────────────────────────────────────
+STEP 2) Update schema generation to a clean LocalBusiness-first graph
+────────────────────────────────────────────────────────
+Find app/lib/schema.ts (or wherever getSiteGraph/getLocalBusinessSchema lives).
+
+A) Add numeric normalization helpers near the top:
+
+---
+function toNumberIfNumericString(value: unknown): unknown {
+  if (typeof value !== 'string') return value
+  const trimmed = value.trim()
+  if (!trimmed) return value
+  if (!/^-?\d+(\.\d+)?$/.test(trimmed)) return value
+  return Number(trimmed)
+}
+
+function normalizeSchemaNumbers<T>(obj: T): T {
+  if (Array.isArray(obj)) return obj.map(normalizeSchemaNumbers) as unknown as T
+  if (obj && typeof obj === 'object') {
+    const out: Record<string, unknown> = {}
+    for (const [k, v] of Object.entries(obj as Record<string, unknown>)) {
+      if (
+        k === 'ratingValue' ||
+        k === 'reviewCount' ||
+        k === 'bestRating' ||
+        k === 'worstRating' ||
+        k === 'latitude' ||
+        k === 'longitude'
+      ) {
+        out[k] = toNumberIfNumericString(v)
+      } else {
+        out[k] = normalizeSchemaNumbers(v)
+      }
+    }
+    return out as T
+  }
+  return obj
+}
+---
+
+B) Keep your reviews array, but ensure:
+- ratingValue is a number (already is)
+- reviewCount is computed (not hard-coded) so it never drifts
+
+C) Replace getLocalBusinessSchema() so it returns ONE primary entity:
+- @type: ["LocalBusiness","ProfessionalService"]
+- @id: "https://ocmoldpros.com/#business"
+- aggregateRating + review ONLY here
+- Keep street address
+- Use SITE_CONFIG.areaServed (cities list) instead of overwriting it
+- Ensure geo lat/long remain numbers
+
+Replace getLocalBusinessSchema() with:
+
+---
+export function getLocalBusinessSchema() {
+  const localBusiness = {
+    '@type': ['LocalBusiness', 'ProfessionalService'],
+    '@id': BUSINESS_ID,
+
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.url + '/',
+    telephone: SITE_CONFIG.telephone,
+    email: SITE_CONFIG.email,
+
+    image: SITE_CONFIG.image,
+    logo: SITE_CONFIG.logo,
+
+    description:
+      'Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
+
+    priceRange: SITE_CONFIG.priceRange,
+
+    // Keep street address in schema
+    address: SITE_CONFIG.address,
+
+    geo: SITE_CONFIG.geo,
+
+    // Use the detailed city list you already maintain
+    areaServed: SITE_CONFIG.areaServed,
+
+    openingHoursSpecification: SITE_CONFIG.openingHoursSpecification,
+    sameAs: SITE_CONFIG.sameAs,
+
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: 5,
+      reviewCount: reviews.length,
+      bestRating: 5,
+      worstRating: 1,
+    },
+
+    review: reviews,
+  }
+
+  return normalizeSchemaNumbers(localBusiness)
+}
+---
+
+D) Keep FAQPage separate (your getFaqSchema is okay).
+Make sure it does NOT carry ratings/reviews/organization identity.
+
+E) Ensure getSiteGraph only outputs:
+- LocalBusiness node
+- FAQPage node (optional)
+
+Replace getSiteGraph with:
+
+---
+export function getSiteGraph(options?: { faqItems?: FaqItem[] }) {
+  const graph: Record<string, unknown>[] = [getLocalBusinessSchema()]
+
+  if (options?.faqItems && options.faqItems.length > 0) {
+    const faq = getFaqSchema(options.faqItems)
+    if (faq) graph.push(faq)
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  }
+}
+---
+
+F) Safety check for duplication:
+Search the codebase for any OTHER usage of <JsonLd ...> or any other injected JSON-LD scripts
+(e.g. in specific pages/components). If any page injects another top-level LocalBusiness/Organization schema,
+remove it so site-wide schema only comes from app/layout.tsx.
+Service pages may keep getServicePageSchema, but do not inject another LocalBusiness there.
+
+────────────────────────────────────────────────────────
+STEP 3) Preferred final schema shape (Exact JSON-LD example for OC Mold Pros)
+────────────────────────────────────────────────────────
+After changes, output the EXACT JSON-LD that should render on the homepage.
+
+It must match this structure and values (use the real address, phone, geo, sameAs, and reviews array):
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://ocmoldpros.com/#business",
+      "name": "OC Mold Pros",
+      "url": "https://ocmoldpros.com/",
+      "telephone": "+1-949-371-5934",
+      "email": "info@ocmoldpros.com",
+      "image": "https://ocmoldpros.com/logo.jpg",
+      "logo": "https://ocmoldpros.com/logo.jpg",
+      "description": "Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1322 Calle Avanzado",
+        "addressLocality": "San Clemente",
+        "addressRegion": "CA",
+        "postalCode": "92673",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.4269,
+        "longitude": -117.612
+      },
+      "areaServed": [
+        { "@type": "City", "name": "San Clemente", "containedIn": { "@type": "AdministrativeArea", "name": "Orange County" } },
+        { "@type": "City", "name": "Dana Point" },
+        { "@type": "City", "name": "Laguna Beach" },
+        { "@type": "City", "name": "Laguna Niguel" },
+        { "@type": "City", "name": "Mission Viejo" },
+        { "@type": "City", "name": "Newport Beach" },
+        { "@type": "City", "name": "Huntington Beach" },
+        { "@type": "City", "name": "Irvine" },
+        { "@type": "City", "name": "Costa Mesa" },
+        { "@type": "City", "name": "Anaheim" },
+        { "@type": "City", "name": "Santa Ana" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "sameAs": ["https://instagram.com/ocmoldpros"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 8,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [ ...exactly the 8 reviews... ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ocmoldpros.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "…",
+          "acceptedAnswer": { "@type": "Answer", "text": "…" }
+        }
+      ]
+    }
+  ]
+}
+
+Critical requirements:
+- ratingValue/reviewCount/bestRating/worstRating must be NUMBERS
+- latitude/longitude must be NUMBERS
+- ONLY the LocalBusiness node contains aggregateRating + review
+- FAQPage is separate and optional (only included when FAQ items exist)
+
+────────────────────────────────────────────────────────
+STEP 4) Report back
+────────────────────────────────────────────────────────
+At the end, summarize:
+- Which files changed
+- What you removed (duplicate entities)
+- Why the final schema is cleaner
+
+END.
