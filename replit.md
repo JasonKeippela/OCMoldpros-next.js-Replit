@@ -122,6 +122,7 @@ Each page includes:
 Services: Mold Sampling, New Construction Inspections, Rental Property Inspections, Mold Prevention, Physical and Visual Inspection, HVAC System Inspection, Kitchen Inspection, Bathroom Inspection, Real Estate Inspection, Indoor Air Testing, Certified Mold Inspector, Mold Inspection, Mold Testing, ERMI Testing, Thermal Imaging Inspection, Indoor Allergen Sampling, Mycotoxin Testing, Custom Mold Action Plans, Mold Cleaning, Mold Damage Restoration, Mold Mitigation, Mold Remediation
 
 ## Recent Changes
+- Feb 08, 2026: Refactored JSON-LD to single @graph with merged LocalBusiness+ProfessionalService entity (app/lib/schema.ts), site-wide via layout.tsx, removed duplicate Organization/ProfessionalService schemas, created reusable JsonLd component, numeric types verified
 - Feb 08, 2026: Added ProfessionalService JSON-LD schema to all 22 service pages via shared builder (app/lib/schema.ts), centralized business data into app/lib/siteConfig.ts, homepage schema now uses shared config
 - Feb 08, 2026: Added server-rendered canonical URLs to all pages using Next.js metadata API (alternates.canonical), replaced client-side CanonicalUrl component with shared helper (app/lib/canonical.ts)
 - Feb 08, 2026: Created 22 service pages system with markdown content, next-mdx-remote rendering, expansion utility, Services dropdown in navigation, BreadcrumbList + FAQPage + ItemList schemas, sitemap update
