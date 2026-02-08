@@ -110,6 +110,11 @@ export default function ServicesPage() {
               <p className="text-gray-600">Expert new construction mold inspections in San Clemente. Protect your investment from mold risks in new homes with pre-drywall and final inspections.</p>
               <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
             </Link>
+            <Link href="/services/hvac-system-inspection" className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow block">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">HVAC System Inspection</h3>
+              <p className="text-gray-600">HVAC system inspection in San Clemente helps catch moisture problems, dirty components, and airflow issues before they spread through the whole house.</p>
+              <span className="inline-block mt-4 text-ocean-600 font-medium">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>

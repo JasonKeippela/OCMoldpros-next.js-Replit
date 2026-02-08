@@ -2,15 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { serialize } from 'next-mdx-remote/serialize'
 import ServiceMarkdown from '@/app/components/ServiceMarkdown'
-import { moldSamplingContent } from './content'
+import { hvacInspectionContent } from './content'
 
 export const metadata: Metadata = {
-  title: 'Mold Sampling San Clemente | Home Inspector',
-  description: 'Local home inspector offering professional mold sampling in San Clemente. Air, surface, and cavity testing with certified lab analysis for coastal homes.',
+  title: 'HVAC System Inspection San Clemente | Home Inspector',
+  description: 'HVAC system inspection in San Clemente helps catch moisture problems, dirty components, and airflow issues before they spread through the whole house.',
 }
 
-export default async function MoldSamplingPage() {
-  const mdxSource = await serialize(moldSamplingContent)
+export default async function HvacSystemInspectionPage() {
+  const mdxSource = await serialize(hvacInspectionContent)
 
   return (
     <main className="pt-28">
@@ -21,14 +21,14 @@ export default async function MoldSamplingPage() {
             <li>/</li>
             <li><Link href="/services" className="hover:text-gray-900">Services</Link></li>
             <li>/</li>
-            <li className="text-gray-900 font-medium">Mold Sampling</li>
+            <li className="text-gray-900 font-medium">HVAC System Inspection</li>
           </ol>
         </div>
       </nav>
 
       <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Mold Sampling San Clemente - A Local Home Inspector Who Actually Finds the Problem</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">HVAC System Inspection San Clemente – Because the Air You Breathe Runs Through This Thing</h1>
         </div>
       </section>
 

@@ -29,11 +29,11 @@ const components = {
   ),
 }
 
-interface MdxContentProps {
+interface ServiceMarkdownProps {
   source: MDXRemoteSerializeResult
 }
 
-export default function MdxContent({ source }: MdxContentProps) {
+export default function ServiceMarkdown({ source }: ServiceMarkdownProps) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <MDXRemote {...source} components={components} />

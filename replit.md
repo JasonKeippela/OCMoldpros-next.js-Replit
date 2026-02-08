@@ -99,8 +99,17 @@ Each page includes:
 - `/services/mold-sampling` - Mold Sampling San Clemente dedicated page with full SEO content
 - `/services/mold-prevention` - Mold Prevention San Clemente dedicated page with prevention strategies, cost comparisons, and FAQ
 - `/services/new-construction-inspections` - New Construction Inspections San Clemente dedicated page with pre-drywall and final inspection coverage
+- `/services/hvac-system-inspection` - HVAC System Inspection San Clemente dedicated page with moisture/airflow focus
+
+## Markdown Rendering
+- Service pages use `next-mdx-remote` for markdown content rendering
+- Reusable component: `app/components/ServiceMarkdown.tsx` - accepts MDXRemoteSerializeResult prop, renders h1-h3, paragraphs, lists, bold, hr with Tailwind styling
+- Content stored in `content.ts` files within each service page directory
+- Pages serialize markdown server-side via `serialize()` from `next-mdx-remote/serialize`
 
 ## Recent Changes
+- Feb 08, 2026: Added HVAC System Inspection service page at /services/hvac-system-inspection with markdown rendering via ServiceMarkdown component, nav dropdown, sitemap entry, and services index link
+- Feb 08, 2026: Created reusable ServiceMarkdown.tsx component using next-mdx-remote for markdown-based service page content
 - Feb 08, 2026: Added New Construction Inspections service page at /services/new-construction-inspections with nav dropdown, sitemap entry, and services index link
 - Feb 08, 2026: Added Mold Prevention service page at /services/mold-prevention with nav dropdown, sitemap entry, and services index link
 - Feb 08, 2026: Updated Mold Sampling page content with new conversational copy
