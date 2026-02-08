@@ -235,7 +235,7 @@ function getOfferCatalogSchema() {
         category: service.category,
         url: `${SITE_CONFIG.url}/services/${service.slug}`,
         provider: { '@id': BUSINESS_ID },
-        areaServed: { '@type': 'AdministrativeArea', name: 'Orange County, CA' },
+        areaServed: { '@type': 'AdministrativeArea', name: 'San Clemente and Orange County, CA' },
       },
     })),
   }
@@ -314,7 +314,7 @@ export function getLocalBusinessSchema() {
     logo: SITE_CONFIG.logo,
 
     description:
-      'Professional mold inspection & testing in Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
+      'Professional mold inspection & testing in San Clemente and Orange County, CA. Certified inspectors, advanced technology, same-day service. Call 949-371-5934 for a free quote today!',
 
     priceRange: SITE_CONFIG.priceRange,
 
