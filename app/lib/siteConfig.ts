@@ -49,5 +49,6 @@ export const SITE_CONFIG = {
   ],
   sameAs: [
     'https://instagram.com/ocmoldpros',
+    'https://www.veteranownedbusiness.com/business/40038/oc-mold-pros',
   ],
 }
