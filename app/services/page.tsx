@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const serviceHighlights = [
   {
     title: 'Visual Mold Inspection',
+    link: '/services/physical-and-visual-inspection',
     description: 'Every San Clemente mold inspector with OC Mold Pros begins with a detailed visual assessment of all accessible areas of the property. This step allows us to identify visible mold growth, staining, discoloration, water damage, and building conditions that commonly contribute to mold problems. We inspect interior living areas, bedrooms, closets, bathrooms, kitchens, laundry rooms, attics, crawlspaces, garages, utility rooms, windows, doors, baseboards, transition points, exterior walls, roofing components, and drainage areas. Rather than just looking for obvious mold, we\'re trained to recognize subtle indicators of moisture intrusion and mold activity that are often overlooked, such as bubbling paint, warped materials, past repairs, or microbial staining.',
     features: ['Complete property walkthrough', 'Identification of visible mold', 'Water damage assessment', 'Detailed photo documentation']
   },
@@ -101,29 +102,38 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="space-y-12">
-            {serviceHighlights.map((service, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="md:col-span-2">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h2>
-                    <p className="text-gray-600 text-lg">{service.description}</p>
-                  </div>
-                  <div className="bg-ocean-50 rounded-lg p-6">
-                    <h3 className="font-semibold text-ocean-800 mb-3">What&apos;s Included:</h3>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, j) => (
-                        <li key={j} className="flex items-start gap-2 text-gray-700">
-                          <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+            {serviceHighlights.map((service, i) => {
+              const content = (
+                <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-2">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h2>
+                      <p className="text-gray-600 text-lg">{service.description}</p>
+                    </div>
+                    <div className="bg-ocean-50 rounded-lg p-6">
+                      <h3 className="font-semibold text-ocean-800 mb-3">What&apos;s Included:</h3>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, j) => (
+                          <li key={j} className="flex items-start gap-2 text-gray-700">
+                            <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+              return service.link ? (
+                <Link key={i} href={service.link} className="block">
+                  {content}
+                </Link>
+              ) : (
+                <div key={i}>{content}</div>
+              )
+            })}
           </div>
         </div>
       </section>

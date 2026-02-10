@@ -92,25 +92,25 @@ function ServicesSection() {
       title: 'Mold Inspection',
       description: 'Comprehensive visual inspection and moisture assessment to identify mold growth and potential problem areas in your home or business.',
       icon: '🔍',
-      link: '/services'
+      link: '/services/mold-inspection'
     },
     {
       title: 'Air Quality Testing',
       description: 'Professional air sampling to measure mold spore concentrations and identify potential health risks in your indoor environment.',
       icon: '🧪',
-      link: '/services'
+      link: '/services/indoor-air-testing'
     },
     {
       title: 'Moisture Detection',
       description: 'Advanced infrared thermal imaging and moisture meters to find hidden water intrusion and dampness that can lead to mold growth.',
       icon: '💧',
-      link: '/services'
+      link: '/services/thermal-imaging-inspection'
     },
     {
       title: 'Detailed Reporting',
       description: 'Comprehensive written reports with photographs, lab results, and clear recommendations for addressing any issues found.',
       icon: '📋',
-      link: '/services'
+      link: '/services/custom-mold-action-plans'
     }
   ]
 
