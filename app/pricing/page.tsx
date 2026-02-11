@@ -15,11 +15,11 @@ export default function PricingPage() {
       price: '$899',
       description: 'Perfect for initial inspections and peace of mind',
       features: [
-        'Up to 4-hour comprehensive inspection',
-        'Moisture mapping with professional meters',
-        'Thermal imaging technology',
-        'Detailed report with findings and photos',
-        'Remediation recommendations'
+        '4-hour comprehensive inspection',
+        'Moisture mapping and Air Sampling for 4 areas',
+        'Thermal imaging inspection',
+        'Detailed report with findings, photos and videos',
+        'Custom Remediation plan and recommendations'
       ],
       buttonText: 'Book Now',
       buttonStyle: 'outline',
@@ -31,7 +31,7 @@ export default function PricingPage() {
       description: 'Our most popular package for thorough testing',
       features: [
         'Everything in I Inspect',
-        'Professional air sample collection',
+        'Moisture mapping and Air Sampling for 5 areas',
         'ERMI testing for mold DNA analysis',
         'HERTSMI-2 scoring',
         'Lab-certified results and interpretation'
@@ -61,9 +61,9 @@ export default function PricingPage() {
       description: 'The ultimate package for complete peace of mind',
       features: [
         'Everything in Healthy Choice',
-        'Professional mold dog inspection',
+        'Professional mold dog inspection included',
         'Air purifier included',
-        '3-6 month follow-up inspection (2 hours)',
+        '6 month follow-up inspection (2 hours)',
         'Follow-up air samples included',
         'Priority scheduling'
       ],
