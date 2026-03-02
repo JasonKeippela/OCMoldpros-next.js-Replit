@@ -71,7 +71,7 @@ function TrustIndicators() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-3 gap-8 text-center">
           {[
-            { number: '25+', label: 'Years Construction', mobileBreak: 'Inspection Experience' },
+            { number: '25+', label: 'Years Construction and', mobileBreak: 'Inspection Experience' },
             { number: '100%', label: 'Satisfaction Guaranteed' },
             { number: '48hr', label: 'Report Turnaround' }
           ].map((stat, i) => (
@@ -82,7 +82,7 @@ function TrustIndicators() {
                 {stat.mobileBreak && (
                   <>
                     <br className="md:hidden" />
-                    <span className="hidden md:inline"> {'&'} </span>
+                    <span className="hidden md:inline"> </span>
                     {stat.mobileBreak}
                   </>
                 )}
