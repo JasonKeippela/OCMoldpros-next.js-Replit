@@ -21,20 +21,20 @@ export default function HeroCTA() {
 
   return (
     <div className="flex flex-col sm:flex-row gap-4">
-      <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center">
+      <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg text-center">
         Call for a free 20-min consultation
       </a>
       {isMobile ? (
         <a 
           href="sms:9493715934?body=Hi, I'd like a free quote!" 
-          className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg text-center"
+          className="px-8 py-4 bg-white text-gray-900 border-2 border-white rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center"
         >
           Text for a FREE Quote
         </a>
       ) : (
         <Link 
           href="/contact" 
-          className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg text-center"
+          className="px-8 py-4 bg-white text-gray-900 border-2 border-white rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center"
         >
           Request a Free Quote
         </Link>
