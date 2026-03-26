@@ -79,6 +79,10 @@ export default function Navigation() {
           <Image src="/logo.jpg" alt="OC Mold Pros - Professional Mold Inspection Services in Orange County, CA" width={1050} height={450} className={`w-auto ${isMobile ? 'h-[100px] my-[-18px]' : 'h-[200px] my-[-36px]'}`} />
         </Link>
         
+        <a href="tel:9493715934" className="lg:hidden px-3 py-2 text-ocean-600 font-bold text-sm">
+          949-371-5934
+        </a>
+        
         <div className="hidden lg:flex items-center gap-6">
           <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">About</Link>
           
