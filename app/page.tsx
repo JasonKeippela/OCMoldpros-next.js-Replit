@@ -180,7 +180,7 @@ function WhyChooseUs() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Your Free Quote</h3>
             <p className="text-gray-600 mb-6">Call us today for a free consultation and accurate pricing for your mold inspection needs.</p>
             <a href="tel:9493715934" className="block w-full py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center mb-4">
-              Call for a FREE Consultation
+              Call for a free 20-min consultation
             </a>
             <Link href="/contact" className="block w-full py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
               Request a Free Quote
@@ -307,7 +307,7 @@ function FAQSection() {
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Have more questions? We are here to help.</p>
           <a href="tel:9493715934" className="text-gray-900 hover:text-gray-900 font-medium text-lg">
-            Call for a FREE Consultation
+            Call for a free 20-min consultation
           </a>
         </div>
       </div>
@@ -325,7 +325,7 @@ function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg">
-            Call for a FREE Consultation
+            Call for a free 20-min consultation
           </a>
           <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg shadow-lg">
             Request a Free Quote
@@ -435,7 +435,7 @@ function TestimonialsSection() {
             <span className="font-medium text-gray-700">View Our Google Business Profile</span>
           </a>
           <a href="tel:9493715934" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
-            Call for a FREE Consultation
+            Call for a free 20-min consultation
           </a>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function HeroCTA() {
   return (
     <div className="flex flex-col sm:flex-row gap-4">
       <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center">
-        Call for a FREE Consultation
+        Call for a free 20-min consultation
       </a>
       {isMobile ? (
         <a 
