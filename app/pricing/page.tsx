@@ -73,12 +73,12 @@ export default function PricingPage() {
     },
     {
       name: 'Clearance Inspection',
-      price: 'From $499',
+      price: 'From $399',
       description: 'Post-remediation clearance and verification',
       features: [
-        'Up to 4 areas of inspection',
+        'Up to 4 areas of concern/containment',
         'Additional areas $75 per area',
-        'Samples billed separately',
+        'Samples not included',
         '$70 per sample (air, swab, or tape lifts)',
         'Baseline sample required outside structure',
         'Clearance certification upon passing'
