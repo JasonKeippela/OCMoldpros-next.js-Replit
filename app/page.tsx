@@ -55,9 +55,6 @@ function HeroSection() {
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
             Emergency inspections and same-day service available. Certified inspectors protecting your home and family with advanced mold detection technology.
           </p>
-          <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
-            Restore Your Home, Restore Your Health
-          </p>
           <HeroCTA />
         </div>
       </div>
