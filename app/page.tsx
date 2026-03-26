@@ -53,10 +53,10 @@ function HeroSection() {
             Worried About Mold in Your Home?<br />Certified Mold Inspection in San Clemente & Orange County
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl italic font-bold">
-            Fatigue? Brain fog? Headaches? Hidden mold could be the cause.
+            Fatigue? Brain fog? Headaches? Unexplained symptoms at home? Hidden mold could be the cause.
           </p>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
-            Air sampling, surface testing, written reports, - results within 24 hours. Same day and emergency inspections available
+            Air sampling, surface testing, written reports, and results within 24 hours. Same day and emergency inspections available
           </p>
           <HeroCTA />
         </div>

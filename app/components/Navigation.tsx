@@ -124,10 +124,10 @@ export default function Navigation() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:9493715934" className="px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
+          <a href="tel:9493715934" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
             949-371-5934
           </a>
-          <Link href="/contact" className="px-4 py-2 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-medium">
+          <Link href="/contact" className="px-4 py-2 text-gray-900 border border-ocean-600 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
             Book your free consultation 
           </Link>
         </div>
