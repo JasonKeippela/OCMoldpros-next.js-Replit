@@ -52,7 +52,7 @@ function HeroSection() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-4xl">
             Worried About Mold in Your Home?<br />Certified Mold Inspection in San Clemente & Orange County
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl italic">
+          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl italic font-bold">
             Fatigue? Brain fog? Headaches? Hidden mold could be the cause.
           </p>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
