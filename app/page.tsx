@@ -186,7 +186,7 @@ function WhyChooseUs() {
               Call for a free 20-min consultation
             </a>
             <Link href="/contact" className="block w-full py-4 bg-white border-2 border-gray-300 text-gray-900 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg text-center">
-              Request a Free Quote
+              Book your free consultation
             </Link>
           </div>
         </div>
@@ -331,7 +331,7 @@ function CTASection() {
             Call for a free 20-min consultation
           </a>
           <Link href="/contact" className="px-8 py-4 bg-white text-gray-900 border-2 border-white rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg">
-            Request a Free Quote
+            Book your free consultation
           </Link>
         </div>
       </div>

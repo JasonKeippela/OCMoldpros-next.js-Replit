@@ -36,7 +36,7 @@ export default function HeroCTA() {
           href="/contact" 
           className="px-8 py-4 bg-white text-gray-900 border-2 border-white rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center"
         >
-          Request a Free Quote
+          Book your free consultation
         </Link>
       )}
     </div>
