@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection Dana Point CA | Certified Mold Testing & Air Quality',
@@ -59,6 +60,16 @@ export default function DanaPointPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in Dana Point, CA
             </h1>
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <Image 
+                src="/pier-dana-point.jpg" 
+                alt="Dana Point Pier at sunset with golden hour lighting and ocean views" 
+                width={1200}
+                height={600}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               Dana Point stands apart as one of Southern California&apos;s most distinctive coastal cities—known worldwide as the &quot;Dolphin &amp; Whale Watching Capital of the World®&quot; and recognized as the first Whale Heritage Site in the Americas. This is a place where ocean life is part of everyday living, with year-round sightings of whales and massive dolphin pods just offshore. At the center of it all is Dana Point Harbor, a vibrant hub for boating, sailing, paddleboarding, and waterfront dining, as well as access to Catalina Island. Just above the harbor, the Dana Point Headlands Conservation Area offers dramatic 150-foot coastal bluffs and scenic trails with panoramic ocean views.
             </p>
