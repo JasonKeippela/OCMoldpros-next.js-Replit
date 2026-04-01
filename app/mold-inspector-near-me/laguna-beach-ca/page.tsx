@@ -66,8 +66,18 @@ export default function LagunaBeachPage() {
                 className="w-full h-auto"
               />
             </div>
-            <p className="text-xl text-gray-600 mb-6 max-w-3xl">
-              Laguna Beach&apos;s artistic charm and stunning coastline come with real moisture challenges. The marine layer, salt air, and canyon microclimates create perfect conditions for hidden mold growth—especially in older beach cottages, hillside homes, and properties with limited ventilation. Our certified inspectors understand the unique construction styles here and provide clear, unbiased assessments to help protect both your home and your health.
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Laguna Beach is one of Southern California&apos;s most iconic coastal destinations, known for its seven miles of stunning coves, vibrant arts culture, and over 20,000 acres of preserved wilderness. Unlike many neighboring cities, Laguna Beach has maintained its identity as a true artist colony since the early 1900s, blending coastal luxury with creative expression. From the historic boardwalk and white lifeguard tower at Main Beach Park to the secluded beauty of Victoria Beach—home to the famous Pirate Tower—each stretch of coastline offers something unique. Areas like Treasure Island Beach below the Montage feature pristine tide pools, crystal-clear water, and protected marine ecosystems that are part of a State Marine Reserve.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Beyond the beaches, Laguna Beach is a nationally recognized arts destination. Signature events like the Pageant of the Masters bring artwork to life in unforgettable performances, while local festivals and galleries continue to shape the city&apos;s creative identity. Outdoor enthusiasts are drawn to places like Laguna Coast Wilderness Park and Top of the World, where panoramic ocean and canyon views highlight the area&apos;s natural diversity. Whether exploring tide pools, hiking coastal ridgelines, or enjoying oceanfront luxury at resorts like Montage Laguna Beach, Laguna Beach offers a rare combination of natural beauty, culture, and elevated coastal living.
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Why Laguna Beach Homes Require Advanced Mold &amp; Moisture Evaluation</h2>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Laguna Beach&apos;s unique geography—steep hillsides, coastal canyons, and direct ocean exposure—creates a microclimate that can significantly impact indoor air quality. Homes are often built into slopes or perched along cliffs, which can introduce drainage challenges, moisture intrusion, and humidity retention that aren&apos;t always visible. Combined with the marine layer, salt air, and shaded canyon environments, these conditions can create ideal environments for hidden mold growth behind walls, under flooring, and inside HVAC systems.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Additionally, many Laguna Beach homes feature custom architecture, older construction, or high-end materials that require a more nuanced inspection approach. Even well-maintained properties can develop concealed moisture issues due to coastal exposure and limited airflow in certain structural areas. At OC Mold Pros, we tailor our inspections specifically for environments like Laguna Beach—using detailed visual assessments and professional air sampling to identify issues that standard inspections often miss. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your home&apos;s air quality, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
