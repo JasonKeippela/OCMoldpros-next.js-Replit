@@ -59,8 +59,21 @@ export default function NewportBeachPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in Newport Beach, CA
             </h1>
-            <p className="text-xl text-gray-600 mb-6 max-w-3xl">
-              Newport Beach&apos;s luxury homes and coastal properties face unique mold challenges. High-end builds with complex HVAC systems, tight building envelopes, and vacation homes that sit closed for extended periods can all develop hidden moisture issues. The harbor environment, marine layer, and salt air add additional risk factors. Our certified inspectors provide thorough, unbiased assessments tailored to the sophisticated construction found throughout Newport Beach.
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Newport Beach is one of Southern California&apos;s most prestigious coastal cities, known for its 10 miles of pristine shoreline, world-class harbor, and a unique blend of luxury living and classic surf culture. At the heart of the city is Newport Harbor—one of the largest recreational harbors in the world, home to over 9,000 vessels and a lifestyle centered around boating, yachting, and waterfront living. The iconic Balboa Peninsula stretches for miles along the coast, featuring the historic Newport and Balboa Piers, a lively boardwalk, and the nostalgic charm of the Balboa Fun Zone. Just across the water, Balboa Island offers a more relaxed coastal experience, known for its walkable streets, boutique shops, and famous frozen bananas.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Newport Beach also delivers some of the most recognizable coastal experiences in California. The powerful waves at The Wedge draw experienced surfers and spectators alike, while Corona del Mar State Beach offers dramatic cliffs, tide pools, and scenic ocean views. For those seeking a mix of nature and recreation, the Upper Newport Bay Nature Preserve—also known as the Back Bay—provides miles of trails through one of Southern California&apos;s last remaining coastal estuaries. Whether cruising the harbor in a Duffy boat, shopping at Fashion Island, or enjoying the coastline, Newport Beach defines &quot;seaside sophistication.&quot;
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Moisture &amp; Mold Risks in Newport Beach Homes and Marine Environments</h2>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              With its expansive harbor, dense waterfront properties, and constant marine exposure, Newport Beach presents a unique set of conditions that can impact indoor air quality. Homes located near Newport Harbor, along the peninsula, or in areas like Corona del Mar are consistently exposed to salt air, humidity, and coastal temperature swings. These factors can slow drying times and contribute to hidden moisture buildup in attics, wall cavities, subflooring, and HVAC systems—especially in larger or tightly sealed homes.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Additionally—and this is often overlooked—boats and yachts in Newport Harbor are highly susceptible to mold growth. Enclosed cabins, bilge areas, upholstery, and ventilation systems can trap moisture and create ideal conditions for microbial growth, especially when vessels are not regularly ventilated or are exposed to fluctuating temperatures. Musty odors inside a boat are often a key indicator of underlying mold issues that can affect both air quality and the longevity of materials.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              At OC Mold Pros, we specialize in identifying mold and air quality concerns in both coastal homes and marine environments. Our inspections are tailored to Newport Beach&apos;s unique conditions, combining detailed visual assessments with professional air sampling to uncover hidden issues early. Whether you live on the water, near the coast, or keep a boat in the harbor, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers and protect your environment.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
