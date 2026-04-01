@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection San Clemente CA | Certified Mold Testing & Air Quality',
@@ -63,6 +64,16 @@ export default function SanClementePage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in San Clemente, CA
             </h1>
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <Image 
+                src="/images/san-clemente-pier.png" 
+                alt="San Clemente Pier at sunset with Spanish Colonial Revival architecture, red tile roofs, and ocean views" 
+                width={1024}
+                height={576}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               San Clemente is one of the most distinctive coastal cities in Orange County, known as the &quot;Spanish Village by the Sea&quot; for its beautifully preserved Spanish Colonial Revival architecture—white stucco homes, red tile roofs, and a cohesive design standard that dates back to its founding in 1928. With over 300 days of sunshine each year, a relaxed small-town atmosphere, and more than 200 registered historic structures, the city blends history, lifestyle, and coastal beauty in a way few places can. The iconic San Clemente Pier—stretching over 1,300 feet into the Pacific—serves as a central hub for fishing, dining, and ocean views, with locals enjoying meals at Fisherman&apos;s Restaurant and Bar. Just above it, Casa Romantica Cultural Center and Gardens—the former home of founder Ole Hanson—offers panoramic coastal views and a direct connection to the city&apos;s origins.
             </p>
