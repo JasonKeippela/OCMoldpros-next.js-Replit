@@ -26,7 +26,7 @@ export default function HeroCTA() {
       </a>
       {isMobile ? (
         <a 
-          href="sms:9493715934?body=Hi, I'd like to set up a free 20 min consultation!" 
+          href="sms:9493715934?body=Hi, I'd like a free quote!" 
           className="px-8 py-4 bg-white text-gray-900 border-2 border-white rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center"
         >
           Text to set up free 20 min consultation
