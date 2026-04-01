@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection Dana Point CA | Certified Mold Testing & Air Quality',
-  description: 'Professional mold inspection and mold testing in Dana Point, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
+  description: 'Professional mold inspection and mold testing in Dana Point, CA. Independent air sampling, moisture detection, and health focused inspections. Free 20-minute consultation.',
   // Canonical v2 – services rollout
   alternates: { canonical: 'https://ocmoldpros.com/mold-inspector-near-me/dana-point-ca' },
 }
@@ -67,20 +67,20 @@ export default function DanaPointPage() {
               />
             </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Dana Point stands apart as one of Southern California&apos;s most distinctive coastal cities—known worldwide as the &quot;Dolphin &amp; Whale Watching Capital of the World®&quot; and recognized as the first Whale Heritage Site in the Americas. This is a place where ocean life is part of everyday living, with year-round sightings of whales and massive dolphin pods just offshore. At the center of it all is Dana Point Harbor, a vibrant hub for boating, sailing, paddleboarding, and waterfront dining, as well as access to Catalina Island. Just above the harbor, the Dana Point Headlands Conservation Area offers dramatic 150-foot coastal bluffs and scenic trails with panoramic ocean views.
+              Dana Point stands apart as one of Southern California&apos;s most distinctive coastal cities known worldwide as the &quot;Dolphin &amp; Whale Watching Capital of the World®&quot; and recognized as the first Whale Heritage Site in the Americas. This is a place where ocean life is part of everyday living, with year-round sightings of whales and massive dolphin pods just offshore. At the center of it all is Dana Point Harbor, a vibrant hub for boating, sailing, paddleboarding, and waterfront dining, as well as access to Catalina Island. Just above the harbor, the Dana Point Headlands Conservation Area offers dramatic 150-foot coastal bluffs and scenic trails with panoramic ocean views.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Dana Point blends this natural beauty with upscale coastal living. Doheny State Beach provides consistent surf and family-friendly beach access, while the Lantern District delivers boutique shopping and a relaxed &quot;California cool&quot; atmosphere. The city is also home to luxury destinations like Waldorf Astoria Monarch Beach Resort &amp; Club and The Ritz-Carlton, Laguna Niguel, where coastal views meet high-end living. Whether it&apos;s a morning walk along the bluffs or a day on the water, Dana Point offers a lifestyle built around the ocean.
+              Dana Point blends this natural beauty with upscale coastal living. Doheny State Beach provides consistent surf and family friendly beach access, while the Lantern District delivers boutique shopping and a relaxed &quot;California cool&quot; atmosphere. The city is also home to luxury destinations like Waldorf Astoria Monarch Beach Resort &amp; Club and The Ritz-Carlton, Laguna Niguel, where coastal views meet high end living. Whether it&apos;s a morning walk along the bluffs or a day on the water, Dana Point offers a lifestyle built around the ocean.
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Coastal Moisture Risks in Homes and Boats in Dana Point</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Living in Dana Point means constant exposure to marine air, elevated humidity, and salt-rich moisture—especially for properties near the harbor, along the bluffs, or close to the shoreline. These conditions can create ideal environments for hidden mold growth inside homes, particularly in attics, wall cavities, subflooring, and HVAC systems where airflow is limited and moisture can linger.
+              Living in Dana Point means constant exposure to marine air, elevated humidity, and salt rich moisture especially for properties near the harbor, along the bluffs, or close to the shoreline. These conditions can create ideal environments for hidden mold growth inside homes, particularly in attics, wall cavities, subflooring, and HVAC systems where airflow is limited and moisture can linger.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              What many people don&apos;t realize is that these same conditions are often more extreme inside boats and yachts. Vessels docked in Dana Point Harbor are subject to continuous moisture exposure, temperature fluctuations, and confined cabin spaces—making them highly susceptible to mold growth behind panels, under cushions, in bilge areas, and within ventilation systems. Musty odors inside a boat are often an early indicator of microbial growth that can impact both air quality and long-term vessel condition.
+              What many people don&apos;t realize is that these same conditions are often more extreme inside boats and yachts. Vessels docked in Dana Point Harbor are subject to continuous moisture exposure, temperature fluctuations, and confined cabin spaces making them highly susceptible to mold growth behind panels, under cushions, in bilge areas, and within ventilation systems. Musty odors inside a boat are often an early indicator of microbial growth that can impact both air quality and long term vessel condition.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              At OC Mold Pros, we specialize in identifying mold and air quality issues in both coastal homes and marine environments. Our inspection process is tailored to Dana Point&apos;s unique conditions, using detailed visual assessments and professional air sampling to detect hidden problems early. Whether you live near the harbor or keep a boat docked there, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers and protect your environment.
+              At OC Mold Pros, we specialize in identifying mold and air quality issues in both coastal homes and marine environments. Our inspection process is tailored to Dana Point&apos;s unique conditions, using detailed visual assessments and professional air sampling to detect hidden problems early. Whether you live near the harbor or keep a boat docked there, DM me to set up a free 20-minute consultation we&apos;ll help you get clear answers and protect your environment.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -118,7 +118,7 @@ export default function DanaPointPage() {
               ))}
             </div>
             <p className="text-gray-600 italic">
-              We inspect only—we do not perform remediation—so our findings stay unbiased.
+              We inspect only, we do not perform remediation so our findings stay unbiased.
             </p>
           </div>
         </section>
@@ -153,7 +153,7 @@ export default function DanaPointPage() {
               Air quality testing measures the concentration and types of mold spores present in your indoor environment compared to outdoor baseline levels. This is particularly valuable if you&apos;re experiencing unexplained allergies, respiratory symptoms, or musty odors but can&apos;t locate visible mold.
             </p>
             <p className="text-lg text-gray-600">
-              Our independent lab analysis provides objective data about what&apos;s in your air—helping you make informed decisions about your home and health.
+              Our independent lab analysis provides objective data about what&apos;s in your air helping you make informed decisions about your home and health.
             </p>
           </div>
         </section>
@@ -165,7 +165,7 @@ export default function DanaPointPage() {
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
             <p className="text-lg text-gray-600">
-              We provide clear, professional reports that realtors and buyers can understand—no unnecessary jargon or scare tactics.
+              We provide clear, professional reports that realtors and buyers can understand no unnecessary jargon or scare tactics.
             </p>
           </div>
         </section>

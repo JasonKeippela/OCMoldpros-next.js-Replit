@@ -67,17 +67,17 @@ export default function LagunaBeachPage() {
               />
             </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Laguna Beach is one of Southern California&apos;s most iconic coastal destinations, known for its seven miles of stunning coves, vibrant arts culture, and over 20,000 acres of preserved wilderness. Unlike many neighboring cities, Laguna Beach has maintained its identity as a true artist colony since the early 1900s, blending coastal luxury with creative expression. From the historic boardwalk and white lifeguard tower at Main Beach Park to the secluded beauty of Victoria Beach—home to the famous Pirate Tower—each stretch of coastline offers something unique. Areas like Treasure Island Beach below the Montage feature pristine tide pools, crystal-clear water, and protected marine ecosystems that are part of a State Marine Reserve.
+              Laguna Beach is one of Southern California&apos;s most iconic coastal destinations, known for its seven miles of stunning coves, vibrant arts culture, and over 20,000 acres of preserved wilderness. Unlike many neighboring cities, Laguna Beach has maintained its identity as a true artist colony since the early 1900s, blending coastal luxury with creative expression. From the historic boardwalk and white lifeguard tower at Main Beach Park to the secluded beauty of Victoria Beach home to the famous Pirate Tower each stretch of coastline offers something unique. Areas like Treasure Island Beach below the Montage feature pristine tide pools, crystal-clear water, and protected marine ecosystems that are part of a State Marine Reserve.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               Beyond the beaches, Laguna Beach is a nationally recognized arts destination. Signature events like the Pageant of the Masters bring artwork to life in unforgettable performances, while local festivals and galleries continue to shape the city&apos;s creative identity. Outdoor enthusiasts are drawn to places like Laguna Coast Wilderness Park and Top of the World, where panoramic ocean and canyon views highlight the area&apos;s natural diversity. Whether exploring tide pools, hiking coastal ridgelines, or enjoying oceanfront luxury at resorts like Montage Laguna Beach, Laguna Beach offers a rare combination of natural beauty, culture, and elevated coastal living.
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Why Laguna Beach Homes Require Advanced Mold &amp; Moisture Evaluation</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Laguna Beach&apos;s unique geography—steep hillsides, coastal canyons, and direct ocean exposure—creates a microclimate that can significantly impact indoor air quality. Homes are often built into slopes or perched along cliffs, which can introduce drainage challenges, moisture intrusion, and humidity retention that aren&apos;t always visible. Combined with the marine layer, salt air, and shaded canyon environments, these conditions can create ideal environments for hidden mold growth behind walls, under flooring, and inside HVAC systems.
+              Laguna Beach&apos;s unique geography steep hillsides, coastal canyons, and direct ocean exposure creates a microclimate that can significantly impact indoor air quality. Homes are often built into slopes or perched along cliffs, which can introduce drainage challenges, moisture intrusion, and humidity retention that aren&apos;t always visible. Combined with the marine layer, salt air, and shaded canyon environments, these conditions can create ideal environments for hidden mold growth behind walls, under flooring, and inside HVAC systems.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Additionally, many Laguna Beach homes feature custom architecture, older construction, or high-end materials that require a more nuanced inspection approach. Even well-maintained properties can develop concealed moisture issues due to coastal exposure and limited airflow in certain structural areas. At OC Mold Pros, we tailor our inspections specifically for environments like Laguna Beach—using detailed visual assessments and professional air sampling to identify issues that standard inspections often miss. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your home&apos;s air quality, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
+              Additionally, many Laguna Beach homes feature custom architecture, older construction, or high-end materials that require a more nuanced inspection approach. Even well-maintained properties can develop concealed moisture issues due to coastal exposure and limited airflow in certain structural areas. At OC Mold Pros, we tailor our inspections specifically for environments like Laguna Beach—using detailed visual assessments and professional air sampling to identify issues that standard inspections often miss. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your home&apos;s air quality, DM me to set up a free 20-minute consultation we&apos;ll help you get clear answers quickly.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -115,7 +115,7 @@ export default function LagunaBeachPage() {
               ))}
             </div>
             <p className="text-gray-600 italic">
-              We inspect only—we do not perform remediation—so our findings stay unbiased.
+              We inspect only, we do not perform remediation so our findings stay unbiased.
             </p>
           </div>
         </section>
@@ -150,7 +150,7 @@ export default function LagunaBeachPage() {
               Air quality testing measures the concentration and types of mold spores present in your indoor environment compared to outdoor baseline levels. This is particularly valuable if you&apos;re experiencing unexplained allergies, respiratory symptoms, or musty odors but can&apos;t locate visible mold.
             </p>
             <p className="text-lg text-gray-600">
-              Our independent lab analysis provides objective data about what&apos;s in your air—helping you make informed decisions about your home and health.
+              Our independent lab analysis provides objective data about what&apos;s in your air helping you make informed decisions about your home and health.
             </p>
           </div>
         </section>
@@ -162,7 +162,7 @@ export default function LagunaBeachPage() {
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
             <p className="text-lg text-gray-600">
-              We provide clear, professional reports that realtors and buyers can understand—no unnecessary jargon or scare tactics.
+              We provide clear, professional reports that realtors and buyers can understand with no unnecessary jargon or scare tactics.
             </p>
           </div>
         </section>

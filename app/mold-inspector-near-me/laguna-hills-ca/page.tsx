@@ -67,20 +67,20 @@ export default function LagunaHillsPage() {
               />
             </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Laguna Hills offers a quiet, family-oriented lifestyle in the heart of South Orange County, just a short drive inland from the coast. Known for its strong sense of community and highly rated schools within the Saddleback Valley Unified School District, the city is especially attractive to families and young professionals seeking a balance of comfort and convenience. Laguna Hills High School stands out as a National Blue Ribbon and California Distinguished School, reflecting the area&apos;s commitment to education and long-term community investment. With tree-lined neighborhoods, well-maintained homes, and a &quot;dense suburban feel,&quot; Laguna Hills delivers a more relaxed pace compared to its coastal neighbors.
+              Laguna Hills offers a quiet, family oriented lifestyle in the heart of South Orange County, just a short drive inland from the coast. Known for its strong sense of community and highly rated schools within the Saddleback Valley Unified School District, the city is especially attractive to families and young professionals seeking a balance of comfort and convenience. Laguna Hills High School stands out as a National Blue Ribbon and California Distinguished School, reflecting the area&apos;s commitment to education and long-term community investment. With tree lined neighborhoods, well-maintained homes, and a &quot;dense suburban feel,&quot; Laguna Hills delivers a more relaxed pace compared to its coastal neighbors.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               The city also offers a variety of local amenities that enhance everyday living. Fossil Reef Park provides a unique glimpse into prehistoric history with preserved fossil exhibits, while the Laguna Hills Community Center serves as a central hub for recreation, events, and community programs. Families enjoy destinations like Big Air Trampoline Park, along with seasonal events such as Concerts in the Park and Movies in the Park. With convenient access to shopping, major freeways, and nearby coastal cities like Laguna Beach, Laguna Hills is positioned as a practical yet highly livable Southern California community.
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Mold Risks in Laguna Hills Homes – HVAC, Attics, and Hidden Moisture</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Unlike coastal cities, Laguna Hills doesn&apos;t deal with constant marine moisture—but that doesn&apos;t mean mold isn&apos;t a concern. In fact, many homes in Laguna Hills were built during large development phases in the 1960s–1980s, often featuring similar construction styles, shared design layouts, and aging infrastructure. Over time, this creates common patterns where mold issues can develop—especially in attics, behind walls, and within HVAC systems.
+              Unlike coastal cities, Laguna Hills doesn&apos;t deal with constant marine moisture but that doesn&apos;t mean mold isn&apos;t a concern. In fact, many homes in Laguna Hills were built during large development phases in the 1960s–1980s, often featuring similar construction styles, shared design layouts, and aging infrastructure. Over time, this creates common patterns where mold issues can develop especially in attics, behind walls, and within HVAC systems.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               Because homes are typically more sealed and rely heavily on air conditioning, moisture can become trapped indoors, particularly around ducting, air handlers, and poorly ventilated attic spaces. Small plumbing leaks, aging roofs, or condensation buildup can go unnoticed for long periods, allowing mold growth to develop without obvious visual signs. In some cases, homeowners experience symptoms or musty odors without ever seeing visible mold.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              At OC Mold Pros, we specialize in identifying these hidden issues through detailed visual inspections and professional air sampling. We understand the construction styles and environmental conditions specific to inland Orange County communities like Laguna Hills, allowing us to pinpoint problems that standard inspections often miss. If you&apos;ve noticed unusual odors, allergy-like symptoms, or just want peace of mind, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
+              At OC Mold Pros, we specialize in identifying these hidden issues through detailed visual inspections and professional air sampling. We understand the construction styles and environmental conditions specific to inland Orange County communities like Laguna Hills, allowing us to pinpoint problems that standard inspections often miss. If you&apos;ve noticed unusual odors, allergy like symptoms, or just want peace of mind, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -118,7 +118,7 @@ export default function LagunaHillsPage() {
               ))}
             </div>
             <p className="text-gray-600 italic">
-              We inspect only—we do not perform remediation—so our findings stay unbiased.
+              We inspect only, we do not perform remediation so that our findings stay unbiased.
             </p>
           </div>
         </section>
@@ -153,7 +153,7 @@ export default function LagunaHillsPage() {
               Air quality testing measures the concentration and types of mold spores present in your indoor environment compared to outdoor baseline levels. This is particularly valuable if you&apos;re experiencing unexplained allergies, respiratory symptoms, or musty odors but can&apos;t locate visible mold.
             </p>
             <p className="text-lg text-gray-600">
-              Our independent lab analysis provides objective data about what&apos;s in your air—helping you make informed decisions about your home and health.
+              Our independent lab analysis provides objective data about what&apos;s in your air helping you make informed decisions about your home and health.
             </p>
           </div>
         </section>
@@ -165,7 +165,7 @@ export default function LagunaHillsPage() {
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
             <p className="text-lg text-gray-600">
-              We provide clear, professional reports that realtors and buyers can understand—no unnecessary jargon or scare tactics.
+              We provide clear, professional reports that realtors and buyers can understand with no unnecessary jargon or scare tactics.
             </p>
           </div>
         </section>

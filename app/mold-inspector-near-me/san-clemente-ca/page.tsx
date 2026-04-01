@@ -71,17 +71,17 @@ export default function SanClementePage() {
               />
             </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              San Clemente is one of the most distinctive coastal cities in Orange County, known as the &quot;Spanish Village by the Sea&quot; for its beautifully preserved Spanish Colonial Revival architecture—white stucco homes, red tile roofs, and a cohesive design standard that dates back to its founding in 1928. With over 300 days of sunshine each year, a relaxed small-town atmosphere, and more than 200 registered historic structures, the city blends history, lifestyle, and coastal beauty in a way few places can. The iconic San Clemente Pier—stretching over 1,300 feet into the Pacific—serves as a central hub for fishing, dining, and ocean views, with locals enjoying meals at Fisherman&apos;s Restaurant and Bar. Just above it, Casa Romantica Cultural Center and Gardens—the former home of founder Ole Hanson—offers panoramic coastal views and a direct connection to the city&apos;s origins.
+              San Clemente is one of the most distinctive coastal cities in Orange County, known as the &quot;Spanish Village by the Sea&quot; for its beautifully preserved Spanish Colonial Revival architecture white stucco homes, red tile roofs, and a cohesive design standard that dates back to its founding in 1928. With over 300 days of sunshine each year, a relaxed small-town atmosphere, and more than 200 registered historic structures, the city blends history, lifestyle, and coastal beauty in a way few places can. The iconic San Clemente Pier stretching over 1,300 feet into the Pacific serves as a central hub for fishing, dining, and ocean views, with locals enjoying meals at Fisherman&apos;s Restaurant and Bar. Just above it, Casa Romantica Cultural Center and Gardens the former home of founder Ole Hanson offers panoramic coastal views and a direct connection to the city&apos;s origins.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              What truly sets San Clemente apart, however, is its surf culture. Just south of town, Trestles is one of the most respected surf breaks in the world and will host Olympic surfing during the 2028 Summer Olympics—a massive recognition of the area&apos;s wave quality and consistency. Combined with iconic spots like T-Street and San Onofre, plus the scenic 2.3-mile beach trail connecting the coastline, San Clemente offers a lifestyle centered around the ocean, outdoor activity, and community pride.
+              What truly sets San Clemente apart, however, is its surf culture. Just south of town, Trestles is one of the most respected surf breaks in the world and will host Olympic surfing during the 2028 Summer Olympics which is a massive recognition of the area&apos;s wave quality and consistency. Combined with iconic spots like T-Street and San Onofre, plus the scenic 2.3-mile beach trail connecting the coastline, San Clemente offers a lifestyle centered around the ocean, outdoor activity, and community pride.
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Coastal Living in San Clemente Comes with Hidden Moisture & Mold Risks</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              That same coastal environment that makes San Clemente so desirable also creates conditions that require a more specialized approach to home health. The marine layer, salt air, and consistent humidity—especially in neighborhoods near the pier, Trestles, and North Beach—can lead to elevated moisture levels inside homes. Over time, this can contribute to hidden mold growth in attics, crawlspaces, behind walls, and within HVAC systems, particularly in older homes or properties with limited ventilation.
+              That same coastal environment that makes San Clemente so desirable also creates conditions that require a more specialized approach to home health. The marine layer, salt air, and consistent humidity especially in neighborhoods near the pier, Trestles, and North Beach, can lead to elevated moisture levels inside homes. Over time, this can contribute to hidden mold growth in attics, crawlspaces, behind walls, and within HVAC systems, particularly in older homes or properties with limited ventilation.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              At OC Mold Pros, we understand the unique environmental factors tied specifically to San Clemente&apos;s coastal climate and historic construction styles. Homes with stucco exteriors, older roofing systems, or aging plumbing can be especially vulnerable if moisture intrusion goes undetected. Our inspections are designed to go beyond the surface—using detailed visual assessments and air sampling to identify issues that are often missed. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your indoor air quality, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
+              At OC Mold Pros, we understand the unique environmental factors tied specifically to San Clemente&apos;s coastal climate and historic construction styles. Homes with stucco exteriors, older roofing systems, or aging plumbing can be especially vulnerable if moisture intrusion goes undetected. Our inspections are designed to go beyond the surface using detailed visual assessments and air sampling to identify issues that are often missed. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your indoor air quality, DM me to set up a free 20-minute consultation we&apos;ll help you get clear answers quickly.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -119,7 +119,7 @@ export default function SanClementePage() {
               ))}
             </div>
             <p className="text-gray-600 italic">
-              We inspect only—we do not perform remediation—so our findings stay unbiased.
+              We inspect only, we do not perform remediation so our findings stay unbiased.
             </p>
           </div>
         </section>
@@ -154,7 +154,7 @@ export default function SanClementePage() {
               Air quality testing measures the concentration and types of mold spores present in your indoor environment compared to outdoor baseline levels. This is particularly valuable if you&apos;re experiencing unexplained allergies, respiratory symptoms, or musty odors but can&apos;t locate visible mold.
             </p>
             <p className="text-lg text-gray-600">
-              Our independent lab analysis provides objective data about what&apos;s in your air—helping you make informed decisions about your home and health.
+              Our independent lab analysis provides objective data about what&apos;s in your air helping you make informed decisions about your home and health.
             </p>
           </div>
         </section>
@@ -166,7 +166,7 @@ export default function SanClementePage() {
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
             <p className="text-lg text-gray-600">
-              We provide clear, professional reports that realtors and buyers can understand—no unnecessary jargon or scare tactics.
+              We provide clear, professional reports that realtors and buyers can understand with no unnecessary jargon or scare tactics.
             </p>
           </div>
         </section>
@@ -185,7 +185,7 @@ export default function SanClementePage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure what to call your area? No problem. If you&apos;re in San Clemente, we can help you decide whether an inspection makes sense based on symptoms, odors, visible growth, past leaks, or humidity—especially in coastal and hillside homes where moisture can hide behind walls or under flooring.
+              Not sure what to call your area? No problem. If you&apos;re in San Clemente, we can help you decide whether an inspection makes sense based on symptoms, odors, visible growth, past leaks, or humidity especially in coastal and hillside homes where moisture can hide behind walls or under flooring.
             </p>
             <p className="text-lg text-ocean-700 font-medium">
               DM or call to schedule a free 20-minute consultation.

@@ -67,20 +67,20 @@ export default function SanJuanCapistranoPage() {
               />
             </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              San Juan Capistrano is one of the most historically rich cities in all of California, proudly known as the &quot;Birthplace of Orange County.&quot; Founded in 1776, the city is home to the legendary Mission San Juan Capistrano—often referred to as the &quot;Jewel of the Missions.&quot; With its preserved gardens, the ruins of the Great Stone Church, and the historic Serra Chapel (the oldest standing building in California), the Mission serves as the cultural and architectural heart of the city. Each year, San Juan Capistrano celebrates the famous Return of the Swallows, a tradition marking the seasonal migration of cliff swallows back to the Mission from Argentina—an event that draws visitors from around the world.
+              San Juan Capistrano is one of the most historically rich cities in all of California, proudly known as the &quot;Birthplace of Orange County.&quot; Founded in 1776, the city is home to the legendary Mission San Juan Capistrano often referred to as the &quot;Jewel of the Missions.&quot; With its preserved gardens, the ruins of the Great Stone Church, and the historic Serra Chapel (the oldest standing building in California), the Mission serves as the cultural and architectural heart of the city. Each year, San Juan Capistrano celebrates the famous Return of the Swallows, a tradition marking the seasonal migration of cliff swallows back to the Mission from Argentina—an event that draws visitors from around the world.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              Beyond the Mission, the city offers a rare glimpse into California&apos;s early days. The Los Rios Historic District is the oldest continuously occupied residential neighborhood in the state, featuring preserved adobe homes and charming wood-frame structures that reflect centuries of history. Visitors and locals enjoy destinations like Zoomars at River Street Ranch, the historic train depot, and iconic dining spots such as Ramos House Café and Heritage Barbecue. With its blend of preserved history, walkable charm, and cultural significance—including upcoming 250th anniversary celebrations—San Juan Capistrano offers a truly unique Southern California experience.
+              Beyond the Mission, the city offers a rare glimpse into California&apos;s early days. The Los Rios Historic District is the oldest continuously occupied residential neighborhood in the state, featuring preserved adobe homes and charming wood frame structures that reflect centuries of history. Visitors and locals enjoy destinations like Zoomars at River Street Ranch, the historic train depot, and iconic dining spots such as Ramos House Café and Heritage Barbecue. With its blend of preserved history, walkable charm, and cultural significance including upcoming 250th anniversary celebrations San Juan Capistrano offers a truly unique Southern California experience.
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Mold Risks in San Juan Capistrano – Older Homes, Adobe Structures, and Hidden Moisture</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              San Juan Capistrano&apos;s historic character also introduces a unique set of considerations when it comes to indoor air quality. Many homes and buildings in the area—especially near the Mission and within older neighborhoods—feature aging materials, adobe construction, or retrofitted systems that were not originally designed for modern moisture control. Adobe, in particular, is highly porous and can retain moisture if not properly maintained, creating conditions where mold growth can develop within walls or structural elements over time.
+              San Juan Capistrano&apos;s historic character also introduces a unique set of considerations when it comes to indoor air quality. Many homes and buildings in the area especially near the Mission and within older neighborhoods feature aging materials, adobe construction, or retrofitted systems that were not originally designed for modern moisture control. Adobe, in particular, is highly porous and can retain moisture if not properly maintained, creating conditions where mold growth can develop within walls or structural elements over time.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               Additionally, older plumbing systems, roofing materials, and limited ventilation in historic or renovated homes can allow moisture to accumulate in hidden areas such as attics, crawlspaces, and behind walls. Even in newer homes built on historically developed land, soil moisture, irrigation, and drainage patterns can contribute to elevated humidity levels around the structure.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              At OC Mold Pros, we understand the unique challenges that come with inspecting both historic and modern homes in San Juan Capistrano. Our approach combines detailed visual inspections with professional air sampling to identify hidden mold and moisture issues—especially in properties where traditional construction methods or age may mask underlying problems. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want peace of mind in your home, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
+              At OC Mold Pros, we understand the unique challenges that come with inspecting both historic and modern homes in San Juan Capistrano. Our approach combines detailed visual inspections with professional air sampling to identify hidden mold and moisture issues especially in properties where traditional construction methods or age may mask underlying problems. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want peace of mind in your home, DM me to set up a free 20-minute consultation we&apos;ll help you get clear answers quickly.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
@@ -118,7 +118,7 @@ export default function SanJuanCapistranoPage() {
               ))}
             </div>
             <p className="text-gray-600 italic">
-              We inspect only—we do not perform remediation—so our findings stay unbiased.
+              We inspect only, we do not perform remediation so our findings stay unbiased.
             </p>
           </div>
         </section>
@@ -153,7 +153,7 @@ export default function SanJuanCapistranoPage() {
               Air quality testing measures the concentration and types of mold spores present in your indoor environment compared to outdoor baseline levels. This is particularly valuable if you&apos;re experiencing unexplained allergies, respiratory symptoms, or musty odors but can&apos;t locate visible mold.
             </p>
             <p className="text-lg text-gray-600">
-              Our independent lab analysis provides objective data about what&apos;s in your air—helping you make informed decisions about your home and health.
+              Our independent lab analysis provides objective data about what&apos;s in your air helping you make informed decisions about your home and health.
             </p>
           </div>
         </section>
@@ -165,7 +165,7 @@ export default function SanJuanCapistranoPage() {
               A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
             </p>
             <p className="text-lg text-gray-600">
-              We provide clear, professional reports that realtors and buyers can understand—no unnecessary jargon or scare tactics.
+              We provide clear, professional reports that realtors and buyers can understand with no unnecessary jargon or scare tactics.
             </p>
           </div>
         </section>
