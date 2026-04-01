@@ -63,8 +63,18 @@ export default function SanClementePage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in San Clemente, CA
             </h1>
-            <p className="text-xl text-gray-600 mb-6 max-w-3xl">
-              San Clemente&apos;s &quot;Spanish Village by the Sea&quot; charm comes with real moisture challenges for homeowners. The coastal humidity, marine layer, and salt air create perfect conditions for hidden mold growth—especially in hillside homes, beach properties, and areas with poor ventilation. Whether you&apos;re in Talega, near the pier, or anywhere in between, our certified inspectors help you understand what&apos;s happening inside your home with clear, unbiased findings and practical recommendations.
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              San Clemente is one of the most distinctive coastal cities in Orange County, known as the &quot;Spanish Village by the Sea&quot; for its beautifully preserved Spanish Colonial Revival architecture—white stucco homes, red tile roofs, and a cohesive design standard that dates back to its founding in 1928. With over 300 days of sunshine each year, a relaxed small-town atmosphere, and more than 200 registered historic structures, the city blends history, lifestyle, and coastal beauty in a way few places can. The iconic San Clemente Pier—stretching over 1,300 feet into the Pacific—serves as a central hub for fishing, dining, and ocean views, with locals enjoying meals at Fisherman&apos;s Restaurant and Bar. Just above it, Casa Romantica Cultural Center and Gardens—the former home of founder Ole Hanson—offers panoramic coastal views and a direct connection to the city&apos;s origins.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              What truly sets San Clemente apart, however, is its surf culture. Just south of town, Trestles is one of the most respected surf breaks in the world and will host Olympic surfing during the 2028 Summer Olympics—a massive recognition of the area&apos;s wave quality and consistency. Combined with iconic spots like T-Street and San Onofre, plus the scenic 2.3-mile beach trail connecting the coastline, San Clemente offers a lifestyle centered around the ocean, outdoor activity, and community pride.
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Coastal Living in San Clemente Comes with Hidden Moisture & Mold Risks</h2>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              That same coastal environment that makes San Clemente so desirable also creates conditions that require a more specialized approach to home health. The marine layer, salt air, and consistent humidity—especially in neighborhoods near the pier, Trestles, and North Beach—can lead to elevated moisture levels inside homes. Over time, this can contribute to hidden mold growth in attics, crawlspaces, behind walls, and within HVAC systems, particularly in older homes or properties with limited ventilation.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              At OC Mold Pros, we understand the unique environmental factors tied specifically to San Clemente&apos;s coastal climate and historic construction styles. Homes with stucco exteriors, older roofing systems, or aging plumbing can be especially vulnerable if moisture intrusion goes undetected. Our inspections are designed to go beyond the surface—using detailed visual assessments and air sampling to identify issues that are often missed. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your indoor air quality, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers quickly.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
