@@ -59,6 +59,13 @@ export default function NewportBeachPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in Newport Beach, CA
             </h1>
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/newport-beach-sunset.jpg" 
+                alt="Newport Beach sunset view with palm trees lining a residential street overlooking the harbor and ocean" 
+                className="w-full h-auto"
+              />
+            </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               Newport Beach is one of Southern California&apos;s most prestigious coastal cities, known for its 10 miles of pristine shoreline, world-class harbor, and a unique blend of luxury living and classic surf culture. At the heart of the city is Newport Harbor—one of the largest recreational harbors in the world, home to over 9,000 vessels and a lifestyle centered around boating, yachting, and waterfront living. The iconic Balboa Peninsula stretches for miles along the coast, featuring the historic Newport and Balboa Piers, a lively boardwalk, and the nostalgic charm of the Balboa Fun Zone. Just across the water, Balboa Island offers a more relaxed coastal experience, known for its walkable streets, boutique shops, and famous frozen bananas.
             </p>
