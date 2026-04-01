@@ -59,6 +59,13 @@ export default function SanJuanCapistranoPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in San Juan Capistrano, CA
             </h1>
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/san-juan-capistrano-mission.jpg" 
+                alt="San Juan Capistrano Mission with historic architecture, bell tower, palm trees, and clear blue sky" 
+                className="w-full h-auto"
+              />
+            </div>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               San Juan Capistrano is one of the most historically rich cities in all of California, proudly known as the &quot;Birthplace of Orange County.&quot; Founded in 1776, the city is home to the legendary Mission San Juan Capistrano—often referred to as the &quot;Jewel of the Missions.&quot; With its preserved gardens, the ruins of the Great Stone Church, and the historic Serra Chapel (the oldest standing building in California), the Mission serves as the cultural and architectural heart of the city. Each year, San Juan Capistrano celebrates the famous Return of the Swallows, a tradition marking the seasonal migration of cliff swallows back to the Mission from Argentina—an event that draws visitors from around the world.
             </p>
