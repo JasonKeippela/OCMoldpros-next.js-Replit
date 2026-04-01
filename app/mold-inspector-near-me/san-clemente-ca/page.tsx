@@ -7,6 +7,26 @@ export const metadata: Metadata = {
   description: 'Professional mold inspection and mold testing in San Clemente, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
   // Canonical v2 – services rollout
   alternates: { canonical: 'https://ocmoldpros.com/mold-inspector-near-me/san-clemente-ca' },
+  openGraph: {
+    title: 'Mold Inspection San Clemente CA | Certified Mold Testing & Air Quality',
+    description: 'Professional mold inspection and mold testing in San Clemente, CA. Free 20-minute consultation.',
+    url: 'https://ocmoldpros.com/mold-inspector-near-me/san-clemente-ca',
+    type: 'website',
+    images: [
+      {
+        url: 'https://ocmoldpros.com/images/san-clemente-pier.png',
+        width: 1024,
+        height: 576,
+        alt: 'San Clemente Pier at sunset with Spanish Colonial Revival architecture, red tile roofs, and ocean views',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mold Inspection San Clemente CA | Certified Mold Testing & Air Quality',
+    description: 'Professional mold inspection and mold testing in San Clemente, CA. Free 20-minute consultation.',
+    images: ['https://ocmoldpros.com/images/san-clemente-pier.png'],
+  },
 }
 
 const neighborhoods = [
