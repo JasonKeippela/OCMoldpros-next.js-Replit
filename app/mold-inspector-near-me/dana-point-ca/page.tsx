@@ -59,8 +59,21 @@ export default function DanaPointPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in Dana Point, CA
             </h1>
-            <p className="text-xl text-gray-600 mb-6 max-w-3xl">
-              Dana Point&apos;s stunning harbor views and coastal lifestyle come with unique moisture challenges. The marine layer, salt air, and ocean humidity can create hidden condensation in homes—especially in bathrooms, closets, and poorly ventilated spaces. Whether you live near the bluffs or down by the harbor, our certified mold inspectors help you understand what&apos;s happening inside your walls before it becomes a bigger issue. We focus on facts, not fear—giving you clear answers and actionable next steps.
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Dana Point stands apart as one of Southern California&apos;s most distinctive coastal cities—known worldwide as the &quot;Dolphin &amp; Whale Watching Capital of the World®&quot; and recognized as the first Whale Heritage Site in the Americas. This is a place where ocean life is part of everyday living, with year-round sightings of whales and massive dolphin pods just offshore. At the center of it all is Dana Point Harbor, a vibrant hub for boating, sailing, paddleboarding, and waterfront dining, as well as access to Catalina Island. Just above the harbor, the Dana Point Headlands Conservation Area offers dramatic 150-foot coastal bluffs and scenic trails with panoramic ocean views.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Dana Point blends this natural beauty with upscale coastal living. Doheny State Beach provides consistent surf and family-friendly beach access, while the Lantern District delivers boutique shopping and a relaxed &quot;California cool&quot; atmosphere. The city is also home to luxury destinations like Waldorf Astoria Monarch Beach Resort &amp; Club and The Ritz-Carlton, Laguna Niguel, where coastal views meet high-end living. Whether it&apos;s a morning walk along the bluffs or a day on the water, Dana Point offers a lifestyle built around the ocean.
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏡 Coastal Moisture Risks in Homes and Boats in Dana Point</h2>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              Living in Dana Point means constant exposure to marine air, elevated humidity, and salt-rich moisture—especially for properties near the harbor, along the bluffs, or close to the shoreline. These conditions can create ideal environments for hidden mold growth inside homes, particularly in attics, wall cavities, subflooring, and HVAC systems where airflow is limited and moisture can linger.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              What many people don&apos;t realize is that these same conditions are often more extreme inside boats and yachts. Vessels docked in Dana Point Harbor are subject to continuous moisture exposure, temperature fluctuations, and confined cabin spaces—making them highly susceptible to mold growth behind panels, under cushions, in bilge areas, and within ventilation systems. Musty odors inside a boat are often an early indicator of microbial growth that can impact both air quality and long-term vessel condition.
+            </p>
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+              At OC Mold Pros, we specialize in identifying mold and air quality issues in both coastal homes and marine environments. Our inspection process is tailored to Dana Point&apos;s unique conditions, using detailed visual assessments and professional air sampling to detect hidden problems early. Whether you live near the harbor or keep a boat docked there, DM me to set up a free 20-minute consultation—we&apos;ll help you get clear answers and protect your environment.
             </p>
             <p className="text-lg text-ocean-700 font-medium mb-8">
               DM or call to schedule a free 20-minute consultation.
