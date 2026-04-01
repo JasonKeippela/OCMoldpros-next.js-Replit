@@ -59,6 +59,13 @@ export default function LagunaBeachPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mold Inspection & Mold Testing in Laguna Beach, CA
             </h1>
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/laguna-beach-cove.jpg" 
+                alt="Laguna Beach cove with turquoise water, sandy beach, palm trees, and coastal cliffs under blue sky" 
+                className="w-full h-auto"
+              />
+            </div>
             <p className="text-xl text-gray-600 mb-6 max-w-3xl">
               Laguna Beach&apos;s artistic charm and stunning coastline come with real moisture challenges. The marine layer, salt air, and canyon microclimates create perfect conditions for hidden mold growth—especially in older beach cottages, hillside homes, and properties with limited ventilation. Our certified inspectors understand the unique construction styles here and provide clear, unbiased assessments to help protect both your home and your health.
             </p>
