@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection Dana Point CA | Certified Mold Testing & Air Quality',
@@ -61,12 +60,9 @@ export default function DanaPointPage() {
               Mold Inspection & Mold Testing in Dana Point, CA
             </h1>
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
-              <Image 
+              <img 
                 src="/pier-dana-point.jpg" 
                 alt="Dana Point Pier at sunset with golden hour lighting and ocean views" 
-                width={1200}
-                height={600}
-                priority
                 className="w-full h-auto"
               />
             </div>
