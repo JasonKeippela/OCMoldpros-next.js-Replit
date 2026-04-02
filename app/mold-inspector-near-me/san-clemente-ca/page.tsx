@@ -226,29 +226,27 @@ export default function SanClementePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">San Clemente Reviews</h2>
               <p className="text-lg text-gray-600">What San Clemente homeowners say about OC Mold Pros</p>
             </div>
-            <div className="mb-8 text-center">
-              <p className="text-gray-600 max-w-3xl mx-auto">Jeslyn, highly mold sensitive and aware of San Clemente&apos;s humid conditions, reached out before renting a new place to live. OC Mold Pros conducted thermal imaging and air sampling across multiple properties until a mold free home was confirmed. Her confidence in the results led to a glowing five star review.</p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-400 mb-3">★★★★★</div>
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.&quot;</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">Jeslyn Rain</p>
-                  <p className="text-gray-500 text-sm">San Clemente, CA</p>
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">Jeslyn, highly mold sensitive and aware of San Clemente&apos;s humid conditions, reached out before renting a new place to live. OC Mold Pros conducted thermal imaging and air sampling across multiple properties until a mold free home was confirmed. Her confidence in the results led to a glowing five star review.</p>
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <div className="flex text-yellow-400 mb-3">★★★★★</div>
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.&quot;</p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-gray-900">Jeslyn Rain</p>
+                    <p className="text-gray-500 text-sm">San Clemente, CA</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="mb-8 text-center">
-              <p className="text-gray-600 max-w-3xl mx-auto">In Talega, Joshua faced prior water damage from a bathroom leak before he and his family purchased the home, it was professionally remediated. Concerned about lingering health impacts like headaches and fatigue, he called OC Mold Pros to verify a safe environment for he and his family. Our testing confirmed a clean home, providing peace of mind for his family.</p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-400 mb-3">★★★★★</div>
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.&quot;</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">Joshua Schneider</p>
-                  <p className="text-gray-500 text-sm">San Clemente, CA</p>
+              <div>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">In Talega, Joshua faced prior water damage from a bathroom leak before he and his family purchased the home, it was professionally remediated. Concerned about lingering health impacts like headaches and fatigue, he called OC Mold Pros to verify a safe environment for his family. Our testing confirmed a clean home, providing peace of mind for his family.</p>
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <div className="flex text-yellow-400 mb-3">★★★★★</div>
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.&quot;</p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-gray-900">Joshua Schneider</p>
+                    <p className="text-gray-500 text-sm">San Clemente, CA</p>
+                  </div>
                 </div>
               </div>
             </div>
