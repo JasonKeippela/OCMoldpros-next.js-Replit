@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Mold Inspection San Clemente CA | Certified Mold Testing & Air Quality',
-  description: 'Professional mold inspection and mold testing in San Clemente, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20 minute consultation.',
+  description: 'Professional mold inspection and mold testing in San Clemente, CA. Independent air sampling, moisture detection, and health-focused inspections. Free 20-minute consultation.',
   // Canonical v2 – services rollout
   alternates: { canonical: 'https://ocmoldpros.com/mold-inspector-near-me/san-clemente-ca' },
 }
@@ -39,7 +39,6 @@ const relatedServices = [
   { href: '/services/mold-inspection', label: 'Mold Inspection' },
   { href: '/services/indoor-air-testing', label: 'Indoor Air Testing' },
   { href: '/services', label: 'Moisture Detection' },
-  { href: '/pricing', label: 'Pricing' },
 ]
 
 export default function SanClementePage() {
@@ -226,7 +225,7 @@ export default function SanClementePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in San Clemente Today</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
-                Call for Free 20 Min Consultation
+                Call for Free 20-Min Consultation
               </a>
               <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
                 Request a Consultation
