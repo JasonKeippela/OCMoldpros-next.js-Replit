@@ -238,6 +238,11 @@ export default function SanClementePage() {
                   <p className="text-gray-500 text-sm">San Clemente, CA</p>
                 </div>
               </div>
+            </div>
+            <div className="mb-8 text-center">
+              <p className="text-gray-600 max-w-3xl mx-auto">In Talega, Joshua faced prior water damage from a bathroom leak before he and his family purchased the home, it was professionally remediated. Concerned about lingering health impacts like headaches and fatigue, he called OC Mold Pros to verify a safe environment for he and his family. Our testing confirmed a clean home, providing peace of mind for his family.</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-white p-6 rounded-xl shadow-sm">
                 <div className="flex text-yellow-400 mb-3">★★★★★</div>
                 <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.&quot;</p>
