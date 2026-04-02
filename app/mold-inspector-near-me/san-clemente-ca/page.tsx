@@ -83,9 +83,6 @@ export default function SanClementePage() {
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               At OC Mold Pros, we understand the unique environmental factors tied specifically to San Clemente&apos;s coastal climate and historic construction styles. Homes with stucco exteriors, older roofing systems, or aging plumbing can be especially vulnerable if moisture intrusion goes undetected. Our inspections are designed to go beyond the surface using detailed visual assessments and air sampling to identify issues that are often missed. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your indoor air quality, Call me to set up a free 20-minute consultation we&apos;ll help you get clear answers quickly.
             </p>
-            <p className="text-lg text-ocean-700 font-medium mb-8">
-              Call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for Free 20-Min Consultation
@@ -187,9 +184,6 @@ export default function SanClementePage() {
             <p className="text-lg text-gray-600 mb-6">
               Not sure what to call your area? No problem. If you&apos;re in San Clemente, we can help you decide whether an inspection makes sense based on symptoms, odors, visible growth, past leaks, or humidity especially in coastal and hillside homes where moisture can hide behind walls or under flooring.
             </p>
-            <p className="text-lg text-ocean-700 font-medium">
-              Call to schedule a free 20-minute consultation.
-            </p>
           </div>
         </section>
 
@@ -230,9 +224,6 @@ export default function SanClementePage() {
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in San Clemente Today</h2>
-            <p className="text-lg text-white font-medium mb-8">
-              Call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
                 Call for Free 20-Min Consultation
