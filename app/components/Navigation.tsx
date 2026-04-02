@@ -27,7 +27,7 @@ const serviceLinks = [
   { name: "Kitchen Inspection", slug: "kitchen-inspection" },
   { name: "Bathroom Inspection", slug: "bathroom-inspection" },
   { name: "Real Estate Inspection", slug: "real-estate-inspection" },
-  { name: "Thermal Imaging Inspection", slug: "thermal-imaging-inspection" },
+  { name: "Indoor Air Testing", slug: "indoor-air-testing" },
   { name: "Certified Mold Inspector", slug: "certified-mold-inspector" },
   { name: "Mold Inspection", slug: "mold-inspection" },
   { name: "Mold Testing", slug: "mold-testing" },
