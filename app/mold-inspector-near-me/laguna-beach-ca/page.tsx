@@ -35,7 +35,6 @@ const relatedServices = [
   { href: '/services/mold-inspection', label: 'Mold Inspection' },
   { href: '/services', label: 'Air Quality Testing' },
   { href: '/services', label: 'Moisture Detection' },
-  { href: '/services', label: 'Clearance / Post-Remediation Testing' },
 ]
 
 export default function LagunaBeachPage() {
