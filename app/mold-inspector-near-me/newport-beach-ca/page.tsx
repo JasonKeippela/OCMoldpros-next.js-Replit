@@ -81,9 +81,6 @@ export default function NewportBeachPage() {
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               At OC Mold Pros, we specialize in identifying mold and air quality concerns in both coastal homes and marine environments. Our inspections are tailored to Newport Beach&apos;s unique conditions, combining detailed visual assessments with professional air sampling to uncover hidden issues early. Whether you live on the water, near the coast, or keep a boat in the harbor, DM me to set up a free 20-minute consultation we&apos;ll help you get clear answers and protect your environment.
             </p>
-            <p className="text-lg text-ocean-700 font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for Free 20-Min Consultation
@@ -183,7 +180,7 @@ export default function NewportBeachPage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure if we cover your area? If you&apos;re in Newport Beach, we can help. DM or call to schedule a free 20-minute consultation.
+              Not sure if we cover your area? If you&apos;re in Newport Beach, we can help.
             </p>
           </div>
         </section>
@@ -225,9 +222,6 @@ export default function NewportBeachPage() {
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Newport Beach Today</h2>
-            <p className="text-lg text-white font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
                 Call for Free 20-Min Consultation

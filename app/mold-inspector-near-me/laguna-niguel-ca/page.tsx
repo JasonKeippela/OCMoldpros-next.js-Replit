@@ -61,9 +61,6 @@ export default function LagunaNiguelPage() {
             <p className="text-xl text-gray-600 mb-6 max-w-3xl">
               Laguna Niguel&apos;s hillside homes enjoy ocean views and coastal breezes—but that proximity to the coast also brings elevated humidity and moisture challenges. Many homes here were built in the 1980s and 90s, and aging plumbing, stucco issues, or inadequate ventilation can lead to hidden mold growth. Our certified inspectors help you understand what&apos;s happening inside your home with clear, unbiased findings and practical recommendations.
             </p>
-            <p className="text-lg text-ocean-700 font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for Free 20-Min Consultation
@@ -163,7 +160,7 @@ export default function LagunaNiguelPage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure if we cover your area? If you&apos;re in Laguna Niguel, we can help. DM or call to schedule a free 20-minute consultation.
+              Not sure if we cover your area? If you&apos;re in Laguna Niguel, we can help.
             </p>
           </div>
         </section>
@@ -205,9 +202,6 @@ export default function LagunaNiguelPage() {
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Laguna Niguel Today</h2>
-            <p className="text-lg text-white font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
                 Call for Free 20-Min Consultation

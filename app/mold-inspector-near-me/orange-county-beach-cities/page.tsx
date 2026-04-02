@@ -107,9 +107,6 @@ export default function BeachCitiesHubPage() {
             <p className="text-xl text-gray-600 mb-6 max-w-4xl">
               Living near the coast in Orange County offers incredible lifestyle benefits—but it also means your home is exposed to persistent marine layer humidity, salt air, and coastal fog that can create hidden moisture problems. From bathrooms and kitchens to HVAC systems, attics, and crawlspaces, moisture can accumulate in unexpected places. Past leaks, poor ventilation, and closed-up vacation homes add additional risk factors. Our certified mold inspectors provide independent, unbiased assessments—we don&apos;t perform remediation, so our findings focus purely on helping you understand what&apos;s happening in your home and what steps (if any) make sense.
             </p>
-            <p className="text-lg text-ocean-700 font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for Free 20-Min Consultation
@@ -200,7 +197,7 @@ export default function BeachCitiesHubPage() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Not sure what city page you need? Let&apos;s talk.</h2>
             <p className="text-xl text-ocean-100 mb-8">
-              DM or call to schedule a free 20-minute consultation and we&apos;ll help you decide what testing (if any) makes sense for your home.
+              We&apos;ll help you decide what testing (if any) makes sense for your home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">

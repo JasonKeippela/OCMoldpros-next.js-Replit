@@ -61,9 +61,6 @@ export default function HuntingtonBeachPage() {
             <p className="text-xl text-gray-600 mb-6 max-w-3xl">
               Surf City&apos;s coastal lifestyle comes with real moisture challenges for homeowners. The beach proximity, marine layer, and older tract homes built in the 1960s-70s create perfect conditions for hidden mold growth. Many homes have experienced past water leaks, aging plumbing, or inadequate ventilation that can lead to ongoing moisture issues. Our certified inspectors provide thorough, unbiased assessments to help you understand what&apos;s happening in your home.
             </p>
-            <p className="text-lg text-ocean-700 font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for Free 20-Min Consultation
@@ -163,7 +160,7 @@ export default function HuntingtonBeachPage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure if we cover your area? If you&apos;re in Huntington Beach, we can help. DM or call to schedule a free 20-minute consultation.
+              Not sure if we cover your area? If you&apos;re in Huntington Beach, we can help.
             </p>
           </div>
         </section>
@@ -205,9 +202,6 @@ export default function HuntingtonBeachPage() {
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Huntington Beach Today</h2>
-            <p className="text-lg text-white font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
                 Call for Free 20-Min Consultation

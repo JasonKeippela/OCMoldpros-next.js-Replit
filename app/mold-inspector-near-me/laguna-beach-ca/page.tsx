@@ -78,9 +78,6 @@ export default function LagunaBeachPage() {
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
               Additionally, many Laguna Beach homes feature custom architecture, older construction, or high-end materials that require a more nuanced inspection approach. Even well-maintained properties can develop concealed moisture issues due to coastal exposure and limited airflow in certain structural areas. At OC Mold Pros, we tailor our inspections specifically for environments like Laguna Beach—using detailed visual assessments and professional air sampling to identify issues that standard inspections often miss. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your home&apos;s air quality, DM me to set up a free 20-minute consultation we&apos;ll help you get clear answers quickly.
             </p>
-            <p className="text-lg text-ocean-700 font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for Free 20-Min Consultation
@@ -180,7 +177,7 @@ export default function LagunaBeachPage() {
               ))}
             </div>
             <p className="text-lg text-gray-600 mb-6">
-              Not sure if we cover your area? If you&apos;re in Laguna Beach, we can help. DM or call to schedule a free 20-minute consultation.
+              Not sure if we cover your area? If you&apos;re in Laguna Beach, we can help.
             </p>
           </div>
         </section>
@@ -222,9 +219,6 @@ export default function LagunaBeachPage() {
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in Laguna Beach Today</h2>
-            <p className="text-lg text-white font-medium mb-8">
-              DM or call to schedule a free 20-minute consultation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
                 Call for Free 20-Min Consultation
