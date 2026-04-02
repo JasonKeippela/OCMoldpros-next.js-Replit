@@ -33,6 +33,7 @@ const relatedServices = [
   { href: '/services/mold-inspection', label: 'Mold Inspection' },
   { href: '/services', label: 'Air Quality Testing' },
   { href: '/services', label: 'Moisture Detection' },
+  { href: '/pricing', label: 'Pricing' },
 ]
 
 export default function SealBeachPage() {
