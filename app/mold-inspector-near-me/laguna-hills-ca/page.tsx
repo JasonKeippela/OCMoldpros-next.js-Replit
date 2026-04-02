@@ -32,7 +32,7 @@ const nearbyBeachCities = [
 ]
 
 const relatedServices = [
-  { href: '/services', label: 'Mold Inspection' },
+  { href: '/services/mold-inspection', label: 'Mold Inspection' },
   { href: '/services', label: 'Air Quality Testing' },
   { href: '/services', label: 'Moisture Detection' },
   { href: '/services', label: 'Clearance / Post-Remediation Testing' },
