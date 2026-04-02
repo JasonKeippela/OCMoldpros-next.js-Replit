@@ -228,7 +228,7 @@ export default function SanClementePage() {
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               <div>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">Jeslyn, highly mold sensitive and aware of San Clemente&apos;s humid conditions, reached out before renting a new place to live. OC Mold Pros conducted thermal imaging and air sampling across multiple properties until a mold free home was confirmed. Her confidence in the results led to a glowing five star review.</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">Jeslyn, is a mold sensitive client aware of San Clemente&apos;s humid conditions, reached out before finding a new home. OC Mold Pros conducted thermal imaging and air sampling across multiple properties until a mold free home was confirmed. Her confidence in the results led to a glowing five star review.</p>
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <div className="flex text-yellow-400 mb-3">★★★★★</div>
                   <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.&quot;</p>
