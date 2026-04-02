@@ -80,14 +80,14 @@ export default function SanClementePage() {
               That same coastal environment that makes San Clemente so desirable also creates conditions that require a more specialized approach to home health. The marine layer, salt air, and consistent humidity especially in neighborhoods near the pier, Trestles, and North Beach, can lead to elevated moisture levels inside homes. Over time, this can contribute to hidden mold growth in attics, crawlspaces, behind walls, and within HVAC systems, particularly in older homes or properties with limited ventilation.
             </p>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-              At OC Mold Pros, we understand the unique environmental factors tied specifically to San Clemente&apos;s coastal climate and historic construction styles. Homes with stucco exteriors, older roofing systems, or aging plumbing can be especially vulnerable if moisture intrusion goes undetected. Our inspections are designed to go beyond the surface using detailed visual assessments and air sampling to identify issues that are often missed. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your indoor air quality, Call me to set up a free 20 minute consultation we&apos;ll help you get clear answers quickly. See our <Link href="/pricing" className="text-ocean-600 hover:text-ocean-700 underline font-medium">inspection pricing</Link> and schedule your appointment today.
+              At OC Mold Pros, we understand the unique environmental factors tied specifically to San Clemente&apos;s coastal climate and historic construction styles. Homes with stucco exteriors, older roofing systems, or aging plumbing can be especially vulnerable if moisture intrusion goes undetected. Our inspections are designed to go beyond the surface using detailed visual assessments and air sampling to identify issues that are often missed. If you&apos;ve noticed musty odors, unexplained health symptoms, or simply want confidence in your indoor air quality, Call me to set up a free 20 minute consultation we&apos;ll help you get clear answers quickly. See our inspection pricing and schedule your appointment today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
                 Call for a Free 20 Min Consultation
               </a>
               <Link href="/contact" className="px-8 py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
-                Request a Consultation
+                Book your free consultation
               </Link>
             </div>
           </div>
@@ -225,10 +225,10 @@ export default function SanClementePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in San Clemente Today</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
-                Call for Free 20-Min Consultation
+                Call for Free 20 Min Consultation
               </a>
               <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-                Request a Consultation
+                Book your free Consultation
               </Link>
             </div>
             <p className="text-ocean-200">Serving San Clemente and all of Orange County, California</p>

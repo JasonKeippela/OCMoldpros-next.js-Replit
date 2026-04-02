@@ -183,7 +183,7 @@ function WhyChooseUs() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Your Free Quote</h3>
             <p className="text-gray-600 mb-6">Call us today for a free consultation and accurate pricing for your mold inspection needs.</p>
             <a href="tel:9493715934" className="block w-full py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center mb-4">
-              Call for a free 20-min consultation
+              Call for a free 20 min consultation
             </a>
             <Link href="/contact" className="block w-full py-4 bg-white border-2 border-gray-300 text-gray-900 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg text-center">
               Book your free consultation
