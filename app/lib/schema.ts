@@ -120,11 +120,11 @@ export const SERVICES_CATALOG: ServiceCategory[] = [
     categoryName: 'Environmental Consultant',
     items: [
       {
-        name: 'Indoor Air Testing',
-        slug: 'indoor-air-testing',
-        serviceType: 'Indoor air quality testing',
+        name: 'Thermal Imaging Inspection',
+        slug: 'thermal-imaging-inspection',
+        serviceType: 'Thermal imaging inspection',
         category: 'Environmental Consultant',
-        description: 'Testing indoor air samples to detect mold spores and evaluate overall indoor air quality.',
+        description: 'Using thermal imaging technology to detect moisture and temperature variations that indicate hidden mold and water intrusion issues.',
       },
       {
         name: 'Certified Mold Inspector',
