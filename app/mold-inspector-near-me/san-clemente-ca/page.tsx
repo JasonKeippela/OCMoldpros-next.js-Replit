@@ -244,6 +244,14 @@ export default function SanClementePage() {
                 </div>
               </div>
             </div>
+            <div className="max-w-4xl mx-auto mt-10">
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Case Study</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  In Talega, San Clemente, a client contacted OC Mold Pros due to a family member’s chronic colds. The home looked pristine, yet our inspection revealed two hidden issues. First, we discovered a long-overdue furnace filter, prompting professional furnace inspection and cleaning. Second, we identified a bathroom vanity with long-term moisture from leaks. The homeowner now has a clear path: a furnace cleanup and remediating the vanity—ensuring a healthier home environment.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
