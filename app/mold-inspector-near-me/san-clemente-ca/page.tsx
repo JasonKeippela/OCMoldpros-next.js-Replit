@@ -64,7 +64,7 @@ export default function SanClementePage() {
             </h1>
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="/pier-dana-point.jpg" 
+                src="/pier-free-bixby.jpg" 
                 alt="San Clemente Pier at sunset with golden hour lighting and ocean views" 
                 className="w-full h-auto"
               />
@@ -143,46 +143,38 @@ export default function SanClementePage() {
           </div>
         </section>
 
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Mold Testing & Indoor Air Quality Testing</h2>
-            <p className="text-lg text-gray-600 mb-4">
-              Air quality testing measures the concentration and types of mold spores present in your indoor environment compared to outdoor baseline levels. This is particularly valuable if you&apos;re experiencing unexplained allergies, respiratory symptoms, or musty odors but can&apos;t locate visible mold.
-            </p>
-            <p className="text-lg text-gray-600">
-              Our independent lab analysis provides objective data about what&apos;s in your air helping you make informed decisions about your home and health.
-            </p>
-          </div>
-        </section>
-
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Buying or Selling a Home in San Clemente?</h2>
-            <p className="text-lg text-gray-600 mb-4">
-              A pre-purchase mold inspection gives buyers confidence and negotiating power. For sellers, addressing mold concerns proactively can prevent deals from falling through and demonstrate transparency to potential buyers.
-            </p>
-            <p className="text-lg text-gray-600">
-              We provide clear, professional reports that realtors and buyers can understand with no unnecessary jargon or scare tactics.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Communities We Serve in San Clemente</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
-              {neighborhoods.map((neighborhood, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-ocean-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">{neighborhood}</span>
-                </div>
-              ))}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">San Clemente Reviews</h2>
+              <p className="text-lg text-gray-600">What San Clemente homeowners say about OC Mold Pros</p>
             </div>
-            <p className="text-lg text-gray-600 mb-6">
-              Not sure what to call your area? No problem. If you&apos;re in San Clemente, we can help you decide whether an inspection makes sense based on symptoms, odors, visible growth, past leaks, or humidity especially in coastal and hillside homes where moisture can hide behind walls or under flooring.
-            </p>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex text-yellow-400 mb-3">★★★★★</div>
+                <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.&quot;</p>
+                <div className="border-t pt-4">
+                  <p className="font-semibold text-gray-900">Jeslyn Rain</p>
+                  <p className="text-gray-500 text-sm">San Clemente, CA</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex text-yellow-400 mb-3">★★★★★</div>
+                <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.&quot;</p>
+                <div className="border-t pt-4">
+                  <p className="font-semibold text-gray-900">Joshua Schneider</p>
+                  <p className="text-gray-500 text-sm">San Clemente, CA</p>
+                </div>
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto mt-10">
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Case Study</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  In Talega, San Clemente, a client contacted OC Mold Pros due to a family member’s chronic colds. The home looked pristine, yet our inspection revealed two hidden issues. First, we discovered a long-overdue furnace filter, prompting professional furnace inspection and cleaning. Second, we identified a bathroom vanity with long-term moisture from leaks. The homeowner now has a clear path: a furnace cleanup and remediating the vanity—ensuring a healthier home environment.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -220,47 +212,12 @@ export default function SanClementePage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">San Clemente Reviews</h2>
-              <p className="text-lg text-gray-600">What San Clemente homeowners say about OC Mold Pros</p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-400 mb-3">★★★★★</div>
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Jason and OC Mold Pros did a fantastic job. He was courteous, timely and provided a thorough inspection at my home in San Clemente! I highly recommend OC Mold Pros. My experience was priceless.&quot;</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">Jeslyn Rain</p>
-                  <p className="text-gray-500 text-sm">San Clemente, CA</p>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="flex text-yellow-400 mb-3">★★★★★</div>
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">&quot;Had such a peaceful stress relieving experience with Jason. He had a few different tools to use, and answered all my questions for my mold inspection at my home in San Clemente. I recommend OC Mold Pros to anyone questioning if they have indoor air quality issues or feel any fatigue or energy issues.&quot;</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">Joshua Schneider</p>
-                  <p className="text-gray-500 text-sm">San Clemente, CA</p>
-                </div>
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto mt-10">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Case Study</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  In Talega, San Clemente, a client contacted OC Mold Pros due to a family member’s chronic colds. The home looked pristine, yet our inspection revealed two hidden issues. First, we discovered a long-overdue furnace filter, prompting professional furnace inspection and cleaning. Second, we identified a bathroom vanity with long-term moisture from leaks. The homeowner now has a clear path: a furnace cleanup and remediating the vanity—ensuring a healthier home environment.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="py-20 bg-ocean-700">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Schedule Your Mold Inspection in San Clemente Today</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
-                Call for Free 20 Min Consultation
+                Call for Free 20-Min Consultation
               </a>
               <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
                 Book your free Consultation
