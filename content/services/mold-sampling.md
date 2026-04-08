@@ -104,12 +104,12 @@ Provide clear, actionable next steps
 
 If you’re dealing with unexplained health symptoms, musty odors, or past water damage, professional mold sampling can provide the clarity you need.
 
-DM me or call for a free 20-minute consultation:
+Call for a free 20 minute consultation:
 📞 949-371-5934
 
 Let’s make sure your home is a safe place to live.
 
-## Mold Sampling
+## Why do Mold Sampling
 
 Mold sampling looks at what you can't see. We take air samples and, when needed, surface samples, then compare indoor results to outdoor control samples.
 

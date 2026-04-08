@@ -64,7 +64,7 @@ export default function SanClementePage() {
             </h1>
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="/pier-dana-point.jpg" 
+                src="/san-clemente-pier.jpg" 
                 alt="San Clemente Pier at sunset with golden hour lighting and ocean views" 
                 className="w-full h-auto"
               />
