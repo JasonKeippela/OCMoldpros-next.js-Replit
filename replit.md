@@ -9,21 +9,31 @@ app/
   layout.tsx          # Root layout with Navigation and Footer
   page.tsx            # Homepage with hero, services, FAQ, etc.
   globals.css         # Tailwind CSS with custom ocean theme + typography plugin
-  sitemap.ts          # Dynamic sitemap for all pages
+  sitemap.ts          # Dynamic sitemap for all pages (uses servicesData.ts)
   lib/
     cities.ts         # City data for 33 Orange County cities
     expandServiceMarkdown.ts  # Expands service markdown with shared content block
     canonical.ts      # Shared canonical URL builder
+    extractFAQ.ts     # Shared FAQ extractor for service pages
     siteConfig.ts     # Centralized business data (name, phone, address, areaServed, sameAs)
     schema.ts         # ProfessionalService JSON-LD schema builder for service pages
   components/
-    Navigation.tsx    # Sticky nav with dropdowns for Services + Service Areas
+    Navigation.tsx    # Sticky nav with mega menu (3 categories) + Service Areas dropdown
     Footer.tsx        # Site-wide footer with links
     ServiceMarkdown.tsx  # MDX renderer for service page markdown content
   about/page.tsx      # About page
   services/
-    page.tsx          # Services index with all 22 service links + ItemList schema
-    [slug]/page.tsx   # Dynamic service pages (22 services) with BreadcrumbList + FAQPage schema
+    page.tsx          # Services index: 3-category layout with category cards + service links
+    [slug]/page.tsx   # Legacy service pages (301 redirect via next.config.ts)
+  home-inspector/
+    page.tsx          # Home Inspector category landing page
+    services/[slug]/page.tsx  # 9 home inspector service pages
+  environmental-consultant/
+    page.tsx          # Environmental Consultant category landing page
+    services/[slug]/page.tsx  # 9 environmental consultant service pages
+  water-damage-restoration-service/
+    page.tsx          # Water Damage Restoration Service category landing page
+    services/[slug]/page.tsx  # 4 restoration service pages
   process/page.tsx    # 4-step process page
   pricing/page.tsx    # Pricing page
   blog/page.tsx       # Learn/Blog page
@@ -31,9 +41,11 @@ app/
   mold-inspector-near-me/
     page.tsx          # Mold inspector near me overview with city grid
     [city]/page.tsx   # Dynamic city landing pages (33 cities)
+data/
+  servicesData.ts     # Single source of truth: 3 categories × 22 services with canonical URLs
 content/
   services/
-    services.config.ts   # Single source of truth for 22 services (name, slug, meta)
+    services.config.ts   # Legacy service config (still used by /services/[slug] pages)
     *.md                 # 22 markdown files for service pages
 public/
   robots.txt          # Robots file

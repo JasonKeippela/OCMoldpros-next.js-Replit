@@ -1,59 +1,32 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { services } from '@/content/services/services.config'
+import { SERVICE_CATEGORIES } from '@/data/servicesData'
 
 export const metadata: Metadata = {
-  title: 'Mold Inspection Services | OC Mold Pros - Orange County',
-  description: 'Comprehensive mold inspection services in Orange County: air quality testing, moisture detection, thermal imaging. Expert analysis & detailed reporting. Book now!',
-  // Canonical v2 – services rollout
+  title: 'Mold Inspection Services | OC Mold Pros – Orange County, CA',
+  description: 'Comprehensive mold inspection and testing services in Orange County, CA. Home inspections, environmental consulting, and water damage restoration support. Call 949-371-5934.',
   alternates: { canonical: 'https://ocmoldpros.com/services' },
 }
 
-const serviceHighlights = [
-  {
-    title: 'Visual Mold Inspection',
-    link: '/services/physical-and-visual-inspection',
-    description: 'Every San Clemente mold inspector with OC Mold Pros begins with a detailed visual assessment of all accessible areas of the property. This step allows us to identify visible mold growth, staining, discoloration, water damage, and building conditions that commonly contribute to mold problems. We inspect interior living areas, bedrooms, closets, bathrooms, kitchens, laundry rooms, attics, crawlspaces, garages, utility rooms, windows, doors, baseboards, transition points, exterior walls, roofing components, and drainage areas. Rather than just looking for obvious mold, we\'re trained to recognize subtle indicators of moisture intrusion and mold activity that are often overlooked, such as bubbling paint, warped materials, past repairs, or microbial staining.',
-    features: ['Complete property walkthrough', 'Identification of visible mold', 'Water damage assessment', 'Detailed photo documentation']
-  },
-  {
-    title: 'Moisture Detection',
-    description: 'Mold cannot grow without moisture, which is why moisture detection is a critical part of every inspection. OC Mold Pros is considered an Orange County mold specialist. Using infrared thermal imaging cameras and professional-grade moisture meters, we evaluate walls, ceilings, flooring, and structural components for hidden moisture that may not be visible to the naked eye. This process allows us to identify concealed leaks behind walls or ceilings, detect active or intermittent moisture intrusion, confirm elevated moisture levels in building materials, and pinpoint areas that may support future mold growth. Thermal imaging helps us locate temperature differentials that suggest moisture, while moisture meters allow us to verify and quantify those findings. This combination reduces guesswork and helps ensure nothing important is missed.',
-    features: ['Infrared thermal imaging', 'Pin and pinless moisture meters', 'Detection of hidden leaks', 'Moisture mapping']
-  },
-  {
-    title: 'Air Quality Testing',
-    description: 'When appropriate, and as part of our mold inspection San Clemente and mold inspection Orange County services, we perform air quality testing to evaluate the presence and concentration of airborne mold spores inside the home. Air samples are collected strategically to compare indoor air to outdoor baseline levels, identify elevated mold spore counts, determine the types of mold present, and assess whether mold activity is localized or widespread. Air sampling is especially valuable when mold is suspected but not visibly present, or when occupants are experiencing symptoms without a clear source. The results provide objective data that helps guide next steps and remediation decisions.',
-    features: ['Indoor and outdoor sampling', 'Spore trap analysis', 'Independent lab testing', 'Species identification']
-  },
-  {
-    title: 'Surface Sampling',
-    description: 'In situations where visible growth or suspicious staining is present, surface sampling may be performed to identify the specific type of mold on a material. Surface samples help confirm whether visible growth is mold, identify mold species present on surfaces, support remediation planning and documentation, and provide additional clarity when air results are elevated. Sampling is performed carefully and selectively, based on findings and the goals of the inspection — not as a one-size-fits-all approach.',
-    features: ['Tape lift samples', 'Swab sampling', 'Lab analysis and identification', 'Health risk assessment']
-  },
-  {
-    title: 'HVAC System Inspection',
-    description: 'Because HVAC systems can circulate mold spores throughout a home, we include an evaluation of accessible HVAC components as part of our inspection. This includes supply and return vents, air handlers and accessible ductwork, condensation lines and drip pans, and signs of moisture, dust buildup, or microbial growth. HVAC-related issues are a common contributor to poor indoor air quality and elevated mold counts, especially in humid coastal environments like Orange County. Even though we do not offer mold removal San Clemente services we have industry partners that we can confidently refer to you. ',
-    features: ['Ductwork inspection', 'Air handler assessment', 'Filter and coil check', 'Condensation evaluation']
-  },
-  {
-    title: 'Comprehensive Reporting',
-    description: 'After the mold inspection services San Clemente inspection is complete, we provide a clear, easy-to-understand report that summarizes our findings and outlines recommended next steps. Your report includes inspection observations from mold testing San Clemente and documented findings from mold sampling Orange County, moisture and environmental insights, laboratory results (when sampling is performed), photos and supporting details, and practical recommendations moving forward. Our goal is clarity — not overwhelm. We take the time to explain what the findings mean, whether conditions appear active or historical, and what actions (if any) should be considered next.',
-    features: ['Detailed written report', 'Photo documentation', 'Lab results included', 'Clear recommendations']
-  }
-]
+const categoryIcons: Record<string, string> = {
+  'home-inspector': '🏠',
+  'environmental-consultant': '🔬',
+  'water-damage-restoration-service': '💧',
+}
 
 export default function ServicesPage() {
   const itemListSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "OC Mold Pros Services",
-    "itemListElement": services.map((service, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": service.name,
-      "url": `https://ocmoldpros.com${service.path}`
-    }))
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'OC Mold Pros Services',
+    itemListElement: SERVICE_CATEGORIES.flatMap((cat, catIdx) =>
+      cat.services.map((svc, svcIdx) => ({
+        '@type': 'ListItem',
+        position: catIdx * 10 + svcIdx + 1,
+        name: svc.name,
+        url: `https://ocmoldpros.com${svc.canonicalHref}`,
+      }))
+    ),
   }
 
   return (
@@ -75,79 +48,69 @@ export default function ServicesPage() {
 
       <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Mold Inspection Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
-            OC Mold Pros offers comprehensive mold inspection and testing services designed to identify mold problems and protect your family&apos;s health. We use advanced technology and proven methods to deliver accurate results.
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Mold Inspection & Testing Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mb-8">
+            OC Mold Pros provides independent mold inspection and testing services across Orange County and San Clemente, CA. We don&apos;t remediate — we inspect. That means our findings are always unbiased, and our job is to give you accurate data and clear next steps.
           </p>
-        </div>
-      </section>
-
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">All Services</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {services.map((service) => (
-              <Link
-                key={service.slug}
-                href={service.path}
-                className="block p-4 bg-ocean-50 rounded-lg hover:bg-ocean-100 transition-colors border border-ocean-100"
-              >
-                <span className="text-gray-900 font-medium">{service.name}</span>
-              </Link>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg text-center">
+              Call 949-371-5934
+            </a>
+            <Link href="/contact" className="px-8 py-4 border-2 border-ocean-600 text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg text-center">
+              Free 20-Min Consultation
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="space-y-12">
-            {serviceHighlights.map((service, i) => {
-              const content = (
-                <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div className="md:col-span-2">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h2>
-                      <p className="text-gray-600 text-lg">{service.description}</p>
-                    </div>
-                    <div className="bg-ocean-50 rounded-lg p-6">
-                      <h3 className="font-semibold text-ocean-800 mb-3">What&apos;s Included:</h3>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, j) => (
-                          <li key={j} className="flex items-start gap-2 text-gray-700">
-                            <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )
-              return service.link ? (
-                <Link key={i} href={service.link} className="block">
-                  {content}
+      {SERVICE_CATEGORIES.map((cat) => (
+        <section key={cat.slug} className="py-16 border-b border-gray-100 last:border-0">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="flex items-start gap-4 mb-3">
+              <span className="text-3xl" aria-hidden="true">{categoryIcons[cat.slug]}</span>
+              <div>
+                <Link href={`/${cat.slug}`} className="group">
+                  <h2 className="text-2xl font-bold text-gray-900 group-hover:text-ocean-700 transition-colors">
+                    {cat.name}
+                    <span className="ml-2 text-ocean-600 text-lg font-normal opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  </h2>
                 </Link>
-              ) : (
-                <div key={i}>{content}</div>
-              )
-            })}
+                <p className="text-gray-600 mt-1">{cat.description}</p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+              {cat.services.map((svc) => (
+                <Link
+                  key={svc.slug}
+                  href={svc.canonicalHref}
+                  className="block p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-ocean-300 transition-all"
+                >
+                  <span className="text-gray-900 font-medium block mb-1">{svc.name}</span>
+                  <span className="text-gray-500 text-sm">{svc.shortDescription}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Link href={`/${cat.slug}`} className="text-sm text-ocean-600 font-medium hover:text-ocean-700">
+                View all {cat.name} services →
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Professional Mold Inspection Matters</h2>
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
             {[
               { title: 'Protect Your Health', desc: 'Mold exposure can cause respiratory issues, allergies, and other health problems. Professional inspection helps identify risks early.' },
               { title: 'Preserve Property Value', desc: 'Unaddressed mold can cause structural damage and significantly reduce your property value. Early detection saves money.' },
-              { title: 'Peace of Mind', desc: 'Know exactly what you are dealing with. Our detailed reports give you the information you need to make informed decisions.' }
+              { title: 'Peace of Mind', desc: 'Know exactly what you are dealing with. Our detailed reports give you the information you need to make informed decisions.' },
             ].map((item, i) => (
-              <div key={i}>
+              <div key={i} className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
@@ -160,14 +123,14 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Inspection Today</h2>
           <p className="text-xl text-ocean-100 mb-8">
-            Contact us to learn more about our services or schedule your mold inspection.
+            Call for a free 20-minute consultation. Serving Orange County and San Clemente, CA.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:9493715934" className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg">
-              Call for FREE Consultation
+              Call 949-371-5934
             </a>
             <Link href="/contact" className="px-8 py-4 bg-ocean-600 text-white border-2 border-white rounded-lg hover:bg-ocean-800 transition-colors font-semibold text-lg">
-              Get Free Quote now
+              Get Free Quote
             </Link>
           </div>
         </div>

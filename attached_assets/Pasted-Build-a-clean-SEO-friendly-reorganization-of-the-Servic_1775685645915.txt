@@ -1,0 +1,505 @@
+Build a clean, SEO-friendly reorganization of the **Services navigation** for **OC Mold Pros** in **Next.js**, but **do not delete, rename, or remove any existing pages**. Keep all current service pages intact and only change **how they are organized, linked, and canonically structured in the navigation and services section**.
+
+## Primary objective
+
+I already have existing service pages. I want you to **reorganize the navigation, internal linking, and canonical URL structure** so the site is easier to use and better aligned with my Google Business Profile categories.
+
+## Critical constraints (must follow)
+
+* **Keep all existing pages intact**
+* **Do not break existing URLs**
+* **Do not remove or overwrite current service pages**
+* **Do not create a destructive refactor**
+* Existing service pages must remain live and accessible
+* Only improve **navigation, internal linking, URL structure, and presentation**
+* If new canonical URLs are introduced, implement **proper 301 redirects**
+* Avoid duplicate content and redirect chains
+
+---
+
+## New Services organization
+
+### 1. Home Inspector
+
+* Mold Sampling
+* New Construction Inspections
+* Rental Property Inspections
+* Mold Prevention
+* Physical and Visual Inspection
+* HVAC System Inspection
+* Kitchen Inspection
+* Bathroom Inspection
+* Real Estate Inspection
+
+### 2. Environmental Consultant
+
+* Indoor Air Testing
+* Certified Mold Inspector
+* Mold Inspection
+* Mold Testing
+* ERMI Testing
+* Thermal Imaging Inspection
+* Indoor Allergen Sampling
+* Mycotoxin Testing
+* Custom Mold Action Plans
+
+### 3. Water Damage Restoration Service
+
+* Mold Cleaning
+* Mold Damage Restoration
+* Mold Mitigation
+* Mold Remediation
+
+---
+
+## Required routing structure
+
+All final canonical service URLs must be **nested under their parent category**.
+
+### Canonical URL pattern
+
+Use this exact structure:
+
+`/{category-slug}/services/{service-slug}`
+
+Example:
+
+* `/home-inspector/services/mold-sampling`
+* `/environmental-consultant/services/mold-inspection`
+* `/water-damage-restoration-service/services/mold-remediation`
+
+### Category landing pages
+
+Use these category URLs:
+
+* `/home-inspector`
+* `/environmental-consultant`
+* `/water-damage-restoration-service`
+
+### Important note
+
+Do **not** use `/services/mold-sampling` as the final canonical structure.
+The category must always be included in the URL path for individual service pages.
+
+---
+
+## Required implementation steps
+
+### Step 1 — Discover existing routes first
+
+Before changing anything:
+
+* Scan the current Next.js project
+* Identify all existing service-related routes and slugs
+* Identify which pages are currently linked in navigation
+* Build a route audit that maps:
+
+  * existing URL
+  * page title
+  * service name
+  * parent category
+  * final canonical URL
+
+### Step 2 — Preserve content, improve structure
+
+* Do not delete existing pages
+* Keep current service content available
+* Reorganize how services are linked in navigation and on the services landing area
+* Use existing pages wherever possible
+* Only add new category landing pages, canonical route structure, and redirects as needed
+
+### Step 3 — Create a centralized service mapping file
+
+Create a single source of truth such as:
+
+`/data/servicesData.ts`
+
+Suggested structure:
+
+* categoryName
+* categorySlug
+* categoryDescription
+* categoryHref
+* services: array of
+
+  * serviceName
+  * serviceSlug
+  * existingHref
+  * canonicalHref
+  * shortDescription
+  * redirectFrom: string[]
+
+This file should drive:
+
+* desktop Services dropdown / mega menu
+* mobile accordion menu
+* services landing page
+* category landing pages
+* service links
+* redirect documentation
+
+---
+
+## Navigation requirements
+
+* Keep a single top-level nav item called **Services**
+* Replace the current cluttered list with a cleaner structure based on the 3 categories above
+* Desktop: polished dropdown or mega menu showing the 3 categories and their services
+* Mobile: accordion or nested expandable menu
+* Category links should point to:
+
+  * `/home-inspector`
+  * `/environmental-consultant`
+  * `/water-damage-restoration-service`
+* Service links should point to the new canonical nested URLs:
+
+  * `/{category-slug}/services/{service-slug}`
+
+---
+
+## Main Services landing page
+
+Create or improve `/services` so it:
+
+* introduces the three service categories
+* shows each category as a card or section
+* lists the services under each category
+* links to the canonical service URLs
+* includes trust-building content for OC Mold Pros
+* includes CTAs:
+
+  * **Call 949-371-5934**
+  * **Call for a free 20-minute consultation**
+
+---
+
+## Category landing pages
+
+Create category landing pages if they do not already exist:
+
+* `/home-inspector`
+* `/environmental-consultant`
+* `/water-damage-restoration-service`
+
+Each page should:
+
+* introduce the category
+* explain the category clearly
+* list and link to related service pages
+* strengthen internal linking
+* include CTAs:
+
+  * **Call 949-371-5934**
+  * **Call for a free 20-minute consultation**
+
+---
+
+## Preferred canonical URL structure
+
+### Home Inspector
+
+* Mold Sampling → `/home-inspector/services/mold-sampling`
+* New Construction Inspections → `/home-inspector/services/new-construction-inspections`
+* Rental Property Inspections → `/home-inspector/services/rental-property-inspections`
+* Mold Prevention → `/home-inspector/services/mold-prevention`
+* Physical and Visual Inspection → `/home-inspector/services/physical-and-visual-inspection`
+* HVAC System Inspection → `/home-inspector/services/hvac-system-inspection`
+* Kitchen Inspection → `/home-inspector/services/kitchen-inspection`
+* Bathroom Inspection → `/home-inspector/services/bathroom-inspection`
+* Real Estate Inspection → `/home-inspector/services/real-estate-inspection`
+
+### Environmental Consultant
+
+* Indoor Air Testing → `/environmental-consultant/services/indoor-air-testing`
+* Certified Mold Inspector → `/environmental-consultant/services/certified-mold-inspector`
+* Mold Inspection → `/environmental-consultant/services/mold-inspection`
+* Mold Testing → `/environmental-consultant/services/mold-testing`
+* ERMI Testing → `/environmental-consultant/services/ermi-testing`
+* Thermal Imaging Inspection → `/environmental-consultant/services/thermal-imaging-inspection`
+* Indoor Allergen Sampling → `/environmental-consultant/services/indoor-allergen-sampling`
+* Mycotoxin Testing → `/environmental-consultant/services/mycotoxin-testing`
+* Custom Mold Action Plans → `/environmental-consultant/services/custom-mold-action-plans`
+
+### Water Damage Restoration Service
+
+* Mold Cleaning → `/water-damage-restoration-service/services/mold-cleaning`
+* Mold Damage Restoration → `/water-damage-restoration-service/services/mold-damage-restoration`
+* Mold Mitigation → `/water-damage-restoration-service/services/mold-mitigation`
+* Mold Remediation → `/water-damage-restoration-service/services/mold-remediation`
+
+---
+
+## Proposed old URL to new canonical URL mapping
+
+I do not know the exact current slugs in the codebase, so first inspect the existing project and then map any matching old routes to the correct new canonical nested URL.
+
+### Home Inspector mappings
+
+* `/mold-sampling-service` → `/home-inspector/services/mold-sampling`
+
+* `/mold-sampling` → `/home-inspector/services/mold-sampling`
+
+* `/services/mold-sampling-service` → `/home-inspector/services/mold-sampling`
+
+* `/new-construction-inspection` → `/home-inspector/services/new-construction-inspections`
+
+* `/new-construction-inspections` → `/home-inspector/services/new-construction-inspections`
+
+* `/services/new-construction-inspection` → `/home-inspector/services/new-construction-inspections`
+
+* `/rental-property-inspection` → `/home-inspector/services/rental-property-inspections`
+
+* `/rental-property-inspections` → `/home-inspector/services/rental-property-inspections`
+
+* `/services/rental-property-inspection` → `/home-inspector/services/rental-property-inspections`
+
+* `/mold-prevention` → `/home-inspector/services/mold-prevention`
+
+* `/mold-prevention-consultation` → `/home-inspector/services/mold-prevention`
+
+* `/services/mold-prevention-consultation` → `/home-inspector/services/mold-prevention`
+
+* `/physical-visual-inspection` → `/home-inspector/services/physical-and-visual-inspection`
+
+* `/physical-and-visual-inspection` → `/home-inspector/services/physical-and-visual-inspection`
+
+* `/visual-inspection` → `/home-inspector/services/physical-and-visual-inspection`
+
+* `/services/visual-inspection` → `/home-inspector/services/physical-and-visual-inspection`
+
+* `/hvac-inspection` → `/home-inspector/services/hvac-system-inspection`
+
+* `/hvac-system-inspection` → `/home-inspector/services/hvac-system-inspection`
+
+* `/services/hvac-inspection` → `/home-inspector/services/hvac-system-inspection`
+
+* `/kitchen-inspection` → `/home-inspector/services/kitchen-inspection`
+
+* `/services/kitchen-inspection` → `/home-inspector/services/kitchen-inspection`
+
+* `/bathroom-inspection` → `/home-inspector/services/bathroom-inspection`
+
+* `/services/bathroom-inspection` → `/home-inspector/services/bathroom-inspection`
+
+* `/real-estate-inspection` → `/home-inspector/services/real-estate-inspection`
+
+* `/homebuyer-mold-inspection` → `/home-inspector/services/real-estate-inspection`
+
+* `/real-estate-mold-inspection` → `/home-inspector/services/real-estate-inspection`
+
+* `/services/real-estate-mold-inspection` → `/home-inspector/services/real-estate-inspection`
+
+### Environmental Consultant mappings
+
+* `/indoor-air-testing` → `/environmental-consultant/services/indoor-air-testing`
+
+* `/indoor-air-quality-testing` → `/environmental-consultant/services/indoor-air-testing`
+
+* `/air-quality-testing` → `/environmental-consultant/services/indoor-air-testing`
+
+* `/services/indoor-air-quality-testing` → `/environmental-consultant/services/indoor-air-testing`
+
+* `/certified-mold-inspector` → `/environmental-consultant/services/certified-mold-inspector`
+
+* `/certified-mold-inspection` → `/environmental-consultant/services/certified-mold-inspector`
+
+* `/services/certified-mold-inspection` → `/environmental-consultant/services/certified-mold-inspector`
+
+* `/mold-inspection` → `/environmental-consultant/services/mold-inspection`
+
+* `/mold-inspection-orange-county` → `/environmental-consultant/services/mold-inspection`
+
+* `/mold-inspection-san-clemente` → `/environmental-consultant/services/mold-inspection`
+
+* `/services/mold-inspection` → `/environmental-consultant/services/mold-inspection`
+
+* `/mold-testing` → `/environmental-consultant/services/mold-testing`
+
+* `/mold-testing-orange-county` → `/environmental-consultant/services/mold-testing`
+
+* `/mold-testing-san-clemente` → `/environmental-consultant/services/mold-testing`
+
+* `/services/mold-testing` → `/environmental-consultant/services/mold-testing`
+
+* `/ermi-testing` → `/environmental-consultant/services/ermi-testing`
+
+* `/ermi-mold-testing` → `/environmental-consultant/services/ermi-testing`
+
+* `/services/ermi-mold-testing` → `/environmental-consultant/services/ermi-testing`
+
+* `/thermal-imaging` → `/environmental-consultant/services/thermal-imaging-inspection`
+
+* `/thermal-imaging-inspection` → `/environmental-consultant/services/thermal-imaging-inspection`
+
+* `/moisture-intrusion-inspection` → `/environmental-consultant/services/thermal-imaging-inspection`
+
+* `/services/thermal-imaging` → `/environmental-consultant/services/thermal-imaging-inspection`
+
+* `/indoor-allergen-sampling` → `/environmental-consultant/services/indoor-allergen-sampling`
+
+* `/allergen-sampling` → `/environmental-consultant/services/indoor-allergen-sampling`
+
+* `/indoor-allergen-testing` → `/environmental-consultant/services/indoor-allergen-sampling`
+
+* `/services/allergen-sampling` → `/environmental-consultant/services/indoor-allergen-sampling`
+
+* `/mycotoxin-testing` → `/environmental-consultant/services/mycotoxin-testing`
+
+* `/services/mycotoxin-testing` → `/environmental-consultant/services/mycotoxin-testing`
+
+* `/custom-mold-action-plan` → `/environmental-consultant/services/custom-mold-action-plans`
+
+* `/custom-mold-action-plans` → `/environmental-consultant/services/custom-mold-action-plans`
+
+* `/mold-action-plan` → `/environmental-consultant/services/custom-mold-action-plans`
+
+* `/mold-remediation-plan` → `/environmental-consultant/services/custom-mold-action-plans`
+
+### Water Damage Restoration Service mappings
+
+* `/mold-cleaning` → `/water-damage-restoration-service/services/mold-cleaning`
+
+* `/services/mold-cleaning` → `/water-damage-restoration-service/services/mold-cleaning`
+
+* `/mold-damage-restoration` → `/water-damage-restoration-service/services/mold-damage-restoration`
+
+* `/mold-restoration` → `/water-damage-restoration-service/services/mold-damage-restoration`
+
+* `/services/mold-restoration` → `/water-damage-restoration-service/services/mold-damage-restoration`
+
+* `/mold-mitigation` → `/water-damage-restoration-service/services/mold-mitigation`
+
+* `/services/mold-mitigation` → `/water-damage-restoration-service/services/mold-mitigation`
+
+* `/mold-remediation` → `/water-damage-restoration-service/services/mold-remediation`
+
+* `/mold-removal` → `/water-damage-restoration-service/services/mold-remediation`
+
+* `/services/mold-removal` → `/water-damage-restoration-service/services/mold-remediation`
+
+* `/services/mold-remediation` → `/water-damage-restoration-service/services/mold-remediation`
+
+---
+
+## 301 redirect requirements
+
+If any old route differs from the selected canonical route:
+
+* create a **301 permanent redirect**
+* make every redirect single-hop only
+* avoid chains like old → intermediate → final
+* preserve important legacy SEO pages
+* do not redirect unrelated location pages unless they clearly correspond to a service page
+* do not redirect blindly; verify route intent before mapping
+
+Implement redirects in `next.config.js` or `next.config.ts` like this:
+
+```ts
+async redirects() {
+  return [
+    {
+      source: '/old-service-url',
+      destination: '/home-inspector/services/mold-sampling',
+      permanent: true,
+    },
+  ];
+}
+```
+
+---
+
+## SEO requirements
+
+* preserve existing indexed pages wherever appropriate
+* improve internal linking using category architecture
+* avoid duplicate content
+* support canonical URL decisions cleanly
+* use semantic HTML
+* maintain good heading structure
+* add intro copy to `/services` and category pages
+* include natural keyword relevance around:
+
+  * mold inspection Orange County
+  * mold testing Orange County
+  * mold inspection San Clemente
+  * indoor air quality testing
+  * ERMI testing
+  * thermal imaging inspection
+  * mold remediation support
+
+---
+
+## Design requirements
+
+* professional, modern, trustworthy
+* home-services / inspection company feel
+* clear category separation
+* easy-to-scan cards or grouped lists
+* polished dropdown or mega menu
+* excellent mobile usability
+* maintain current branding and styling
+
+---
+
+## Category intro copy
+
+### Home Inspector
+
+“Inspection-focused services for identifying mold risks, moisture concerns, and problem areas throughout the home.”
+
+### Environmental Consultant
+
+“Advanced testing and consulting services to evaluate indoor air quality, mold contamination, and next-step action planning.”
+
+### Water Damage Restoration Service
+
+“Supportive services related to mold cleanup, restoration guidance, mitigation, and remediation-related needs.”
+
+---
+
+## Technical requirements
+
+* use Next.js best practices
+* use app router if the existing project already uses it
+* keep code modular and reusable
+* use a non-destructive refactor
+* update existing navigation components rather than rebuilding unrelated app sections
+* add category landing pages as needed
+* keep all current service content available
+* make future edits easy through the centralized data file
+
+---
+
+## Final deliverables
+
+At completion, provide:
+
+1. all existing service routes discovered
+2. final mapping:
+
+   * existing URL
+   * service name
+   * parent category
+   * canonical URL
+   * redirect required: yes/no
+3. full redirect list added
+4. files updated and files created
+5. where the service mapping file is stored
+6. how to safely edit:
+
+   * service labels
+   * category labels
+   * canonical URLs
+   * redirects
+
+---
+
+## Business info
+
+Business name: **OC Mold Pros**
+Primary service area emphasis: **Orange County and San Clemente, California**
+
+Primary CTA:
+
+* **Call 949-371-5934**
+* **Call for a free 20-minute consultation**
