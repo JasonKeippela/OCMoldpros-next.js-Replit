@@ -12,7 +12,7 @@ const videos = [
   {
     title: 'Proper Mold Remediation',
     youtubeId: '8ooiwa5Q5MA',
-    description: 'A quick breakdown of what proper mold remediation actually looks like — and why inspection before cleanup is so important.',
+    description: 'A quick breakdown of what proper mold remediation actually looks like — and why mold inspections are so important. Credit to Jeff Goldbaum and team at Restoration 1 of Orange County on the remediation.',
     date: '2026-05-01',
   },
 ]
