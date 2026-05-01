@@ -52,7 +52,8 @@ const resources = [
     title: 'HEPA Air Purifier',
     category: 'Air Purifiers',
     description: 'True HEPA filtration captures mold spores, allergens, and fine particulates. Useful during and after remediation in bedrooms or living spaces.',
-    link: '#',
+    link: 'https://airdoctorpro.com/',
+    external: true,
   },
   {
     title: 'Whole-Home Dehumidifier',
