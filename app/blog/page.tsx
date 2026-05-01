@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://ocmoldpros.com/blog' },
 }
 
+const videos = [
+  {
+    title: 'Proper Mold Remediation',
+    youtubeId: '8ooiwa5Q5MA',
+    description: 'A quick breakdown of what proper mold remediation actually looks like — and why inspection before cleanup is so important.',
+    date: '2026-05-01',
+  },
+]
+
 const articles = [
   {
     title: 'The Hidden Mold Risk Beneath Your Refrigerator: Condensate (Drip) Pans',
@@ -112,8 +121,38 @@ export default function BlogPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Videos</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {videos.map((video, i) => (
+              <div key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-xs font-medium text-white bg-ocean-600 px-2 py-1 rounded">Video</span>
+                    <span className="text-xs text-gray-500">{new Date(video.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{video.title}</h3>
+                  <p className="text-gray-600 text-sm">{video.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article, i) => (
               <article key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
