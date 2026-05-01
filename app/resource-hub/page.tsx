@@ -99,6 +99,7 @@ const insights = [
     summary: 'One of the highest-rated air purifiers for mold spore filtration.',
     why: 'Its HyperHEPA filter captures particles down to 0.003 microns — smaller than most mold spores. Worth considering post-remediation or for anyone with mold-related sensitivities.',
     link: '#',
+    image: '/airdoctor-logo.png',
   },
   {
     name: 'Santa Fe Advance 2 Dehumidifier',
@@ -359,6 +360,11 @@ export default function ResourceHubPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {insights.map((item, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                {item.image && (
+                  <div className="h-24 bg-gradient-to-br from-ocean-50 to-ocean-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img src={item.image} alt={item.name} className="max-h-full max-w-full object-contain p-3" />
+                  </div>
+                )}
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{item.name}</h3>
                 <p className="text-ocean-700 font-medium text-sm mb-3">{item.summary}</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
