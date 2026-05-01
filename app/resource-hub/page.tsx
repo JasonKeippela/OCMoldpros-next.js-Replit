@@ -58,7 +58,8 @@ const resources = [
     title: 'Whole-Home Dehumidifier',
     category: 'Dehumidifiers',
     description: 'Maintaining indoor humidity between 35–50% is one of the most effective ways to prevent mold growth in Southern California coastal homes.',
-    link: '#',
+    link: 'https://www.amazon.com/Waykar-Energy-Dehumidifier-Basements-Gallons/dp/B0B5V6MBMR/ref=sr_1_1_sspa?crid=LN5L0DCMPRL6&dib=eyJ2IjoiMSJ9.BO-gO49U6Thj0hq-u4QMHKsfAcXEsmyWugO6GaiaJJGoXh3-ppW--4xbdDn3Q7oxddyESAxOOVXy2FdeFRUvhPNvZB3lsyg2h-4VVlgHuLpxv9powShXZ2zUgJTkdv1fxHR0mfbeHcNpcBIzq4_DKTE62UD-SCU_0_SpQeraF9hArbufdBtrpXngjnKcRAh2Q2rT6qQ2emzHnQNm99I57jKy5pj0sOhQrfE113H8hLjuibJSF7LaD5nCJm6KPghy4QYIn6s0xMUs1-FYi7Hzw0i4Y3aUQwCmT39nni-C2I8.sCCY4haIC90nTSW4jM2v0SH9rNLLk2_bf4H-5B8sT2c&dib_tag=se&keywords=dehumidifier&qid=1777675708&sprefix=dehumidifier%2Caps%2C306&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.5998aa40-ec6f-4947-a68f-cd087fee0848&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1',
+    external: true,
   },
   {
     title: 'Digital Moisture Meter',
