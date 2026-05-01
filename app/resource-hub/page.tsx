@@ -99,7 +99,6 @@ const insights = [
     summary: 'One of the highest-rated air purifiers for mold spore filtration.',
     why: 'Its HyperHEPA filter captures particles down to 0.003 microns — smaller than most mold spores. Worth considering post-remediation or for anyone with mold-related sensitivities.',
     link: '#',
-    image: '/airdoctor-logo.png',
   },
   {
     name: 'Santa Fe Advance 2 Dehumidifier',
