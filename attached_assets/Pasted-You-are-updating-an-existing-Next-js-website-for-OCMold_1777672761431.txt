@@ -1,0 +1,297 @@
+You are updating an existing Next.js website for OCMoldPros.com.
+
+OBJECTIVE
+Add a new top-level navigation item called “Resource Hub” and create a high-value public-facing page at /resource-hub.
+
+This page should function as an educational, trust-building, and conversion-focused resource center for both clients and non-clients.
+
+The page should:
+- Provide practical value through videos, curated recommendations, helpful links, and short product/resource insights
+- Position OC Mold Pros as a trusted authority in mold inspection, indoor air quality, healthier homes, and practical next steps
+- Give visitors one easy place to reference topics discussed during consultations, inspections, or general research
+- Act as a soft conversion tool that encourages users to call for a free 20-minute consultation
+- Be structured so it can later support affiliate links and expanded content without requiring a major redesign
+
+This page is NOT an ecommerce store.
+This page is NOT a checkout page.
+This page IS a curated educational and recommendation hub.
+
+PRIMARY CTA STRATEGY
+All sections should subtly support the main call to action:
+“Call for a free 20-minute consultation”
+The page should be helpful first, not pushy, but every section should reinforce trust and make it easy for a visitor to reach out.
+
+IMPORTANT REQUIREMENTS
+- Keep all existing pages intact
+- Do not remove, rename, or break any current routes, pages, or components
+- Reuse the site’s existing design system, typography, spacing, button styles, header, and footer as much as possible
+- Match the current branding and styling of OCMoldPros.com
+- Build this in a clean, maintainable, scalable way
+- Follow Next.js best practices
+- If the site uses the App Router, follow that architecture
+- If the site uses the Pages Router, follow that architecture
+- Inspect the current routing and navigation structure before making changes
+- Integrate this cleanly into the existing website rather than creating disconnected code
+
+NAVIGATION UPDATE
+Add a new top-level navigation item labeled:
+- Resource Hub
+
+Navigation requirements:
+- Add it to the main header navigation
+- Make it visible on desktop and mobile navigation
+- Link it to /resource-hub
+- Place it in a logical, prominent position in the nav
+- If the site has footer navigation or quick links, add Resource Hub there too if it fits naturally
+
+NEW PAGE ROUTE
+Create a new public page at:
+- /resource-hub
+
+PAGE PURPOSE
+This page should be a single-page hub with organized sections that visitors can scroll through easily.
+It should help users:
+- watch how-to videos
+- browse recommended tools and resources
+- review curated product/resource insights
+- access helpful links
+- get practical answers to common questions
+- contact OC Mold Pros for help
+
+PAGE STRUCTURE
+Build this as one clean, well-organized landing page with anchor links near the top so users can jump to sections quickly.
+
+Use these sections:
+
+1. HERO SECTION
+Create a polished hero section with:
+- H1: Resource Hub
+- A short supporting paragraph explaining that this page contains practical videos, trusted recommendations, helpful resources, and guidance related to mold awareness, healthier homes, moisture control, and indoor air quality
+- 1 primary CTA button:
+  - Call for a Free 20-Minute Consultation
+- 1 secondary CTA button:
+  - Explore Resources
+  or
+  - Watch Videos
+
+Near the hero, add anchor/jump links to the major sections below.
+
+2. HOW-TO VIDEOS
+Purpose:
+A section for educational videos and visual learning.
+
+Requirements:
+- Add a section heading
+- Add a short intro sentence
+- Use a responsive card grid or stacked layout
+- Include 4 to 6 placeholder video cards for now
+- Each video card should include:
+  - thumbnail placeholder
+  - title
+  - short description
+  - CTA button such as “Watch Video”
+
+Use placeholder topics like:
+- How to Prepare for a Mold Inspection
+- What Air Sampling Tells You
+- Common Signs of Mold in a Home
+- How to Reduce Indoor Moisture
+- What to Do After Remediation
+- When to Call a Mold Inspector
+
+Structure this so the video content can easily be edited later.
+
+3. RECOMMENDED TOOLS & RESOURCES
+Purpose:
+A section for curated recommendations without acting like a store.
+
+Requirements:
+- Add a section heading
+- Add a short intro paragraph
+- Use a card-based layout
+- Each resource card should include:
+  - image placeholder
+  - title
+  - short description
+  - optional category/tag
+  - outbound link button such as:
+    - View Resource
+    - Learn More
+    - See Recommendation
+
+Use sample categories such as:
+- Air Purifiers
+- Dehumidifiers
+- Moisture Meters
+- Cleaning / Support Tools
+- Educational Resources
+
+Important:
+- Build the cards from structured data so links and text are easy to update later
+- Use placeholder URLs where needed
+- Make it simple to swap in affiliate links later
+- Add a short note or disclaimer that recommendations are for convenience and educational purposes
+
+4. PRODUCT / RESOURCE INSIGHTS
+Purpose:
+A curated editorial-style section with short writeups explaining why certain products or resources may be useful.
+
+Requirements:
+- Add a section heading
+- Add a short intro sentence
+- Use cards or a clean list layout
+- Each item should include:
+  - product/resource name
+  - short summary
+  - why it may be helpful
+  - CTA button such as:
+    - View Product
+    - Read More
+    - Learn More
+
+Tone:
+- Helpful
+- Curated
+- Trustworthy
+- Not salesy
+
+5. HELPFUL LINKS
+Purpose:
+A quick-access section for both internal and external links.
+
+Requirements:
+- Add a section heading
+- Group links under simple subheadings such as:
+  - Inspection Prep
+  - Mold Education
+  - Indoor Air Quality
+  - Trusted Resources
+- Use a clean and scannable layout
+- Include placeholder internal and external links
+- Make it easy to update later
+
+6. FAQ / QUICK ANSWERS
+Purpose:
+Add usability, trust, and SEO value.
+
+Requirements:
+- Add a section heading
+- Use an accordion or expandable FAQ layout if the current component system supports it
+- Include questions like:
+  - What should I do before a mold inspection?
+  - Are these products sold by OC Mold Pros?
+  - Do you personally test these products?
+  - Can I use these recommendations even if I’m not a client?
+  - Will these links become affiliate links later?
+
+Answers should be clear, practical, and trust-building.
+
+7. FINAL CTA SECTION
+At the bottom of the page, add a strong but clean final CTA section.
+
+Messaging direction:
+- Need help figuring out what’s going on in your home?
+- Call for a free 20-minute consultation.
+
+Include:
+- a strong headline
+- a short supporting sentence
+- a primary CTA button such as:
+  - Call for a Free 20-Minute Consultation
+  - Contact OC Mold Pros
+
+If a phone number already exists in the codebase, reuse it.
+If not, make this section easy to update.
+
+DESIGN REQUIREMENTS
+- Keep the layout clean, modern, and spacious
+- Make it very easy to scan
+- Use strong section spacing and visual hierarchy
+- Use cards where appropriate
+- Include subtle visual separation between sections
+- Make anchor navigation smooth and user-friendly
+- Ensure the page looks excellent on mobile, tablet, and desktop
+- Follow accessibility best practices
+- Use semantic heading structure for SEO
+
+CONTENT ARCHITECTURE
+Use a data-driven structure where practical.
+
+Prefer storing section data in arrays or objects for easy future updates, especially for:
+- video cards
+- recommended resources
+- product/resource insights
+- helpful links
+- FAQ items
+
+If it fits the existing codebase, consider breaking this into reusable components such as:
+- ResourceHubHero
+- ResourceHubAnchorNav
+- VideoCard
+- ResourceCard
+- HelpfulLinksSection
+- FAQAccordion
+- CTASection
+
+SEO REQUIREMENTS
+Add SEO metadata for the new page.
+
+Use:
+- Title tag: Resource Hub | OC Mold Pros
+- Meta description: Explore helpful mold education videos, recommended tools, product insights, and practical resources from OC Mold Pros.
+
+Also:
+- Use one clear H1
+- Use well-structured H2s and H3s
+- Ensure the page is internally linked from navigation
+- Make sure it is crawlable and consistent with the site’s current SEO setup
+
+OUTBOUND LINK BEST PRACTICES
+For external links:
+- Open in a new tab where appropriate
+- Add rel attributes for security and best practices
+- Make external links easy to manage and update later
+
+OPTIONAL ENHANCEMENTS
+If they fit naturally into the existing design and architecture, you may also add:
+- a sticky anchor nav on desktop
+- subtle icons for section headings
+- a featured resource card near the top
+- a recommendation disclaimer near the tools/resources section
+
+CONTENT EXAMPLES
+Use polished placeholder content related to OC Mold Pros’ niche:
+- mold inspection
+- air sampling
+- moisture control
+- indoor air quality
+- healthier homes
+- mold awareness
+- post-remediation guidance
+
+Do not use generic placeholder lorem ipsum if avoidable.
+Use realistic placeholder copy relevant to the business.
+
+IMPLEMENTATION INSTRUCTIONS
+Please inspect the current codebase first and determine:
+- where the main navigation is defined
+- whether the project uses App Router or Pages Router
+- how SEO metadata is currently handled
+- what reusable UI components already exist that should be reused
+
+Then implement the new page and nav item in a way that matches the current project structure and coding style.
+
+DELIVERABLES AFTER IMPLEMENTATION
+After making the changes, provide:
+1. A list of files created
+2. A list of files modified
+3. A brief explanation of how the navigation was updated
+4. A brief explanation of where I can edit:
+   - video titles and descriptions
+   - recommended resources
+   - outbound links
+   - FAQ content
+5. Any notes about assumptions made based on the current codebase
+
+Please implement the changes directly in the project.
+Do not remove existing content unless absolutely necessary for clean integration.

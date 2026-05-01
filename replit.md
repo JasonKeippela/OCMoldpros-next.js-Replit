@@ -36,7 +36,10 @@ app/
     services/[slug]/page.tsx  # 4 restoration service pages
   process/page.tsx    # 4-step process page
   pricing/page.tsx    # Pricing page
-  blog/page.tsx       # Learn/Blog page
+  blog/page.tsx       # Learn/Blog page (with Videos section + Articles grid)
+  resource-hub/
+    layout.tsx        # SEO metadata for Resource Hub
+    page.tsx          # Resource Hub: videos, tools, insights, links, FAQ, CTA
   contact/page.tsx    # Contact page with form
   mold-inspector-near-me/
     page.tsx          # Mold inspector near me overview with city grid
