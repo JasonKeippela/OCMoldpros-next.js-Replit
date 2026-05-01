@@ -72,6 +72,7 @@ const resources = [
     description: 'For surface-level mold on non-porous materials. Not a replacement for professional remediation on porous or structural surfaces.',
     link: 'https://microbalancehealthproducts.com/?rfsn=8931013.504c93',
     external: true,
+    image: '/microbalance-logo.png',
   },
   {
     title: 'EPA Indoor Air Quality Guide',
@@ -323,10 +324,14 @@ export default function ResourceHubPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((r, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="h-36 bg-gradient-to-br from-ocean-50 to-ocean-100 rounded-lg mb-4 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-ocean-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
+                <div className="h-36 bg-gradient-to-br from-ocean-50 to-ocean-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {r.image ? (
+                    <img src={r.image} alt={r.title} className="max-h-full max-w-full object-contain p-3" />
+                  ) : (
+                    <svg className="w-10 h-10 text-ocean-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                  )}
                 </div>
                 <span className="text-xs font-semibold text-ocean-700 uppercase tracking-wide mb-2">{r.category}</span>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{r.title}</h3>
