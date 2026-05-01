@@ -70,7 +70,8 @@ const resources = [
     title: 'Non-Toxic Mold Support Spray',
     category: 'Cleaning / Support Tools',
     description: 'For surface-level mold on non-porous materials. Not a replacement for professional remediation on porous or structural surfaces.',
-    link: '#',
+    link: 'https://microbalancehealthproducts.com/?rfsn=8931013.504c93',
+    external: true,
   },
   {
     title: 'EPA Indoor Air Quality Guide',
