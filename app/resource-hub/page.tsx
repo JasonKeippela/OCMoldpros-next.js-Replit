@@ -54,7 +54,6 @@ const resources = [
     description: 'True HEPA filtration captures mold spores, allergens, and fine particulates. Useful during and after remediation in bedrooms or living spaces.',
     link: 'https://airdoctorpro.com/',
     external: true,
-    image: '/airdoctor-logo.png',
   },
   {
     title: 'Dehumidifier',
@@ -73,7 +72,7 @@ const resources = [
   {
     title: 'Non-Toxic cleaning produts',
     category: 'Cleaning / Support Tools',
-    description: 'For surface-level mold on non-porous materials. Not a replacement for professional remediation on porous or structural surfaces.',
+    description: 'For surface-level mold on non-porous materials. Not a replacement for professional remediation on porous or structural surfaces. Affiliate link',
     link: 'https://microbalancehealthproducts.com/?rfsn=8931013.504c93',
     external: true,
     image: '/microbalance-logo.png',
@@ -111,12 +110,6 @@ const insights = [
     name: 'Govee WiFi Hygrometer',
     summary: 'Affordable, accurate humidity and temperature sensor with app alerts.',
     why: 'A simple way to monitor problem rooms (bathrooms, crawlspaces, attics) without hiring anyone. Set alerts above 55% RH so you can act before mold has a chance to grow.',
-    link: '#',
-  },
-  {
-    name: 'ERMI Test Kit (via Envirobiomics)',
-    summary: 'An EPA-developed mold DNA test you can self-collect and mail in.',
-    why: 'ERMI (Environmental Relative Moldiness Index) provides a DNA-based mold score for your home. We often recommend this as a follow-up or for clients who want a data-driven baseline.',
     link: '#',
   },
 ]
@@ -318,12 +311,12 @@ export default function ResourceHubPage() {
       {/* Recommended Tools & Resources */}
       <section id="tools" className="py-16 bg-gray-50 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">Recommended Tools & Resources</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">Products we recommended</h2>
           <p className="text-gray-600 mb-3 max-w-2xl">
-            Tools and resources that come up often in client conversations. These are curated for practical value — not because we sell them.
+            Resources that come up often in client conversations. These are curated for practical value.
           </p>
           <p className="text-xs text-gray-400 mb-10 max-w-2xl italic">
-            Disclaimer: Recommendations are shared for educational and convenience purposes only. OC Mold Pros does not sell these products and receives no compensation for listing them. Links may become affiliate links in the future, and will be clearly disclosed if so.
+            Disclaimer: Recommendations are shared for educational purposes only. OC Mold Pros does not sell these products but may receive compensation for listing them. Links may become affiliate links in the future, and will be clearly disclosed if so.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((r, i) => (
