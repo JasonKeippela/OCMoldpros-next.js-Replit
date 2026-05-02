@@ -110,7 +110,7 @@ const insights = [
     name: 'Govee WiFi Hygrometer',
     summary: 'Affordable, accurate humidity and temperature sensor with app alerts.',
     why: 'A simple way to monitor problem rooms (bathrooms, crawlspaces, attics) without hiring anyone. Set alerts above 55% RH so you can act before mold has a chance to grow.',
-    link: '#',
+    link: 'https://www.amazon.com/dp/B0CF45477Z/ref=twister_B09BHSLWBL?_encoding=UTF8&th=1',
   },
 ]
 
