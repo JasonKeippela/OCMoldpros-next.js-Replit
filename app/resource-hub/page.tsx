@@ -95,12 +95,6 @@ const resources = [
 
 const insights = [
   {
-    name: 'IQ Air HealthPro Plus',
-    summary: 'One of the highest-rated air purifiers for mold spore filtration.',
-    why: 'Its HyperHEPA filter captures particles down to 0.003 microns — smaller than most mold spores. Worth considering post-remediation or for anyone with mold-related sensitivities.',
-    link: '#',
-  },
-  {
     name: 'Santa Fe Advance 2 Dehumidifier',
     summary: 'A crawlspace and whole-home dehumidifier built for coastal climates.',
     why: 'Coastal OC homes often deal with marine layer humidity that standard dehumidifiers cannot keep up with. Units like the Santa Fe Advance are engineered for sustained high-humidity environments.',
