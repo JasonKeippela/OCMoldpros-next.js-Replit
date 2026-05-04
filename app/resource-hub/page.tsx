@@ -69,7 +69,7 @@ const resources: Resource[] = [
     title: 'HEPA Air Purifier',
     category: 'Air Purifiers',
     description: 'True HEPA filtration captures mold spores, allergens, and fine particulates. Useful during and after remediation in bedrooms or living spaces.',
-    link: 'https://airdoctorpro.com/',
+    link: 'https://austinairsystems.com/collections/all-products?filter.p.m.specs.pollutant=Mold',
     external: true,
   },
   {
