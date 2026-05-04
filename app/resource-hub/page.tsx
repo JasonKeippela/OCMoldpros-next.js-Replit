@@ -71,6 +71,7 @@ const resources: Resource[] = [
     description: 'True HEPA filtration captures mold spores, allergens, and fine particulates. Useful during and after remediation in bedrooms or living spaces.',
     link: 'https://austinairsystems.com/collections/all-products?filter.p.m.specs.pollutant=Mold',
     external: true,
+    image: '/austin-air-logo.png',
   },
   {
     title: 'Dehumidifier',
