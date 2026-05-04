@@ -21,7 +21,7 @@ const videos = [
     description: 'Note: This area was treated with an anti-microbial before drying started. What proper mold remediation actually looks like — and why mold inspections matter.',
   },
   {
-    youtubeId: null,
+    youtubeId: 'TvXOzqGLfsE',
     title: 'How to Prepare for a Mold Inspection',
     description: 'Simple steps to take before your inspector arrives so you get the most accurate results.',
   },
