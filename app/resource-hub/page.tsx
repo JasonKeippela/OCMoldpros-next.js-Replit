@@ -18,7 +18,7 @@ const videos = [
   {
     youtubeId: '8ooiwa5Q5MA',
     title: 'Proper Mold Remediation',
-    description: 'What proper mold remediation actually looks like — and why inspection before cleanup matters.',
+    description: 'Note: This area was treated with an anti-microbial before drying started. What proper mold remediation actually looks like — and why mold inspections matter.',
   },
   {
     youtubeId: null,
@@ -47,7 +47,24 @@ const videos = [
   },
 ]
 
-const resources = [
+type Resource = {
+  title: string
+  category: string
+  description: string
+  link: string
+  external?: boolean
+  image?: string
+}
+
+type Insight = {
+  name: string
+  summary: string
+  why: string
+  link: string
+  image?: string
+}
+
+const resources: Resource[] = [
   {
     title: 'HEPA Air Purifier',
     category: 'Air Purifiers',
@@ -93,7 +110,7 @@ const resources = [
   },
 ]
 
-const insights = [
+const insights: Insight[] = [
   {
     name: 'Santa Fe Advance 2 Dehumidifier',
     summary: 'A crawlspace and whole-home dehumidifier built for coastal climates.',
