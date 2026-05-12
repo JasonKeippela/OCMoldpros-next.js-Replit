@@ -82,9 +82,9 @@ const resources: Resource[] = [
     image: '/waykar-dehumidifier.png',
   },
   {
-    title: 'Lymbic system retraining',
-    category: 'Moisture Meters',
-    description: 'Allows homeowners to spot-check walls, floors, and ceilings for elevated moisture after a leak or water intrusion event.',
+    title: 'Lymbic System Retraining',
+    category: 'Brain retraining',
+    description: 'DNRS focuses on retraining the brain’s response to environmental triggers through neuroplasticity. Affiliate link.',
     link: '#',
   },
   {
