@@ -18,7 +18,7 @@ const videos = [
   {
     youtubeId: '8ooiwa5Q5MA',
     title: 'Proper Mold Remediation',
-    description: 'Note: This area was treated with an anti-microbial before drying started. What proper mold remediation actually looks like — and why mold inspections matter.',
+    description: 'Note: This area was treated with an anti-microbial before drying started. What proper mold remediation actually looks like and why mold inspections matter.',
   },
   {
     youtubeId: 'TvXOzqGLfsE',
@@ -28,7 +28,7 @@ const videos = [
   {
     youtubeId: null,
     title: 'What Air Sampling Tells You',
-    description: 'A plain-language breakdown of what air samples measure and how to read the results.',
+    description: 'A plain language breakdown of what air samples measure and how to read the results.',
   },
   {
     youtubeId: null,
@@ -43,7 +43,7 @@ const videos = [
   {
     youtubeId: null,
     title: 'What to Do After Remediation',
-    description: 'Steps to verify the remediation worked and keep your home mold-free going forward.',
+    description: 'Steps to verify the remediation worked and keep your home mold free going forward.',
   },
 ]
 
@@ -113,10 +113,10 @@ const resources: Resource[] = [
 
 const insights: Insight[] = [
   {
-    name: 'Santa Fe Advance 2 Dehumidifier',
-    summary: 'A crawlspace and whole-home dehumidifier built for coastal climates.',
-    why: 'Coastal OC homes often deal with marine layer humidity that standard dehumidifiers cannot keep up with. Units like the Santa Fe Advance are engineered for sustained high-humidity environments.',
-    link: '#',
+    name: 'Mold Illness Recovery',
+    summary: 'A practical resource for those dealing with symptoms linked to mold exposure.',
+    why: 'Some clients experience ongoing health symptoms after mold exposure — fatigue, brain fog, and respiratory issues. This site covers CIRS, nervous system retraining, and recovery approaches that go beyond just fixing the building.',
+    link: 'https://retrainingthebrain.com/mold-illness/',
   },
   {
     name: 'Govee WiFi Hygrometer',
@@ -169,19 +169,19 @@ const helpfulLinks: { heading: string; items: { label: string; href: string; ext
 const faqs = [
   {
     q: 'What should I do before a mold inspection?',
-    a: 'Try not to clean or paint over any areas you\'re concerned about — we need to see them as-is. Make sure all rooms are accessible, including attics, crawlspaces, and garage areas. If you have a recent water event (leak, flood, overflow), document it with photos. A little heads-up on your concerns before we arrive helps us focus the inspection.',
+    a: 'Try not to clean or paint over any areas you\'re concerned about, we need to see them as-is. Make sure all rooms are accessible, including attics, crawlspaces, and garage areas. If you have a recent water event (leak, flood, overflow), document it with photos. A little heads up on your concerns before we arrive helps us focus the inspection.',
   },
   {
     q: 'Are these products sold by OC Mold Pros?',
-    a: 'No. OC Mold Pros does not sell products. Everything on this page is shared strictly for educational and reference purposes. These are tools and resources that come up in conversations with clients. We believe in giving you practical information — not trying to sell you anything.',
+    a: 'No. OC Mold Pros does not sell products directly, in some cases we have an affiliate link with the manufacture (we will let you know). Everything on this page is shared for educational and reference purposes. These are tools and resources that come up in conversations with clients. We believe in giving you practical information.',
   },
   {
     q: 'Do you personally test or endorse these products?',
-    a: 'Some of these tools are ones we have used or seen used in the field. Others are well-regarded by industry professionals and widely recommended in the mold and indoor air quality space. We share them because they\'re commonly useful — not because we receive any compensation for doing so.',
+    a: 'Some of these tools are ones we have used or seen used in the field. Others are well regarded by industry professionals and widely recommended in the mold and indoor air quality space. We share them because they\'re commonly useful.',
   },
   {
     q: 'Can I use these recommendations even if I\'m not a client?',
-    a: 'Absolutely. This page is public and meant to help anyone dealing with mold-related concerns, whether or not you\'ve worked with us. If any of it raises questions for your specific situation, give us a call — the initial consultation is free.',
+    a: 'Absolutely. This page is public and meant to help anyone dealing with mold-related concerns, whether or not you\'ve worked with us. If any of it raises questions for your specific situation, give us a call for a free 20 minute free consultation.',
   },
   {
     q: 'Will these links become affiliate links later?',
@@ -239,14 +239,14 @@ export default function ResourceHubPage() {
           <p className="text-sm font-semibold text-ocean-600 uppercase tracking-widest mb-3">OC Mold Pros</p>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Resource Hub</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-            Practical videos, trusted tool recommendations, helpful links, and plain-language guidance — all in one place. Whether you're preparing for an inspection, recovering from remediation, or just doing your homework, this is where to start.
+            Practical videos, trusted tool recommendations, helpful links, and plain-language guidance all in one place. Whether you're preparing for an inspection, recovering from remediation, or just doing your homework, this is where to start.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href={`tel:${PHONE}`}
               className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg"
             >
-              Call for a Free 20-Min Consultation
+              Call for a Free 20 Min Consultation
             </a>
             <a
               href="#videos"
