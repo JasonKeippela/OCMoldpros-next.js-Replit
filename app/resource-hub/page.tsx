@@ -82,9 +82,9 @@ const resources: Resource[] = [
     image: '/waykar-dehumidifier.png',
   },
   {
-    title: 'Digital Moisture Meter',
-    category: 'Moisture Meters',
-    description: 'Allows homeowners to spot-check walls, floors, and ceilings for elevated moisture after a leak or water intrusion event.',
+    title: 'Lymbic System Retraining',
+    category: 'Body',
+    description: 'DNRS focuses on retraining the brain’s response to environmental triggers through neuroplasticity.',
     link: '#',
   },
   {
@@ -117,6 +117,7 @@ const insights: Insight[] = [
     summary: 'A practical resource for those dealing with symptoms linked to mold exposure.',
     why: 'Some clients experience ongoing health symptoms after mold exposure — fatigue, brain fog, and respiratory issues. This site covers CIRS, nervous system retraining, and recovery approaches that go beyond just fixing the building.',
     link: 'https://retrainingthebrain.com/mold-illness/',
+    image: '/dnrs-logo.png',
   },
   {
     name: 'Govee WiFi Hygrometer',
