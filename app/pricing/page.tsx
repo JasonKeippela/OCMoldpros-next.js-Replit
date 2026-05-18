@@ -56,22 +56,6 @@ export default function PricingPage() {
       popular: false
     },
     {
-      name: 'Inspect Max',
-      price: '$4,999',
-      description: 'The ultimate package for complete peace of mind',
-      features: [
-        'Everything in Healthy Choice',
-        'Professional mold dog inspection included',
-        'Air purifier included',
-        '6 month follow-up inspection (2 hours)',
-        'Follow-up air samples included',
-        'Priority scheduling'
-      ],
-      buttonText: 'Schedule Now',
-      buttonStyle: 'filled-orange',
-      popular: false
-    },
-    {
       name: 'Clearance Inspection',
       price: 'From $399',
       description: 'Post-remediation clearance and verification',
@@ -204,7 +188,7 @@ export default function PricingPage() {
             {[
               { q: 'What factors affect the price of a mold inspection?', a: 'The main factors are property size, number of samples needed, and complexity of the inspection. Our packages are designed to cover most residential needs.' },
               { q: 'Are lab fees included in the price?', a: 'Yes, all prices include laboratory analysis fees. There are no hidden costs or surprise charges.' },
-              { q: 'Which package is right for me?', a: 'I Inspect is perfect for basic peace of mind. I Inspect Plus is our most popular for thorough testing. Healthy Choice is ideal if you have health concerns. Inspect Max provides the ultimate protection with follow-up care.' },
+              { q: 'Which package is right for me?', a: 'I Inspect is perfect for basic peace of mind. I Inspect Plus is our most popular for thorough testing. Healthy Choice is ideal if you have health concerns or want a more comprehensive assessment.' },
               { q: 'What payment methods do you accept?', a: 'We accept all major credit cards, checks, and cash. Payment is due at the time of service.' }
             ].map((faq, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-6">
