@@ -11,6 +11,22 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   const packages = [
     {
+      name: 'Clearance Inspection',
+      price: 'From $399',
+      description: 'Post-remediation clearance and verification',
+      features: [
+        'Up to 4 areas of concern/containment',
+        'Additional areas $75 per area',
+        'Samples not included',
+        '$70 per sample (air, swab, or tape lifts)',
+        'Baseline sample required outside structure',
+        'Clearance certification upon passing'
+      ],
+      buttonText: 'Get Quote',
+      buttonStyle: 'outline',
+      popular: false
+    },
+    {
       name: 'I Inspect',
       price: '$899',
       description: 'Perfect for initial inspections and peace of mind',
@@ -52,22 +68,6 @@ export default function PricingPage() {
         'Detailed remediation action plan'
       ],
       buttonText: 'Get Estimate',
-      buttonStyle: 'outline',
-      popular: false
-    },
-    {
-      name: 'Clearance Inspection',
-      price: 'From $399',
-      description: 'Post-remediation clearance and verification',
-      features: [
-        'Up to 4 areas of concern/containment',
-        'Additional areas $75 per area',
-        'Samples not included',
-        '$70 per sample (air, swab, or tape lifts)',
-        'Baseline sample required outside structure',
-        'Clearance certification upon passing'
-      ],
-      buttonText: 'Get Quote',
       buttonStyle: 'outline',
       popular: false
     }
