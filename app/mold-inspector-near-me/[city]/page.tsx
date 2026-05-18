@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { APPROVED_SERVICE_AREAS, getCityBySlug, getCityData } from '@/app/lib/cities'
 import { getCanonicalUrl } from '@/app/lib/canonical'
+import { getBreadcrumbSchema } from '@/app/lib/schema'
+import JsonLd from '@/app/components/JsonLd'
 
 type Props = {
   params: Promise<{ city: string }>
@@ -16,13 +18,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city: citySlug } = await params
   const cityInfo = getCityBySlug(citySlug)
   if (!cityInfo) return { title: 'City Not Found' }
-  
-  // Canonical v2 – services rollout
+
+  const canonicalUrl = getCanonicalUrl(`/mold-inspector-near-me/${citySlug}`)
+  const title = `Mold Inspector ${cityInfo.name} CA | OC Mold Pros`
+  const description = `Professional mold inspection & testing in ${cityInfo.name}, CA. IAC2 certified, veteran owned. Thermal imaging, air sampling & 24-hr reports. Call OC Mold Pros at 949-371-5934.`
+
   return {
-    title: `${cityInfo.name} Mold Inspection | OC Mold Pros`,
-    description: `Expert mold inspection services in ${cityInfo.name}. Contact OC Mold Pros for professional mold testing and remediation in ${cityInfo.name}, California.`,
-    alternates: {
-      canonical: getCanonicalUrl(`/mold-inspector-near-me/${citySlug}`),
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      type: 'website',
+      locale: 'en_US',
+      siteName: 'OC Mold Pros',
+      images: [{ url: 'https://ocmoldpros.com/logo.jpg', width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['https://ocmoldpros.com/logo.jpg'],
     },
   }
 }
@@ -45,9 +63,16 @@ export default async function CityPage({ params }: Props) {
     slug: cityToSlug(name)
   }))
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://ocmoldpros.com' },
+    { name: 'Mold Inspector Near Me', url: 'https://ocmoldpros.com/mold-inspector-near-me' },
+    { name: `${cityInfo.name}, CA`, url: `https://ocmoldpros.com/mold-inspector-near-me/${citySlug}` },
+  ])
+
   return (
     <>
       <main className="pt-28">
+        <JsonLd data={breadcrumbSchema} />
         <nav className="bg-gray-100 py-3">
           <div className="max-w-6xl mx-auto px-4">
             <ol className="flex items-center gap-2 text-sm text-gray-600">

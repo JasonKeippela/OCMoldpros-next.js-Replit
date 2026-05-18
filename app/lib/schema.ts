@@ -375,13 +375,39 @@ export function getSiteGraph(options?: { faqItems?: FaqItem[] }) {
   }
 }
 
-export function getServicePageSchema(service: { name: string; path: string }) {
+export function getServicePageSchema(service: { name: string; path: string; description?: string }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: service.name,
+    description: service.description,
     url: `${SITE_CONFIG.url}${service.path}`,
     provider: { '@id': BUSINESS_ID },
     areaServed: { '@type': 'AdministrativeArea', name: 'Orange County, CA' },
+  }
+}
+
+export function getBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.url,
+    })),
+  }
+}
+
+export function getWebPageSchema(name: string, description: string, url: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name,
+    description,
+    url,
+    isPartOf: { '@id': SITE_CONFIG.url },
+    provider: { '@id': BUSINESS_ID },
   }
 }

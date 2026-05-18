@@ -4,38 +4,40 @@ import { SERVICE_CATEGORIES } from '@/data/servicesData'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ocmoldpros.com'
+  const now = new Date()
 
-  const staticPages = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/mold-inspector-near-me`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/process`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: baseUrl, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/mold-inspector-near-me`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/process`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resource-hub`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
   ]
 
-  const categoryPages = SERVICE_CATEGORIES.map(cat => ({
+  const categoryPages: MetadataRoute.Sitemap = SERVICE_CATEGORIES.map(cat => ({
     url: `${baseUrl}/${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.85,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.9,
   }))
 
-  const servicePages = SERVICE_CATEGORIES.flatMap(cat =>
+  const servicePages: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap(cat =>
     cat.services.map(svc => ({
       url: `${baseUrl}${svc.canonicalHref}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      lastModified: now,
+      changeFrequency: 'monthly',
       priority: 0.8,
     }))
   )
 
-  const cityPages = cities.map(city => ({
+  const cityPages: MetadataRoute.Sitemap = cities.map(city => ({
     url: `${baseUrl}/mold-inspector-near-me/${city.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
+    lastModified: now,
+    changeFrequency: 'monthly',
     priority: 0.8,
   }))
 

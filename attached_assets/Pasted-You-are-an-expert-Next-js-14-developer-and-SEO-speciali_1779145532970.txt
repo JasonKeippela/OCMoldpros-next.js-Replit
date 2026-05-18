@@ -1,0 +1,280 @@
+You are an expert Next.js 14 developer and SEO specialist working on a local services website for OC Mold Pros (ocmoldpros.com) — a mold inspection and testing company based in San Clemente, CA serving all of Orange County.
+
+The site is built with:
+- Next.js 14 App Router (TypeScript)
+- Tailwind CSS with a custom "ocean" color palette
+- next/navigation, next/link, next/image
+- Structured data via inline <script type="application/ld+json">
+
+════════════════════════════════════════
+BUSINESS INFORMATION (use everywhere)
+════════════════════════════════════════
+Business name: OC Mold Pros
+Phone: 949-371-5934
+Email: info@ocmoldpros.com
+Address: 1322 Calle Avanzado, San Clemente, CA 92673
+Hours: Mon–Fri 8am–5pm, Sat 8am–12pm
+Domain: https://ocmoldpros.com
+Certifications: IAC2 Certified (verify at iac2.org/verify-a-consultant/?search_term=keippela)
+Veteran Owned: Yes (veteranownedbusiness.com/business/40038/oc-mold-pros)
+Speciality: Inspection-ONLY — we never perform remediation (this is a key trust differentiator)
+Service area: All cities in Orange County, CA + San Clemente
+
+════════════════════════════════════════
+CRITICAL SEO PROBLEMS TO FIX (do all of these)
+════════════════════════════════════════
+
+PROBLEM 1 — openGraph does not deep-merge in Next.js
+The root layout.tsx defines a global openGraph block. Page-level metadata exports
+do NOT override individual openGraph fields — they must re-declare the ENTIRE
+openGraph object or they will inherit the root layout's og:url (the homepage).
+Every page is currently showing og:url = https://ocmoldpros.com regardless of
+which page it is. This is causing Google to treat all pages as duplicates of
+the homepage and is the primary reason 80 of 100 pages are not indexed.
+
+FIX: Every page.tsx must export its own complete openGraph object with the
+correct url field for that specific page. Never rely on partial inheritance.
+
+PROBLEM 2 — Shared, generic metadata across all pages
+Every page currently shares identical og:title, og:description, og:url,
+twitter:title, twitter:description, and meta keywords from the root layout.
+Google sees this as a duplicate content signal.
+
+FIX: Every page.tsx must have a fully unique metadata export including:
+- title (unique per page, keyword-rich, under 60 chars)
+- description (unique per page, action-oriented, 140–160 chars)
+- keywords (unique per page, 5–8 locally relevant terms)
+- alternates.canonical (correct full URL for this page)
+- openGraph.title (can match title)
+- openGraph.description (can match description)
+- openGraph.url (MUST be the full URL of THIS specific page)
+- openGraph.type, openGraph.locale, openGraph.siteName, openGraph.images
+- twitter.card, twitter.title, twitter.description, twitter.images
+
+PROBLEM 3 — Missing schema markup
+No pages currently have structured data. For a local health-adjacent services
+business, this significantly reduces E-E-A-T signals.
+
+FIX: Add the following schema to the pages listed:
+- LocalBusiness schema: every page (import from a shared helper)
+- Service schema: all service and category pages
+- FAQPage schema: all category pages and location pages
+- BreadcrumbList schema: all pages except homepage
+
+════════════════════════════════════════
+TASK 1 — Create a shared metadata helper
+════════════════════════════════════════
+Create file: app/lib/metadata.ts
+
+This file exports a function buildMetadata(config) that accepts:
+- title: string
+- description: string  
+- keywords: string[]
+- path: string (e.g. '/home-inspector')
+- ogImage?: string (defaults to '/logo.jpg')
+
+And returns a complete Next.js Metadata object with all fields correctly
+populated including the full openGraph block with the correct url derived
+from `https://ocmoldpros.com` + path.
+
+Also export a SITE_DEFAULTS constant with shared values (siteName, 
+defaultImage, twitterHandle etc.) used across all pages.
+
+════════════════════════════════════════
+TASK 2 — Create a shared schema helper
+════════════════════════════════════════
+Create file: app/lib/schema.ts (update existing if present)
+
+Export the following functions, each returning a plain JS object ready
+to be JSON.stringify'd into a <script type="application/ld+json">:
+
+1. getLocalBusinessSchema() — full LocalBusiness with name, phone, address,
+   url, openingHours, areaServed, sameAs (Yelp, Facebook, IAC2, Houzz,
+   Spectora, VeteranOwnedBusiness), priceRange, image, founder credentials
+
+2. getServiceSchema(name, description, url) — Service with provider pointing
+   to LocalBusiness
+
+3. getFaqSchema(faqs: {q: string, a: string}[]) — FAQPage
+
+4. getBreadcrumbSchema(crumbs: {name: string, url: string}[]) — BreadcrumbList
+
+5. getWebPageSchema(name, description, url) — WebPage
+
+Export a <JsonLd> component that accepts a data prop (object or array of
+objects) and renders <script type="application/ld+json"> safely using
+dangerouslySetInnerHTML. Place all schema at the top of <main>.
+
+════════════════════════════════════════
+TASK 3 — Fix all category pages
+════════════════════════════════════════
+Apply fixes to these 3 category pages:
+- app/home-inspector/page.tsx
+- app/environmental-consultant/page.tsx  
+- app/water-damage-restoration-service/page.tsx
+
+Each page must have:
+□ Complete unique metadata export using buildMetadata()
+□ Unique title targeting local keyword (e.g. "Home Inspector Orange County CA")
+□ Trust bar near top of hero: IAC2 Certified | Veteran Owned | 
+  Inspection-Only | Same-Day Service Available
+□ Expanded hero copy (2 paragraphs, 80–120 words total)
+□ Services grid (keep existing structure)
+□ "Why us" section (3 cards, keep existing)
+□ NEW: Credentials/trust section with 4 items:
+  IAC2 certified, Veteran Owned, 24hr reports, Full OC coverage
+□ NEW: FAQ section with 5 Q&As relevant to that category
+  (rendered as static cards, NOT accordion — avoids JS issues)
+□ CTA section (keep existing)
+□ LocalBusiness + Service + FAQPage + BreadcrumbList schema
+□ Correct og:url for this specific page
+
+════════════════════════════════════════
+TASK 4 — Fix all service sub-pages
+════════════════════════════════════════
+There are 3 groups of service sub-pages:
+
+Group A — Home Inspector services (under /home-inspector/services/):
+mold-sampling, new-construction-inspections, rental-property-inspections,
+mold-prevention, physical-and-visual-inspection, hvac-system-inspection,
+kitchen-inspection, bathroom-inspection, real-estate-inspection
+
+Group B — Environmental Consultant services (under /environmental-consultant/services/):
+indoor-air-testing, certified-mold-inspector, mold-inspection, mold-testing,
+ermi-testing, thermal-imaging-inspection, indoor-allergen-sampling,
+mycotoxin-testing, custom-mold-action-plans
+
+Group C — Water Damage Restoration services (under /water-damage-restoration-service/services/):
+mold-cleaning, mold-damage-restoration, mold-mitigation, mold-remediation
+
+Each service sub-page must have:
+□ Complete unique metadata export using buildMetadata()
+□ Unique title and description targeting the specific service + Orange County
+□ H1 targeting the service keyword locally
+□ 300–500 words of unique body content explaining the service in depth
+□ What to expect / process section (3–4 steps)
+□ Who needs this service section
+□ 3 Q&As specific to this service as FAQ cards
+□ CTA section
+□ Internal links: back to parent category page + 2–3 related services
+□ Service + FAQPage + BreadcrumbList + LocalBusiness schema
+□ Correct og:url for this specific page
+
+════════════════════════════════════════
+TASK 5 — Fix all location pages
+════════════════════════════════════════
+There are 33 city pages under /mold-inspector-near-me/[city]-ca/
+
+Each location page must have:
+□ Complete unique metadata using buildMetadata()
+□ Title format: "Mold Inspector [City] CA | OC Mold Pros"
+□ Description referencing the specific city and key services
+□ og:url pointing to the specific city page URL
+□ H1: "Mold Inspection & Testing in [City], CA"
+□ Hero image relevant to the city (use existing if present, else use /logo.jpg)
+□ 400–600 words of UNIQUE city-specific content including:
+  - 1–2 sentences about the city itself (geography, coastal proximity, 
+    housing types, climate) and how it relates to mold risk
+  - Why mold is a concern in this specific city
+  - What areas/neighborhoods we serve in that city
+  - Services available in that city (link to service pages)
+□ Services offered section (card grid linking to service pages)
+□ Trust bar (IAC2, Veteran Owned, Same-Day)
+□ 3 city-specific FAQ cards
+□ CTA section
+□ Internal links to nearby city pages (2–3 neighboring cities)
+□ LocalBusiness + Service + FAQPage + BreadcrumbList schema
+□ Correct og:url for this specific city page
+
+Key coastal/humidity context for OC cities:
+- Coastal cities (San Clemente, Dana Point, Laguna Beach, Newport Beach, 
+  Huntington Beach, Seal Beach): emphasize marine layer humidity, salt air
+  moisture, coastal fog, older beach construction, HOA units
+- Inland cities (Irvine, Anaheim, Yorba Linda, Brea, Fullerton): emphasize
+  irrigation, older housing stock, poor ventilation in inland heat, 
+  HVAC-related moisture
+- Canyon/hillside cities (Laguna Niguel, Mission Viejo, Rancho Santa 
+  Margarita, Laguna Hills): emphasize slope drainage, hillside moisture 
+  intrusion, retaining walls
+
+════════════════════════════════════════
+TASK 6 — Fix the 18 404 pages
+════════════════════════════════════════
+Export the 404 URLs from Google Search Console Coverage report.
+For each URL:
+- If a similar page exists at a new URL → add a 301 redirect in next.config.js
+  under the redirects() function
+- If the page no longer exists → ensure no internal links point to it and
+  remove it from the sitemap
+- Add a custom 404 page at app/not-found.tsx if not already present with
+  helpful navigation links back to /services and /mold-inspector-near-me
+
+════════════════════════════════════════
+TASK 7 — Fix the sitemap
+════════════════════════════════════════
+Create or update app/sitemap.ts (Next.js dynamic sitemap) that:
+- Exports a default function returning a MetadataRoute.Sitemap array
+- Includes ALL valid pages with correct lastModified, changeFrequency, priority
+- Excludes any 404 pages
+- Excludes /privacy and any utility/legal pages from priority crawl
+- Priority scale: homepage=1.0, category pages=0.9, service pages=0.8, 
+  location pages=0.8, blog=0.7, about/contact/process/pricing=0.6
+- changeFrequency: homepage/blog=weekly, everything else=monthly
+
+════════════════════════════════════════
+TASK 8 — Create a reusable metadata audit component (dev only)
+════════════════════════════════════════
+Create app/components/MetaDebug.tsx (render only when NODE_ENV=development)
+
+This component reads the current page URL and displays a floating panel
+(bottom-right corner) showing:
+- Current og:url value
+- Current title
+- Current description length (highlight red if >160 or <140 chars)
+- Whether canonical matches the current URL
+- Whether openGraph.url matches the current URL
+
+This helps catch missing or wrong metadata during development before deploying.
+
+════════════════════════════════════════
+CODING STANDARDS (follow strictly)
+════════════════════════════════════════
+- TypeScript strict mode throughout
+- No 'any' types
+- Use Next.js Metadata type from 'next' for all metadata exports
+- Use next/link for all internal links
+- Use next/image for all images with proper width, height, alt
+- All schema objects typed with explicit interfaces, not inline literals
+- No inline styles — Tailwind classes only
+- All text content in sentence case (never ALL CAPS in headings)
+- Mobile-first responsive: sm: md: lg: breakpoints
+- Accessibility: all images have descriptive alt text, all interactive 
+  elements have aria-labels where needed
+- Keep components small and composable — extract repeated patterns
+  (TrustBar, FaqCard, ServiceCard, CtaSection, BreadcrumbNav) into
+  app/components/shared/
+
+════════════════════════════════════════
+EXECUTION ORDER
+════════════════════════════════════════
+Complete tasks in this order to avoid breaking changes:
+1. app/lib/metadata.ts (everything depends on this)
+2. app/lib/schema.ts (everything depends on this)
+3. app/components/shared/ (TrustBar, FaqCard, CtaSection, BreadcrumbNav)
+4. app/home-inspector/page.tsx (use as template for other category pages)
+5. app/environmental-consultant/page.tsx
+6. app/water-damage-restoration-service/page.tsx
+7. All service sub-pages (Groups A, B, C)
+8. All 33 location pages
+9. app/sitemap.ts
+10. next.config.js redirects for 404s
+11. app/not-found.tsx
+12. app/components/MetaDebug.tsx
+
+After completing all tasks, confirm:
+□ Every page has a unique og:url matching its own canonical URL
+□ Every page has a unique title, description, and keywords
+□ Every page has at least LocalBusiness + BreadcrumbList schema
+□ Sitemap contains all valid pages with no 404 URLs
+□ No page shares identical metadata with any other page
+□ MetaDebug shows green for all pages in development

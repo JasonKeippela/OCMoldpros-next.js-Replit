@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import JsonLd from './components/JsonLd'
+import MetaDebug from './components/MetaDebug'
 import { getSiteGraph } from './lib/schema'
 
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <MetaDebug />
       </body>
     </html>
   )

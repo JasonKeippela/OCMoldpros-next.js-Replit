@@ -26,10 +26,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = findServiceBySlug(slug)
   if (!service || service.categorySlug !== CATEGORY_SLUG) return {}
+  const canonicalUrl = getCanonicalUrl(service.canonicalHref)
+  const title = `${service.name} in Orange County CA | OC Mold Pros`
+  const description = `${service.shortDescription} IAC2 certified environmental consultant serving all of Orange County. Call 949-371-5934.`
   return {
-    title: `${service.name} | OC Mold Pros – Orange County, CA`,
-    description: service.shortDescription,
-    alternates: { canonical: getCanonicalUrl(service.canonicalHref) },
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      type: 'website',
+      locale: 'en_US',
+      siteName: 'OC Mold Pros',
+      images: [{ url: 'https://ocmoldpros.com/logo.jpg', width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['https://ocmoldpros.com/logo.jpg'],
+    },
   }
 }
 
