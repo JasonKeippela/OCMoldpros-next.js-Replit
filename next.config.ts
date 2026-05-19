@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
     ],
   },
   allowedDevOrigins: ['*.replit.dev', '*.replit.app', '*.kirk.replit.dev'],
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'no-cache, must-revalidate' },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       // General page redirects
