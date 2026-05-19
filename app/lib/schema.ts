@@ -387,6 +387,18 @@ export function getServicePageSchema(service: { name: string; path: string; desc
   }
 }
 
+export function getServiceSchema(name: string, description: string, url: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    url,
+    provider: { '@id': BUSINESS_ID },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Orange County, CA' },
+  }
+}
+
 export function getBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
   return {
     '@context': 'https://schema.org',

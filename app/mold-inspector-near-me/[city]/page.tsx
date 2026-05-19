@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { APPROVED_SERVICE_AREAS, getCityBySlug, getCityData } from '@/app/lib/cities'
 import { getCanonicalUrl } from '@/app/lib/canonical'
-import { getBreadcrumbSchema } from '@/app/lib/schema'
+import { getLocalBusinessSchema, getServiceSchema, getFaqSchema, getBreadcrumbSchema } from '@/app/lib/schema'
 import JsonLd from '@/app/components/JsonLd'
 
 type Props = {
@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityInfo = getCityBySlug(citySlug)
   if (!cityInfo) return { title: 'City Not Found' }
 
+  const cityData = getCityData(cityInfo.name)
   const canonicalUrl = getCanonicalUrl(`/mold-inspector-near-me/${citySlug}`)
   const title = `Mold Inspector ${cityInfo.name} CA | OC Mold Pros`
   const description = `Professional mold inspection & testing in ${cityInfo.name}, CA. IAC2 certified, veteran owned. Thermal imaging, air sampling & 24-hr reports. Call OC Mold Pros at 949-371-5934.`
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: cityData.keywords,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title,
@@ -49,30 +51,52 @@ function cityToSlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-') + '-ca'
 }
 
+const TRUST_BADGES = [
+  'IAC2 Certified',
+  'Veteran Owned',
+  'Inspection-Only',
+  'Written Report in 24 Hours',
+  'Same-Day Service Available',
+]
+
 export default async function CityPage({ params }: Props) {
   const { city: citySlug } = await params
   const cityInfo = getCityBySlug(citySlug)
-  
+
   if (!cityInfo) {
     notFound()
   }
 
-  const { description, moldServices, isCoastal } = getCityData(cityInfo.name)
+  const cityData = getCityData(cityInfo.name)
+  const { description, moldServices, isCoastal, faqs } = cityData
   const nearbyWithSlugs = cityInfo.nearby.map(name => ({
     name,
     slug: cityToSlug(name)
   }))
 
+  const canonicalUrl = `https://ocmoldpros.com/mold-inspector-near-me/${citySlug}`
+  const serviceTitle = `Mold Inspection in ${cityInfo.name}, CA`
+  const serviceDescription = `Professional mold inspection and testing services in ${cityInfo.name}, CA. IAC2 certified, veteran owned inspector serving all of Orange County.`
+
+  const businessSchema = getLocalBusinessSchema()
+  const serviceSchema = getServiceSchema(serviceTitle, serviceDescription, canonicalUrl)
+  const faqSchemaData = faqs.length > 0
+    ? getFaqSchema(faqs.map(f => ({ question: f.q, answer: f.a })))
+    : null
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: 'https://ocmoldpros.com' },
     { name: 'Mold Inspector Near Me', url: 'https://ocmoldpros.com/mold-inspector-near-me' },
-    { name: `${cityInfo.name}, CA`, url: `https://ocmoldpros.com/mold-inspector-near-me/${citySlug}` },
+    { name: `${cityInfo.name}, CA`, url: canonicalUrl },
   ])
 
   return (
     <>
       <main className="pt-28">
+        <JsonLd data={{ '@context': 'https://schema.org', ...businessSchema }} />
+        <JsonLd data={serviceSchema} />
+        {faqSchemaData && <JsonLd data={{ '@context': 'https://schema.org', ...faqSchemaData }} />}
         <JsonLd data={breadcrumbSchema} />
+
         <nav className="bg-gray-100 py-3">
           <div className="max-w-6xl mx-auto px-4">
             <ol className="flex items-center gap-2 text-sm text-gray-600">
@@ -88,8 +112,18 @@ export default async function CityPage({ params }: Props) {
         <section className="py-16 bg-gradient-to-b from-ocean-50 to-white">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Professional Mold Testing & Inspection Services in {cityInfo.name}, CA
+              Professional Mold Testing &amp; Inspection Services in {cityInfo.name}, CA
             </h1>
+            <p className="text-lg text-gray-700 mb-6 max-w-3xl leading-relaxed">
+              {description}
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              {TRUST_BADGES.map((badge) => (
+                <span key={badge} className="px-3 py-1 bg-ocean-100 text-ocean-800 text-sm font-medium rounded-full border border-ocean-200">
+                  ✓ {badge}
+                </span>
+              ))}
+            </div>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl">
               OC Mold Pros provides comprehensive mold inspection and testing services to homeowners and businesses throughout {cityInfo.name} and the surrounding Orange County communities. Our certified inspectors use advanced technology to detect hidden mold and moisture problems, protecting your property and your family&apos;s health.
             </p>
@@ -165,10 +199,10 @@ export default async function CityPage({ params }: Props) {
 
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">About {cityInfo.name}, California</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">{description}</p>
-            
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Local Landmarks & Points of Interest</h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mold Inspection Services in {cityInfo.name}</h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">{moldServices}</p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Local Landmarks &amp; Points of Interest</h3>
             <div className="flex flex-wrap gap-3">
               {cityInfo.landmarks?.map((landmark, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200 shadow-sm">
@@ -179,12 +213,23 @@ export default async function CityPage({ params }: Props) {
           </div>
         </section>
 
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mold Inspection Services in {cityInfo.name}</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">{moldServices}</p>
-          </div>
-        </section>
+        {faqs.length > 0 && (
+          <section className="py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Frequently Asked Questions About Mold Inspection in {cityInfo.name}
+              </h2>
+              <div className="space-y-5">
+                {faqs.map((faq, i) => (
+                  <div key={i} className="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
+                    <p className="text-gray-600">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-16 bg-ocean-50">
           <div className="max-w-6xl mx-auto px-4">
