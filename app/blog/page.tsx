@@ -96,6 +96,90 @@ const articles = [
     excerpt: 'An overview of the most common mold species we encounter during inspections and their characteristics.',
     category: 'Education',
     date: '2024-11-15'
+  },
+  {
+    title: 'Why Newport Beach Homes Need Mold Inspections More Often Than You Think',
+    slug: 'mold-inspection-newport-beach-coastal-homes',
+    excerpt: 'Coastal humidity, salt air, and older construction make Newport Beach properties uniquely vulnerable to hidden mold growth — here is what homeowners need to know.',
+    category: 'City Guide',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Mold in Irvine Master-Planned Communities: What Homeowners Are Not Told',
+    slug: 'mold-inspection-irvine-master-planned-communities',
+    excerpt: 'Energy-efficient construction in Irvine neighborhoods like Woodbridge, Quail Hill, and Portola Springs creates conditions where indoor humidity accumulates faster than most homeowners realize.',
+    category: 'City Guide',
+    date: '2026-05-21'
+  },
+  {
+    title: '7 Signs You Have Mold in Your Orange County Home (And What to Do Next)',
+    slug: 'signs-you-have-mold-orange-county-home',
+    excerpt: 'Most mold grows where you cannot see it. These seven warning signs help Orange County homeowners identify a potential problem before it becomes a serious health or property issue.',
+    category: 'Education',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Your HVAC System May Be Spreading Mold Through Your Orange County Home',
+    slug: 'hvac-mold-orange-county',
+    excerpt: 'HVAC systems are the most efficient mold distribution mechanism in a home — here is how mold gets into your system, how to recognize it, and what a professional inspection covers.',
+    category: 'Education',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Why Every Orange County Home Buyer Should Get a Mold Inspection Before Closing',
+    slug: 'mold-inspection-before-buying-home-orange-county',
+    excerpt: 'A general home inspection does not include the air sampling and moisture mapping needed to identify hidden mold — here is what a pre-purchase mold inspection covers and why it matters.',
+    category: 'Real Estate',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Aspergillus and Penicillium: The Most Common Mold Species Found in Orange County Homes',
+    slug: 'aspergillus-penicillium-mold-orange-county',
+    excerpt: 'Aspergillus and Penicillium are the mold species most frequently identified in Orange County air samples — understanding what they are and where they grow helps homeowners take the right action.',
+    category: 'Education',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Mold Inspection in San Clemente: What the Ocean Air Does to Your Home',
+    slug: 'mold-inspection-san-clemente',
+    excerpt: 'San Clemente\'s coastal setting makes it one of the most mold-prone cities in Orange County — here is what local homeowners need to know about marine humidity, Spanish Colonial construction, and professional inspection.',
+    category: 'City Guide',
+    date: '2026-05-21'
+  },
+  {
+    title: 'California Landlord Mold Responsibilities: What Orange County Property Owners Need to Know',
+    slug: 'landlord-mold-responsibilities-california',
+    excerpt: 'California law places specific mold disclosure and habitability obligations on landlords — here is what Orange County rental property owners need to understand to protect their tenants and their investments.',
+    category: 'Real Estate',
+    date: '2026-05-21'
+  },
+  {
+    title: 'ERMI Testing Explained: When Standard Mold Air Sampling Is Not Enough',
+    slug: 'ermi-testing-explained',
+    excerpt: 'ERMI testing uses dust analysis to identify 36 mold species and provides a different picture of mold history in a home than standard air sampling — here is when it makes sense.',
+    category: 'Education',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Mold Illness and Your Home: When Symptoms Point to Indoor Air Quality',
+    slug: 'mold-illness-symptoms-home-inspection',
+    excerpt: 'Fatigue, brain fog, and respiratory symptoms that improve when you leave home may indicate mold exposure — here is what to know and how professional inspection provides answers.',
+    category: 'Health',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Mycotoxin Testing: What It Is and When Orange County Homeowners Should Consider It',
+    slug: 'mycotoxin-testing-orange-county',
+    excerpt: 'Mycotoxins are toxic compounds produced by certain mold species that standard air sampling does not detect — here is when mycotoxin testing provides meaningful additional information.',
+    category: 'Education',
+    date: '2026-05-21'
+  },
+  {
+    title: 'Mold in Dana Point and Laguna Beach: A Guide for Coastal Orange County Homeowners',
+    slug: 'mold-dana-point-laguna-beach-coastal',
+    excerpt: 'Dana Point and Laguna Beach homeowners face some of the highest mold risk in Orange County — canyon microclimates, ocean exposure, and older construction create a challenging moisture environment.',
+    category: 'City Guide',
+    date: '2026-05-21'
   }
 ]
 
