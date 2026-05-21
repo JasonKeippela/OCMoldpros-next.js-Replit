@@ -197,6 +197,22 @@ export default async function CityPage({ params }: Props) {
           </div>
         </section>
 
+        {cityInfo.neighborhoods && cityInfo.neighborhoods.length > 0 && (
+          <section className="mt-12">
+            <div className="max-w-6xl mx-auto px-4">
+              <h2 className="text-2xl font-bold mb-6">Neighborhoods We Serve in {cityInfo.name}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {cityInfo.neighborhoods.map((n) => (
+                  <div key={n.name} className="p-5 border border-gray-200 rounded-lg bg-white shadow-sm">
+                    <h3 className="text-lg font-semibold mb-2">{n.name}</h3>
+                    <p className="text-gray-600 text-sm">{n.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mold Inspection Services in {cityInfo.name}</h2>

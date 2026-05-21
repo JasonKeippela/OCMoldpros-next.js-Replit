@@ -7,6 +7,7 @@ export type ServiceArea = {
   tier: 'core' | 'secondary';
   nearby: string[];
   landmarks: string[];
+  neighborhoods?: { name: string; description: string }[];
 }
 
 export type CityData = {
@@ -19,16 +20,127 @@ export type CityData = {
 
 // 10 Core cities (primary service area focus)
 export const CORE_CITIES: ServiceArea[] = [
-  { name: 'San Clemente', slug: 'san-clemente-ca', tier: 'core', nearby: ['Dana Point', 'San Juan Capistrano', 'Laguna Niguel', 'Laguna Beach', 'Mission Viejo', 'Rancho Santa Margarita'], landmarks: ['San Clemente Pier', 'Casa Romantica Cultural Center', 'San Clemente State Beach', 'Trestles Beach', 'Downtown San Clemente'] },
-  { name: 'Dana Point', slug: 'dana-point-ca', tier: 'core', nearby: ['San Clemente', 'Laguna Niguel', 'San Juan Capistrano', 'Laguna Beach', 'Mission Viejo', 'Aliso Viejo'], landmarks: ['Dana Point Harbor', 'Doheny State Beach', 'Ocean Institute', 'Headlands Conservation Area', 'Salt Creek Beach Park'] },
-  { name: 'Laguna Beach', slug: 'laguna-beach-ca', tier: 'core', nearby: ['Laguna Niguel', 'Aliso Viejo', 'Dana Point', 'Newport Beach', 'Laguna Hills', 'Irvine'], landmarks: ['Laguna Art Museum', 'Heisler Park', 'Main Beach', 'Crystal Cove State Park', 'Festival of Arts'] },
-  { name: 'Laguna Niguel', slug: 'laguna-niguel-ca', tier: 'core', nearby: ['Dana Point', 'Aliso Viejo', 'Laguna Beach', 'Mission Viejo', 'San Juan Capistrano', 'Laguna Hills'], landmarks: ['Aliso Summit Trail', 'Laguna Niguel Regional Park', 'Crown Valley Community Park', 'Laguna Niguel Skate Park', 'Salt Creek Beach'] },
-  { name: 'Laguna Hills', slug: 'laguna-hills-ca', tier: 'core', nearby: ['Aliso Viejo', 'Lake Forest', 'Mission Viejo', 'Laguna Niguel', 'Irvine', 'Laguna Beach'], landmarks: ['Laguna Hills Mall', 'Nellie Gail Ranch', 'Community Center & Sports Complex', 'Laguna Hills Skate Park', 'Aliso Creek Trail'] },
-  { name: 'Mission Viejo', slug: 'mission-viejo-ca', tier: 'core', nearby: ['Lake Forest', 'Laguna Niguel', 'Aliso Viejo', 'Rancho Santa Margarita', 'Laguna Hills', 'San Juan Capistrano'], landmarks: ['Lake Mission Viejo', 'Oso Creek Trail', 'Kaleidoscope Shopping Center', 'Mission Viejo Country Club', 'Pavillion Park'] },
-  { name: 'Newport Beach', slug: 'newport-beach-ca', tier: 'core', nearby: ['Costa Mesa', 'Irvine', 'Huntington Beach', 'Laguna Beach', 'Santa Ana', 'Fountain Valley'], landmarks: ['Balboa Island', 'Fashion Island', 'Corona del Mar State Beach', 'Newport Harbor', 'The Wedge'] },
-  { name: 'Huntington Beach', slug: 'huntington-beach-ca', tier: 'core', nearby: ['Fountain Valley', 'Costa Mesa', 'Westminster', 'Seal Beach', 'Newport Beach', 'Garden Grove'], landmarks: ['Huntington Beach Pier', 'Bolsa Chica Ecological Reserve', 'International Surfing Museum', 'Pacific City', 'Huntington Central Park'] },
-  { name: 'Costa Mesa', slug: 'costa-mesa-ca', tier: 'core', nearby: ['Newport Beach', 'Irvine', 'Huntington Beach', 'Santa Ana', 'Fountain Valley', 'Tustin'], landmarks: ['South Coast Plaza', 'Segerstrom Center for the Arts', 'Orange County Fairgrounds', 'The LAB Anti-Mall', 'TeWinkle Park'] },
-  { name: 'Irvine', slug: 'irvine-ca', tier: 'core', nearby: ['Tustin', 'Costa Mesa', 'Newport Beach', 'Lake Forest', 'Santa Ana', 'Orange'], landmarks: ['Irvine Spectrum Center', 'University of California Irvine', 'Great Park', 'Quail Hill', 'Turtle Rock Community Park'] },
+  {
+    name: 'San Clemente', slug: 'san-clemente-ca', tier: 'core',
+    nearby: ['Dana Point', 'San Juan Capistrano', 'Laguna Niguel', 'Laguna Beach', 'Mission Viejo', 'Rancho Santa Margarita'],
+    landmarks: ['San Clemente Pier', 'Casa Romantica Cultural Center', 'San Clemente State Beach', 'Trestles Beach', 'Downtown San Clemente'],
+    neighborhoods: [
+      { name: 'T-Street & Pier Bowl', description: 'Older beach cottages and Spanish Colonial homes near the pier face constant salt air exposure and marine humidity. These properties often lack modern vapor barriers and benefit from regular mold inspections.' },
+      { name: 'Forster Ranch', description: 'Hillside homes in Forster Ranch experience temperature swings that cause condensation in wall cavities and attic spaces. Canyon-facing exposures are particularly prone to moisture accumulation from coastal fog.' },
+      { name: 'Talega', description: "Talega's newer master-planned construction is energy efficient but tightly sealed — trapping humidity when HVAC systems underperform. We regularly inspect HVAC evaporator coils and condensate lines in Talega homes." },
+      { name: 'San Clemente Cove & Marblehead', description: 'Coastal bluff properties in these neighborhoods face direct ocean exposure. Salt air accelerates seal degradation on windows and exterior penetrations, creating moisture entry points.' },
+      { name: 'Rancho San Clemente', description: 'Hillside and canyon-adjacent homes in Rancho San Clemente can experience drainage issues on uphill foundation walls after rain events. Crawl spaces and lower-level areas are priority inspection zones.' },
+      { name: 'Downtown San Clemente (Avenida Del Mar)', description: 'Historic commercial and residential buildings in downtown San Clemente include older construction with plaster walls and vintage plumbing. These properties require non-invasive inspection methods appropriate for aged materials.' },
+    ],
+  },
+  {
+    name: 'Dana Point', slug: 'dana-point-ca', tier: 'core',
+    nearby: ['San Clemente', 'Laguna Niguel', 'San Juan Capistrano', 'Laguna Beach', 'Mission Viejo', 'Aliso Viejo'],
+    landmarks: ['Dana Point Harbor', 'Doheny State Beach', 'Ocean Institute', 'Headlands Conservation Area', 'Salt Creek Beach Park'],
+    neighborhoods: [
+      { name: 'Lantern District', description: 'Historic mixed-use neighborhood with older residential construction close to the bluffs. Salt air penetration and aging window seals are the primary moisture entry points in Lantern District homes.' },
+      { name: 'Monarch Beach', description: 'Luxury oceanfront and bluff-top properties here face the highest direct ocean exposure in Dana Point. Salt-laden air accelerates building material degradation and creates persistent indoor humidity challenges.' },
+      { name: 'Dana Hills', description: 'Hillside residential community with homes from the 1970s-80s. Hillside drainage and foundation moisture on uphill walls are inspection priorities, along with aging HVAC systems common in this era of construction.' },
+      { name: 'Capistrano Beach (Capo Beach)', description: 'Known locally as Capo Beach, this neighborhood has older beachside construction with direct marine exposure. Many homes have minimal vapor barriers and benefit from thorough inspection of attic, crawl space, and bathroom areas.' },
+      { name: 'Niguel Shores', description: 'Gated coastal community with ocean-view homes. The marine environment keeps humidity elevated year-round. We inspect ocean-facing walls, window assemblies, and HVAC systems in Niguel Shores properties.' },
+    ],
+  },
+  {
+    name: 'Laguna Beach', slug: 'laguna-beach-ca', tier: 'core',
+    nearby: ['Laguna Niguel', 'Aliso Viejo', 'Dana Point', 'Newport Beach', 'Laguna Hills', 'Irvine'],
+    landmarks: ['Laguna Art Museum', 'Heisler Park', 'Main Beach', 'Crystal Cove State Park', 'Festival of Arts'],
+    neighborhoods: [
+      { name: 'Top of the World', description: 'Elevated neighborhood with panoramic views and exposure to coastal fog from multiple directions. Canyon-facing homes in Top of the World see consistent marine layer penetration, particularly in attics and north-facing walls.' },
+      { name: 'Emerald Bay', description: "Private gated community with oceanfront and bluff-top properties. Older construction styles combined with direct ocean exposure make Emerald Bay one of Laguna's higher mold-risk communities." },
+      { name: 'Three Arch Bay', description: 'Another private coastal enclave where homes face persistent ocean humidity. The cove setting traps marine air, creating elevated moisture levels that affect even well-maintained properties.' },
+      { name: 'Arch Beach Heights', description: 'Hillside neighborhood with canyon exposure and older residential construction. Limited airflow between homes on narrow canyon lots allows moisture to accumulate, particularly in shaded north-facing areas.' },
+      { name: 'South Laguna', description: 'Beachside properties in South Laguna include many older cottages and bungalows with minimal moisture protection. Direct PCH-adjacent properties face road moisture and ocean exposure simultaneously.' },
+    ],
+  },
+  {
+    name: 'Laguna Niguel', slug: 'laguna-niguel-ca', tier: 'core',
+    nearby: ['Dana Point', 'Aliso Viejo', 'Laguna Beach', 'Mission Viejo', 'San Juan Capistrano', 'Laguna Hills'],
+    landmarks: ['Aliso Summit Trail', 'Laguna Niguel Regional Park', 'Crown Valley Community Park', 'Laguna Niguel Skate Park', 'Salt Creek Beach'],
+    neighborhoods: [
+      { name: 'Bear Brand Ranch', description: 'Upscale gated community with hillside homes and ocean views. Hillside drainage and foundation moisture on uphill walls are key inspection priorities alongside aging HVAC systems.' },
+      { name: 'Marina Hills', description: "Ocean-view community with homes from the 1980s-90s. Coastal humidity combined with this era's construction details — particularly window and door seals — creates conditions for moisture intrusion." },
+      { name: 'Rancho Niguel', description: "One of Laguna Niguel's largest communities with diverse housing from condos to single-family homes. HVAC systems and bathroom ventilation are the most common moisture sources we find here." },
+      { name: 'El Niguel Heights', description: 'Hillside neighborhood with canyon-adjacent lots. Drainage around uphill foundation walls and crawl space moisture are primary inspection focus areas after rain events.' },
+      { name: 'Laguna Sur', description: 'Coastal bluff community with panoramic ocean views. Direct marine exposure and the elevated position that catches coastal fog make Laguna Sur properties candidates for regular professional inspection.' },
+    ],
+  },
+  {
+    name: 'Laguna Hills', slug: 'laguna-hills-ca', tier: 'core',
+    nearby: ['Aliso Viejo', 'Lake Forest', 'Mission Viejo', 'Laguna Niguel', 'Irvine', 'Laguna Beach'],
+    landmarks: ['Laguna Hills Mall', 'Nellie Gail Ranch', 'Community Center & Sports Complex', 'Laguna Hills Skate Park', 'Aliso Creek Trail'],
+    neighborhoods: [
+      { name: 'Nellie Gail Ranch', description: 'Equestrian community with large custom lots and homes from the 1970s-80s. Large irrigated lots and older plumbing systems are common moisture sources. Custom construction requires experienced inspection techniques.' },
+      { name: 'Aliso Viejo border communities', description: 'Homes along the Laguna Hills and Aliso Viejo border share similar construction from the late 1980s-90s. HVAC moisture and bathroom ventilation failures are the most frequent findings in this corridor.' },
+      { name: 'Laguna Hills central residential', description: 'The core residential areas of Laguna Hills feature a mix of townhomes and single-family homes. Shared-wall construction in attached homes means moisture in one unit can affect neighbors — a key consideration for condo owners.' },
+    ],
+  },
+  {
+    name: 'Mission Viejo', slug: 'mission-viejo-ca', tier: 'core',
+    nearby: ['Lake Forest', 'Laguna Niguel', 'Aliso Viejo', 'Rancho Santa Margarita', 'Laguna Hills', 'San Juan Capistrano'],
+    landmarks: ['Lake Mission Viejo', 'Oso Creek Trail', 'Kaleidoscope Shopping Center', 'Mission Viejo Country Club', 'Pavillion Park'],
+    neighborhoods: [
+      { name: 'Pacific Hills', description: 'Hillside community with ocean views and homes from the 1980s. Canyon-adjacent lots experience temperature swings that promote condensation. HVAC systems and attic ventilation are primary inspection priorities.' },
+      { name: 'Olympiad area', description: 'Central Mission Viejo neighborhood with a mix of single-family homes from the 1970s-80s. Aging plumbing and HVAC systems in this era of construction are common moisture sources we address regularly.' },
+      { name: 'Trabuco area', description: 'Eastern Mission Viejo neighborhood near the Trabuco Creek corridor. Creek-adjacent properties can experience elevated ground moisture, particularly in crawl spaces after winter rains.' },
+      { name: 'Casta del Sol', description: 'Active adult community with older construction requiring attention to aging HVAC systems, plumbing fixtures, and bathroom ventilation. We provide respectful, thorough inspections for this established community.' },
+      { name: 'Lake area (Marguerite Pkwy corridor)', description: 'Homes near Lake Mission Viejo experience slightly elevated ambient humidity from the lake. HVAC systems, bathroom exhaust, and any below-grade spaces are priority inspection areas for lake-adjacent properties.' },
+    ],
+  },
+  {
+    name: 'Newport Beach', slug: 'newport-beach-ca', tier: 'core',
+    nearby: ['Costa Mesa', 'Irvine', 'Huntington Beach', 'Laguna Beach', 'Santa Ana', 'Fountain Valley'],
+    landmarks: ['Balboa Island', 'Fashion Island', 'Corona del Mar State Beach', 'Newport Harbor', 'The Wedge'],
+    neighborhoods: [
+      { name: 'Balboa Peninsula', description: "One of OC's highest mold-risk areas — older beach cottages with direct ocean exposure, limited attic ventilation, and aging plumbing. Many properties date from the 1940s-60s with minimal moisture protection." },
+      { name: 'Balboa Island', description: 'Island properties face marine humidity from all sides. Limited lot sizes mean homes are densely packed with minimal airflow between structures. HVAC systems and crawl spaces require particular attention.' },
+      { name: 'Corona del Mar', description: 'Upscale bluff-top homes in CdM face ocean-facing moisture intrusion on west-facing walls and windows. High-value properties here benefit from thorough inspection before purchase or renovation.' },
+      { name: 'Newport Coast', description: 'Newer luxury construction in Newport Coast is tightly built for energy efficiency. Without adequate mechanical ventilation, these homes trap humidity — particularly in multi-zone HVAC systems and spa or pool-adjacent rooms.' },
+      { name: 'Lido Isle', description: "This harbor-facing island community experiences some of Newport's highest marine humidity levels. Homes on Lido Isle often have older HVAC systems and require inspection of all harbor-facing walls and window assemblies." },
+      { name: 'West Newport', description: 'Dense residential development with older construction and high rental turnover. West Newport properties near PCH frequently show moisture issues in bathroom walls, under-sink areas, and poorly ventilated garage spaces.' },
+    ],
+  },
+  {
+    name: 'Huntington Beach', slug: 'huntington-beach-ca', tier: 'core',
+    nearby: ['Fountain Valley', 'Costa Mesa', 'Westminster', 'Seal Beach', 'Newport Beach', 'Garden Grove'],
+    landmarks: ['Huntington Beach Pier', 'Bolsa Chica Ecological Reserve', 'International Surfing Museum', 'Pacific City', 'Huntington Central Park'],
+    neighborhoods: [
+      { name: 'Downtown HB / Pier area', description: 'Older beach cottages and condos within walking distance of the pier face maximum salt air and marine humidity exposure. Many properties in this corridor were built before modern moisture barriers were standard.' },
+      { name: 'Huntington Harbour', description: 'Waterfront community with homes on man-made channels. Water on multiple sides creates persistently elevated humidity. Boat garages and lower-level rooms adjacent to the water are high-priority inspection areas.' },
+      { name: 'Bolsa Chica area', description: 'Homes near the Bolsa Chica Ecological Reserve experience wetland-adjacent humidity. Properties backing the reserve or the slough have unique ground moisture conditions that affect crawl spaces and slab foundations.' },
+      { name: 'Seacliff', description: "Upscale planned community with bluff-top and inland homes. Seacliff's proximity to the coast combined with 1980s-90s construction makes HVAC systems and window assemblies key inspection focus areas." },
+      { name: 'Oldtown Huntington Beach', description: 'Historic neighborhood with pre-war and post-war construction near the beach. These older homes often have original plumbing and minimal vapor barriers — prime candidates for thorough professional inspection.' },
+    ],
+  },
+  {
+    name: 'Costa Mesa', slug: 'costa-mesa-ca', tier: 'core',
+    nearby: ['Newport Beach', 'Irvine', 'Huntington Beach', 'Santa Ana', 'Fountain Valley', 'Tustin'],
+    landmarks: ['South Coast Plaza', 'Segerstrom Center for the Arts', 'Orange County Fairgrounds', 'The LAB Anti-Mall', 'TeWinkle Park'],
+    neighborhoods: [
+      { name: 'Eastside Costa Mesa', description: "Bordering Newport Beach's Back Bay, Eastside Costa Mesa is among the most humidity-affected areas in the city. Older single-family homes here frequently show moisture issues in attics, bathrooms, and around original plumbing." },
+      { name: 'Mesa Verde', description: 'Established neighborhood with homes from the 1960s-70s. Aging HVAC systems, older plumbing connections, and dated bathroom ventilation are the most common moisture sources we find in Mesa Verde properties.' },
+      { name: 'South Coast Metro area', description: 'Mix of condos and apartments near South Coast Plaza. High-density attached housing means shared-wall moisture migration is a concern. We inspect HVAC systems and all shared-wall bathrooms and kitchen areas.' },
+      { name: 'Westside Costa Mesa', description: 'Older industrial-residential mix neighborhood with homes dating from the 1950s-60s. Plumbing and roof systems in this era of construction deserve particular attention during inspection.' },
+      { name: 'College Park area', description: 'Residential neighborhood with post-war and mid-century construction near OCC. Aging infrastructure and older construction styles are common — we assess original plumbing, HVAC, and window seals in this area.' },
+    ],
+  },
+  {
+    name: 'Irvine', slug: 'irvine-ca', tier: 'core',
+    nearby: ['Tustin', 'Costa Mesa', 'Newport Beach', 'Lake Forest', 'Santa Ana', 'Orange'],
+    landmarks: ['Irvine Spectrum Center', 'University of California Irvine', 'Great Park', 'Quail Hill', 'Turtle Rock Community Park'],
+    neighborhoods: [
+      { name: 'Woodbridge', description: "One of Irvine's original villages with homes from the late 1970s-80s. Aging plumbing and HVAC systems are common moisture sources. Lake-adjacent areas can see slightly elevated ground moisture near lower-level living spaces." },
+      { name: 'Quail Hill', description: 'Newer construction in Quail Hill is tightly built, making HVAC moisture management critical. We commonly inspect evaporator coils and condensate drain lines in this community\'s townhomes and single-family homes.' },
+      { name: 'Portola Springs', description: "Portola Springs features some of Irvine's newest construction. While well-built, these homes can develop mold from construction moisture sealed in during building, or from HVAC issues in the first few years of occupancy." },
+      { name: 'Northwood', description: "Northwood's mix of 1980s-90s single-family homes and condos frequently show bathroom ventilation issues and aging water heater connections as primary moisture sources." },
+      { name: 'University Park', description: 'Proximity to UC Irvine means many University Park properties are rentals with higher occupancy and intensive bathroom and kitchen use. Landlords benefit from annual inspections to meet California habitability standards.' },
+      { name: 'Laguna Altura', description: "Laguna Altura's hillside location creates temperature differentials that promote condensation inside wall cavities. Tightly sealed homes here can accumulate indoor humidity rapidly without proper ventilation." },
+    ],
+  },
 ]
 
 // 24 Secondary cities
