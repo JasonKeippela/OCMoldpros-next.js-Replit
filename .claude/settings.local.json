@@ -5,7 +5,12 @@
       "Bash(nslookup ocmoldpros.com)",
       "Bash(dig ocmoldpros.com CNAME +short)",
       "Bash(dig www.ocmoldpros.com CNAME +short)",
-      "Bash(dig www.ocmoldpros.com A +short)"
+      "Bash(dig www.ocmoldpros.com A +short)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
