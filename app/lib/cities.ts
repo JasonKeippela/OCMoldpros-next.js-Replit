@@ -145,30 +145,253 @@ export const CORE_CITIES: ServiceArea[] = [
 
 // 24 Secondary cities
 export const SECONDARY_CITIES: ServiceArea[] = [
-  { name: 'Aliso Viejo', slug: 'aliso-viejo-ca', tier: 'secondary', nearby: ['Laguna Niguel', 'Laguna Hills', 'Mission Viejo', 'Laguna Beach', 'Lake Forest', 'Irvine'], landmarks: ['Aliso Viejo Town Center', 'Aliso and Wood Canyons Wilderness Park', 'Grand Park', 'Iglesia Park', 'Soka University'] },
-  { name: 'Anaheim', slug: 'anaheim-ca', tier: 'secondary', nearby: ['Orange', 'Fullerton', 'Garden Grove', 'Buena Park', 'Placentia', 'Santa Ana'], landmarks: ['Disneyland Resort', 'Angel Stadium', 'Honda Center', 'Anaheim Packing District', 'Downtown Disney'] },
-  { name: 'Brea', slug: 'brea-ca', tier: 'secondary', nearby: ['Fullerton', 'Placentia', 'Yorba Linda', 'La Habra', 'Orange', 'Anaheim'], landmarks: ['Brea Mall', 'Downtown Brea', 'Brea Dam Recreation Area', 'Carbon Canyon Regional Park', 'Curtis Theatre'] },
-  { name: 'Buena Park', slug: 'buena-park-ca', tier: 'secondary', nearby: ['Fullerton', 'Anaheim', 'Cypress', 'La Palma', 'Stanton', 'Garden Grove'], landmarks: ['Knotts Berry Farm', 'Medieval Times', 'Pirate Dinner Adventure', 'Buena Park Downtown', 'Ralph B. Clark Regional Park'] },
-  { name: 'Cypress', slug: 'cypress-ca', tier: 'secondary', nearby: ['Buena Park', 'Los Alamitos', 'La Palma', 'Stanton', 'Garden Grove', 'Seal Beach'], landmarks: ['Cypress College', 'Arnold Cypress Park', 'Veterans Memorial', 'Oak Knoll Park', 'Cypress Community Center'] },
-  { name: 'Fountain Valley', slug: 'fountain-valley-ca', tier: 'secondary', nearby: ['Huntington Beach', 'Costa Mesa', 'Westminster', 'Santa Ana', 'Garden Grove', 'Irvine'], landmarks: ['Mile Square Regional Park', 'Fountain Valley Recreation Center', 'Kingston Park', 'Courreges Park', 'Fountain Valley Summerfest'] },
-  { name: 'Fullerton', slug: 'fullerton-ca', tier: 'secondary', nearby: ['Placentia', 'Anaheim', 'Brea', 'Buena Park', 'La Habra', 'Yorba Linda'], landmarks: ['Fullerton Arboretum', 'Muckenthaler Cultural Center', 'Downtown Fullerton', 'California State University Fullerton', 'Hillcrest Park'] },
-  { name: 'Garden Grove', slug: 'garden-grove-ca', tier: 'secondary', nearby: ['Westminster', 'Anaheim', 'Santa Ana', 'Stanton', 'Fountain Valley', 'Orange'], landmarks: ['Christ Cathedral', 'Atlantis Play Center', 'Garden Grove Strawberry Festival', 'Village Green Park', 'Garden Grove Historical Society'] },
-  { name: 'La Habra', slug: 'la-habra-ca', tier: 'secondary', nearby: ['Brea', 'Fullerton', 'Buena Park', 'La Palma', 'Placentia', 'Yorba Linda'], landmarks: ['La Habra Childrens Museum', 'La Habra Depot Theater', 'Portola Park', 'La Habra Citrus Festival', 'Imperial Park'] },
-  { name: 'La Palma', slug: 'la-palma-ca', tier: 'secondary', nearby: ['Buena Park', 'Cypress', 'Stanton', 'Anaheim', 'Los Alamitos', 'La Habra'], landmarks: ['La Palma Central Park', 'La Palma Intercommunity Hospital', 'Walker Junior High School', 'George Washington Elementary', 'La Palma City Hall'] },
-  { name: 'Laguna Woods', slug: 'laguna-woods-ca', tier: 'secondary', nearby: ['Lake Forest', 'Laguna Hills', 'Irvine', 'Aliso Viejo', 'Mission Viejo', 'Laguna Beach'], landmarks: ['Laguna Woods Village', 'Laguna Woods City Hall', 'Aliso Creek', 'El Toro Road Shopping', 'Laguna Woods Community Center'] },
-  { name: 'Lake Forest', slug: 'lake-forest-ca', tier: 'secondary', nearby: ['Irvine', 'Mission Viejo', 'Laguna Hills', 'Laguna Woods', 'Rancho Santa Margarita', 'Aliso Viejo'], landmarks: ['Ethnobotany Garden', 'Pittsford Park', 'Lake Forest Sports Park', 'Borrego Park', 'Heritage Hill Historical Park'] },
-  { name: 'Los Alamitos', slug: 'los-alamitos-ca', tier: 'secondary', nearby: ['Seal Beach', 'Cypress', 'Garden Grove', 'Westminster', 'Huntington Beach', 'Stanton'], landmarks: ['Los Alamitos Race Course', 'Arbor Dog Park', 'Little Cottonwood Park', 'Los Alamitos Community Center', 'Museum of History'] },
-  { name: 'Orange', slug: 'orange-ca', tier: 'secondary', nearby: ['Anaheim', 'Santa Ana', 'Tustin', 'Villa Park', 'Irvine', 'Garden Grove'], landmarks: ['Old Towne Orange', 'Chapman University', 'The Outlets at Orange', 'Irvine Regional Park', 'Santiago Oaks Regional Park'] },
-  { name: 'Placentia', slug: 'placentia-ca', tier: 'secondary', nearby: ['Fullerton', 'Yorba Linda', 'Anaheim', 'Brea', 'Orange', 'Villa Park'], landmarks: ['Tri-City Park', 'George Key Ranch Historic Park', 'Bradford House', 'Placentia Champions Sports Complex', 'Downtown Placentia'] },
-  { name: 'Rancho Santa Margarita', slug: 'rancho-santa-margarita-ca', tier: 'secondary', nearby: ['Mission Viejo', 'Lake Forest', 'San Juan Capistrano', 'Laguna Hills', 'Laguna Niguel', 'Aliso Viejo'], landmarks: ['Rancho Santa Margarita Lake', 'Central Park', 'Tijeras Creek Golf Club', 'Arroyo Trabuco Golf Club', 'OSO Viejo Park'] },
-  { name: 'San Juan Capistrano', slug: 'san-juan-capistrano-ca', tier: 'secondary', nearby: ['Dana Point', 'San Clemente', 'Laguna Niguel', 'Mission Viejo', 'Rancho Santa Margarita', 'Laguna Hills'], landmarks: ['Mission San Juan Capistrano', 'Los Rios Historic District', 'Zoomars Petting Zoo', 'ONeill Museum', 'Historic Town Center'] },
-  { name: 'Santa Ana', slug: 'santa-ana-ca', tier: 'secondary', nearby: ['Orange', 'Irvine', 'Costa Mesa', 'Tustin', 'Garden Grove', 'Fountain Valley'], landmarks: ['Santa Ana Zoo', 'Bowers Museum', 'Discovery Cube Orange County', 'MainPlace Mall', 'Heritage Museum of Orange County'] },
-  { name: 'Seal Beach', slug: 'seal-beach-ca', tier: 'secondary', nearby: ['Huntington Beach', 'Los Alamitos', 'Westminster', 'Cypress', 'Garden Grove', 'Fountain Valley'], landmarks: ['Seal Beach Pier', 'Main Street Seal Beach', 'Seal Beach National Wildlife Refuge', 'Eisenhower Park', 'Red Car Museum'] },
-  { name: 'Stanton', slug: 'stanton-ca', tier: 'secondary', nearby: ['Garden Grove', 'Cypress', 'Buena Park', 'Anaheim', 'Westminster', 'La Palma'], landmarks: ['Adventure City', 'Stanton Central Park', 'Veterans Memorial', 'Harry M. Dotson Park', 'Stanton Community Center'] },
-  { name: 'Tustin', slug: 'tustin-ca', tier: 'secondary', nearby: ['Irvine', 'Santa Ana', 'Orange', 'Costa Mesa', 'Fountain Valley', 'Villa Park'], landmarks: ['Old Town Tustin', 'Tustin Legacy', 'Tustin Ranch Golf Club', 'Marconi Automotive Museum', 'Peters Canyon Regional Park'] },
-  { name: 'Villa Park', slug: 'villa-park-ca', tier: 'secondary', nearby: ['Orange', 'Anaheim', 'Yorba Linda', 'Placentia', 'Tustin', 'Santa Ana'], landmarks: ['Villa Park High School', 'Villa Park Orchards', 'Santiago Creek', 'Serrano Park', 'Villa Park Town Center'] },
-  { name: 'Westminster', slug: 'westminster-ca', tier: 'secondary', nearby: ['Garden Grove', 'Huntington Beach', 'Fountain Valley', 'Stanton', 'Seal Beach', 'Santa Ana'], landmarks: ['Little Saigon', 'Asian Garden Mall', 'Westminster Mall', 'Sid Goldstein Freedom Park', 'Vietnam War Memorial'] },
-  { name: 'Yorba Linda', slug: 'yorba-linda-ca', tier: 'secondary', nearby: ['Placentia', 'Brea', 'Anaheim', 'Fullerton', 'Orange', 'Villa Park'], landmarks: ['Richard Nixon Presidential Library', 'Black Gold Golf Club', 'Yorba Regional Park', 'Jessamyn West Park', 'Travis Ranch'] },
+  {
+    name: 'Aliso Viejo', slug: 'aliso-viejo-ca', tier: 'secondary',
+    nearby: ['Laguna Niguel', 'Laguna Hills', 'Mission Viejo', 'Laguna Beach', 'Lake Forest', 'Irvine'],
+    landmarks: ['Aliso Viejo Town Center', 'Aliso and Wood Canyons Wilderness Park', 'Grand Park', 'Iglesia Park', 'Soka University'],
+    neighborhoods: [
+      { name: 'Glenwood', description: "One of Aliso Viejo's largest communities with townhomes and condos from the early 2000s. Shared-wall construction means moisture in one unit can migrate to neighbors. HVAC systems and bathroom ventilation are primary inspection focus areas." },
+      { name: 'Aliso Viejo Town Center area', description: 'Mixed residential development near the Town Center with condos and attached homes. High-density construction requires attention to shared plumbing chases and common-area mechanical systems that can distribute moisture between units.' },
+      { name: 'Pacific Ridge', description: 'Hillside community with ocean views and newer construction. Tightly sealed energy-efficient homes can trap humidity when HVAC systems underperform. Canyon-facing lots experience temperature swings that promote condensation.' },
+      { name: 'Soka University area', description: 'Residential neighborhoods near Soka University include a mix of attached and detached homes. The hillside setting brings coastal fog and moisture that affects attic spaces and north-facing walls in particular.' },
+    ],
+  },
+  {
+    name: 'Anaheim', slug: 'anaheim-ca', tier: 'secondary',
+    nearby: ['Orange', 'Fullerton', 'Garden Grove', 'Buena Park', 'Placentia', 'Santa Ana'],
+    landmarks: ['Disneyland Resort', 'Angel Stadium', 'Honda Center', 'Anaheim Packing District', 'Downtown Disney'],
+    neighborhoods: [
+      { name: 'Anaheim Hills', description: 'Upscale hillside community in eastern Anaheim with custom and tract homes from the 1970s-90s. Canyon locations experience temperature differentials that promote condensation. Aging HVAC systems and plumbing in this era of construction are common moisture sources.' },
+      { name: 'Platinum Triangle', description: 'High-density condo and apartment development near Angel Stadium. Newer construction in multi-story buildings requires attention to shared HVAC systems, plumbing chases, and below-grade parking levels that can accumulate moisture.' },
+      { name: 'Colony Historic District', description: "One of Anaheim's oldest neighborhoods with homes from the early 1900s through the 1950s. Original plumbing, plaster walls, and minimal vapor barriers make these properties higher mold-risk candidates requiring non-invasive inspection methods." },
+      { name: 'West Anaheim', description: 'Older residential neighborhoods with post-war tract homes from the 1950s-60s. Aging plumbing systems, dated bathroom ventilation, and original roofing are the most common moisture sources we find in West Anaheim inspections.' },
+    ],
+  },
+  {
+    name: 'Brea', slug: 'brea-ca', tier: 'secondary',
+    nearby: ['Fullerton', 'Placentia', 'Yorba Linda', 'La Habra', 'Orange', 'Anaheim'],
+    landmarks: ['Brea Mall', 'Downtown Brea', 'Brea Dam Recreation Area', 'Carbon Canyon Regional Park', 'Curtis Theatre'],
+    neighborhoods: [
+      { name: 'Downtown Brea / Brea Mall area', description: 'Mix of older residential construction and newer infill development near the downtown corridor. Older homes in this area have original plumbing and roofing that benefit from periodic professional inspection.' },
+      { name: 'Carbon Canyon area', description: 'Hillside and canyon-adjacent homes near Carbon Canyon Regional Park experience moisture from canyon breezes and marine layer. Drainage around hillside foundations is a common concern after rain events.' },
+      { name: 'Olinda Ranch', description: 'Newer master-planned community with construction from the early 2000s. While well-built, these homes can develop mold from HVAC issues and construction moisture. Tightly sealed building envelopes trap humidity when ventilation is inadequate.' },
+      { name: 'Brea Country Hills', description: 'Established hillside neighborhood with homes from the 1970s-80s. Canyon-facing lots and aging construction details — particularly window seals and HVAC systems — are priority inspection areas.' },
+    ],
+  },
+  {
+    name: 'Buena Park', slug: 'buena-park-ca', tier: 'secondary',
+    nearby: ['Fullerton', 'Anaheim', 'Cypress', 'La Palma', 'Stanton', 'Garden Grove'],
+    landmarks: ['Knotts Berry Farm', 'Medieval Times', 'Pirate Dinner Adventure', 'Buena Park Downtown', 'Ralph B. Clark Regional Park'],
+    neighborhoods: [
+      { name: "Knott's Berry Farm area", description: "Residential neighborhoods near Knott's have older post-war construction from the 1950s-60s. Original plumbing, limited attic ventilation, and dated bathroom exhaust systems are the most common moisture sources in this corridor." },
+      { name: 'Downtown Buena Park', description: 'Older urban residential area with a mix of apartments, condos, and single-family homes. High occupancy rental properties in this area benefit from regular inspection to meet California habitability requirements.' },
+      { name: 'North Buena Park', description: 'Family-oriented neighborhoods with tract homes from the 1960s-70s. Aging HVAC systems and plumbing connections are typical moisture sources. Flat-roof sections common in this era of construction also require attention.' },
+    ],
+  },
+  {
+    name: 'Cypress', slug: 'cypress-ca', tier: 'secondary',
+    nearby: ['Buena Park', 'Los Alamitos', 'La Palma', 'Stanton', 'Garden Grove', 'Seal Beach'],
+    landmarks: ['Cypress College', 'Arnold Cypress Park', 'Veterans Memorial', 'Oak Knoll Park', 'Cypress Community Center'],
+    neighborhoods: [
+      { name: 'Cypress College area', description: 'Residential neighborhoods near Cypress College include older tract homes from the 1960s-70s. High student rental occupancy in some properties increases moisture load from intensive bathroom and kitchen use.' },
+      { name: 'Los Alamitos border / Katella corridor', description: 'Neighborhoods along the Cypress and Los Alamitos border have older construction with dated plumbing and ventilation systems. Proximity to the San Gabriel River watershed means certain lots experience elevated soil moisture.' },
+      { name: 'Central Cypress residential', description: 'Core family neighborhoods with homes from the 1960s-80s. HVAC systems, bathroom exhaust fans venting into attic spaces, and aging water heater connections are the most frequent findings in our Cypress inspections.' },
+    ],
+  },
+  {
+    name: 'Fountain Valley', slug: 'fountain-valley-ca', tier: 'secondary',
+    nearby: ['Huntington Beach', 'Costa Mesa', 'Westminster', 'Santa Ana', 'Garden Grove', 'Irvine'],
+    landmarks: ['Mile Square Regional Park', 'Fountain Valley Recreation Center', 'Kingston Park', 'Courreges Park', 'Fountain Valley Summerfest'],
+    neighborhoods: [
+      { name: 'Mile Square Park area', description: 'Residential neighborhoods surrounding Mile Square Regional Park feature homes from the 1960s-70s. Flat terrain means drainage relies on underground systems, and older homes may have moisture near foundations after heavy rain.' },
+      { name: 'Fountain Valley central residential', description: 'Core family neighborhoods with tract homes from the 1960s-70s. Aging plumbing and HVAC systems are the most common moisture sources. Proximity to Huntington Beach means the marine layer regularly affects indoor humidity levels.' },
+      { name: 'Eastside Fountain Valley', description: 'Neighborhoods bordering Costa Mesa and Santa Ana with older construction. Original plumbing systems and roofing in these properties benefit from regular inspection, particularly before buying or selling.' },
+    ],
+  },
+  {
+    name: 'Fullerton', slug: 'fullerton-ca', tier: 'secondary',
+    nearby: ['Placentia', 'Anaheim', 'Brea', 'Buena Park', 'La Habra', 'Yorba Linda'],
+    landmarks: ['Fullerton Arboretum', 'Muckenthaler Cultural Center', 'Downtown Fullerton', 'California State University Fullerton', 'Hillcrest Park'],
+    neighborhoods: [
+      { name: 'Downtown Fullerton historic district', description: 'Beautiful historic homes from the early 1900s through the 1940s with original plaster walls, galvanized plumbing, and single-pane windows. These properties require non-invasive inspection methods appropriate for vintage construction.' },
+      { name: 'CSUF campus area', description: 'High-density rental properties near Cal State Fullerton see intensive occupancy and frequent deferred maintenance. Bathroom ventilation, aging HVAC, and plumbing under kitchen sinks are the most common moisture sources in college-area rentals.' },
+      { name: 'Fullerton Hills', description: 'Upscale hillside community with custom homes from the 1970s-90s. Canyon-facing lots experience temperature swings that promote condensation. Larger homes with complex rooflines require thorough attic inspections.' },
+      { name: 'Raymond Hills', description: 'Established residential neighborhood with a mix of older and mid-century homes. Tree-lined streets and older construction make this a character-rich area that benefits from periodic professional moisture assessment.' },
+    ],
+  },
+  {
+    name: 'Garden Grove', slug: 'garden-grove-ca', tier: 'secondary',
+    nearby: ['Westminster', 'Anaheim', 'Santa Ana', 'Stanton', 'Fountain Valley', 'Orange'],
+    landmarks: ['Christ Cathedral', 'Atlantis Play Center', 'Garden Grove Strawberry Festival', 'Village Green Park', 'Garden Grove Historical Society'],
+    neighborhoods: [
+      { name: 'Little Saigon adjacent neighborhoods', description: 'Older residential areas near the Garden Grove and Westminster Little Saigon corridor have post-war construction from the 1950s-60s. Original plumbing and roofing systems in these properties are common moisture sources.' },
+      { name: 'West Garden Grove', description: 'Residential neighborhoods with older tract homes bordering Stanton and Westminster. Aging infrastructure and flat terrain make drainage and foundation moisture considerations important during inspections.' },
+      { name: 'Garden Grove central', description: 'Core neighborhoods with homes from the 1950s-70s near the Christ Cathedral corridor. Older window seals, bathroom ventilation, and HVAC systems are the most frequent moisture findings in this area.' },
+    ],
+  },
+  {
+    name: 'La Habra', slug: 'la-habra-ca', tier: 'secondary',
+    nearby: ['Brea', 'Fullerton', 'Buena Park', 'La Palma', 'Placentia', 'Yorba Linda'],
+    landmarks: ['La Habra Childrens Museum', 'La Habra Depot Theater', 'Portola Park', 'La Habra Citrus Festival', 'Imperial Park'],
+    neighborhoods: [
+      { name: 'Downtown La Habra', description: 'Older residential neighborhoods near downtown with homes from the 1940s-60s. Original plumbing systems and minimal vapor barriers in these properties make professional inspection particularly valuable before purchase or renovation.' },
+      { name: 'La Habra Hills', description: 'Hillside community bordering Los Angeles County with custom homes and canyon-adjacent lots. Hillside drainage and uphill foundation moisture are key inspection priorities alongside aging construction details.' },
+      { name: 'North La Habra', description: 'Family neighborhoods with tract homes from the 1960s-70s bordering Whittier. Aging HVAC systems and plumbing connections are common moisture sources in this era of construction.' },
+    ],
+  },
+  {
+    name: 'La Palma', slug: 'la-palma-ca', tier: 'secondary',
+    nearby: ['Buena Park', 'Cypress', 'Stanton', 'Anaheim', 'Los Alamitos', 'La Habra'],
+    landmarks: ['La Palma Central Park', 'La Palma Intercommunity Hospital', 'Walker Junior High School', 'George Washington Elementary', 'La Palma City Hall'],
+    neighborhoods: [
+      { name: 'La Palma central residential', description: "La Palma's compact residential core features homes from the 1960s-70s in well-maintained neighborhoods. Despite the city's small size, HVAC systems and bathroom ventilation are the most common moisture sources we find during inspections." },
+      { name: 'La Palma / Buena Park border', description: 'Neighborhoods along the La Palma and Buena Park border share similar construction styles from the 1960s-70s. Aging plumbing and roofing in this corridor benefit from periodic professional assessment.' },
+    ],
+  },
+  {
+    name: 'Laguna Woods', slug: 'laguna-woods-ca', tier: 'secondary',
+    nearby: ['Lake Forest', 'Laguna Hills', 'Irvine', 'Aliso Viejo', 'Mission Viejo', 'Laguna Beach'],
+    landmarks: ['Laguna Woods Village', 'Laguna Woods City Hall', 'Aliso Creek', 'El Toro Road Shopping', 'Laguna Woods Community Center'],
+    neighborhoods: [
+      { name: 'Laguna Woods Village', description: 'The majority of Laguna Woods consists of this active adult community developed in the 1960s-70s. Co-op and condo structures mean shared HVAC and plumbing systems can distribute moisture between units. We provide respectful, thorough service to all Village residents.' },
+      { name: 'Gate areas (1 through 9)', description: 'Laguna Woods Village is divided into gate communities, each with slightly different construction details and common-area systems. HVAC units in gate communities often share mechanical rooms that require periodic inspection for moisture and mold.' },
+    ],
+  },
+  {
+    name: 'Lake Forest', slug: 'lake-forest-ca', tier: 'secondary',
+    nearby: ['Irvine', 'Mission Viejo', 'Laguna Hills', 'Laguna Woods', 'Rancho Santa Margarita', 'Aliso Viejo'],
+    landmarks: ['Ethnobotany Garden', 'Pittsford Park', 'Lake Forest Sports Park', 'Borrego Park', 'Heritage Hill Historical Park'],
+    neighborhoods: [
+      { name: 'El Toro area', description: 'Established neighborhoods in the former El Toro community with homes from the 1970s-80s. Aging HVAC systems, plumbing connections, and bathroom ventilation are the most common moisture sources we find in El Toro area inspections.' },
+      { name: 'Foothill Ranch', description: 'Master-planned community in eastern Lake Forest with homes from the 1990s-2000s. Hillside and canyon-adjacent lots experience temperature differentials. Tightly sealed newer construction can trap humidity when ventilation is inadequate.' },
+      { name: 'Baker Ranch', description: 'One of Lake Forest\'s newest communities with construction from 2014 onward. While modern, these homes can develop mold from construction moisture, HVAC issues, or plumbing leaks in tight wall chases. Energy-efficient envelopes trap humidity effectively.' },
+      { name: 'Serrano', description: 'Gated community in eastern Lake Forest with upscale homes and hillside lots. Canyon exposure and larger homes with complex rooflines require thorough attic and crawl space inspection alongside standard HVAC and plumbing assessment.' },
+    ],
+  },
+  {
+    name: 'Los Alamitos', slug: 'los-alamitos-ca', tier: 'secondary',
+    nearby: ['Seal Beach', 'Cypress', 'Garden Grove', 'Westminster', 'Huntington Beach', 'Stanton'],
+    landmarks: ['Los Alamitos Race Course', 'Arbor Dog Park', 'Little Cottonwood Park', 'Los Alamitos Community Center', 'Museum of History'],
+    neighborhoods: [
+      { name: 'Old Town Los Alamitos', description: 'Historic core of Los Alamitos with older residential construction near the Race Course. Homes from the 1940s-60s in this area have original plumbing and roofing that benefit from professional inspection before purchase or renovation.' },
+      { name: 'Rossmoor adjacent areas', description: 'Neighborhoods bordering the Rossmoor community in unincorporated Orange County feature homes from the 1960s-70s. Well-maintained properties in this area still benefit from periodic HVAC and plumbing inspection.' },
+    ],
+  },
+  {
+    name: 'Orange', slug: 'orange-ca', tier: 'secondary',
+    nearby: ['Anaheim', 'Santa Ana', 'Tustin', 'Villa Park', 'Irvine', 'Garden Grove'],
+    landmarks: ['Old Towne Orange', 'Chapman University', 'The Outlets at Orange', 'Irvine Regional Park', 'Santiago Oaks Regional Park'],
+    neighborhoods: [
+      { name: 'Old Towne Orange', description: "National Register historic district with homes from the 1880s through the 1930s. Original plaster walls, wood lath construction, and vintage plumbing require non-invasive inspection methods. We have extensive experience with historic Orange County construction." },
+      { name: 'Chapman University area', description: 'College neighborhoods surrounding Chapman University with older rental properties. High occupancy and typical deferred maintenance make HVAC systems, bathroom ventilation, and plumbing the primary moisture sources in these properties.' },
+      { name: 'Orange Hills', description: 'Upscale hillside community in eastern Orange with custom homes and canyon-adjacent lots. Hillside drainage, complex rooflines, and aging HVAC systems in properties from the 1970s-90s are key inspection priorities.' },
+      { name: 'Villa Park border neighborhoods', description: 'Residential areas bordering Villa Park feature larger lots and custom construction. Properties in this corridor often have original plumbing and HVAC systems from the 1960s-80s that deserve periodic professional assessment.' },
+    ],
+  },
+  {
+    name: 'Placentia', slug: 'placentia-ca', tier: 'secondary',
+    nearby: ['Fullerton', 'Yorba Linda', 'Anaheim', 'Brea', 'Orange', 'Villa Park'],
+    landmarks: ['Tri-City Park', 'George Key Ranch Historic Park', 'Bradford House', 'Placentia Champions Sports Complex', 'Downtown Placentia'],
+    neighborhoods: [
+      { name: 'Downtown Placentia historic area', description: 'Historic downtown neighborhood with homes from the early 1900s through the 1940s. Original construction with plaster walls and vintage plumbing benefits from non-invasive inspection methods appropriate for historic materials.' },
+      { name: 'Placentia central residential', description: 'Core family neighborhoods with tract homes from the 1960s-70s. Aging HVAC systems, bathroom ventilation, and plumbing connections are the most common moisture sources we find during Placentia inspections.' },
+      { name: 'Tri-City Park area', description: 'Established neighborhoods near Tri-City Park with homes from the 1970s-80s. A well-maintained community where HVAC systems and aging plumbing connections are the primary inspection focus areas.' },
+    ],
+  },
+  {
+    name: 'Rancho Santa Margarita', slug: 'rancho-santa-margarita-ca', tier: 'secondary',
+    nearby: ['Mission Viejo', 'Lake Forest', 'San Juan Capistrano', 'Laguna Hills', 'Laguna Niguel', 'Aliso Viejo'],
+    landmarks: ['Rancho Santa Margarita Lake', 'Central Park', 'Tijeras Creek Golf Club', 'Arroyo Trabuco Golf Club', 'OSO Viejo Park'],
+    neighborhoods: [
+      { name: 'RSM Lake area', description: 'Homes near Rancho Santa Margarita Lake experience slightly elevated ambient humidity from lake proximity. HVAC systems, bathroom exhaust, and any below-grade spaces are priority inspection areas for lake-adjacent properties.' },
+      { name: 'Melinda Heights', description: 'Hillside community in northern RSM with homes from the late 1980s-90s. Canyon-adjacent lots experience temperature swings that promote condensation. HVAC systems and attic ventilation are primary inspection priorities.' },
+      { name: 'Tijeras Creek area', description: 'Homes near the Tijeras Creek golf corridor experience creek-adjacent ground moisture that affects crawl spaces and lower-level areas after rain events. Well-maintained community that benefits from periodic professional inspection.' },
+      { name: 'Dove Canyon', description: 'Gated community in eastern RSM with upscale homes and canyon views. The canyon setting creates unique moisture microclimates. Larger custom homes require thorough attic, crawl space, and HVAC inspection.' },
+    ],
+  },
+  {
+    name: 'San Juan Capistrano', slug: 'san-juan-capistrano-ca', tier: 'secondary',
+    nearby: ['Dana Point', 'San Clemente', 'Laguna Niguel', 'Mission Viejo', 'Rancho Santa Margarita', 'Laguna Hills'],
+    landmarks: ['Mission San Juan Capistrano', 'Los Rios Historic District', 'Zoomars Petting Zoo', 'ONeill Museum', 'Historic Town Center'],
+    neighborhoods: [
+      { name: 'Los Rios Historic District', description: "One of California's oldest neighborhoods with adobe-style construction dating to the 1700s-1800s. Adobe walls absorb ambient humidity and original construction lacks modern vapor barriers. Non-invasive inspection methods are essential for these historic structures." },
+      { name: 'Rancho Viejo area', description: "Established neighborhoods with homes from the 1970s-80s near the equestrian corridor. Aging HVAC systems and plumbing, combined with the area's agricultural irrigation history, make moisture assessment particularly valuable." },
+      { name: 'Ortega Highway corridor', description: 'Hillside and canyon-adjacent properties along the Ortega Highway corridor experience creek moisture and canyon temperature swings. Trabuco Creek proximity creates elevated soil moisture conditions for nearby foundations.' },
+      { name: 'Mission Hills area', description: 'Residential neighborhoods near Mission San Juan Capistrano with a mix of historic and newer construction. Properties in the shadow of the hills experience limited airflow that can promote moisture accumulation in attic and crawl spaces.' },
+    ],
+  },
+  {
+    name: 'Santa Ana', slug: 'santa-ana-ca', tier: 'secondary',
+    nearby: ['Orange', 'Irvine', 'Costa Mesa', 'Tustin', 'Garden Grove', 'Fountain Valley'],
+    landmarks: ['Santa Ana Zoo', 'Bowers Museum', 'Discovery Cube Orange County', 'MainPlace Mall', 'Heritage Museum of Orange County'],
+    neighborhoods: [
+      { name: 'Floral Park', description: 'Prestigious historic neighborhood with homes from the 1920s-40s. Original plumbing, plaster walls, and single-pane windows create conditions for moisture accumulation. Professional inspection preserves these valuable properties while identifying hidden moisture issues.' },
+      { name: 'Heninger Park', description: 'Historic residential neighborhood with craftsman and Spanish Colonial homes from the 1920s-30s. Older construction requires non-invasive inspection methods and experienced assessment of vintage plumbing and roofing systems.' },
+      { name: 'Midtown Santa Ana', description: 'Dense urban residential area with a mix of older single-family homes and multi-family buildings. High occupancy rental properties benefit from regular inspection to meet California habitability requirements and protect tenant health.' },
+      { name: 'South Coast Metro adjacent', description: 'Residential neighborhoods bordering the South Coast Plaza corridor feature a mix of construction ages. Proximity to Newport Beach and Costa Mesa means coastal humidity regularly affects indoor air quality in this area.' },
+    ],
+  },
+  {
+    name: 'Seal Beach', slug: 'seal-beach-ca', tier: 'secondary',
+    nearby: ['Huntington Beach', 'Los Alamitos', 'Westminster', 'Cypress', 'Garden Grove', 'Fountain Valley'],
+    landmarks: ['Seal Beach Pier', 'Main Street Seal Beach', 'Seal Beach National Wildlife Refuge', 'Eisenhower Park', 'Red Car Museum'],
+    neighborhoods: [
+      { name: 'Old Town Seal Beach / Main Street', description: 'Historic beach cottages and bungalows within walking distance of the pier. Built before modern moisture standards, these properties face direct ocean exposure and require thorough inspection of attics, crawl spaces, and original plumbing.' },
+      { name: 'Leisure World', description: 'Large active adult community with construction from the 1960s-70s. Co-op residential structures share plumbing and HVAC systems that can distribute moisture between units. We provide respectful, thorough service to Leisure World residents.' },
+      { name: 'College Park East', description: 'Established family neighborhood with homes from the 1960s-70s inland from the beach. While less exposed to direct marine humidity than coastal areas, aging HVAC systems and plumbing are common moisture sources in College Park East properties.' },
+    ],
+  },
+  {
+    name: 'Stanton', slug: 'stanton-ca', tier: 'secondary',
+    nearby: ['Garden Grove', 'Cypress', 'Buena Park', 'Anaheim', 'Westminster', 'La Palma'],
+    landmarks: ['Adventure City', 'Stanton Central Park', 'Veterans Memorial', 'Harry M. Dotson Park', 'Stanton Community Center'],
+    neighborhoods: [
+      { name: 'Central Stanton residential', description: "Core neighborhoods with older tract homes from the 1950s-60s. Stanton's flat terrain means drainage relies on underground systems, and older homes may experience foundation moisture after heavy rain. Aging plumbing and roofing are common inspection findings." },
+      { name: 'Stanton / Garden Grove border', description: 'Neighborhoods along the Stanton and Garden Grove border share similar post-war construction. Original plumbing systems and dated bathroom ventilation are the most frequent moisture sources we find in this corridor.' },
+    ],
+  },
+  {
+    name: 'Tustin', slug: 'tustin-ca', tier: 'secondary',
+    nearby: ['Irvine', 'Santa Ana', 'Orange', 'Costa Mesa', 'Fountain Valley', 'Villa Park'],
+    landmarks: ['Old Town Tustin', 'Tustin Legacy', 'Tustin Ranch Golf Club', 'Marconi Automotive Museum', 'Peters Canyon Regional Park'],
+    neighborhoods: [
+      { name: 'Old Town Tustin', description: 'Charming historic district with homes from the early 1900s through the 1950s. Original plaster walls, wood framing, and vintage plumbing require non-invasive inspection methods. We have extensive experience with Old Town Tustin\'s construction styles.' },
+      { name: 'Tustin Ranch', description: 'Master-planned community in eastern Tustin with homes from the 1980s-90s. While generally well-maintained, aging HVAC systems and plumbing connections in this era of construction are common moisture sources. Larger homes require thorough attic inspection.' },
+      { name: 'Tustin Legacy', description: 'Newer mixed-use development on the former Marine Corps Air Station with construction from 2005 onward. Modern construction can still develop mold from HVAC issues and plumbing leaks. Energy-efficient building envelopes trap humidity when ventilation is inadequate.' },
+      { name: 'Peppertree area', description: 'Established residential neighborhood in central Tustin with homes from the 1960s-70s. Aging infrastructure and dated construction details make periodic professional inspection valuable for homeowners and landlords alike.' },
+    ],
+  },
+  {
+    name: 'Villa Park', slug: 'villa-park-ca', tier: 'secondary',
+    nearby: ['Orange', 'Anaheim', 'Yorba Linda', 'Placentia', 'Tustin', 'Santa Ana'],
+    landmarks: ['Villa Park High School', 'Villa Park Orchards', 'Santiago Creek', 'Serrano Park', 'Villa Park Town Center'],
+    neighborhoods: [
+      { name: 'Villa Park equestrian estates', description: 'Large custom lots with equestrian facilities throughout Villa Park. Irrigated acreage contributes to elevated soil moisture around foundations. Custom homes from the 1960s-80s often have original plumbing and HVAC systems requiring experienced inspection.' },
+      { name: 'Santiago Creek adjacent', description: 'Properties backing Santiago Creek experience creek-adjacent ground moisture that affects crawl spaces and lower-level areas after rain events. Uphill foundation walls on creek-facing lots are priority inspection areas.' },
+      { name: 'Villa Park central residential', description: 'Core neighborhoods with custom single-family homes on large lots. The exclusivity of Villa Park means properties often have unique construction features that require experienced assessment. HVAC systems and custom plumbing installations are key focus areas.' },
+    ],
+  },
+  {
+    name: 'Westminster', slug: 'westminster-ca', tier: 'secondary',
+    nearby: ['Garden Grove', 'Huntington Beach', 'Fountain Valley', 'Stanton', 'Seal Beach', 'Santa Ana'],
+    landmarks: ['Little Saigon', 'Asian Garden Mall', 'Westminster Mall', 'Sid Goldstein Freedom Park', 'Vietnam War Memorial'],
+    neighborhoods: [
+      { name: 'Little Saigon', description: 'Vibrant cultural district with older residential construction from the 1950s-70s mixed with commercial development. Older homes in this corridor have post-war construction details — original plumbing and roofing systems — that benefit from professional inspection.' },
+      { name: 'Westminster central residential', description: 'Core family neighborhoods with tract homes from the 1960s-70s. Aging HVAC systems, bathroom ventilation, and plumbing connections are the most common moisture sources in Westminster residential inspections.' },
+      { name: 'Midway City adjacent', description: 'Neighborhoods bordering the Midway City unincorporated area feature older construction with dated infrastructure. Flat terrain and aging drainage systems make foundation moisture a consideration during inspection.' },
+    ],
+  },
+  {
+    name: 'Yorba Linda', slug: 'yorba-linda-ca', tier: 'secondary',
+    nearby: ['Placentia', 'Brea', 'Anaheim', 'Fullerton', 'Orange', 'Villa Park'],
+    landmarks: ['Richard Nixon Presidential Library', 'Black Gold Golf Club', 'Yorba Regional Park', 'Jessamyn West Park', 'Travis Ranch'],
+    neighborhoods: [
+      { name: 'Yorba Linda Country Club area', description: 'Upscale neighborhoods surrounding the country club with custom homes from the 1970s-90s. Large lots with mature landscaping and irrigation systems can contribute to foundation moisture. Aging HVAC and plumbing in these properties deserve periodic professional assessment.' },
+      { name: 'Travis Ranch', description: 'Family community in eastern Yorba Linda with homes from the 1980s-90s. Canyon-adjacent lots experience temperature swings. HVAC systems and attic ventilation are primary inspection priorities in this well-maintained community.' },
+      { name: 'East Lake Village', description: 'Master-planned community with a private lake and homes from the 1980s-90s. Lake-adjacent properties experience slightly elevated ambient humidity. HVAC systems, bathroom exhaust, and below-grade spaces are key inspection focus areas.' },
+      { name: 'Black Gold area', description: 'Hillside neighborhoods near Black Gold Golf Club with upscale custom homes and canyon views. Hillside drainage, complex rooflines, and the canyon microclimate create unique moisture conditions that benefit from professional assessment.' },
+    ],
+  },
 ]
 
 // All 34 approved service areas (combined and deduplicated)
