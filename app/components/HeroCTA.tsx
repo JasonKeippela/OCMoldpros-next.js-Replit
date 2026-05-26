@@ -5,8 +5,10 @@ import Link from 'next/link';
 
 export default function HeroCTA() {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const checkMobile = () => {
       const userAgent = navigator.userAgent || navigator.vendor;
       const isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
@@ -24,7 +26,7 @@ export default function HeroCTA() {
       <a href="tel:9493715934" className="px-8 py-4 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors font-semibold text-lg shadow-lg text-center">
         Call for a free 20-min consultation
       </a>
-      {isMobile ? (
+      {mounted && isMobile ? (
         <a 
           href="sms:9493715934?body=Hi, I'd like a free quote!" 
           className="px-8 py-4 bg-white text-gray-900 border-2 border-white rounded-lg hover:bg-ocean-50 transition-colors font-semibold text-lg shadow-lg text-center"
