@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
+import JsonLd from '../components/JsonLd'
+import { getLocalBusinessSchema } from '@/app/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Schedule Mold Inspection | OC Mold Pros',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="pt-28">
+      <JsonLd data={getLocalBusinessSchema()} />
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">

@@ -121,6 +121,7 @@ export default function Navigation() {
           <Link href="/pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Pricing</Link>
           <Link href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Blog</Link>
           <Link href="/resource-hub" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Resource Hub</Link>
+          <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Contact</Link>
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
