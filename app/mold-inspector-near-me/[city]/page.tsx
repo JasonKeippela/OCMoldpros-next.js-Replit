@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cityData = getCityData(cityInfo.name)
   const canonicalUrl = getCanonicalUrl(`/mold-inspector-near-me/${citySlug}`)
-  const title = `Mold Inspector ${cityInfo.name} CA | OC Mold Pros`
-  const description = `Professional mold inspection & testing in ${cityInfo.name}, CA. IAC2 certified, veteran owned. Thermal imaging, air sampling & 24-hr reports. Call OC Mold Pros at 949-371-5934.`
+  const title = cityData.metaTitle ?? `Mold Inspector ${cityInfo.name} CA | OC Mold Pros`
+  const description = cityData.metaDescription ?? `Professional mold inspection & testing in ${cityInfo.name}, CA. IAC2 certified, veteran owned. Thermal imaging, air sampling & 24-hr reports. Call OC Mold Pros at 949-371-5934.`
 
   return {
     title,

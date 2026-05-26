@@ -16,6 +16,8 @@ export type CityData = {
   isCoastal: boolean;
   keywords: string[];
   faqs: { q: string; a: string }[];
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 // 10 Core cities (primary service area focus)
@@ -1239,9 +1241,33 @@ const cityFaqs: Record<string, { q: string; a: string }[]> = {
   ],
 }
 
+const cityMetaOverrides: Record<string, { metaTitle?: string; metaDescription?: string }> = {
+  'San Clemente': {
+    metaTitle: 'Mold Inspector San Clemente CA | Same-Day Inspections | OC Mold Pros',
+    metaDescription: 'San Clemente coastal humidity creates hidden mold problems. IAC2 certified inspector, thermal imaging & air sampling. 24-hr reports. Call 949-371-5934.',
+  },
+  'Laguna Niguel': {
+    metaTitle: 'Mold Inspector Laguna Niguel CA | Certified & Veteran-Owned | OC Mold Pros',
+    metaDescription: 'Mold inspection in Laguna Niguel by an IAC2 certified, veteran-owned company. Thermal imaging, air sampling, unbiased reports. Free consult 949-371-5934.',
+  },
+  'Costa Mesa': {
+    metaTitle: 'Mold Inspector Costa Mesa CA | Thermal Imaging & Air Sampling | OC Mold Pros',
+    metaDescription: 'Costa Mesa mold inspections with thermal imaging & lab-certified air sampling. Unbiased findings — we do not do remediation. Same-day. Call 949-371-5934.',
+  },
+  'Laguna Beach': {
+    metaTitle: 'Mold Inspector Laguna Beach CA | Ocean Air Mold Specialists | OC Mold Pros',
+    metaDescription: 'Laguna Beach homes face constant ocean moisture and mold risk. IAC2 certified inspector with thermal imaging & 24-hr lab reports. Call 949-371-5934.',
+  },
+  'Anaheim': {
+    metaTitle: 'Mold Inspector Anaheim CA | Fast & Certified | OC Mold Pros',
+    metaDescription: 'Mold inspection in Anaheim by an IAC2 certified, veteran-owned company. Older homes, rentals & commercial properties welcome. Free consult 949-371-5934.',
+  },
+}
+
 export function getCityData(cityName: string): CityData {
   const isCoastal = ['Newport Beach', 'Huntington Beach', 'Laguna Beach', 'Dana Point', 'San Clemente', 'Seal Beach'].includes(cityName)
 
+  const meta = cityMetaOverrides[cityName] ?? {}
   return {
     description: descriptions[cityName] ?? `${cityName} is a wonderful community in Orange County, California, offering residents a high quality of life with access to beaches, shopping, and entertainment.`,
     moldServices: moldServices[cityName] ?? `We provide professional mold inspection services throughout ${cityName}. Our certified inspectors understand the local housing stock and common moisture issues in this area.`,
@@ -1268,5 +1294,7 @@ export function getCityData(cityName: string): CityData {
         a: `We offer same-day appointments in ${cityName} when our schedule allows. Call us at 949-371-5934 to check availability. We also offer Saturday appointments from 8am to 12pm.`,
       },
     ],
+    metaTitle: meta.metaTitle,
+    metaDescription: meta.metaDescription,
   }
 }
