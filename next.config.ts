@@ -35,6 +35,16 @@ const nextConfig: NextConfig = {
       { source: '/locations', destination: '/mold-inspector-near-me', permanent: true },
       { source: '/service-areas', destination: '/mold-inspector-near-me', permanent: true },
       { source: '/service-areas/:path*', destination: '/mold-inspector-near-me/:path*', permanent: true },
+      // /blog with blogcategory query param → /blog (clean; 'has' params are not forwarded by Next.js)
+      {
+        source: '/blog',
+        has: [{ type: 'query', key: 'blogcategory' }],
+        destination: '/blog',
+        permanent: true,
+      },
+      // /blog-1/f.rss and /easy-breathing → /blog
+      { source: '/blog-1/f.rss', destination: '/blog', permanent: true },
+      { source: '/easy-breathing', destination: '/blog', permanent: true },
       // Legacy blog redirects - exact paths with query params first (most specific)
       { 
         source: '/education/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home',
