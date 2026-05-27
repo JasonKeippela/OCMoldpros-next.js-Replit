@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import JsonLd from '@/app/components/JsonLd'
+import { getBreadcrumbSchema } from '@/app/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Resource Hub | OC Mold Pros',
@@ -7,5 +9,14 @@ export const metadata: Metadata = {
 }
 
 export default function ResourceHubLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://ocmoldpros.com' },
+    { name: 'Resource Hub', url: 'https://ocmoldpros.com/resource-hub' },
+  ])
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      {children}
+    </>
+  )
 }

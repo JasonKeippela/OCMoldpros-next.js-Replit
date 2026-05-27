@@ -329,6 +329,13 @@ export function getLocalBusinessSchema() {
 
     hasOfferCatalog: getOfferCatalogSchema(),
 
+    founder: {
+      '@type': 'Person',
+      name: 'Jason Keippela',
+      jobTitle: 'Certified Mold Inspector',
+      sameAs: 'https://iac2.org/verify-a-consultant/?search_term=keippela',
+    },
+
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: 5,

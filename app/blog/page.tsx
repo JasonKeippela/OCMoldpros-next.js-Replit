@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import JsonLd from '../components/JsonLd'
+import { getBreadcrumbSchema } from '@/app/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Learn About Mold | Educational Resources | OC Mold Pros',
@@ -184,8 +186,13 @@ const articles = [
 ]
 
 export default function BlogPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://ocmoldpros.com' },
+    { name: 'Blog', url: 'https://ocmoldpros.com/blog' },
+  ])
   return (
     <main className="pt-28">
+      <JsonLd data={breadcrumbSchema} />
       <nav className="bg-gray-100 py-3">
         <div className="max-w-6xl mx-auto px-4">
           <ol className="flex items-center gap-2 text-sm text-gray-600">

@@ -50,5 +50,9 @@ export const SITE_CONFIG = {
   sameAs: [
     'https://instagram.com/ocmoldpros',
     'https://www.veteranownedbusiness.com/business/40038/oc-mold-pros',
+    'https://www.yelp.com/biz/oc-mold-pros-san-clemente-4',
+    'https://www.houzz.com/pro/jason-keippela',
+    'https://iac2.org/verify-a-consultant/?search_term=keippela',
+    'https://www.facebook.com/profile.php?id=61573717618539',
   ],
 }
