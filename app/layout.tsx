@@ -48,8 +48,8 @@ export default function RootLayout({
   const siteGraph = getSiteGraph()
 
   return (
-    <html lang="en">
-      <head>
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-white text-gray-900 antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CK8D20LRK0"
           strategy="afterInteractive"
@@ -62,8 +62,6 @@ export default function RootLayout({
             gtag('config', 'G-CK8D20LRK0');
           `}
         </Script>
-      </head>
-      <body className="bg-white text-gray-900 antialiased">
         <JsonLd data={siteGraph} />
         <Navigation />
         {children}
