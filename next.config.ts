@@ -35,16 +35,9 @@ const nextConfig: NextConfig = {
       { source: '/locations', destination: '/mold-inspector-near-me', permanent: true },
       { source: '/service-areas', destination: '/mold-inspector-near-me', permanent: true },
       { source: '/service-areas/:path*', destination: '/mold-inspector-near-me/:path*', permanent: true },
-      // /blog with blogcategory query param → /blog (clean; 'has' params are not forwarded by Next.js)
-      {
-        source: '/blog',
-        has: [{ type: 'query', key: 'blogcategory' }],
-        destination: '/blog',
-        permanent: true,
-      },
-      // /blog-1/f.rss and /easy-breathing → /blog
-      { source: '/blog-1/f.rss', destination: '/blog', permanent: true },
-      { source: '/easy-breathing', destination: '/blog', permanent: true },
+      // /blog-1/f.rss and /easy-breathing → /blog (statusCode: 301 required; permanent:true emits 308 in Next.js 16)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ...([ { source: '/blog-1/f.rss', destination: '/blog', statusCode: 301 }, { source: '/easy-breathing', destination: '/blog', statusCode: 301 } ] as any[]),
       // Legacy blog redirects - exact paths with query params first (most specific)
       { 
         source: '/education/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home',
@@ -68,54 +61,9 @@ const nextConfig: NextConfig = {
       { source: '/education/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home', destination: '/blog/understanding-health-effects-mold-holistic-perspective', permanent: true },
       { source: '/education/f/identifying-the-signs-of-mold-illness', destination: '/blog', permanent: true },
       { source: '/blog-1/f/the-cost-of-ignoring-mold-issues-protect-your-health-and-home', destination: '/blog/how-fast-can-mold-spread-in-home', permanent: true },
-      // Legacy redirects - /education with multiple query params
-      { 
-        source: '/education',
-        has: [
-          { type: 'query', key: 'blog', value: 'y' },
-          { type: 'query', key: 'blogcategory', value: 'Mold Illness' }
-        ],
-        destination: '/blog',
-        permanent: true
-      },
-      { 
-        source: '/education',
-        has: [
-          { type: 'query', key: 'blog', value: 'y' },
-          { type: 'query', key: 'blogcategory', value: 'Costs' }
-        ],
-        destination: '/blog',
-        permanent: true
-      },
-      // Legacy redirects - /education with single query param
-      { 
-        source: '/education',
-        has: [{ type: 'query', key: 'blogcategory', value: 'Costs' }],
-        destination: '/pricing',
-        permanent: true
-      },
-      { 
-        source: '/education',
-        has: [{ type: 'query', key: 'blogcategory', value: 'Mold Illness' }],
-        destination: '/blog',
-        permanent: true
-      },
-      { 
-        source: '/education',
-        has: [{ type: 'query', key: 'blog', value: 'y' }],
-        destination: '/blog',
-        permanent: true
-      },
-      // Broad /education fallback (must be last for /education)
-      { source: '/education', destination: '/blog', permanent: true },
-      // Legacy /blog-1 redirects
-      { 
-        source: '/blog-1',
-        has: [{ type: 'query', key: 'blogcategory', value: 'Costs' }],
-        destination: '/pricing',
-        permanent: true
-      },
-      { source: '/blog-1', destination: '/blog', permanent: true },
+      // /blog, /blog-1, and /education broad redirects are handled by middleware.ts
+      // (Next.js 16 runs next.config.ts redirects before middleware, so these must
+      //  not appear here or middleware would never run for those paths)
       // 301 Redirects for removed/invalid service area URLs
       { source: '/service-areas/rowland-heights-ca', destination: '/mold-inspector-near-me', permanent: true },
       { source: '/service-areas/cerritos-ca', destination: '/mold-inspector-near-me', permanent: true },
